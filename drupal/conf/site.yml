@@ -9,8 +9,8 @@ default:
   temporary: _build
   final: current
   previous: builds
-  profile: wk
-  site: Wundersite
+  profile: jeeves_product_site
+  site: Solvaxis
 
   # In development environments we want to use symlinks, note settings.php
   link:
@@ -18,7 +18,7 @@ default:
     - code/modules/custom: sites/all/modules/custom
     - code/modules/features: sites/all/modules/features
     - code/themes/custom: sites/all/themes/custom
-    - code/profiles/wk: profiles/wk
+    - code/profiles/jeeves_product_site: profiles/jeeves_product_site
     - conf/vagrant.settings.php: sites/default/settings.php
     - conf/aliases.drushrc.php: sites/default/aliases.drushrc.php
 
@@ -31,7 +31,7 @@ local:
     - code/modules/custom: sites/all/modules/custom
     - code/modules/features: sites/all/modules/features
     - code/themes/custom: sites/all/themes/custom
-    - code/profiles/wk: profiles/wk
+    - code/profiles/jeeves_product_site: profiles/jeeves_product_site
     - conf/local.settings.php: sites/default/settings.php
     - conf/aliases.drushrc.php: sites/default/aliases.drushrc.php
 
@@ -47,7 +47,7 @@ test:
     - code/modules/custom: sites/all/modules/custom
     - code/modules/features: sites/all/modules/features
     - code/themes/custom: sites/all/themes/custom
-    - code/profiles/wk: profiles/wk
+    - code/profiles/jeeves_product_site: profiles/jeeves_product_site
     - conf/test.settings.php: sites/default/settings.php
 
 
@@ -65,7 +65,7 @@ production:
     - code/modules/custom: sites/all/modules/custom
     - code/modules/features: sites/all/modules/features
     - code/themes/custom: sites/all/themes/custom
-    - code/profiles/wk: profiles/wk
+    - code/profiles/jeeves_product_site: profiles/jeeves_product_site
     - conf/prod.settings.php: sites/default/settings.php
 
 # Command sets:
