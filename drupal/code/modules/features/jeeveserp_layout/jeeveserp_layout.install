@@ -2,6 +2,13 @@
 
 
 /**
+ * Implements hook_install().
+ */
+function jeeveserp_layout_install() {
+  jeeveserp_layout_update_7001();
+}
+
+/**
  * Updates
  */
 
