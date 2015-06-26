@@ -96,7 +96,20 @@ projects[inline_entity_form][version] = "1.5"
 projects[inline_entity_form][patch][] = https://www.drupal.org/files/issues/entity-translations-1545896-55.patch
 
 projects[media][version] = 2.x-dev
-projects[media][revision] = 9f7142b61f9e27d841d10ba12e607c465e1087f2
+projects[media][subdir] = contrib
+projects[media][revision] = 1e1aadec29ff24341599b7acc9e5102f501df692
+projects[media][patch][] = https://www.drupal.org/files/issues/media_remove_file_display_alter-2104193-91.patch
+
+projects[media_youtube][version] = 2.x-dev
+projects[media_youtube][subdir] = contrib
+projects[media_youtube][revision] = 54b5cf53e69d51e22190bec7d2f146d7a60a87b7
+projects[media_youtube][patch][] = https://www.drupal.org/files/issues/replace_video_id_with_title-2225713.patch
+
+projects[media_vimeo][version] = "1.0-beta5"
+; Using patch against 1.0-beta5 instead of 2.x
+projects[media_vimeo][patch][] = https://drupal.org/files/media_vimeo_filetype_empty-2032803-1.patch
+projects[mediafront][version] = "2.2"
+projects[html5_media][version] = "1.1"
 
 projects[module_filter][version] = "2.0"
 projects[taxonomy_menu][version] = "1.5"
@@ -123,14 +136,6 @@ projects[search_api_et][revision] = "a56f5273bc4cef18ebac797a9f04410224601d2f"
 projects[search_api_et_solr][version] = "1.x-dev"
 projects[search_api_et_solr][revision] = "ad701b9aeb60ce87f55121b18453f8a38527837a"
 
-
-projects[media_vimeo][version] = "1.0-beta5"
-; Using patch against 1.0-beta5 instead of 2.x
-projects[media_vimeo][patch][] = https://drupal.org/files/media_vimeo_filetype_empty-2032803-1.patch
-projects[media_youtube][version] = "2.0-rc3"
-projects[media_youtube][patch][] = "https://www.drupal.org/files/media_youtube_filetype_empty.patch"
-projects[mediafront][version] = "2.2"
-projects[html5_media][version] = "1.1"
 
 projects[tagclouds][version] = "1.9"
 projects[addthis][version] = "4.0-alpha2"
