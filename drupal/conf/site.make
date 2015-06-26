@@ -11,6 +11,8 @@ projects[drupal][version] = 7.37
 ; Contrib projects
 ; ---------
 
+defaults[projects][subdir] = contrib
+
 projects[i18n][version] = "1.13"
 projects[variable][version] = "2.5"
 projects[lang_dropdown][version] = "1.5"
