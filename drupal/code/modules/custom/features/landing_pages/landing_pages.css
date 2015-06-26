@@ -1,0 +1,13 @@
+.header-secondary-float {
+  display:none;
+  position:fixed;
+  top:0px;
+  left:0px;
+  /*padding:5px;*/
+  width:100%;
+  border-bottom: 1px solid #DDD;
+}
+
+.header-secondary-float .header-secondary {
+  padding:0px;
+}

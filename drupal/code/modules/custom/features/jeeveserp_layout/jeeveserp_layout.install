@@ -1,0 +1,62 @@
+<?php
+
+
+/**
+ * Updates
+ */
+
+
+/**
+ * Add new role Administrator.
+ */
+function jeeveserp_layout_update_7001() {
+  $role = user_role_load_by_name('administrator');
+  if (!$role) {
+    $role = new stdClass();
+    $role->name = 'administrator';
+    user_role_save($role);
+  }
+
+  $account = user_load_by_name('gatis');
+  if (!$account) {
+    $account = new stdClass();
+    $account->name = 'gatis';
+    $account->mail = 'gatis.rudins@wunderkraut.com';
+    $account->status = 1;
+    user_save($account);
+  }
+  user_save($account, array('roles' => $account->roles + array($role->rid => $role->name)));
+}
+
+/**
+ * Enable Taxonomy Access Fix module.
+ */
+function jeeveserp_layout_update_7002() {
+  module_enable(array('taxonomy_access_fix'));
+}
+
+
+/**
+ * Enable Override Node Options; Revert features.
+ */
+function jeeveserp_layout_update_7003() {
+  module_enable(array('override_node_options'));
+  // jeeveserp_features_revert(array(
+  //   'attachments',
+  //   'blogs',
+  //   'deployment_destination',
+  //   'employees',
+  //   'events',
+  //   'industries',
+  //   'jeeveserp_layout',
+  //   'jeeveserp_permissions',
+  //   'landing_pages',
+  //   'news',
+  //   'partners',
+  //   'promo',
+  //   'region_langugage_workflow',
+  //   'video',
+  //   'webforms'
+  // ));
+  drupal_flush_all_caches();
+}

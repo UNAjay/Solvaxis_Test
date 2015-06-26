@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Display Suite install file.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function landing_pages_install() {
+  db_update('system')
+    ->fields(array('weight' => 2))
+    ->condition('name', 'landing_pages')
+    ->execute();
+}
+
+
+/**
+ * Change module weight.
+ */
+function landing_pages_update_7001() {
+  db_update('system')
+    ->fields(array('weight' => 2))
+    ->condition('name', 'landing_pages')
+    ->execute();
+}
