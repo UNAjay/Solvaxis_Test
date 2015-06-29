@@ -1,0 +1,8 @@
+# Generic ones
+.DS_Store
+.vagrant
+drupal/current
+drupal/builds
+.idea
+ansible
+local.*
