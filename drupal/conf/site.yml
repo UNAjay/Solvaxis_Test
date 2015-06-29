@@ -41,15 +41,14 @@ test:
   # Test environment only symlinks files
   link:
     - files: sites/default/files
-
-  # Other files are copied, note settings.php
-  copy:
     - code/modules/custom: sites/all/modules/custom
     - code/modules/features: sites/all/modules/features
     - code/themes/custom: sites/all/themes/custom
     - code/profiles/jeeves_product_site: profiles/jeeves_product_site
-    - conf/test.settings.php: sites/default/settings.php
 
+  # Other files are copied, note settings.php
+  copy:
+    - conf/test.settings.php: sites/default/settings.php
 
 # Production environment:
 production:
