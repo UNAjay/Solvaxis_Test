@@ -21,7 +21,7 @@
 	.view-content {
 		padding: 15px;
     @include full-width;
-		
+
     @include at-breakpoint($second) {
       padding: 15px 0;
     }
@@ -30,7 +30,7 @@
 	.divtable-content {
 	  @include full-width;
 	}
-	
+
 	// header
 	.divtable-header {
 	  font-weight: 600;
@@ -39,7 +39,7 @@
 	  padding-bottom: 10px;
 	  word-wrap: break-word;
 	}
-	
+
 	// content
 	.views-field-field-acton-url {
 		@include span-columns(8,16);
@@ -47,16 +47,20 @@
 	.views-field-field-attachment-type {
 		@include span-columns(8 omega,16);
 	}
-	
+
 }
 
 // videos
 .view-videos {
 	.views-field-title {
 		padding: 0 15px;
-    
+
     @include at-breakpoint($first) {
       padding: 0;
     }
 	}
+}
+
+.media-vimeo-video {
+  margin-bottom: 20px;
 }

@@ -105,9 +105,11 @@ projects[media_youtube][subdir] = contrib
 projects[media_youtube][revision] = 54b5cf53e69d51e22190bec7d2f146d7a60a87b7
 projects[media_youtube][patch][] = https://www.drupal.org/files/issues/replace_video_id_with_title-2225713.patch
 
-projects[media_vimeo][version] = "1.0-beta5"
-; Using patch against 1.0-beta5 instead of 2.x
-projects[media_vimeo][patch][] = https://drupal.org/files/media_vimeo_filetype_empty-2032803-1.patch
+projects[media_vimeo][version] = "2.x-dev"
+projects[media_vimeo][revision] = "0841d8eb8982d6fe007316fbc43bdfb2402c05ab"
+
+projects[fitvids][version] = "1.17"
+
 projects[mediafront][version] = "2.2"
 projects[html5_media][version] = "1.1"
 
@@ -286,3 +288,9 @@ libraries[chosen][destination] = "libraries"
 libraries[spyc][download][type] = "get"
 libraries[spyc][download][url] = "https://github.com/mustangostang/spyc/archive/master.zip"
 libraries[spyc][destination] = "libraries"
+
+libraries[fitvids][download][type] = "file"
+libraries[fitvids][download][url] = "https://github.com/davatron5000/FitVids.js/archive/master.zip"
+libraries[fitvids][destination] = "libraries"
+
+

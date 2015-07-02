@@ -3518,6 +3518,10 @@ table tbody td {
   }
 }
 
+.media-vimeo-video {
+  margin-bottom: 20px;
+}
+
 .blog-list-view .views-row,
 .node-type-blog-post .views-row,
 .page-blogs .views-row {
