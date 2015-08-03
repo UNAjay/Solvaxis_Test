@@ -273,6 +273,12 @@ projects[shs][type] = module
 projects[shs][download][type] = git
 projects[shs][download][revision] = ee6f612914764a4e6f48494d44c2c8325b896ca5
 
+
+projects[devdocs][type] = module
+projects[devdocs][download][type] = git
+projects[devdocs][download][url] = "git@gitlab.com:cbones/devdocs.git"
+projects[devdocs][download][branch] = "7.x-1.x"
+
 ; Libraries
 ; ---------
 
