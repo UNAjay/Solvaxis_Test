@@ -80,14 +80,6 @@ function partners_node_info() {
       'title_label' => t('Name'),
       'help' => '',
     ),
-    'partner_office' => array(
-      'name' => t('Implementation partner office'),
-      'base' => 'node_content',
-      'description' => t('Location of implementation partner office'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
   );
   drupal_alter('node_info', $items);
   return $items;

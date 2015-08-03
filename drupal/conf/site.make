@@ -45,6 +45,13 @@ projects[ckeditor_link][version] = "2.x-dev"
 projects[ckeditor_link][revision] = "862bef80dcaa1b0fb506c8d3aff4e64509838775"
 projects[ckeditor_link][patch][] = https://drupal.org/files/issues/ckeditor_link-entity-translation-1875720.patch
 projects[ckeditor_link][patch][] = https://www.drupal.org/files/ckeditor-link-not-loading-when-rte-not-loaded-initially-1835878-1.patch
+
+projects[linkit][version] = 3.3
+projects[linkit][subdir] = contrib
+
+projects[pathologic][version] = 3.0-beta2
+projects[pathologic][subdir] = contrib
+
 projects[navigation404][version] = "1.0"
 projects[menu_trail_by_path][version] = "2.0"
 projects[node_menu_permissions][version] = "1.0"

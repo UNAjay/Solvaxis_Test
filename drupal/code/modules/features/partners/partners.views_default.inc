@@ -33,16 +33,10 @@ function partners_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Entity Reference: Referencing entity */
-  $handler->display->display_options['relationships']['reverse_field_partner_offices_node']['id'] = 'reverse_field_partner_offices_node';
-  $handler->display->display_options['relationships']['reverse_field_partner_offices_node']['table'] = 'node';
-  $handler->display->display_options['relationships']['reverse_field_partner_offices_node']['field'] = 'reverse_field_partner_offices_node';
-  $handler->display->display_options['relationships']['reverse_field_partner_offices_node']['label'] = 'Implementation partner';
   /* Field: Content: Logo */
   $handler->display->display_options['fields']['field_partner_logo']['id'] = 'field_partner_logo';
   $handler->display->display_options['fields']['field_partner_logo']['table'] = 'field_data_field_partner_logo';
   $handler->display->display_options['fields']['field_partner_logo']['field'] = 'field_partner_logo';
-  $handler->display->display_options['fields']['field_partner_logo']['relationship'] = 'reverse_field_partner_offices_node';
   $handler->display->display_options['fields']['field_partner_logo']['label'] = '';
   $handler->display->display_options['fields']['field_partner_logo']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_partner_logo']['click_sort_column'] = 'fid';
@@ -50,28 +44,6 @@ function partners_views_default_views() {
     'image_style' => 'partner_logo',
     'image_link' => 'content',
   );
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
-  $handler->display->display_options['fields']['title_1']['table'] = 'node';
-  $handler->display->display_options['fields']['title_1']['field'] = 'title';
-  $handler->display->display_options['fields']['title_1']['label'] = '';
-  $handler->display->display_options['fields']['title_1']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['title_1']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title_1']['alter']['text'] = ', [title_1]';
-  $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title_1']['link_to_node'] = FALSE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['relationship'] = 'reverse_field_partner_offices_node';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['text'] = '[title][title_1] ';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
@@ -80,20 +52,14 @@ function partners_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Field: Field: Title */
-  $handler->display->display_options['fields']['title_field']['id'] = 'title_field';
-  $handler->display->display_options['fields']['title_field']['table'] = 'field_data_title_field';
-  $handler->display->display_options['fields']['title_field']['field'] = 'title_field';
-  $handler->display->display_options['fields']['title_field']['relationship'] = 'reverse_field_partner_offices_node';
-  $handler->display->display_options['fields']['title_field']['label'] = '';
-  $handler->display->display_options['fields']['title_field']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title_field']['alter']['text'] = '[title_field][title_1]';
-  $handler->display->display_options['fields']['title_field']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['title_field']['alter']['path'] = 'node/[nid]';
-  $handler->display->display_options['fields']['title_field']['element_type'] = 'div';
-  $handler->display->display_options['fields']['title_field']['element_class'] = 'views-field-title';
-  $handler->display->display_options['fields']['title_field']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title_field']['link_to_entity'] = 0;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_type'] = 'div';
+  $handler->display->display_options['fields']['title']['element_class'] = 'views-field-title';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Content: Partner type */
   $handler->display->display_options['fields']['field_partner_type']['id'] = 'field_partner_type';
   $handler->display->display_options['fields']['field_partner_type']['table'] = 'field_data_field_partner_type';
@@ -199,7 +165,7 @@ function partners_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'partner_office' => 'partner_office',
+    'partner' => 'partner',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Content: Has taxonomy terms (with depth) */
@@ -249,13 +215,6 @@ function partners_views_default_views() {
   );
   $handler->display->display_options['filters']['tid']['type'] = 'select';
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'partner_type';
-  /* Filter criterion: Content: Partner offices (field_partner_offices) */
-  $handler->display->display_options['filters']['field_partner_offices_target_id']['id'] = 'field_partner_offices_target_id';
-  $handler->display->display_options['filters']['field_partner_offices_target_id']['table'] = 'field_data_field_partner_offices';
-  $handler->display->display_options['filters']['field_partner_offices_target_id']['field'] = 'field_partner_offices_target_id';
-  $handler->display->display_options['filters']['field_partner_offices_target_id']['relationship'] = 'reverse_field_partner_offices_node';
-  $handler->display->display_options['filters']['field_partner_offices_target_id']['operator'] = 'not empty';
-  $handler->display->display_options['filters']['field_partner_offices_target_id']['group'] = 1;
 
   /* Display: Partner page - success stories */
   $handler = $view->new_display('block', 'Partner page - success stories', 'block_2');
@@ -346,7 +305,7 @@ function partners_views_default_views() {
   $handler->display->display_options['empty']['view']['view_to_insert'] = 'partner:offices_all';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Partner offices (field_partner_offices:delta) */
+  /* Sort criterion: Broken/missing handler */
   $handler->display->display_options['sorts']['delta']['id'] = 'delta';
   $handler->display->display_options['sorts']['delta']['table'] = 'field_data_field_partner_offices';
   $handler->display->display_options['sorts']['delta']['field'] = 'delta';
@@ -399,7 +358,7 @@ return isset($params[\'location\']) ? $params[\'location\'] : \'\';';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['empty'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Entity Reference: Referencing entity */
+  /* Relationship: Broken/missing handler */
   $handler->display->display_options['relationships']['reverse_field_partner_offices_node']['id'] = 'reverse_field_partner_offices_node';
   $handler->display->display_options['relationships']['reverse_field_partner_offices_node']['table'] = 'node';
   $handler->display->display_options['relationships']['reverse_field_partner_offices_node']['field'] = 'reverse_field_partner_offices_node';
@@ -452,19 +411,12 @@ return isset($params[\'location\']) ? $params[\'location\'] : \'\';';
   $handler->display->display_options['fields']['field_partner_office_contactinfo']['field'] = 'field_partner_office_contactinfo';
   $handler->display->display_options['fields']['field_partner_office_contactinfo']['label'] = '';
   $handler->display->display_options['fields']['field_partner_office_contactinfo']['element_label_colon'] = FALSE;
-  /* Field: Content: Partner offices */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_partner_offices']['id'] = 'field_partner_offices';
   $handler->display->display_options['fields']['field_partner_offices']['table'] = 'field_data_field_partner_offices';
   $handler->display->display_options['fields']['field_partner_offices']['field'] = 'field_partner_offices';
   $handler->display->display_options['fields']['field_partner_offices']['label'] = '';
   $handler->display->display_options['fields']['field_partner_offices']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_partner_offices']['type'] = 'entityreference_entity_view';
-  $handler->display->display_options['fields']['field_partner_offices']['settings'] = array(
-    'view_mode' => 'full',
-    'links' => 0,
-    'use_content_language' => 1,
-  );
-  $handler->display->display_options['fields']['field_partner_offices']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Nid */
@@ -574,6 +526,29 @@ return isset($params[\'location\']) ? $params[\'location\'] : \'\';';
   );
   $handler->display->display_options['attachment_position'] = 'after';
   $handler->display->display_options['inherit_arguments'] = FALSE;
+  $translatables['partner'] = array(
+    t('Master'),
+    t('Implementation partners'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Select any filter and click on Apply to see results'),
+    t('Location'),
+    t('Type'),
+    t('Partners listing'),
+    t('Partner page - success stories'),
+    t('Customer success stories'),
+    t('All'),
+    t('Partner offices'),
+    t('Partner offices All'),
+    t('reverse_field_partner_offices_node'),
+    t(', [title_1]'),
+    t('[title][title_1] '),
+    t('<a id="partner-locations" href="" class="locations closed">Show All Locations</a>'),
+  );
   $export['partner'] = $view;
 
   return $export;

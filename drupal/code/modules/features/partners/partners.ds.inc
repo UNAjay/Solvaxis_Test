@@ -17,24 +17,8 @@ function partners_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'partner';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
-    'partner_offices_block' => array(
-      'weight' => '8',
-      'label' => 'hidden',
-      'format' => 'default',
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'field-partner-offices offices',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
     'related_success_stories' => array(
-      'weight' => '6',
+      'weight' => '3',
       'label' => 'above',
       'format' => 'default',
     ),
@@ -65,33 +49,6 @@ function partners_ds_field_settings_info() {
           'fi-at' => '',
           'fi-def-at' => FALSE,
           'fi-odd-even' => FALSE,
-        ),
-      ),
-    ),
-    'field_acton_url' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'lb-el' => 'h2',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'contact-form',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
-    'field_product' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'field',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
         ),
       ),
     ),
@@ -173,29 +130,19 @@ function partners_ds_layout_settings_info() {
       'main_primary' => array(
         0 => 'title',
         1 => 'body',
-        2 => 'field_partner_level',
-        3 => 'field_product',
-        4 => 'field_partner_numofcertconsulta',
-        5 => 'field_partner_numofcerts',
-        6 => 'related_success_stories',
+        2 => 'field_partner_office_contactinfo',
+        3 => 'related_success_stories',
       ),
       'aside_primary' => array(
-        7 => 'field_partner_logo',
-        8 => 'partner_offices_block',
-        9 => 'field_acton_url',
+        4 => 'field_partner_logo',
       ),
     ),
     'fields' => array(
       'title' => 'main_primary',
       'body' => 'main_primary',
-      'field_partner_level' => 'main_primary',
-      'field_product' => 'main_primary',
-      'field_partner_numofcertconsulta' => 'main_primary',
-      'field_partner_numofcerts' => 'main_primary',
+      'field_partner_office_contactinfo' => 'main_primary',
       'related_success_stories' => 'main_primary',
       'field_partner_logo' => 'aside_primary',
-      'partner_offices_block' => 'aside_primary',
-      'field_acton_url' => 'aside_primary',
     ),
     'classes' => array(),
     'wrappers' => array(

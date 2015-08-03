@@ -23,9 +23,8 @@ function partners_field_group_info() {
     'label' => 'Categories',
     'weight' => '4',
     'children' => array(
-      0 => 'field_product',
-      1 => 'field_industry',
-      2 => 'field_region',
+      0 => 'field_industry',
+      1 => 'field_region',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -55,10 +54,8 @@ function partners_field_group_info() {
       0 => 'body',
       1 => 'field_partner_logo',
       2 => 'field_partner_type',
-      3 => 'field_partner_level',
-      4 => 'field_partner_numofcertconsulta',
-      5 => 'field_partner_numofcerts',
-      6 => 'field_acton_url',
+      3 => 'field_partner_office_contactinfo',
+      4 => 'field_partner_office_location',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

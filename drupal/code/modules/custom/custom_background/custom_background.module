@@ -151,33 +151,35 @@ function set_page_background($fid) {
 
   $file = file_load($fid);
 
-  $style = 'image-w-2000-scale';
-  $derivative_uri = image_style_path($style, $file->uri);
-  if (!file_exists($derivative_uri)) {
-    $style = image_style_load('image-w-2000-scale', NULL);
-    image_style_create_derivative($style, $file->uri, $derivative_uri);
+  if ($file && is_object($file)) {
+    $style = 'image-w-2000-scale';
+    $derivative_uri = image_style_path($style, $file->uri);
+    if (!file_exists($derivative_uri)) {
+      $style = image_style_load('image-w-2000-scale', NULL);
+      image_style_create_derivative($style, $file->uri, $derivative_uri);
+    }
+
+    // get image path
+    $url = file_create_url($derivative_uri);
+    $url = parse_url($url);
+    $path = $url['path'];
+
+    // file_create_url
+    drupal_add_css(
+      //'body > #page {background-image: url("'.$path.'");}',
+      'body > #page {
+        background: url("'.$path.'") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }',
+      array(
+        'group' => CSS_THEME,
+        'type' => 'inline',
+      )
+    );
   }
-
-  // get image path
-  $url = file_create_url($derivative_uri);
-  $url = parse_url($url);
-  $path = $url['path'];
-
-  // file_create_url
-  drupal_add_css(
-    //'body > #page {background-image: url("'.$path.'");}',
-    'body > #page {
-      background: url("'.$path.'") no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-    }',
-    array(
-      'group' => CSS_THEME,
-      'type' => 'inline',
-    )
-  );
 }
 
 /**
@@ -186,18 +188,18 @@ function set_page_background($fid) {
  * @param type $file
  */
 function custom_background_file_insert($file) {
-  global $user;
+  // global $user;
 
-  $imageFile = file_load($file->fid);
-  if (!$imageFile->status) {
-    $imageFile->status = FILE_STATUS_PERMANENT;
+  // $imageFile = file_load($file->fid);
+  // if (!$imageFile->status) {
+  //   $imageFile->status = FILE_STATUS_PERMANENT;
 
-    file_save($imageFile);
+  //   file_save($imageFile);
 
-    $references = file_usage_list($imageFile);
-    if (empty($references)) {
-      // making usage for this file
-      file_usage_add($imageFile, 'file', 'user', $user->uid);
-    }
-  }
+  //   $references = file_usage_list($imageFile);
+  //   if (empty($references)) {
+  //     // making usage for this file
+  //     file_usage_add($imageFile, 'file', 'user', $user->uid);
+  //   }
+  // }
 }

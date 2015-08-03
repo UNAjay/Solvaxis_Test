@@ -5,7 +5,7 @@
 # file: roles/web-front/defaults/main.yml
 
 # Databases
-databases: 
+databases:
   drupal:
     user: drupal
     pass: password
@@ -56,7 +56,7 @@ php:
     - key: date.timezone
       val: Europe/Helsinki
 # - section: APC
-#   options: 
+#   options:
 #    - key: apc.shm_size
 #      val: 256M
 #    - key: apc.ttl
@@ -105,28 +105,28 @@ ssl_ip_fix: false
 
 #Docs
 docs:
-  hostname : 'docs.local.ansibleref.com'
+  hostname : 'docs.local.solvaxis.dev'
   dir : '/vagrant/docs'
-  
+
 # Nginx
 worker_processes: '1'
 nginx_sites:
-  - hostname: 'local.ansibleref.com *.local.ansibleref.com'
+  - hostname: 'local.solvaxis.dev *.local.solvaxis.dev'
     port: '8080 default_server'
     docroot: '/vagrant/drupal/current'
     accesslog: true
     accesslog_params: 'main buffer=32k'
     errorlog: true
-    logprefix: 'local.ansibleref.com'
+    logprefix: 'local.solvaxis.dev'
     ssl: false
     sslproxy: false
     ssl_certificate: default.crt
     ssl_certificate_key: default.key
     include_drupal: true
     cdn: false
-    nocdnhostname: 'www.wunder.io'
+    nocdnhostname: 'solvaxis.dev'
     redirect: false
-    redirecthost: 'https://www.wunder.io'
+    redirecthost: 'https://solvaxis.dev'
   - hostname: "{{ docs.hostname }}"
     port: '8080'
     docroot: "{{ docs.dir }}"
@@ -141,6 +141,6 @@ nginx_sites:
     include_drupal: false
     include_wiki: true
     cdn: false
-    nocdnhostname: 'www.wunder.io'
+    nocdnhostname: 'solvaxis.dev'
     redirect: false
-    redirecthost: 'https://www.wunder.io'
+    redirecthost: 'https://solvaxis.dev'

@@ -768,27 +768,28 @@ function custom_actions_form_views_exposed_form_alter(&$form, $form_state) {
         $query->entityCondition('bundle', $vocabulary);
         $result = $query->execute();
 
+        $nested_options = array();
+        $nested_options_childs = array();
+
         if (!empty($result['taxonomy_term'])) {
           $terms = entity_load('taxonomy_term', array_keys($result['taxonomy_term']));
           foreach ($terms as $term) {
             $options[$term->tid] = entity_label('taxonomy_term', $term);
           }
-        }
 
-        // Create new options array based on chosen taxonomy structure.
-        $nested_options = array();
-        $nested_options_childs = array();
-        foreach ($terms as $tid => $term) {
-          // Add option to see all terms within the current parent term.
-          // $nested_options[$term->tid] = $term->name;
-          $nested_options[$term->tid] = entity_label('taxonomy_term', $term);
+          // Create new options array based on chosen taxonomy structure.
+          foreach ($terms as $tid => $term) {
+            // Add option to see all terms within the current parent term.
+            // $nested_options[$term->tid] = $term->name;
+            $nested_options[$term->tid] = entity_label('taxonomy_term', $term);
 
 
-          // Nest child terms within parent term.
-          $children = taxonomy_get_children($term->tid, $vid);
-          foreach ($children as $child) {
-            // $nested_options_childs[$term->tid][$child->tid] = $child->name;
-            $nested_options_childs[$term->tid][$child->tid] = entity_label('taxonomy_term', $child);
+            // Nest child terms within parent term.
+            $children = taxonomy_get_children($term->tid, $vid);
+            foreach ($children as $child) {
+              // $nested_options_childs[$term->tid][$child->tid] = $child->name;
+              $nested_options_childs[$term->tid][$child->tid] = entity_label('taxonomy_term', $child);
+            }
           }
         }
 
