@@ -14,6 +14,7 @@ function events_user_default_permissions() {
   $permissions['create event content'] = array(
     'name' => 'create event content',
     'roles' => array(
+      'Product site admin' => 'Product site admin',
       'Regional editor' => 'Regional editor',
     ),
     'module' => 'node',
@@ -22,7 +23,9 @@ function events_user_default_permissions() {
   // Exported permission: 'delete any event content'.
   $permissions['delete any event content'] = array(
     'name' => 'delete any event content',
-    'roles' => array(),
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+    ),
     'module' => 'node',
   );
 
@@ -38,7 +41,9 @@ function events_user_default_permissions() {
   // Exported permission: 'edit any event content'.
   $permissions['edit any event content'] = array(
     'name' => 'edit any event content',
-    'roles' => array(),
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+    ),
     'module' => 'node',
   );
 

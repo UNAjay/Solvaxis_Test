@@ -25,6 +25,8 @@ function partners_field_group_info() {
     'children' => array(
       0 => 'field_industry',
       1 => 'field_region',
+      2 => 'field_market',
+      3 => 'field_product',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

@@ -13,14 +13,18 @@ function contact_us_user_default_permissions() {
   // Exported permission: 'create office content'.
   $permissions['create office content'] = array(
     'name' => 'create office content',
-    'roles' => array(),
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'delete any office content'.
   $permissions['delete any office content'] = array(
     'name' => 'delete any office content',
-    'roles' => array(),
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+    ),
     'module' => 'node',
   );
 
@@ -34,7 +38,9 @@ function contact_us_user_default_permissions() {
   // Exported permission: 'edit any office content'.
   $permissions['edit any office content'] = array(
     'name' => 'edit any office content',
-    'roles' => array(),
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+    ),
     'module' => 'node',
   );
 
@@ -48,18 +54,14 @@ function contact_us_user_default_permissions() {
   // Exported permission: 'geocoder_service_all_handlers'.
   $permissions['geocoder_service_all_handlers'] = array(
     'name' => 'geocoder_service_all_handlers',
-    'roles' => array(
-      'Product site admin' => 'Product site admin',
-    ),
+    'roles' => array(),
     'module' => 'geocoder',
   );
 
   // Exported permission: 'geocoder_service_handler_google'.
   $permissions['geocoder_service_handler_google'] = array(
     'name' => 'geocoder_service_handler_google',
-    'roles' => array(
-      'Product site admin' => 'Product site admin',
-    ),
+    'roles' => array(),
     'module' => 'geocoder',
   );
 

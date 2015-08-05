@@ -53,3 +53,4 @@ features_exclude[dependencies][ctools] = ctools
 features_exclude[dependencies][options] = options
 features_exclude[dependencies][blogs] = blogs
 features_exclude[dependencies][jeeveserp_layout] = jeeveserp_layout
+project path = sites/all/modules/features

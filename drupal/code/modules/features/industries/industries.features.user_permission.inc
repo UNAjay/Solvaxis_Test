@@ -14,6 +14,7 @@ function industries_user_default_permissions() {
   $permissions['create customer content'] = array(
     'name' => 'create customer content',
     'roles' => array(
+      'Product site admin' => 'Product site admin',
       'Regional editor' => 'Regional editor',
     ),
     'module' => 'node',
@@ -22,7 +23,9 @@ function industries_user_default_permissions() {
   // Exported permission: 'delete any customer content'.
   $permissions['delete any customer content'] = array(
     'name' => 'delete any customer content',
-    'roles' => array(),
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+    ),
     'module' => 'node',
   );
 
@@ -38,7 +41,9 @@ function industries_user_default_permissions() {
   // Exported permission: 'edit any customer content'.
   $permissions['edit any customer content'] = array(
     'name' => 'edit any customer content',
-    'roles' => array(),
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+    ),
     'module' => 'node',
   );
 

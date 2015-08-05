@@ -108,11 +108,11 @@ function jeeveserp_layout_wysiwyg_default_profiles() {
         'imce' => array(
           'imce' => 1,
         ),
-        'drupal_path' => array(
-          'Link' => 1,
+        'linkit' => array(
+          'linkit' => 1,
         ),
         'drupal' => array(
-          'media' => 1,
+          'break' => 1,
         ),
       ),
       'toolbar_loc' => 'top',

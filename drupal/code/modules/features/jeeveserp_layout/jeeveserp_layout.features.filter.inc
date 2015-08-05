@@ -48,10 +48,18 @@ function jeeveserp_layout_filter_default_formats() {
         'status' => 1,
         'settings' => array(),
       ),
-      'ckeditor_link_filter' => array(
-        'weight' => 0,
+      'pathologic' => array(
+        'weight' => 50,
         'status' => 1,
-        'settings' => array(),
+        'settings' => array(
+          'settings_source' => 'global',
+          'local_paths' => '',
+          'protocol_style' => 'full',
+          'local_settings' => array(
+            'protocol_style' => 'full',
+            'local_paths' => '',
+          ),
+        ),
       ),
     ),
   );

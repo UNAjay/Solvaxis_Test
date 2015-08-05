@@ -21,9 +21,11 @@ function landing_pages_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Categories',
-    'weight' => '5',
+    'weight' => '7',
     'children' => array(
       0 => 'field_acc_region',
+      1 => 'field_industry',
+      2 => 'field_product',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -48,11 +50,12 @@ function landing_pages_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Content',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(
       0 => 'body',
-      1 => 'field_sidebar_text',
-      2 => 'field_acton_url',
+      1 => 'field_acton_url',
+      2 => 'field_info_tab',
+      3 => 'field_sidebar_text',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -77,7 +80,7 @@ function landing_pages_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Header',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_slide',
     ),
@@ -104,11 +107,13 @@ function landing_pages_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'References',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(
       0 => 'field_basic_pages',
-      1 => 'field_files',
-      2 => 'field_ref_news',
+      1 => 'field_clients',
+      2 => 'field_files',
+      3 => 'field_page_sections',
+      4 => 'field_ref_news',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

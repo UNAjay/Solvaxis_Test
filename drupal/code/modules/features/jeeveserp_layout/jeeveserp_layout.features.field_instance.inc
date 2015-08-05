@@ -50,6 +50,13 @@ function jeeveserp_layout_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 2,
       ),
+      'ds_press_releases' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
       'ds_related_content' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -202,6 +209,15 @@ function jeeveserp_layout_field_default_field_instances() {
         'type' => 'site_iframe_formatter_display',
         'weight' => 10,
       ),
+      'ds_press_releases' => array(
+        'label' => 'above',
+        'module' => 'site_iframe_formatter',
+        'settings' => array(
+          'iframe_height' => 580,
+        ),
+        'type' => 'site_iframe_formatter_display',
+        'weight' => 7,
+      ),
       'ds_success_stories' => array(
         'label' => 'above',
         'settings' => array(),
@@ -308,326 +324,6 @@ function jeeveserp_layout_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_acton_url'
-  $field_instances['node-page-field_acton_url'] = array(
-    'bundle' => 'page',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'blogs' => array(
-        'label' => 'above',
-        'module' => 'site_iframe_formatter',
-        'settings' => array(
-          'iframe_height' => 580,
-        ),
-        'type' => 'site_iframe_formatter_display',
-        'weight' => 6,
-      ),
-      'company' => array(
-        'label' => 'above',
-        'module' => 'site_iframe_formatter',
-        'settings' => array(
-          'iframe_height' => 580,
-        ),
-        'type' => 'site_iframe_formatter_display',
-        'weight' => 5,
-      ),
-      'customers' => array(
-        'label' => 'above',
-        'module' => 'site_iframe_formatter',
-        'settings' => array(
-          'iframe_height' => 580,
-        ),
-        'type' => 'site_iframe_formatter_display',
-        'weight' => 6,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'site_iframe_formatter',
-        'settings' => array(
-          'iframe_height' => 580,
-        ),
-        'type' => 'site_iframe_formatter_display',
-        'weight' => 8,
-      ),
-      'ds_contact_us' => array(
-        'label' => 'above',
-        'module' => 'site_iframe_formatter',
-        'settings' => array(
-          'iframe_height' => 580,
-        ),
-        'type' => 'site_iframe_formatter_display',
-        'weight' => 7,
-      ),
-      'ds_success_stories' => array(
-        'label' => 'above',
-        'module' => 'site_iframe_formatter',
-        'settings' => array(
-          'iframe_height' => 580,
-        ),
-        'type' => 'site_iframe_formatter_display',
-        'weight' => 6,
-      ),
-      'events' => array(
-        'label' => 'above',
-        'module' => 'site_iframe_formatter',
-        'settings' => array(
-          'iframe_height' => 580,
-        ),
-        'type' => 'site_iframe_formatter_display',
-        'weight' => 8,
-      ),
-      'frontpage' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'industries' => array(
-        'label' => 'above',
-        'module' => 'site_iframe_formatter',
-        'settings' => array(
-          'iframe_height' => 580,
-        ),
-        'type' => 'site_iframe_formatter_display',
-        'weight' => 6,
-      ),
-      'news' => array(
-        'label' => 'above',
-        'module' => 'site_iframe_formatter',
-        'settings' => array(
-          'iframe_height' => 580,
-        ),
-        'type' => 'site_iframe_formatter_display',
-        'weight' => 6,
-      ),
-      'partners' => array(
-        'label' => 'above',
-        'module' => 'site_iframe_formatter',
-        'settings' => array(
-          'iframe_height' => 580,
-        ),
-        'type' => 'site_iframe_formatter_display',
-        'weight' => 5,
-      ),
-      'resources_events' => array(
-        'label' => 'above',
-        'module' => 'site_iframe_formatter',
-        'settings' => array(
-          'iframe_height' => 580,
-        ),
-        'type' => 'site_iframe_formatter_display',
-        'weight' => 5,
-      ),
-      'resources_files' => array(
-        'label' => 'above',
-        'module' => 'site_iframe_formatter',
-        'settings' => array(
-          'iframe_height' => 580,
-        ),
-        'type' => 'site_iframe_formatter_display',
-        'weight' => 5,
-      ),
-      'resources_video' => array(
-        'label' => 'above',
-        'module' => 'site_iframe_formatter',
-        'settings' => array(
-          'iframe_height' => 580,
-        ),
-        'type' => 'site_iframe_formatter_display',
-        'weight' => 5,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_acton_url',
-    'label' => 'Contact form',
-    'required' => 0,
-    'settings' => array(
-      'attributes' => array(
-        'class' => '',
-        'configurable_title' => 0,
-        'rel' => '',
-        'target' => 'default',
-        'title' => '',
-      ),
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 0,
-      'entity_translation_sync' => FALSE,
-      'mediafront' => array(
-        'custom' => '',
-        'field_type' => 0,
-        'media_type' => 'media',
-        'preview' => 0,
-        'thumbnail' => 0,
-      ),
-      'rel_remove' => 'default',
-      'title' => 'none',
-      'title_maxlength' => 128,
-      'title_value' => '',
-      'url' => 0,
-      'user_register_form' => FALSE,
-      'validate_url' => 1,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'link',
-      'settings' => array(),
-      'type' => 'link_field',
-      'weight' => 5,
-    ),
-  );
-
-  // Exported field_instance: 'node-page-field_apps'
-  $field_instances['node-page-field_apps'] = array(
-    'bundle' => 'page',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'blogs' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 43,
-      ),
-      'company' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 45,
-      ),
-      'customers' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 47,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'shs',
-        'settings' => array(
-          'linked' => FALSE,
-        ),
-        'type' => 'shs_default',
-        'weight' => 2,
-      ),
-      'ds_contact_us' => array(
-        'label' => 'above',
-        'module' => 'shs',
-        'settings' => array(
-          'linked' => FALSE,
-        ),
-        'type' => 'shs_default',
-        'weight' => 4,
-      ),
-      'ds_related_content' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 39,
-      ),
-      'ds_success_stories' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 45,
-      ),
-      'events' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 52,
-      ),
-      'frontpage' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'industries' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 43,
-      ),
-      'news' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 47,
-      ),
-      'partners' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 44,
-      ),
-      'resources_events' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 44,
-      ),
-      'resources_files' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 44,
-      ),
-      'resources_video' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 44,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 12,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_apps',
-    'label' => 'Apps',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'mediafront' => array(
-        'custom' => '',
-        'field_type' => 0,
-        'media_type' => 'media',
-        'preview' => 0,
-        'thumbnail' => 0,
-      ),
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'inline_entity_form',
-      'settings' => array(
-        'fields' => array(),
-        'type_settings' => array(
-          'allow_existing' => 1,
-          'delete_references' => 0,
-          'match_operator' => 'CONTAINS',
-        ),
-      ),
-      'type' => 'inline_entity_form',
-      'weight' => 6,
-    ),
-  );
-
   // Exported field_instance: 'node-page-field_background_image'
   $field_instances['node-page-field_background_image'] = array(
     'bundle' => 'page',
@@ -663,6 +359,12 @@ function jeeveserp_layout_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 51,
+      ),
+      'ds_press_releases' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 34,
       ),
       'ds_success_stories' => array(
         'label' => 'above',
@@ -819,6 +521,12 @@ function jeeveserp_layout_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'ds_press_releases' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'ds_success_stories' => array(
         'label' => 'above',
         'settings' => array(),
@@ -915,9 +623,10 @@ function jeeveserp_layout_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_clients'
-  $field_instances['node-page-field_clients'] = array(
+  // Exported field_instance: 'node-page-field_market'
+  $field_instances['node-page-field_market'] = array(
     'bundle' => 'page',
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -925,62 +634,44 @@ function jeeveserp_layout_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 44,
+        'weight' => 0,
       ),
       'company' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 46,
+        'weight' => 0,
       ),
       'customers' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'default' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'links' => 1,
-          'use_content_language' => TRUE,
-          'view_mode' => 'teaser',
-        ),
-        'type' => 'entityreference_entity_view',
-        'weight' => 5,
+        'module' => 'i18n_taxonomy',
+        'settings' => array(),
+        'type' => 'i18n_taxonomy_term_reference_link',
+        'weight' => 51,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'links' => 1,
-          'use_content_language' => TRUE,
-          'view_mode' => 'teaser',
-        ),
-        'type' => 'entityreference_entity_view',
-        'weight' => 6,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
-      'ds_related_content' => array(
+      'ds_press_releases' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 41,
-      ),
-      'ds_success_stories' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 39,
+        'weight' => 0,
       ),
       'events' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 49,
+        'weight' => 0,
       ),
       'frontpage' => array(
         'label' => 'above',
@@ -992,49 +683,49 @@ function jeeveserp_layout_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 44,
+        'weight' => 0,
       ),
       'news' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 48,
+        'weight' => 0,
       ),
       'partners' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 45,
+        'weight' => 0,
       ),
       'resources_events' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 45,
+        'weight' => 0,
       ),
       'resources_files' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 45,
+        'weight' => 0,
       ),
       'resources_video' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 45,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'field_name' => 'field_clients',
-    'label' => 'Customer Cases',
+    'field_name' => 'field_market',
+    'label' => 'Market',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -1049,326 +740,10 @@ function jeeveserp_layout_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'inline_entity_form',
-      'settings' => array(
-        'fields' => array(),
-        'type_settings' => array(
-          'allow_existing' => 1,
-          'delete_references' => 0,
-          'match_operator' => 'CONTAINS',
-        ),
-      ),
-      'type' => 'inline_entity_form',
-      'weight' => 5,
-    ),
-  );
-
-  // Exported field_instance: 'node-page-field_files'
-  $field_instances['node-page-field_files'] = array(
-    'bundle' => 'page',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'blogs' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 45,
-      ),
-      'company' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 47,
-      ),
-      'customers' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 48,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'links' => 1,
-          'use_content_language' => TRUE,
-          'view_mode' => 'full',
-        ),
-        'type' => 'entityreference_entity_view',
-        'weight' => 10,
-      ),
-      'ds_contact_us' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'links' => 1,
-          'use_content_language' => TRUE,
-          'view_mode' => 'full',
-        ),
-        'type' => 'entityreference_entity_view',
-        'weight' => 11,
-      ),
-      'ds_related_content' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 43,
-      ),
-      'ds_success_stories' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 46,
-      ),
-      'events' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 50,
-      ),
-      'frontpage' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'industries' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 45,
-      ),
-      'news' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 49,
-      ),
-      'partners' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 46,
-      ),
-      'resources_events' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 46,
-      ),
-      'resources_files' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 46,
-      ),
-      'resources_video' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 46,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 11,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_files',
-    'label' => 'Attachments',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'mediafront' => array(
-        'custom' => '',
-        'field_type' => 0,
-        'media_type' => 'media',
-        'preview' => 0,
-        'thumbnail' => 0,
-      ),
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'inline_entity_form',
-      'settings' => array(
-        'fields' => array(),
-        'type_settings' => array(
-          'allow_existing' => 1,
-          'delete_references' => 0,
-          'match_operator' => 'CONTAINS',
-        ),
-      ),
-      'type' => 'inline_entity_form',
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
       'weight' => 8,
-    ),
-  );
-
-  // Exported field_instance: 'node-page-field_image'
-  $field_instances['node-page-field_image'] = array(
-    'bundle' => 'page',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'blogs' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 39,
-      ),
-      'company' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 40,
-      ),
-      'customers' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 44,
-      ),
-      'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 46,
-      ),
-      'ds_contact_us' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 48,
-      ),
-      'ds_related_content' => array(
-        'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => 'content',
-          'image_style' => 'related_listing_image',
-        ),
-        'type' => 'image',
-        'weight' => 0,
-      ),
-      'ds_success_stories' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 43,
-      ),
-      'events' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 44,
-      ),
-      'frontpage' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'industries' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 39,
-      ),
-      'news' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 43,
-      ),
-      'partners' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 41,
-      ),
-      'resources_events' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 39,
-      ),
-      'resources_files' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 39,
-      ),
-      'resources_video' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 39,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => 'content',
-          'image_style' => 'medium',
-        ),
-        'type' => 'image',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_image',
-    'label' => 'Image',
-    'required' => 0,
-    'settings' => array(
-      'alt_field' => 0,
-      'default_image' => 0,
-      'entity_translation_sync' => FALSE,
-      'file_directory' => 'page',
-      'file_extensions' => 'png gif jpg jpeg',
-      'focus' => 1,
-      'focus_lock_ratio' => 0,
-      'focus_min_size' => '',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'mediafront' => array(
-        'custom' => '',
-        'field_type' => 0,
-        'media_type' => 'media',
-        'preview' => 0,
-        'thumbnail' => 0,
-      ),
-      'min_resolution' => '',
-      'title_field' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'image',
-      'settings' => array(
-        'filefield_sources' => array(
-          'filefield_sources' => array(),
-          'source_attach' => array(
-            'absolute' => 0,
-            'attach_mode' => 'move',
-            'path' => 'file_attach',
-          ),
-          'source_imce' => array(
-            'imce_mode' => 0,
-          ),
-          'source_reference' => array(
-            'autocomplete' => 0,
-          ),
-        ),
-        'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'image_image',
-      'weight' => 2,
     ),
   );
 
@@ -1408,6 +783,12 @@ function jeeveserp_layout_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 49,
+      ),
+      'ds_press_releases' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 44,
       ),
       'ds_success_stories' => array(
         'label' => 'above',
@@ -1537,6 +918,13 @@ function jeeveserp_layout_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 9,
       ),
+      'ds_press_releases' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
       'ds_success_stories' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -1634,151 +1022,6 @@ function jeeveserp_layout_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_videos'
-  $field_instances['node-page-field_videos'] = array(
-    'bundle' => 'page',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'blogs' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 41,
-      ),
-      'company' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 43,
-      ),
-      'customers' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 45,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'links' => 1,
-          'use_content_language' => TRUE,
-          'view_mode' => 'teaser',
-        ),
-        'type' => 'entityreference_entity_view',
-        'weight' => 4,
-      ),
-      'ds_contact_us' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'links' => 1,
-          'use_content_language' => TRUE,
-          'view_mode' => 'teaser',
-        ),
-        'type' => 'entityreference_entity_view',
-        'weight' => 5,
-      ),
-      'ds_related_content' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 40,
-      ),
-      'ds_success_stories' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 44,
-      ),
-      'events' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 48,
-      ),
-      'frontpage' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'industries' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 41,
-      ),
-      'news' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 45,
-      ),
-      'partners' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 42,
-      ),
-      'resources_events' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 42,
-      ),
-      'resources_files' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 42,
-      ),
-      'resources_video' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 42,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_videos',
-    'label' => 'Videos',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'mediafront' => array(
-        'custom' => '',
-        'field_type' => 0,
-        'media_type' => 'media',
-        'preview' => 0,
-        'thumbnail' => 0,
-      ),
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'inline_entity_form',
-      'settings' => array(
-        'fields' => array(),
-        'type_settings' => array(
-          'allow_existing' => 1,
-          'delete_references' => 0,
-          'match_operator' => 'CONTAINS',
-        ),
-      ),
-      'type' => 'inline_entity_form',
-      'weight' => 7,
-    ),
-  );
-
   // Exported field_instance: 'node-page-title_field'
   $field_instances['node-page-title_field'] = array(
     'bundle' => 'page',
@@ -1787,131 +1030,94 @@ function jeeveserp_layout_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'blogs' => array(
-        'label' => 'hidden',
-        'module' => 'title',
-        'settings' => array(
-          'title_class' => '',
-          'title_link' => '',
-          'title_style' => 'h1',
-        ),
-        'type' => 'title_linked',
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
       'company' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 48,
+        'weight' => 0,
       ),
       'customers' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 49,
+        'weight' => 0,
       ),
       'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 45,
-      ),
-      'ds_contact_us' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 46,
-      ),
-      'ds_related_content' => array(
-        'label' => 'hidden',
-        'module' => 'title',
-        'settings' => array(
-          'title_class' => '',
-          'title_link' => 'content',
-          'title_style' => '_none',
-        ),
-        'type' => 'title_linked',
-        'weight' => 1,
-      ),
-      'ds_success_stories' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 47,
+        'weight' => 49,
+      ),
+      'ds_contact_us' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ds_press_releases' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 49,
       ),
       'events' => array(
-        'label' => 'hidden',
-        'module' => 'title',
-        'settings' => array(
-          'title_class' => '',
-          'title_link' => '',
-          'title_style' => 'h1',
-        ),
-        'type' => 'title_linked',
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
       'frontpage' => array(
         'label' => 'above',
-        'module' => 'title',
-        'settings' => array(
-          'title_class' => '',
-          'title_link' => '',
-          'title_style' => '',
-        ),
-        'type' => 'title_linked',
-        'weight' => 24,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'industries' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 47,
+        'weight' => 0,
       ),
       'news' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 51,
+        'weight' => 0,
       ),
       'partners' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 47,
-      ),
-      'resources' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 32,
+        'weight' => 0,
       ),
       'resources_events' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 47,
+        'weight' => 0,
       ),
       'resources_files' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 47,
+        'weight' => 0,
       ),
       'resources_video' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 47,
+        'weight' => 0,
       ),
       'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'title',
-        'settings' => array(
-          'title_class' => 'title',
-          'title_link' => 'content',
-          'title_style' => 'h2',
-        ),
-        'type' => 'title_linked',
-        'weight' => 2,
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
@@ -1933,25 +1139,20 @@ function jeeveserp_layout_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 0,
+      'weight' => -5,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Apps');
-  t('Attachments');
   t('Background image');
   t('Basic pages');
   t('Body');
-  t('Contact form');
-  t('Customer Cases');
-  t('Image');
+  t('Market');
   t('Newsletter');
   t('Region');
   t('Sidebar text');
   t('Title');
-  t('Videos');
 
   return $field_instances;
 }

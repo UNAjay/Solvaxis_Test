@@ -94,6 +94,9 @@ function attachments_strongarm() {
         'xmlsitemap' => array(
           'weight' => '6',
         ),
+        'language' => array(
+          'weight' => '5',
+        ),
       ),
       'display' => array(),
     ),

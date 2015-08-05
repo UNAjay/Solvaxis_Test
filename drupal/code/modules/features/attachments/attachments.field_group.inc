@@ -23,9 +23,10 @@ function attachments_field_group_info() {
     'label' => 'Categories',
     'weight' => '3',
     'children' => array(
-      0 => 'field_product',
-      1 => 'field_industry',
-      2 => 'field_region',
+      0 => 'field_industry',
+      1 => 'field_region',
+      2 => 'field_market',
+      3 => 'field_product',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -52,9 +53,9 @@ function attachments_field_group_info() {
     'label' => 'Content',
     'weight' => '2',
     'children' => array(
-      0 => 'field_file',
+      0 => 'field_acton_url',
       1 => 'field_attachment_type',
-      2 => 'field_acton_url',
+      2 => 'field_file',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

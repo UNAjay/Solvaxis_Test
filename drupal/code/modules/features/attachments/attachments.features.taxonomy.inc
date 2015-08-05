@@ -19,5 +19,15 @@ function attachments_taxonomy_default_vocabularies() {
       'language' => 'und',
       'i18n_mode' => 1,
     ),
+    'market' => array(
+      'name' => 'Market',
+      'machine_name' => 'market',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'language' => 'und',
+      'i18n_mode' => 1,
+    ),
   );
 }

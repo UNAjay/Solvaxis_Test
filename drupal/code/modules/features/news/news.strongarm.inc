@@ -89,16 +89,16 @@ function news_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '7',
+          'weight' => '5',
         ),
         'metatags' => array(
-          'weight' => '8',
+          'weight' => '6',
         ),
         'xmlsitemap' => array(
           'weight' => '9',
         ),
         'language' => array(
-          'weight' => '5',
+          'weight' => '1',
         ),
       ),
       'display' => array(),

@@ -15,9 +15,9 @@ function landing_pages_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'entity_translation_settings_node__landing_page';
   $strongarm->value = array(
-    'default_language' => 'und',
+    'default_language' => 'xx-et-default',
     'hide_language_selector' => 0,
-    'exclude_language_none' => 0,
+    'exclude_language_none' => 1,
     'lock_language' => 0,
     'shared_fields_original_only' => 0,
   );
@@ -254,13 +254,13 @@ function landing_pages_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '8',
+          'weight' => '11',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '10',
         ),
         'xmlsitemap' => array(
           'weight' => '9',
@@ -416,7 +416,7 @@ function landing_pages_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_full_page';
-  $strongarm->value = '0';
+  $strongarm->value = '4';
   $export['language_content_type_full_page'] = $strongarm;
 
   $strongarm = new stdClass();

@@ -23,18 +23,5 @@ function jeeveserp_layout_locale_default_languages() {
     'prefix' => 'en',
     'weight' => -9,
   );
-  // Exported language: sv.
-  $languages['sv'] = array(
-    'language' => 'sv',
-    'name' => 'Sweden',
-    'native' => 'Svenska',
-    'direction' => 0,
-    'enabled' => 1,
-    'plurals' => 2,
-    'formula' => '($n!=1)',
-    'domain' => '',
-    'prefix' => 'sv',
-    'weight' => -10,
-  );
   return $languages;
 }

@@ -194,93 +194,6 @@ function jeeveserp_layout_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_apps' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'lb' => 'Apps',
-          'lb-el' => 'div',
-          'lb-cl' => 'field-label',
-          'lb-col' => TRUE,
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'field-clients clients',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
-    'field_clients' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'lb' => 'Customer Cases',
-          'lb-el' => 'div',
-          'lb-cl' => 'field-label',
-          'lb-col' => TRUE,
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'field-clients clients',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
-    'field_files' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'lb' => 'Downloads',
-          'lb-el' => 'h2',
-          'lb-col' => TRUE,
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'attachments',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
-    'field_videos' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'lb' => 'Videos',
-          'lb-el' => 'div',
-          'lb-cl' => 'field-label',
-          'lb-col' => TRUE,
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'field-clients clients',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
-    'field_acton_url' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'lb-el' => 'h2',
-          'lb-col' => TRUE,
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'contact-form',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
-    'field_basic_pages' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
   );
   $export['node|page|default'] = $ds_fieldsetting;
 
@@ -948,31 +861,21 @@ function jeeveserp_layout_ds_layout_settings_info() {
       'main_primary' => array(
         0 => 'title',
         1 => 'body',
-        2 => 'field_apps',
-        3 => 'field_basic_pages',
-        4 => 'field_videos',
-        5 => 'field_clients',
+        2 => 'field_basic_pages',
       ),
       'aside_primary' => array(
-        6 => 'resources_right_menu',
-        7 => 'field_sidebar_text',
-        8 => 'field_acton_url',
-        9 => 'field_acton_newsletter_url',
-        10 => 'field_files',
+        3 => 'resources_right_menu',
+        4 => 'field_sidebar_text',
+        5 => 'field_acton_newsletter_url',
       ),
     ),
     'fields' => array(
       'title' => 'main_primary',
       'body' => 'main_primary',
-      'field_apps' => 'main_primary',
       'field_basic_pages' => 'main_primary',
-      'field_videos' => 'main_primary',
-      'field_clients' => 'main_primary',
       'resources_right_menu' => 'aside_primary',
       'field_sidebar_text' => 'aside_primary',
-      'field_acton_url' => 'aside_primary',
       'field_acton_newsletter_url' => 'aside_primary',
-      'field_files' => 'aside_primary',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -986,6 +889,51 @@ function jeeveserp_layout_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['node|page|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|page|ds_press_releases';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'page';
+  $ds_layout->view_mode = 'ds_press_releases';
+  $ds_layout->layout = 'jeeves_eleven_five';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'main_primary' => array(
+        0 => 'title',
+        1 => 'body',
+        2 => 'news_top_story',
+        3 => 'news_listing',
+      ),
+      'aside_primary' => array(
+        4 => 'resources_right_menu',
+        5 => 'field_sidebar_text',
+        6 => 'field_acton_url',
+        7 => 'field_acton_newsletter_url',
+      ),
+    ),
+    'fields' => array(
+      'title' => 'main_primary',
+      'body' => 'main_primary',
+      'news_top_story' => 'main_primary',
+      'news_listing' => 'main_primary',
+      'resources_right_menu' => 'aside_primary',
+      'field_sidebar_text' => 'aside_primary',
+      'field_acton_url' => 'aside_primary',
+      'field_acton_newsletter_url' => 'aside_primary',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'main_primary' => 'div',
+      'aside_primary' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|page|ds_press_releases'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
@@ -1369,6 +1317,15 @@ function jeeveserp_layout_ds_view_modes_info() {
     'node' => 'node',
   );
   $export['customers'] = $ds_view_mode;
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'ds_press_releases';
+  $ds_view_mode->label = 'DS Press Releases';
+  $ds_view_mode->entities = array(
+    'node' => 'node',
+  );
+  $export['ds_press_releases'] = $ds_view_mode;
 
   $ds_view_mode = new stdClass();
   $ds_view_mode->api_version = 1;

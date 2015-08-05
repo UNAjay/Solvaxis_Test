@@ -14,6 +14,7 @@ function blogs_user_default_permissions() {
   $permissions['create blog_post content'] = array(
     'name' => 'create blog_post content',
     'roles' => array(
+      'Product site admin' => 'Product site admin',
       'Regional editor' => 'Regional editor',
     ),
     'module' => 'node',
@@ -22,7 +23,9 @@ function blogs_user_default_permissions() {
   // Exported permission: 'delete any blog_post content'.
   $permissions['delete any blog_post content'] = array(
     'name' => 'delete any blog_post content',
-    'roles' => array(),
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+    ),
     'module' => 'node',
   );
 
@@ -38,7 +41,9 @@ function blogs_user_default_permissions() {
   // Exported permission: 'edit any blog_post content'.
   $permissions['edit any blog_post content'] = array(
     'name' => 'edit any blog_post content',
-    'roles' => array(),
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+    ),
     'module' => 'node',
   );
 

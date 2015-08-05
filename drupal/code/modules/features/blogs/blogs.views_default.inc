@@ -93,6 +93,18 @@ function blogs_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
+  $translatables['authors'] = array(
+    t('Master'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('nodes'),
+    t('Alla'),
+    t('Block'),
+  );
   $export['authors'] = $view;
 
   $view = new view();
@@ -458,6 +470,41 @@ function blogs_views_default_views() {
   $handler->display->display_options['arguments']['name']['path_case'] = 'lower';
   $handler->display->display_options['arguments']['name']['transform_dash'] = TRUE;
   $handler->display->display_options['path'] = 'blogs/tag/%';
+  $translatables['blogs'] = array(
+    t('Master'),
+    t('Blog'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('author'),
+    t('Translations'),
+    t('Blog listing'),
+    t('Read more'),
+    t('<span class="views-field-created">[created]</span>
+<span>[field_author]</span>
+<div class="field-add-this">[field_add_this]</div>
+<div class="title">[title_field]</div>
+<div class="body">[body]</div>'),
+    t('RSS Feed'),
+    t('Page'),
+    t('term'),
+    t('<span class="views-field-created">[created]</span>
+<span>[name]</span>
+<div class="field-add-this">[field_add_this]</div>
+<div class="title">[title]</div>
+<div class="body">[body]</div>'),
+    t('All'),
+  );
   $export['blogs'] = $view;
 
   return $export;

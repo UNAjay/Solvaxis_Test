@@ -6,7 +6,7 @@ api = 2
 ; Drupal
 ; ---------
 projects[drupal][type] = core
-projects[drupal][version] = 7.37
+projects[drupal][version] = 7.38
 
 ; Contrib projects
 ; ---------
@@ -39,12 +39,8 @@ projects[link][version] = "1.2"
 projects[context][version] = "3.6"
 projects[wysiwyg][version] = "2.2"
 projects[libraries][version] = "2.2"
-projects[imce][version] = "1.7"
+projects[imce][version] = "1.9"
 projects[imce_wysiwyg][version] = "1.0"
-projects[ckeditor_link][version] = "2.x-dev"
-projects[ckeditor_link][revision] = "862bef80dcaa1b0fb506c8d3aff4e64509838775"
-projects[ckeditor_link][patch][] = https://drupal.org/files/issues/ckeditor_link-entity-translation-1875720.patch
-projects[ckeditor_link][patch][] = https://www.drupal.org/files/ckeditor-link-not-loading-when-rte-not-loaded-initially-1835878-1.patch
 
 projects[linkit][version] = 3.3
 projects[linkit][subdir] = contrib
@@ -94,23 +90,19 @@ projects[override_node_options][version] = "1.13"
 projects[countries][version] = "2.3"
 projects[entity][version] = "1.6"
 
-projects[file_entity][version] = 2.x-dev
-projects[file_entity][revision] = 3320b2bd1d6c8733c659ce59bbd89c19cdbe18cf
-projects[file_entity][patch][2192391] = https://www.drupal.org/files/issues/default_file_entities-2192391-51.patch
+projects[file_entity][version] = 2.0-beta2
+; projects[file_entity][patch][2192391] = https://www.drupal.org/files/issues/default_file_entities-2192391-51.patch
 projects[file_entity][patch][2312603] = https://www.drupal.org/files/issues/fix_entity_api_create_access-2312603-8.patch
 
-projects[inline_entity_form][version] = "1.5"
-projects[inline_entity_form][patch][] = https://www.drupal.org/files/issues/entity-translations-1545896-55.patch
+projects[inline_entity_form][version] = "1.x-dev"
+projects[inline_entity_form][revision] = "8d8ee06592d991f717d202419f7e3323c5991397"
+; projects[inline_entity_form][patch][] = https://www.drupal.org/files/issues/entity-translations-1545896-55.patch
+projects[inline_entity_form][patch][] = https://www.drupal.org/files/issues/d7_entity_translation_0.patch
 
-projects[media][version] = 2.x-dev
+projects[media][version] = 2.0-beta1
 projects[media][subdir] = contrib
-projects[media][revision] = 1e1aadec29ff24341599b7acc9e5102f501df692
-projects[media][patch][] = https://www.drupal.org/files/issues/media_remove_file_display_alter-2104193-91.patch
 
-projects[media_youtube][version] = 2.x-dev
-projects[media_youtube][subdir] = contrib
-projects[media_youtube][revision] = 54b5cf53e69d51e22190bec7d2f146d7a60a87b7
-projects[media_youtube][patch][] = https://www.drupal.org/files/issues/replace_video_id_with_title-2225713.patch
+projects[media_youtube][version] = 3.0
 
 projects[media_vimeo][version] = "2.x-dev"
 projects[media_vimeo][revision] = "0841d8eb8982d6fe007316fbc43bdfb2402c05ab"
@@ -214,6 +206,8 @@ projects[tracking_code][version] = "1.6"
 ; Development
 projects[diff][version] = "3.2"
 
+projects[markdown][version] = "1.2"
+
 ; Deployment
 projects[uuid][version] = "1.x-dev"
 projects[uuid][revision] = "a7bf2dbeb323a587a831238fa977a604920d256c"
@@ -247,7 +241,7 @@ projects[feeds_xpathparser][version] = "1.0-beta4"
 
 ; for future. chosen. and it needs jquery_update.
 projects[chosen][version] = "2.0-alpha4"
-projects[jquery_update][version] = "2.3"
+projects[jquery_update][version] = "2.6"
 
 ; sitemap
 projects[site_map][version] = "1.0"
@@ -276,7 +270,7 @@ projects[shs][download][revision] = ee6f612914764a4e6f48494d44c2c8325b896ca5
 
 projects[devdocs][type] = module
 projects[devdocs][download][type] = git
-projects[devdocs][download][url] = "git@gitlab.com:cbones/devdocs.git"
+projects[devdocs][download][url] = "https://gitlab.com/cbones/devdocs.git"
 projects[devdocs][download][branch] = "7.x-1.x"
 
 ; Libraries

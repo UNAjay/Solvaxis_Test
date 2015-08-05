@@ -24,6 +24,8 @@ function jeeveserp_layout_field_group_info() {
     'weight' => '4',
     'children' => array(
       0 => 'field_region',
+      1 => 'field_product',
+      2 => 'field_market',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -53,7 +55,6 @@ function jeeveserp_layout_field_group_info() {
       0 => 'body',
       1 => 'field_acton_newsletter_url',
       2 => 'field_sidebar_text',
-      3 => 'field_acton_url',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -180,7 +181,6 @@ function jeeveserp_layout_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'field_background_image',
-      1 => 'field_image',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -208,11 +208,7 @@ function jeeveserp_layout_field_group_info() {
     'label' => 'References',
     'weight' => '3',
     'children' => array(
-      0 => 'field_apps',
-      1 => 'field_clients',
-      2 => 'field_files',
-      3 => 'field_videos',
-      4 => 'field_basic_pages',
+      0 => 'field_basic_pages',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

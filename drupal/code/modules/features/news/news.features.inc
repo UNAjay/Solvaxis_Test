@@ -57,8 +57,24 @@ function news_image_default_styles() {
  */
 function news_node_info() {
   $items = array(
+    'diverse' => array(
+      'name' => t('Diverse'),
+      'base' => 'node_content',
+      'description' => t('News item'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'news' => array(
-      'name' => t('News'),
+      'name' => t('Press Release'),
+      'base' => 'node_content',
+      'description' => t('News item'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'product_news' => array(
+      'name' => t('Product News'),
       'base' => 'node_content',
       'description' => t('News item'),
       'has_title' => '1',

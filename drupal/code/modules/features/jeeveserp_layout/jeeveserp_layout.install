@@ -67,3 +67,11 @@ function jeeveserp_layout_update_7003() {
   // ));
   drupal_flush_all_caches();
 }
+
+/**
+ * Disable CKEditor Link module.
+ */
+function jeeveserp_layout_update_7004() {
+  module_disable(array('ckeditor_link'));
+}
+

@@ -394,6 +394,43 @@ function events_views_default_views() {
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
     '***DEFAULT_LANGUAGE***' => '***DEFAULT_LANGUAGE***',
   );
+  $translatables['events'] = array(
+    t('Master'),
+    t('Top event'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Select any filter and click on Apply to see results'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('Date'),
+    t('<div class="title">[title]</div>
+<div class="desciption">[body]</div>'),
+    t('Event'),
+    t('Event type'),
+    t('Location / Type / Product'),
+    t('<div class="type">[field_event_type]</div>
+<div class="location">[field_event_location]</div>
+<div class="product">[field_product]</div>'),
+    t('Type'),
+    t('Location'),
+    t('Industry'),
+    t('Product'),
+    t('Events listing'),
+    t('RSS Feed'),
+    t('Top event (sticky)'),
+    t('<div class="title">[title]</div>'),
+    t('<div class="desciption">[body]</div>'),
+    t('All'),
+  );
   $export['events'] = $view;
 
   return $export;

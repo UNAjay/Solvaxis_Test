@@ -35,7 +35,7 @@ function landing_pages_views_default_views() {
   $handler->display->display_options['relationships']['reverse_field_slide_node']['id'] = 'reverse_field_slide_node';
   $handler->display->display_options['relationships']['reverse_field_slide_node']['table'] = 'eck_slide';
   $handler->display->display_options['relationships']['reverse_field_slide_node']['field'] = 'reverse_field_slide_node';
-  /* Field: Field: Video */
+  /* Field: Slide: Video */
   $handler->display->display_options['fields']['field_video']['id'] = 'field_video';
   $handler->display->display_options['fields']['field_video']['table'] = 'field_data_field_video';
   $handler->display->display_options['fields']['field_video']['field'] = 'field_video';
@@ -93,6 +93,19 @@ function landing_pages_views_default_views() {
   $handler->display->display_options['entity_type'] = 'node';
   $handler->display->display_options['bundles'] = array(
     0 => 'landing_page',
+  );
+  $translatables['landing_page_slides'] = array(
+    t('Master'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Content referencing Slide from field_slide'),
+    t('[field_video] '),
+    t('Alla'),
+    t('Slides'),
   );
   $export['landing_page_slides'] = $view;
 
@@ -189,6 +202,24 @@ function landing_pages_views_default_views() {
   );
   $handler->display->display_options['row_options']['separator'] = ' ';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $translatables['reference_landing_page_news'] = array(
+    t('Master'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('- ([type]) -'),
+    t('Entity Reference'),
+  );
   $export['reference_landing_page_news'] = $view;
 
   return $export;

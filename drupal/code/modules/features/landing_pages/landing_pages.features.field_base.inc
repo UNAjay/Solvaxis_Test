@@ -10,29 +10,6 @@
 function landing_pages_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_info_tab'
-  $field_bases['field_info_tab'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_info_tab',
-    'indexes' => array(
-      'revision_id' => array(
-        0 => 'revision_id',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'field_collection',
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'hide_blank_items' => 1,
-      'path' => '',
-    ),
-    'translatable' => 1,
-    'type' => 'field_collection',
-  );
-
   // Exported field_base: 'field_page_sections'
   $field_bases['field_page_sections'] = array(
     'active' => 1,
@@ -289,49 +266,6 @@ function landing_pages_field_default_field_bases() {
     'shared_content_plan' => '',
     'translatable' => 1,
     'type' => 'text_long',
-  );
-
-  // Exported field_base: 'field_tab_info'
-  $field_bases['field_tab_info'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_tab_info',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'text_long',
-  );
-
-  // Exported field_base: 'field_tab_title'
-  $field_bases['field_tab_title'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_tab_title',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'max_length' => 100,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
   );
 
   return $field_bases;

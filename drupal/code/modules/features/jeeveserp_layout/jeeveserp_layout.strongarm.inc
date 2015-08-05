@@ -21,7 +21,7 @@ function jeeveserp_layout_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'clean_url';
-  $strongarm->value = '1';
+  $strongarm->value = TRUE;
   $export['clean_url'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -62,7 +62,7 @@ function jeeveserp_layout_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'entity_translation_hide_translation_links_full_page';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['entity_translation_hide_translation_links_full_page'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -182,7 +182,7 @@ function jeeveserp_layout_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'entity_translation_settings_node__attachments';
   $strongarm->value = array(
-    'default_language' => 'xx-et-current',
+    'default_language' => 'xx-et-default',
     'hide_language_selector' => 0,
     'exclude_language_none' => 1,
     'lock_language' => 0,
@@ -195,7 +195,7 @@ function jeeveserp_layout_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'entity_translation_settings_node__customer';
   $strongarm->value = array(
-    'default_language' => 'xx-et-current',
+    'default_language' => 'xx-et-default',
     'hide_language_selector' => 0,
     'exclude_language_none' => 1,
     'lock_language' => 0,
@@ -208,9 +208,9 @@ function jeeveserp_layout_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'entity_translation_settings_node__event';
   $strongarm->value = array(
-    'default_language' => 'und',
+    'default_language' => 'xx-et-default',
     'hide_language_selector' => 0,
-    'exclude_language_none' => 0,
+    'exclude_language_none' => 1,
     'lock_language' => 0,
     'shared_fields_original_only' => 0,
   );
@@ -221,9 +221,9 @@ function jeeveserp_layout_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'entity_translation_settings_node__news';
   $strongarm->value = array(
-    'default_language' => 'und',
+    'default_language' => 'xx-et-default',
     'hide_language_selector' => 0,
-    'exclude_language_none' => 0,
+    'exclude_language_none' => 1,
     'lock_language' => 0,
     'shared_fields_original_only' => 0,
   );
@@ -234,9 +234,9 @@ function jeeveserp_layout_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'entity_translation_settings_node__office';
   $strongarm->value = array(
-    'default_language' => 'und',
+    'default_language' => 'xx-et-default',
     'hide_language_selector' => 0,
-    'exclude_language_none' => 0,
+    'exclude_language_none' => 1,
     'lock_language' => 0,
     'shared_fields_original_only' => 0,
   );
@@ -247,7 +247,7 @@ function jeeveserp_layout_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'entity_translation_settings_node__page';
   $strongarm->value = array(
-    'default_language' => 'xx-et-current',
+    'default_language' => 'xx-et-default',
     'hide_language_selector' => 0,
     'exclude_language_none' => 1,
     'lock_language' => 0,
@@ -260,9 +260,9 @@ function jeeveserp_layout_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'entity_translation_settings_node__partner';
   $strongarm->value = array(
-    'default_language' => 'und',
+    'default_language' => 'xx-et-default',
     'hide_language_selector' => 0,
-    'exclude_language_none' => 0,
+    'exclude_language_none' => 1,
     'lock_language' => 0,
     'shared_fields_original_only' => 0,
   );
@@ -286,9 +286,9 @@ function jeeveserp_layout_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'entity_translation_settings_node__promo';
   $strongarm->value = array(
-    'default_language' => 'und',
+    'default_language' => 'xx-et-default',
     'hide_language_selector' => 0,
-    'exclude_language_none' => 0,
+    'exclude_language_none' => 1,
     'lock_language' => 0,
     'shared_fields_original_only' => 0,
   );
@@ -538,6 +538,12 @@ function jeeveserp_layout_strongarm() {
       'ds_success_stories' => array(
         'custom_settings' => TRUE,
       ),
+      'ds_press_releases' => array(
+        'custom_settings' => TRUE,
+      ),
+      'ds_response' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -597,6 +603,10 @@ function jeeveserp_layout_strongarm() {
             'weight' => '36',
             'visible' => FALSE,
           ),
+          'ds_press_releases' => array(
+            'weight' => '36',
+            'visible' => FALSE,
+          ),
         ),
       ),
     ),
@@ -638,17 +648,17 @@ function jeeveserp_layout_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'language_default';
   $strongarm->value = (object) array(
-    'language' => 'sv',
-    'name' => 'Sweden',
-    'native' => 'Svenska',
+    'language' => 'en',
+    'name' => 'U.S. English',
+    'native' => 'English',
     'direction' => '0',
-    'enabled' => '1',
-    'plurals' => '2',
-    'formula' => '($n!=1)',
+    'enabled' => 1,
+    'plurals' => '0',
+    'formula' => '',
     'domain' => '',
-    'prefix' => 'sv',
-    'weight' => '-10',
-    'javascript' => '3bqa4TjZxPORVbmhXHp0wjUDXm3vK7uZk-FlSQkeLcs',
+    'prefix' => 'en',
+    'weight' => '-9',
+    'javascript' => '',
   );
   $export['language_default'] = $strongarm;
 

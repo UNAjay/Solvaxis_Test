@@ -232,6 +232,57 @@ function jeeveserp_layout_username_view() {
 
 
 /**
+ * Implements hook_form_alter().
+ */
+function jeeveserp_layout_form_alter(&$form, $form_state, $form_id) {
+
+  // Translatable webform fields placholders
+  if (isset($form['#theme'][1]) && $form['#theme'][1] == 'webform_form') {
+    foreach ($form['submitted'] as $key => $submitted) {
+
+      if (is_array($submitted)) {
+        if ($submitted['#type'] == 'select') {
+          $form['submitted'][$key]['#empty_option'] = t($form['submitted'][$key]['#title']);
+        }
+        unset($form['submitted'][$key]['#title']);
+
+        if (isset($submitted['#attributes'])
+          && !empty($submitted['#attributes'])
+          && isset($submitted['#attributes']['placeholder'])) {
+            $placeholder = $submitted['#attributes']['placeholder'];
+            $form['submitted'][$key]['#attributes']['placeholder'] = t($placeholder);
+        }
+      }
+    }
+  }
+
+
+  if (!empty($form_state['inline_entity_form'])) {
+    if (!isset($form['#node']->nid)) {
+      $instances = field_info_instances('node', $form['#node']->type);
+      foreach ($instances as $key => $instance) {
+        if ($instance['widget']['type'] == 'inline_entity_form') {
+          $reference_fields[] = $key;
+        }
+      }
+      // dpm($instances);
+      foreach ($reference_fields as $reference_field) {
+        if (array_key_exists($reference_field, $form)) {
+          $form[$reference_field][LANGUAGE_NONE]['actions']['#access'] = FALSE;
+          $form[$reference_field][LANGUAGE_NONE][] = array(
+              '#prefix' => '<div class="messages warning">',
+              '#markup' => t('You need to save this page first in order to add references.'),
+              '#suffix' => '</div>',
+          );
+        }
+      }
+    }
+  }
+
+}
+
+
+/**
  * Revert specified features.
  *
  * @TODO Check that it really is Forced features revert.  Currently an exact
@@ -257,5 +308,7 @@ function jeeveserp_features_revert($modules) {
     }
   }
 }
+
+
 
 

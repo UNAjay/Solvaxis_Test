@@ -3,9 +3,9 @@
 // DATABASE
 
 $databases = array (
-  'default' => 
+  'default' =>
   array (
-    'default' => 
+    'default' =>
     array (
       'database' => 'drupal',
       'username' => 'drupal',
@@ -19,15 +19,15 @@ $databases = array (
 );
 
 // CACHING
-$conf['cache_backends'][] = 'sites/all/modules/contrib/memcache/memcache.inc';
-$conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
-$conf['cache_default_class'] = 'MemCacheDrupal';
-$conf['memcache_key_prefix'] = 'wk';
+// $conf['cache_backends'][] = 'sites/all/modules/contrib/memcache/memcache.inc';
+// $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
+// $conf['cache_default_class'] = 'MemCacheDrupal';
+// $conf['memcache_key_prefix'] = 'wk';
 
-$conf['cache_backends'][] = 'sites/all/modules/contrib/varnish/varnish.cache.inc';
-$conf['cache_class_cache_page']  = 'VarnishCache';
+// $conf['cache_backends'][] = 'sites/all/modules/contrib/varnish/varnish.cache.inc';
+// $conf['cache_class_cache_page']  = 'VarnishCache';
 
 // Varnish
-$conf['varnish_version'] = "3";
+// $conf['varnish_version'] = "3";
 
 
