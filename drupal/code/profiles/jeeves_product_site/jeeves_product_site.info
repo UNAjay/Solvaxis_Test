@@ -81,4 +81,5 @@ dependencies[] = contact_us
 dependencies[] = landing_pages
 ; dependencies[] = site_search
 dependencies[] = custom_background
+dependencies[] = devdocs
 

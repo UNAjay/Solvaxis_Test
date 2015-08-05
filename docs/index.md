@@ -20,8 +20,8 @@ Project management
 
 The project is managed using the following tools:
 
-* Git repo: [url1]
-* Ticket system: [url2]
+* Git repo: git@mearra.git.beanstalkapp.com:/mearra/solvaxis.git
+* Ticket system: https://wunderkraut.atlassian.net/secure/RapidBoard.jspa?rapidView=187&view=planning
 * Project documentation: [googledocsurls]
 
 Hosting info
@@ -29,7 +29,7 @@ Hosting info
 
 The following servers are used in this project:
 
-* Development [dev_url] user/password
+* Development http://solvaxis.wkdev.lv admin/admin
 * Staging [sta_url]     user/passowrd
 * Live site [live_url]
 
