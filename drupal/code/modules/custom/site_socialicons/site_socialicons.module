@@ -106,7 +106,12 @@ function site_socialicons_field_formatter_view($entity_type, $entity, $field, $i
       case 'facebook.com':
           $socialmedia = 'facebook';
         break;
-
+      
+      case 'www.xing.com':
+      case 'xing.com':
+        $socialmedia = 'Xing';
+      break;
+      
       case 'www.twitter.com':
       case 'twitter.com':
           $socialmedia = 'twitter';

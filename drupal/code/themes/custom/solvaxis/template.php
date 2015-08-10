@@ -1,43 +1,164 @@
 <?php
 
-
-
-function solvaxis_language_switch_links_alter(array &$links, $type, $path) {
-  foreach ($links as $langcode => $link) {
-    if (!isset($link['href'])) {
-      $links[$langcode]['href'] = '<front>';
-    }
-  }
-}
-
-
-/*
- * Implements hook_preprocess_page().
+/**
+ * Override or insert variables into the maintenance page template.
+ *
+ * @param $vars
+ *   An array of variables to pass to the theme template.
  */
-function solvaxis_preprocess_page(&$vars) {
-  $active_contexts = array_keys(context_active_contexts());
-  if (in_array('landing_page', $active_contexts)) {
-    $vars['logo'] = base_path() . drupal_get_path('theme', 'solvaxis') . '/images/logo_white.png';
-    $vars['logo_footer'] = base_path() . drupal_get_path('theme', 'solvaxis') . '/images/logo_white.png';
-  }
+function solvaxis_preprocess_maintenance_page(&$vars) {
+  // When a variable is manipulated or added in preprocess_html or
+  // preprocess_page, that same work is probably needed for the maintenance page
+  // as well, so we can just re-use those functions to do that work here.
+  // solvaxis_preprocess_html($vars);
+  // solvaxis_preprocess_page($vars);
+
+  // This preprocessor will also be used if the db is inactive. To ensure your
+  // theme is used, add the following line to your settings.php file:
+  // $conf['maintenance_theme'] = 'solvaxis';
+  // Also, check $vars['db_is_active'] before doing any db queries.
 }
 
 /**
- * Implements hook_page_alter() to insert JavaScript to the appropriate scope/region of the page.
+ * Implements hook_modernizr_load_alter().
+ *
+ * @return
+ *   An array to be output as yepnope testObjects.
  */
-function solvaxis_page_alter(&$page) {
-
-//   $tag = '
-// <!-- Tracking code for www.solvaxis.se -->
-// <script type="text/javascript">var psSite = "4b00539a68";var peJsHost = (("https:" == document.location.protocol) ? "https://" : "http://");
-// document.write(unescape("%3Cscript src="' + peJsHost + 'tr.prospecteye.com/track.js" type="text/javascript"%3E%3C/script%3E"));
-// </script>
-// <noscript><img src="http://tr.prospecteye.com/?id=4b00539a68" style="border:0;display:none;"></noscript>
-// <!-- End Tracking code -->';
-
-//   $page['page_bottom']['prospect_eye'] = array(
-//     'weight' => 30,
-//     '#markup' => $tag,
-//   );
+/* -- Delete this line if you want to use this function
+function solvaxis_modernizr_load_alter(&$load) {
 
 }
+
+/**
+ * Implements hook_preprocess_html()
+ *
+ * @param $vars
+ *   An array of variables to pass to the theme template.
+ */
+/* -- Delete this line if you want to use this function
+function solvaxis_preprocess_html(&$vars) {
+
+}
+
+/**
+ * Override or insert variables into the page template.
+ *
+ * @param $vars
+ *   An array of variables to pass to the theme template.
+ */
+/* -- Delete this line if you want to use this function
+function solvaxis_preprocess_page(&$vars) {
+
+}
+
+/**
+ * Override or insert variables into the region templates.
+ *
+ * @param $vars
+ *   An array of variables to pass to the theme template.
+ */
+/* -- Delete this line if you want to use this function
+function solvaxis_preprocess_region(&$vars) {
+
+}
+// */
+
+/**
+ * Override or insert variables into the block templates.
+ *
+ * @param $vars
+ *   An array of variables to pass to the theme template.
+ */
+/* -- Delete this line if you want to use this function
+function solvaxis_preprocess_block(&$vars) {
+
+}
+// */
+
+/**
+ * Override or insert variables into the entity template.
+ *
+ * @param $vars
+ *   An array of variables to pass to the theme template.
+ */
+/* -- Delete this line if you want to use this function
+function solvaxis_preprocess_entity(&$vars) {
+
+}
+// */
+
+/**
+ * Override or insert variables into the node template.
+ *
+ * @param $vars
+ *   An array of variables to pass to the theme template.
+ */
+/* -- Delete this line if you want to use this function
+function solvaxis_preprocess_node(&$vars) {
+  $node = $vars['node'];
+}
+// */
+
+/**
+ * Override or insert variables into the field template.
+ *
+ * @param $vars
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered ("field" in this case.)
+ */
+/* -- Delete this line if you want to use this function
+function solvaxis_preprocess_field(&$vars, $hook) {
+
+}
+// */
+
+/**
+ * Override or insert variables into the comment template.
+ *
+ * @param $vars
+ *   An array of variables to pass to the theme template.
+ */
+/* -- Delete this line if you want to use this function
+function solvaxis_preprocess_comment(&$vars) {
+  $comment = $vars['comment'];
+}
+// */
+
+/**
+ * Override or insert variables into the views template.
+ *
+ * @param $vars
+ *   An array of variables to pass to the theme template.
+ */
+/* -- Delete this line if you want to use this function
+function solvaxis_preprocess_views_view(&$vars) {
+  $view = $vars['view'];
+}
+// */
+
+
+/**
+ * Override or insert css on the site.
+ *
+ * @param $css
+ *   An array of all CSS items being requested on the page.
+ */
+/* -- Delete this line if you want to use this function
+function solvaxis_css_alter(&$css) {
+
+}
+// */
+
+/**
+ * Override or insert javascript on the site.
+ *
+ * @param $js
+ *   An array of all JavaScript being presented on the page.
+ */
+/* -- Delete this line if you want to use this function
+function solvaxis_js_alter(&$js) {
+
+}
+// */

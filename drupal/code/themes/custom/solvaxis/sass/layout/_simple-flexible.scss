@@ -1,0 +1,106 @@
+//
+// Simple-Flexible - A really basic flexible layout
+// =============================================================================
+
+// basic 960 grid (60em max width)
+// full width containers are for full width regions with a possible background color
+//  - please note that this need a somewhat different markup
+
+
+// breakingpoints will be configured in a later state
+.container {
+  width: 100%;
+  @include breakpoint($breakpoint-s) { // 640px ++
+    max-width: 960px; // using px instead of em due to base font size
+    margin: 0 auto;
+  }
+  &--full {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.container:after {
+  content: "";
+  display: table;
+  width: 100%;
+}
+
+//[class*="grid-"]
+.grid-item {
+  float: left;
+  display: inline;
+
+  margin-left: 4%;
+  margin-right: 4%;
+  min-height: 1px; // fix for collapsing grid element
+  @include breakpoint($breakpoint-s) { // 640px ++
+    margin-left: 1%;
+    margin-right: 1%;    
+  }
+}
+
+.alpha {
+  margin-left: 0;
+}
+.omega {
+  margin-right: 0;
+}
+.alpha.omega {
+  width: 100%;
+}
+
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6,
+.grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12 {
+  width: 92.0%;
+}
+
+[class*="pull-"],
+[class*="push-"] {
+  position: relative;
+}
+
+
+
+@include breakpoint($breakpoint-s) {
+  .grid-1  { width: 6.33333333333333%;  }
+  .grid-2  { width: 14.66666666666667%; }
+  .grid-3  { width: 23.0%; }
+  .grid-4  { width: 31.33333333333333%; }
+  .grid-5  { width: 39.66666666666667%; }
+  .grid-6  { width: 48.0%; }
+  .grid-7  { width: 56.33333333333333%; }
+  .grid-8  { width: 64.66666666666667%; }
+  .grid-9  { width: 73.0%; }
+  .grid-10 { width: 81.33333333333333%; }
+  .grid-11 { width: 89.66666666666667%; }
+  .grid-12 { width: 98.0%; }
+
+  .pull-3 {
+    left: -25%;
+  }
+  .pull-6 {
+    left: -50%;
+  }
+  .pull-9 {
+    left: -75%;
+  }
+  .push-3 {
+    left: 25%;
+  }
+  .push-6 {
+    left: 50%;
+  }
+  .push-9 {
+    left: 75%;
+  }
+}
+
+// helpers
+.push-top-45 {
+  margin-top: 46px;
+}
+
+.border-top {
+  border-top: 1px solid lighten($gray, 26%);
+}

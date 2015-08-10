@@ -1,0 +1,95 @@
+// Social icons - common styles
+.block-site-socialicons {
+  label,
+  .name {
+    display: none;
+  }
+}
+
+.social-icons {
+  li {
+    display: inline-block;
+    float: left;
+    margin: 0 0 0 10px;
+    &:first-child {
+      margin: 0;
+    }
+    
+    a {
+      display: block;
+      width: 25px;
+      height: 25px;
+      position: relative;
+      
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 3px;
+        left: 6px;
+        font-family: 'solvaxis-icn';
+        font-size: 15px;
+        color: $white;
+      }
+    }
+    
+    a[title="Twitter"] {
+      background: $twitter;
+      &:before {
+        content: '\e800';
+      }
+    }
+    
+    a[title="Facebook"] {
+      background: $facebook;
+      &:before {
+        content: '\e802';
+        font-size: 20px;
+        top: 7px;
+        left: 9px;
+      }
+    }
+    
+    a[title="LinkedIn"] {
+      background: $linkedin;
+      &:before {
+        content: '\e803';
+        font-size: 17px;
+      }
+    }
+    
+    a[title="Xing"] {
+      background: $xing;
+      &:before {
+        content: '\e804';
+        font-size: 19px;
+        top: 4px;
+        left: 5px;
+      }
+    }
+    
+    img {
+      display: none;
+    }
+  }
+}
+
+// Icon colors in footer
+footer {
+  .social-icons {
+    li {
+      a {
+        background: $gray-dark;
+        &:before {
+          color: $base-background-color;
+         }
+       }
+       a[title="Twitter"],
+       a[title="Facebook"],
+       a[title="LinkedIn"],
+       a[title="Xing"] {
+         background: $gray-dark;
+      }
+    }
+  }
+}
