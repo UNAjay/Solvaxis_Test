@@ -73,6 +73,13 @@ function jeeveserp_layout_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 1,
       ),
+      'ds_with_sidebar' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
       'events' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -193,11 +200,8 @@ function jeeveserp_layout_field_default_field_instances() {
       ),
       'default' => array(
         'label' => 'above',
-        'module' => 'site_iframe_formatter',
-        'settings' => array(
-          'iframe_height' => 580,
-        ),
-        'type' => 'site_iframe_formatter_display',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 9,
       ),
       'ds_contact_us' => array(
@@ -223,6 +227,12 @@ function jeeveserp_layout_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 40,
+      ),
+      'ds_with_sidebar' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
       ),
       'events' => array(
         'label' => 'above',
@@ -371,6 +381,12 @@ function jeeveserp_layout_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 41,
+      ),
+      'ds_with_sidebar' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 48,
       ),
       'events' => array(
         'label' => 'above',
@@ -533,6 +549,17 @@ function jeeveserp_layout_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'ds_with_sidebar' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 1,
+          'use_content_language' => 1,
+          'view_mode' => 'teaser',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 3,
+      ),
       'events' => array(
         'label' => 'above',
         'settings' => array(),
@@ -650,9 +677,8 @@ function jeeveserp_layout_field_default_field_instances() {
       ),
       'default' => array(
         'label' => 'above',
-        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
+        'type' => 'hidden',
         'weight' => 51,
       ),
       'ds_contact_us' => array(
@@ -666,6 +692,12 @@ function jeeveserp_layout_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'ds_with_sidebar' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 51,
       ),
       'events' => array(
         'label' => 'above',
@@ -796,6 +828,12 @@ function jeeveserp_layout_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 42,
       ),
+      'ds_with_sidebar' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 47,
+      ),
       'events' => array(
         'label' => 'above',
         'settings' => array(),
@@ -906,9 +944,8 @@ function jeeveserp_layout_field_default_field_instances() {
       ),
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 7,
       ),
       'ds_contact_us' => array(
@@ -931,6 +968,12 @@ function jeeveserp_layout_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 5,
+      ),
+      'ds_with_sidebar' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
       ),
       'events' => array(
         'label' => 'hidden',
@@ -1065,6 +1108,12 @@ function jeeveserp_layout_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 49,
       ),
+      'ds_with_sidebar' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 49,
+      ),
       'events' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1139,7 +1188,7 @@ function jeeveserp_layout_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -5,
+      'weight' => 0,
     ),
   );
 

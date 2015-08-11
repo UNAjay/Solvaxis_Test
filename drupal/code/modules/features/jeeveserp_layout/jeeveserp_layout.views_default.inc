@@ -130,7 +130,7 @@ function jeeveserp_layout_views_default_views() {
   $handler->display->display_options['fields']['field_file']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_file']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_file']['type'] = 'direct_download_icon';
-  /* Field: Content: Form URL */
+  /* Field: Content: ActOn URL */
   $handler->display->display_options['fields']['field_acton_url']['id'] = 'field_acton_url';
   $handler->display->display_options['fields']['field_acton_url']['table'] = 'field_data_field_acton_url';
   $handler->display->display_options['fields']['field_acton_url']['field'] = 'field_acton_url';

@@ -75,3 +75,10 @@ function jeeveserp_layout_update_7004() {
   module_disable(array('ckeditor_link'));
 }
 
+/**
+ * Enable Monster Page module.
+ */
+function jeeveserp_layout_update_7005() {
+  module_enable(array('monster_page'));
+}
+

@@ -21,11 +21,10 @@ function jeeveserp_layout_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Categories',
-    'weight' => '4',
+    'weight' => '6',
     'children' => array(
       0 => 'field_region',
-      1 => 'field_product',
-      2 => 'field_market',
+      1 => 'field_market',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -50,7 +49,7 @@ function jeeveserp_layout_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Content',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'body',
       1 => 'field_acton_newsletter_url',
@@ -178,7 +177,7 @@ function jeeveserp_layout_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Image',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'field_background_image',
     ),
@@ -206,7 +205,7 @@ function jeeveserp_layout_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'References',
-    'weight' => '3',
+    'weight' => '5',
     'children' => array(
       0 => 'field_basic_pages',
     ),

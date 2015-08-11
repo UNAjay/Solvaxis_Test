@@ -533,7 +533,7 @@ function jeeveserp_layout_strongarm() {
         'custom_settings' => TRUE,
       ),
       'ds_with_sidebar' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'ds_success_stories' => array(
         'custom_settings' => TRUE,
@@ -544,6 +544,18 @@ function jeeveserp_layout_strongarm() {
       'ds_response' => array(
         'custom_settings' => FALSE,
       ),
+      'view_mode_selector' => array(
+        'custom_settings' => FALSE,
+      ),
+      'section_dark' => array(
+        'custom_settings' => FALSE,
+      ),
+      'section_text' => array(
+        'custom_settings' => FALSE,
+      ),
+      'section_view' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -551,16 +563,16 @@ function jeeveserp_layout_strongarm() {
           'weight' => '-5',
         ),
         'path' => array(
-          'weight' => '8',
+          'weight' => '7',
         ),
         'redirect' => array(
           'weight' => '30',
         ),
         'language' => array(
-          'weight' => '0',
+          'weight' => '1',
         ),
         'metatags' => array(
-          'weight' => '9',
+          'weight' => '8',
         ),
         'xmlsitemap' => array(
           'weight' => '10',
@@ -604,6 +616,10 @@ function jeeveserp_layout_strongarm() {
             'visible' => FALSE,
           ),
           'ds_press_releases' => array(
+            'weight' => '36',
+            'visible' => FALSE,
+          ),
+          'ds_with_sidebar' => array(
             'weight' => '36',
             'visible' => FALSE,
           ),
