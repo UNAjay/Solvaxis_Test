@@ -1,0 +1,84 @@
+<?php
+/**
+ * @file
+ * Code for the Monster Page feature.
+ */
+
+include_once 'monster_page.features.inc';
+
+
+/**
+ * Process variables for node.tpl.php.
+ */
+function monster_page_preprocess_node(&$variables) {
+  $variables['view_mode'] = $variables['elements']['#view_mode'];
+  $view_mode = $variables['elements']['#view_mode'];
+  $entity_type = $variables['elements']['#entity_type'];
+
+  if ($entity_type == 'node') {
+    $variables['classes_array'][] = $view_mode;
+  }
+}
+
+
+function monster_page_entity_view($entity, $type, $view_mode, $langcode) {
+  if ($type == 'node' && $entity->type == 'section' && $view_mode == 'full') {
+    $page_wrapper = entity_metadata_wrapper('node', $entity);
+    $page = $page_wrapper->field_section_node_eb->value(); // field_section_node_eb comes from Entityreference backreference
+    if ($page) {
+      $page_uri = entity_uri('node', reset($page));
+      // $page_nid = reset($page)->nid;
+      $fragment = 'node-' . $entity->nid;
+      drupal_goto($page_uri['path'], array('fragment' => $fragment));
+    }
+  }
+
+}
+
+
+
+function monster_page_entity_view_alter(&$build, $entity_type) {
+  // $view_mode = $build['#view_mode'];
+  // if ($entity_type == 'node' && $build['#bundle'] == 'webform' && $view_mode == 'full') {
+  //   $node = $build['#node'];
+  //   $webform = webform_features_machine_name_load('photo-request-form');
+  //   if ($node->nid == $webform->nid) {
+  //     $view = views_get_view('gallery_images');
+  //     $result = $view->preview('cart');
+
+  //     $build['webform']['#form']['submitted']['images']['#markup'] = $result;
+  //     $build['webform']['#form']['submitted']['images']['#weight'] = '-100';
+
+  //   }
+  // }
+}
+
+
+/**
+ * Implements hook_form_alter().
+ */
+function monster_page_form_alter(&$form, $form_state, $form_id) {
+
+  // Translatable webform fields placholders
+  if (isset($form['#theme'][1]) && $form['#theme'][1] == 'webform_form') {
+    foreach ($form['submitted'] as $key => $submitted) {
+
+      if (is_array($submitted)) {
+        if ($submitted['#type'] == 'select') {
+          $form['submitted'][$key]['#empty_option'] = t($form['submitted'][$key]['#title']);
+        }
+        unset($form['submitted'][$key]['#title']);
+
+        if (isset($submitted['#attributes'])
+          && !empty($submitted['#attributes'])
+          && isset($submitted['#attributes']['placeholder'])) {
+            $placeholder = $submitted['#attributes']['placeholder'];
+            $form['submitted'][$key]['#attributes']['placeholder'] = t($placeholder);
+        }
+      }
+    }
+  }
+
+
+}
+
