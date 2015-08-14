@@ -20,6 +20,8 @@ function solvaxis_preprocess_page(&$vars) {
     $vars['logo'] = base_path() . drupal_get_path('theme', 'solvaxis') . '/images/logo_white.png';
     $vars['logo_footer'] = base_path() . drupal_get_path('theme', 'solvaxis') . '/images/logo_white.png';
   }
+  $view = views_embed_view('promo_slideshow', 'block');
+  $vars['slideshow'] = $view;
 }
 
 /**

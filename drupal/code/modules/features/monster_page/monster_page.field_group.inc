@@ -24,6 +24,7 @@ function monster_page_field_group_info() {
     'weight' => '4',
     'children' => array(
       0 => 'field_section',
+      1 => 'field_promo',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

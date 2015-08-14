@@ -89,13 +89,16 @@ function monster_page_strongarm() {
         'custom_settings' => TRUE,
       ),
       'section_text' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'section_view' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'view_mode_selector' => array(
         'custom_settings' => FALSE,
+      ),
+      'section_light' => array(
+        'custom_settings' => TRUE,
       ),
     ),
     'extra_fields' => array(

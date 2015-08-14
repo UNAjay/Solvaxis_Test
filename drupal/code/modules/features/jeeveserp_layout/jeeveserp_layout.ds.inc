@@ -162,11 +162,6 @@ function jeeveserp_layout_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'page';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
-    'resources_right_menu' => array(
-      'weight' => '6',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
     'title' => array(
       'weight' => '0',
       'label' => 'hidden',
@@ -176,22 +171,6 @@ function jeeveserp_layout_ds_field_settings_info() {
         'wrapper' => 'h1',
         'class' => '',
         'ft' => array(),
-      ),
-    ),
-    'field_acton_newsletter_url' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'lb-el' => 'h2',
-          'lb-def-at' => TRUE,
-          'lb-col' => TRUE,
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'newsletter-form',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
       ),
     ),
   );
@@ -855,32 +834,25 @@ function jeeveserp_layout_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'page';
   $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'jeeves_eleven_five';
+  $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
     'regions' => array(
-      'main_primary' => array(
+      'ds_content' => array(
         0 => 'title',
         1 => 'body',
-        2 => 'field_basic_pages',
-      ),
-      'aside_primary' => array(
-        3 => 'resources_right_menu',
-        4 => 'field_sidebar_text',
-        5 => 'field_acton_newsletter_url',
+        2 => 'field_section',
+        3 => 'field_basic_pages',
       ),
     ),
     'fields' => array(
-      'title' => 'main_primary',
-      'body' => 'main_primary',
-      'field_basic_pages' => 'main_primary',
-      'resources_right_menu' => 'aside_primary',
-      'field_sidebar_text' => 'aside_primary',
-      'field_acton_newsletter_url' => 'aside_primary',
+      'title' => 'ds_content',
+      'body' => 'ds_content',
+      'field_section' => 'ds_content',
+      'field_basic_pages' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'main_primary' => 'div',
-      'aside_primary' => 'div',
+      'ds_content' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',

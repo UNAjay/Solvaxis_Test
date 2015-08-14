@@ -75,11 +75,13 @@
 
 <div id="page">
 
-  <?php
-    if(isset($full_page)) {
-      print '<div class="first-section-container"><div>';
-    }
-  ?>
+
+
+  <section id="leader" role="complementary">
+
+    <?php print '<div class="top-bg-image"></div>'; ?>
+
+    <?php print $slideshow; ?>
 
     <header class="header-primary clearfix" role="banner">
       <div class="region-holder">
@@ -107,7 +109,7 @@
       </div>
     </header>
 
-
+  </section>
 
     <section id="content" class="content clearfix" role="main">
       <div class="region-holder">
@@ -133,18 +135,6 @@
       </div>
     </section>
 
-  <?php if(isset($full_page)) : ?>
-      <div class="first-section">
-        <?php print $first_section; ?>
-      </div>
-
-    </div></div>
-
-  <div class="other-sections" id="more-info">
-    <?php print $other_sections; ?>
-  </div>
-
-  <?php endif; ?>
 
   <footer class="footer clearfix" role="contentinfo">
     <div class="region-holder">

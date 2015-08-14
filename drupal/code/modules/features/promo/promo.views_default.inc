@@ -126,6 +126,18 @@ function promo_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
+  $translatables['news_slideshow'] = array(
+    t('Master'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('<a href="/sv/nyheter">Nyheter</a>'),
+    t('Läs mer'),
+    t('Block'),
+  );
   $export['news_slideshow'] = $view;
 
   $view = new view();
@@ -157,6 +169,11 @@ function promo_views_default_views() {
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['content'] = '<div id="slideshow-nav"></div>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
+  /* Relationship: Entity Reference: Referencing entity */
+  $handler->display->display_options['relationships']['reverse_field_promo_node']['id'] = 'reverse_field_promo_node';
+  $handler->display->display_options['relationships']['reverse_field_promo_node']['table'] = 'node';
+  $handler->display->display_options['relationships']['reverse_field_promo_node']['field'] = 'reverse_field_promo_node';
+  $handler->display->display_options['relationships']['reverse_field_promo_node']['required'] = TRUE;
   /* Field: Field: Title */
   $handler->display->display_options['fields']['title_field']['id'] = 'title_field';
   $handler->display->display_options['fields']['title_field']['table'] = 'field_data_title_field';
@@ -226,6 +243,16 @@ function promo_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['relationship'] = 'reverse_field_promo_node';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -251,6 +278,20 @@ function promo_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
+  $translatables['promo_slideshow'] = array(
+    t('Master'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('<div id="slideshow-nav"></div>'),
+    t('Content referencing Content from field_promo'),
+    t('Läs mer'),
+    t('All'),
+    t('Block'),
+  );
   $export['promo_slideshow'] = $view;
 
   return $export;
