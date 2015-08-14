@@ -17,6 +17,27 @@ body {
   @include font-size(14);
 }
 
+//-----------------------------------------
+// general elements
+//-----------------------------------------
+
+.region-holder {
+  @include container;
+	margin: 0 auto;
+	max-width: 1000px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.region-content {
+  background: transparent;
+	padding: 20px 0;
+  @include full-width;
+
+  @include at-breakpoint($first) {
+    padding: 20px 0;
+  }
+}
 
 //-----------------------------------------
 // breadcrumbs

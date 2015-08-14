@@ -37,6 +37,38 @@ body {
   font-size: 1.4rem;
 }
 
+.region-holder {
+  *zoom: 1;
+  max-width: 1004px;
+  max-width: 62.75rem;
+  _width: 1004px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.region-holder:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.region-content {
+  background: transparent;
+  padding: 20px 0;
+  float: left;
+  width: 100%;
+}
+@media (min-width: 600px) {
+  .region-content {
+    padding: 20px 0;
+  }
+}
+
 .breadcrumb a,
 .breadcrumb .current {
   background: url("../images/bg-breadcrumb.png") repeat-x;
@@ -622,12 +654,12 @@ footer .social-icons li a[title="Xing"] {
 .node-section .view-filters {
   display: none;
 }
-.node-section .title-field {
+.node-section .title {
   margin-bottom: 26px;
   padding-bottom: 12px;
   position: relative;
 }
-.node-section .title-field:before {
+.node-section .title:before {
   content: '';
   display: block;
   position: absolute;
@@ -637,7 +669,7 @@ footer .social-icons li a[title="Xing"] {
   height: 1px;
   background: #E30043;
 }
-.node-section .title-field .field-item {
+.node-section .title .field-item {
   font-size: 20px;
   font-weight: 300;
   text-transform: uppercase;
@@ -672,4 +704,162 @@ footer .social-icons li a[title="Xing"] {
   font-size: 15px;
   font-weight: 300;
   text-transform: uppercase;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #F2F2F2;
+}
+
+/*
+** Override formalize settigns
+*/
+button,
+a.button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"] {
+  padding: 17px 22px 19px;
+  border: 1px solid #E30043;
+  background: transparent;
+  color: #E30043;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 0;
+  text-transform: uppercase;
+}
+button:hover, button:focus,
+a.button:hover,
+a.button:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+input[type="button"]:hover,
+input[type="button"]:focus {
+  background: #E30043;
+  color: #fff;
+}
+button:active,
+a.button:active,
+input[type="reset"]:active,
+input[type="submit"]:active,
+input[type="button"]:active {
+  border: 1px solid #c70038;
+  background: #c70038;
+  color: #fff;
+}
+
+a.button {
+  display: inline-block;
+  text-decoration: none;
+}
+a.button:active {
+  color: #fff;
+}
+a.button:hover, a.button:focus {
+  text-decoration: none;
+}
+a.button:active {
+  text-decoration: none;
+}
+
+#edit-preview {
+  background: none;
+  border: none;
+  text-decoration: underline;
+}
+
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  height: auto;
+  max-width: 100%;
+  padding: 0 8px;
+  border: 1px solid transparent;
+  background: #fff;
+  font-size: 14px;
+  color: #3C3F42;
+  font-family: inherit;
+  line-height: 28px;
+}
+textarea:focus,
+select:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus {
+  border: 1px solid #CCC;
+  outline: none;
+}
+
+.messages.error {
+  display: none;
+}
+
+a {
+  color: #E30043;
+}
+a:hover, a:active, a:focus {
+  color: #000;
+  text-decoration: underline;
+}
+a:hover.icon, a:active.icon, a:focus.icon {
+  text-decoration: none;
+}
+a:focus {
+  outline: none;
+}
+a :visited {
+  color: #000;
+}
+
+p a {
+  color: #E30043;
+}
+
+.current > a,
+.active > a {
+  text-decoration: underline;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: inherit;
+}
+h1 a:hover, h1 a:active, h1 a:focus, h2 a:hover, h2 a:active, h2 a:focus, h3 a:hover, h3 a:active, h3 a:focus, h4 a:hover, h4 a:active, h4 a:focus, h5 a:hover, h5 a:active, h5 a:focus, h6 a:hover, h6 a:active, h6 a:focus {
+  color: #000;
 }
