@@ -1,0 +1,46 @@
+//-----------------------------------------
+// susy settings
+//-----------------------------------------
+// this is the default number of columns
+// $total-columns: 12;
+$total-columns: 16;
+// width of each column
+// $column-width: 65px;
+$column-width: 44px;
+// space between columns
+$gutter-width: 20px;
+// space on the right and left of the grid
+$grid-padding: 0;
+
+// breakpoints
+$first: 600px;
+$second: 800px;
+$third: 1014px;
+
+//-----------------------------------------
+// general variables
+//-----------------------------------------
+$footerHeightMobile: 170px;
+$footerHeightDesktop: 46px;
+$paragraphColor: #404040;
+
+$black: #000;
+$white: #fff;
+
+$gray-dark: #3C3F42;
+$gray: #73797C;
+$gray-light: #CCC;
+$gray-lighter: #F2F2F2;
+$crimson: #E30043;
+
+$twitter: #55acee;
+$facebook: #3b5998;
+$linkedin: #007bb6;
+$xing: #006567;
+
+$base-background-color: $gray-lighter;
+$link-color-hover: $black;
+
+// fonts
+$sans-font-family:         'Raleway', Helvetica, Arial, sans-serif;
+$serif-font-family:       Georgia, "Times New Roman", Times, serif;

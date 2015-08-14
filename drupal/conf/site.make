@@ -267,7 +267,7 @@ projects[shs][type] = module
 projects[shs][download][type] = git
 projects[shs][download][revision] = ee6f612914764a4e6f48494d44c2c8325b896ca5
 
-projects[viewfield][version] = "2.0
+projects[viewfield][version] = 2.0
 
 projects[view_mode_selector][version] = 1.x-dev
 projects[view_mode_selector][subdir] = contrib

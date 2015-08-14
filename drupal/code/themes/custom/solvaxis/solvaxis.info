@@ -1,7 +1,16 @@
-name = solvaxis
-description =  solvaxis theme.
+name = Solvaxis
+description = Responsive theme for Solvaxis.
 core = 7.x
-base theme = aurora
+base theme = jeeves
+engine = phptemplate
+version = "7.x-1.0"
+
+; Stylesheets
+stylesheets[all][] = css/solvaxis.css
+stylesheets[print][] = css/print.css
+
+; Javascripts
+scripts[] = scripts/solvaxis.js
 
 ; Regions
 regions[header_primary] = 'Header primary'
@@ -20,23 +29,3 @@ features[] = slogan
 features[] = favicon
 features[] = main_menu
 features[] = secondary_menu
-
-
-; ========================================
-; Stylesheets
-; ========================================
-
-stylesheets[all][] = 'css/style.css'
-stylesheets[print][] = 'css/print.css'
-
-; ========================================
-; Scripts
-; ========================================
-
-scripts[] = js/script.js
-
-; ========================================
-; Modernizr
-; ========================================
-
-modernizr[tests][] = css_boxsizing
