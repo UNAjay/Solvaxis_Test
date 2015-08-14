@@ -10,7 +10,7 @@ stylesheets[all][] = css/solvaxis.css
 stylesheets[print][] = css/print.css
 
 ; Javascripts
-scripts[] = scripts/solvaxis.js
+scripts[] = js/script.js
 
 ; Regions
 regions[header_primary] = 'Header primary'
