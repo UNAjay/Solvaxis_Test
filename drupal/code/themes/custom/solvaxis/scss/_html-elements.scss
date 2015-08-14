@@ -27,7 +27,9 @@ button,
 a.button,
 input[type="reset"],
 input[type="submit"],
-input[type="button"] {
+input[type="button"],
+.button, .region-content input[type="submit"], #colorbox input[type="submit"], .node-type-full-page .view-promo-slideshow .slides {
+  background: none transparent;
   padding: 17px 22px 19px;
   border: 1px solid $crimson;
   background: transparent;
@@ -38,8 +40,10 @@ input[type="button"] {
   line-height: 0;
   
   text-transform: uppercase;
+  text-shadow: none;
   &:hover,
   &:focus {
+    border: 1px solid $crimson;
     background: $crimson;
     color: $white;
   }
@@ -109,7 +113,5 @@ input[type="week"] {
 
 
 
-// Noņemu error message - jāatrdod normālis veids kā to noņemt 
-.messages.error {
-  display: none;
-}
+
+

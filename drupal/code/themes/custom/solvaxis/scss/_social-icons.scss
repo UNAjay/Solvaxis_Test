@@ -1,7 +1,8 @@
 // Social icons - common styles
 .block-site-socialicons {
   label,
-  .name {
+  .name,
+  .title {
     display: none;
   }
 }
@@ -29,6 +30,7 @@
         left: 6px;
         font-family: 'solvaxis-icn';
         font-size: 15px;
+        font-weight: normal;
         color: $white;
       }
     }
@@ -45,7 +47,7 @@
       &:before {
         content: '\e802';
         font-size: 20px;
-        top: 7px;
+        top: 4px;
         left: 9px;
       }
     }
@@ -63,7 +65,7 @@
       &:before {
         content: '\e804';
         font-size: 19px;
-        top: 4px;
+        top: 1px;
         left: 5px;
       }
     }

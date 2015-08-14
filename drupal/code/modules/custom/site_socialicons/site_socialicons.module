@@ -477,6 +477,12 @@ function _site_socialicons_parse_text($text, $context = FALSE) {
             $socialmedia = 'facebook';
             $socialmedianame = 'Facebook';
           break;
+          
+        case 'www.xing.com':
+        case 'xing.com':
+            $socialmedia = 'xing';
+            $socialmedianame = 'Xing';
+          break;
 
         case 'www.twitter.com':
         case 'twitter.com':

@@ -6,12 +6,12 @@ footer {
 	position: absolute;
 	bottom: 0;
   @include font-size(12, 16);
-	background: #4C4C4C;
+	background: transparent;
 	height: $footerHeightMobile;
 	padding: 15px;
   
 	@include at-breakpoint($third) {
-		background: url('../images/bg-footer.png') repeat-x;
+		//background: url('../images/bg-footer.png') repeat-x;
 		height: $footerHeightDesktop;
     padding-right: 10px;
     padding-left: 10px;

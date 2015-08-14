@@ -35,11 +35,9 @@ footer {
 	
   a,
   label,
-	p,
-	.block p,
-	#block-lang-dropdown-language h2 {
+	p {
 		color: #B2B1AE;
-		text-shadow: 1px 1px #333;
+		text-shadow: none;
 
 	  @include at-breakpoint($second) {
 			color: #9FA09F;
