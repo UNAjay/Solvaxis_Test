@@ -85,6 +85,10 @@ projects[entityreference][version] = "1.1"
 ; issue where entity is displayed in english instead of referenced language. https://drupal.org/node/1674792 comment 30
 projects[entityreference][patch][] = "https://drupal.org/files/issues/entityreference-rendered-entity-is-not-language-aware-1674792-30.patch"
 
+; Needed to get Sections referencing Page node
+projects[entityreference_backreference][version] = 1.0-beta3
+projects[entityreference_backreference][subdir] = contrib
+
 projects[override_node_options][version] = "1.13"
 
 projects[countries][version] = "2.3"

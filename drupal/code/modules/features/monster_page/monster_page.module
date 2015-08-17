@@ -20,6 +20,8 @@ function monster_page_preprocess_node(&$variables) {
     $variables['classes_array'][] = $view_mode;
 
     if ($node->type == 'section') {
+      $variables['classes_array'][] = drupal_html_class('node-' . $node->nid);
+
       $sidebar = field_get_items($entity_type, $node, 'field_sidebar_text');
       $acton = field_get_items($entity_type, $node, 'field_acton_url');
       if ($sidebar || $acton) {
