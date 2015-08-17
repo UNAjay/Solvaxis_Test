@@ -1103,3 +1103,22 @@ footer .footer-info .region {
     margin-left: 0;
   }
 }
+.node-section .region-holder {
+  *zoom: 1;
+  max-width: 1004px;
+  max-width: 62.75rem;
+  _width: 1004px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.node-section .region-holder:after {
+  content: "";
+  display: table;
+  clear: both;
+}
