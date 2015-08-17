@@ -74,16 +74,19 @@
 }
 
 
-// section styles
+// section styles - ielikt atseviska faila
 .node-section {
   .view-filters {
     display: none; //pagaidām izņemts, pēctam jāizņem pareizā veidā
   }
   
-  .title {
+  .section-title {
     margin-bottom: 26px;
     padding-bottom: 12px;
     position: relative;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
     
     &:before {
       content: '';
@@ -96,10 +99,15 @@
       background: $crimson;
     }
     
-    .field-item {
-      font-size: 20px;
-      font-weight: 300;
-      text-transform: uppercase;
+    //.field-item {
+//      font-size: 20px;
+//      font-weight: 300;
+//      text-transform: uppercase;
+//    }
+  }
+  &.section_dark {
+    .section-title {
+      color: $white;
     }
   }
 }
@@ -138,6 +146,9 @@
           font-weight: 300;
           text-transform: uppercase;
           //margin: 10px 0 0 0;
+          a {
+            color: $black;
+          }
         }
       }
     }
@@ -160,7 +171,8 @@
 .section-inner,
 #breadcrumb, 
 .tabs,
-footer .region-holder {
+footer .region-holder,
+.node-section > .body {
   @include container;
 	margin: 0 auto;
 	max-width: 1000px;

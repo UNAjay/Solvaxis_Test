@@ -17,6 +17,19 @@ function monster_page_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'section';
   $ds_fieldsetting->view_mode = 'section_dark';
   $ds_fieldsetting->settings = array(
+    'field_view' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'section-inner',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
     'field_acton_url' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -42,6 +55,19 @@ function monster_page_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'section';
   $ds_fieldsetting->view_mode = 'section_light';
   $ds_fieldsetting->settings = array(
+    'field_view' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'section-inner',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
     'field_acton_url' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -134,8 +160,8 @@ function monster_page_ds_layout_settings_info() {
         0 => 'body',
         1 => 'field_view',
         2 => 'field_banner_image',
-        3 => 'field_add_this',
-        4 => 'field_banner_text',
+        3 => 'field_banner_text',
+        4 => 'field_add_this',
         5 => 'group_sidebar',
         6 => 'group_banner',
         7 => 'field_sidebar_text',
@@ -146,8 +172,8 @@ function monster_page_ds_layout_settings_info() {
       'body' => 'ds_content',
       'field_view' => 'ds_content',
       'field_banner_image' => 'ds_content',
-      'field_add_this' => 'ds_content',
       'field_banner_text' => 'ds_content',
+      'field_add_this' => 'ds_content',
       'group_sidebar' => 'ds_content',
       'group_banner' => 'ds_content',
       'field_sidebar_text' => 'ds_content',
@@ -177,8 +203,8 @@ function monster_page_ds_layout_settings_info() {
       'ds_content' => array(
         0 => 'body',
         1 => 'field_banner_image',
-        2 => 'field_view',
-        3 => 'field_banner_text',
+        2 => 'field_banner_text',
+        3 => 'field_view',
         4 => 'field_add_this',
         5 => 'field_sidebar_text',
         6 => 'group_sidebar',
@@ -189,8 +215,8 @@ function monster_page_ds_layout_settings_info() {
     'fields' => array(
       'body' => 'ds_content',
       'field_banner_image' => 'ds_content',
-      'field_view' => 'ds_content',
       'field_banner_text' => 'ds_content',
+      'field_view' => 'ds_content',
       'field_add_this' => 'ds_content',
       'field_sidebar_text' => 'ds_content',
       'group_sidebar' => 'ds_content',
