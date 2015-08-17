@@ -9,7 +9,7 @@ footer {
 	background: #4C4C4C;
 	height: $footerHeightMobile;
 	padding: 15px;
-  
+
 	@include at-breakpoint($third) {
 		background: url('../images/bg-footer.png') repeat-x;
 		height: $footerHeightDesktop;
@@ -17,55 +17,62 @@ footer {
     padding-left: 10px;
   }
   ul {
+  	margin-bottom: 10px;
 	  @include at-breakpoint($second) {
-	  	float: left;
+	  	float: none;
 	  }
   }
   li {
-		margin-bottom: 8px;
-	  
+		margin-bottom: 0;
+
 	  @include at-breakpoint($third) {
-			float: left;
+	  	float: none;
 	  }
 
 	  &.last {
 	  	margin-bottom: 0;
 	  }
   }
-	
+
   a,
   label,
 	p {
-		color: #B2B1AE;
+		color: $white;
 		text-shadow: none;
 
 	  @include at-breakpoint($second) {
-			color: #9FA09F;
+
 	  }
 	  @include at-breakpoint($third) {
 			margin: 0;
 	  }
   }
 	a {
-		font-weight: 600;
-		
+		font-weight: 100;
+
 	  &:hover {
 	  	color: #fff;
 	  }
   }
-	
+
+  .block {
+  	p {
+  		color: $white;
+  		text-shadow: none;
+  	}
+  }
+
   // footer menu block
   .block-menu-block {
-  	float: left;
-		@include span-columns(8,16);
-	
+  	float: none;
+
 		@include at-breakpoint($third) {
     	width: auto;
-			
+
 			.menu {
 				li {
-					margin-left: 18px;
-					
+					margin-left: 0;
+
 					&:first-child {
 						margin-left: 0;
 					}
@@ -81,7 +88,6 @@ footer {
 		@include full-width;
 
 	  @include at-breakpoint($third) {
-    	float: right;
       margin: 0;
       width: auto;
 	  }
@@ -115,14 +121,40 @@ footer {
 	    margin-left: 4px;
 		}
 	}
-	
+
 	// copyright block
 	.block-block {
 		float: left;
-		
+
 	  @include at-breakpoint(0 $second - 1) {
     	@include span-columns(6 omega,16);
 	  }
 	}
+<<<<<<< HEAD
 }
 
+=======
+
+	.footer-info {
+		width: 60%;
+		float: left;
+		background-color: $crimson;
+		color: $white;
+		padding: 20px;
+
+		h3 {
+			text-transform: uppercase;
+			padding-bottom: 10px;
+		}
+
+		.region {
+			float: left;
+			width: 50%;
+		}
+	}
+
+
+
+
+}
+>>>>>>> 77049a089795c1e51d3635c73c392ba2a55fd557
