@@ -12,31 +12,69 @@ function jeeveserp_layout_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
-  $export['site_socialicons-site_socialicons_global'] = array(
-    'cache' => 1,
+  $export['block-copyright'] = array(
+    'cache' => -1,
     'custom' => 0,
-    'delta' => 'site_socialicons_global',
     'i18n_block_language' => array(),
     'i18n_mode' => 0,
-    'module' => 'site_socialicons',
+    'machine_name' => 'copyright',
+    'module' => 'block',
     'node_types' => array(),
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bartik' => array(
+      'solvaxis' => array(
         'region' => '',
         'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'garp' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'garp',
+        'theme' => 'solvaxis',
         'weight' => 0,
       ),
     ),
-    'title' => 'Follow us',
+    'title' => '<none>',
+    'visibility' => 0,
+  );
+
+  $export['block-footer_info'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'machine_name' => 'footer_info',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'solvaxis' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'solvaxis',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '<none>',
+    'visibility' => 0,
+  );
+
+  $export['menu_block-1'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 1,
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'menu_block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'solvaxis' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'solvaxis',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '<none>',
     'visibility' => 0,
   );
 

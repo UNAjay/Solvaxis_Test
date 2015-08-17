@@ -147,18 +147,27 @@
         </div>
       <?php endif; ?>
 
+
+
+      <div class="footer-info">
+        <h3><?php print t('Quick links and useful info');?></h3>
+
+        <?php if (!empty($page['footer_col_1'])): ?>
+          <?php print render($page['footer_col_1']); ?>
+        <?php endif; ?>
+        <?php if (!empty($page['footer_col_2'])): ?>
+          <?php print render($page['footer_col_2']); ?>
+        <?php endif; ?>
+        <?php if (!empty($page['footer_col_3'])): ?>
+          <?php print render($page['footer_col_3']); ?>
+        <?php endif; ?>
+        <?php if (!empty($page['footer_col_4'])): ?>
+          <?php print render($page['footer_col_4']); ?>
+        <?php endif; ?>
+      </div>
+
       <?php if (!empty($page['footer_primary'])): ?>
         <?php print render($page['footer_primary']); ?>
-      <?php endif; ?>
-
-      <?php if (!empty($page['footer_col_2'])): ?>
-        <?php print render($page['footer_col_2']); ?>
-      <?php endif; ?>
-      <?php if (!empty($page['footer_col_3'])): ?>
-        <?php print render($page['footer_col_3']); ?>
-      <?php endif; ?>
-      <?php if (!empty($page['footer_col_4'])): ?>
-        <?php print render($page['footer_col_4']); ?>
       <?php endif; ?>
 
     </div>
