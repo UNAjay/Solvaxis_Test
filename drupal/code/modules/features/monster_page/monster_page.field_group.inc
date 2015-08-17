@@ -85,8 +85,8 @@ function monster_page_field_group_info() {
     'label' => 'Banner',
     'weight' => '4',
     'children' => array(
-      0 => 'field_banner_image',
-      1 => 'field_banner_text',
+      0 => 'field_banner_text',
+      1 => 'field_banner_image',
     ),
     'format_type' => 'div',
     'format_settings' => array(

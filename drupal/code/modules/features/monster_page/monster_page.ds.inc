@@ -57,15 +57,7 @@ function monster_page_ds_field_settings_info() {
   $ds_fieldsetting->settings = array(
     'field_view' => array(
       'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'section-inner',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
+        'ft' => array(),
       ),
     ),
     'field_acton_url' => array(
