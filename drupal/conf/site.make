@@ -148,6 +148,8 @@ projects[hierarchical_select][version] = "3.0-alpha6"
 projects[cs_adaptive_image][version] = "1.0"
 projects[transliteration][version] = "3.2"
 
+projects[imagecache_actions][version] = "1.5"
+
 ; SEO
 projects[hreflang][version] = 1.1
 projects[xmlsitemap][version] = 2.0
