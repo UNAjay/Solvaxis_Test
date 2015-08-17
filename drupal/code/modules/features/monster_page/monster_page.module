@@ -53,18 +53,13 @@ function monster_page_entity_view($entity, $type, $view_mode, $langcode) {
 
 function monster_page_entity_view_alter(&$build, $entity_type) {
   // $view_mode = $build['#view_mode'];
-  // if ($entity_type == 'node' && $build['#bundle'] == 'webform' && $view_mode == 'full') {
-  //   $node = $build['#node'];
-  //   $webform = webform_features_machine_name_load('photo-request-form');
-  //   if ($node->nid == $webform->nid) {
-  //     $view = views_get_view('gallery_images');
-  //     $result = $view->preview('cart');
-
-  //     $build['webform']['#form']['submitted']['images']['#markup'] = $result;
-  //     $build['webform']['#form']['submitted']['images']['#weight'] = '-100';
-
-  //   }
-  // }
+  if ($entity_type == 'node' && $build['#bundle'] == 'section') {
+    $node = $build['#node'];
+    $ref_view = field_get_items($entity_type, $node, 'field_view');
+    if ($ref_view) {
+      $build['field_add_this']['#access'] = FALSE;
+    }
+  }
 }
 
 
