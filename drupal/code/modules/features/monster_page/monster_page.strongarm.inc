@@ -104,10 +104,10 @@ function monster_page_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '5',
+          'weight' => '7',
         ),
         'path' => array(
-          'weight' => '4',
+          'weight' => '6',
         ),
         'language' => array(
           'weight' => '1',
