@@ -2,7 +2,7 @@
 // general mixins
 //-----------------------------------------
 @mixin font-family () {
-  font-family: 'Open Sans', sans-serif;
+  font-family: $sans-font-family;
 }
 
 @mixin full-width () {

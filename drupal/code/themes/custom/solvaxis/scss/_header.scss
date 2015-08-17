@@ -128,7 +128,7 @@
 //-----------------------------------------
 // search-block in desktop
 //-----------------------------------------
-.header-primary #block-search-form {
+.header-secondary #block-search-form {
 	display: none;
 	float: right;
 
@@ -181,6 +181,13 @@
 // main menu
 //-----------------------------------------
 .header-secondary {
+  //position: fixed;
+//  left: 0;
+//  top: 0;
+//  width: 100%;
+//  border-bottom: 1px solid transparent;
+//  z-index: 9999;
+  
   @include at-breakpoint(0 $second - 1) {
 		background: url('../images/bg-mobile-menu.png') repeat-x;
   }
@@ -313,12 +320,4 @@
   top: 0;
   width: 100%;
   border-bottom: 1px solid #ddd;
-}
-
-.node-section {
-  @include container;
-	margin: 0 auto;
-	max-width: 1000px;
-  padding-left: 0;
-  padding-right: 0;
 }

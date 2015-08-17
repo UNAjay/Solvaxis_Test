@@ -22,9 +22,9 @@ body {
 //-----------------------------------------
 
 .region-holder {
-  @include container;
+  width: 100%;
 	margin: 0 auto;
-	max-width: 1000px;
+	max-width: none;
   padding-left: 0;
   padding-right: 0;
 }

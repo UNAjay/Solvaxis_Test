@@ -143,3 +143,32 @@
     }
   }
 }
+
+// section layout styles - ielikt atseviksa faila
+.section_dark {
+   background: $gray-dark;
+}
+
+.section_light {
+  background: transparent;
+}
+
+.node-section {
+  width: 100%;
+}
+
+.section-inner,
+#breadcrumb, 
+.tabs,
+footer .region-holder {
+  @include container;
+	margin: 0 auto;
+	max-width: 1000px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#content {
+  margin-left: 0;
+  margin-right: 0;
+}
