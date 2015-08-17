@@ -271,7 +271,7 @@ projects[viewfield][version] = 2.0
 
 projects[view_mode_selector][version] = 1.x-dev
 projects[view_mode_selector][subdir] = contrib
-projects[view_mode_selector][revision] = 00296feadbb30db7cf63d8a460939d34c84e25c1"
+projects[view_mode_selector][revision] = 2e299d1be927e0181b4dfe3b330ddf1403e74efa"
 
 projects[devdocs][type] = module
 projects[devdocs][download][type] = git
