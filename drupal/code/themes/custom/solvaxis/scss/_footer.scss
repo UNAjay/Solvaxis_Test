@@ -9,7 +9,7 @@ footer {
 	background: #4C4C4C;
 	height: $footerHeightMobile;
 	padding: 15px;
-
+  
 	@include at-breakpoint($third) {
 		background: url('../images/bg-footer.png') repeat-x;
 		height: $footerHeightDesktop;
@@ -17,62 +17,55 @@ footer {
     padding-left: 10px;
   }
   ul {
-  	margin-bottom: 10px;
 	  @include at-breakpoint($second) {
-	  	float: none;
+	  	float: left;
 	  }
   }
   li {
-		margin-bottom: 0;
-
+		margin-bottom: 8px;
+	  
 	  @include at-breakpoint($third) {
-	  	float: none;
+			float: left;
 	  }
 
 	  &.last {
 	  	margin-bottom: 0;
 	  }
   }
-
+	
   a,
   label,
 	p {
-		color: $white;
+		color: #B2B1AE;
 		text-shadow: none;
 
 	  @include at-breakpoint($second) {
-
+			color: #9FA09F;
 	  }
 	  @include at-breakpoint($third) {
 			margin: 0;
 	  }
   }
 	a {
-		font-weight: 100;
-
+		font-weight: 600;
+		
 	  &:hover {
 	  	color: #fff;
 	  }
   }
-
-  .block {
-  	p {
-  		color: $white;
-  		text-shadow: none;
-  	}
-  }
-
+	
   // footer menu block
   .block-menu-block {
-  	float: none;
-
+  	float: left;
+		@include span-columns(8,16);
+	
 		@include at-breakpoint($third) {
     	width: auto;
-
+			
 			.menu {
 				li {
-					margin-left: 0;
-
+					margin-left: 18px;
+					
 					&:first-child {
 						margin-left: 0;
 					}
@@ -88,6 +81,7 @@ footer {
 		@include full-width;
 
 	  @include at-breakpoint($third) {
+    	float: right;
       margin: 0;
       width: auto;
 	  }
@@ -121,40 +115,14 @@ footer {
 	    margin-left: 4px;
 		}
 	}
-
+	
 	// copyright block
 	.block-block {
 		float: left;
-
+		
 	  @include at-breakpoint(0 $second - 1) {
     	@include span-columns(6 omega,16);
 	  }
 	}
-<<<<<<< HEAD
 }
 
-=======
-
-	.footer-info {
-		width: 60%;
-		float: left;
-		background-color: $crimson;
-		color: $white;
-		padding: 20px;
-
-		h3 {
-			text-transform: uppercase;
-			padding-bottom: 10px;
-		}
-
-		.region {
-			float: left;
-			width: 50%;
-		}
-	}
-
-
-
-
-}
->>>>>>> 77049a089795c1e51d3635c73c392ba2a55fd557
