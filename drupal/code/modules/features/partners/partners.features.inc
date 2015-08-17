@@ -52,10 +52,10 @@ function partners_image_default_styles() {
   $styles['partner_logo'] = array(
     'label' => 'partner_logo',
     'effects' => array(
-      2 => array(
+      4 => array(
         'name' => 'image_scale',
         'data' => array(
-          'width' => 120,
+          'width' => 220,
           'height' => '',
           'upscale' => 0,
         ),

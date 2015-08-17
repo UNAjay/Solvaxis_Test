@@ -56,27 +56,5 @@ function jeeveserp_layout_default_fe_block_settings() {
     'visibility' => 0,
   );
 
-  $export['menu_block-1'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 1,
-    'i18n_block_language' => array(),
-    'i18n_mode' => 0,
-    'module' => 'menu_block',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'solvaxis' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'solvaxis',
-        'weight' => 0,
-      ),
-    ),
-    'title' => '<none>',
-    'visibility' => 0,
-  );
-
   return $export;
 }

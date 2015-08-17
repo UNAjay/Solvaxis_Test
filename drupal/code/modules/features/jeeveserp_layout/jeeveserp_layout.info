@@ -99,7 +99,6 @@ features[fe_block_boxes][] = copyright
 features[fe_block_boxes][] = footer_info
 features[fe_block_settings][] = block-copyright
 features[fe_block_settings][] = block-footer_info
-features[fe_block_settings][] = menu_block-1
 features[features_api][] = api:2
 features[field_base][] = body
 features[field_base][] = field_acton_newsletter_url
