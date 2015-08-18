@@ -168,11 +168,9 @@
   width: 100%;
 }
 
-.section-inner,
 #breadcrumb, 
 .tabs,
-footer .region-holder,
-.node-section > .body {
+footer .region-holder {
   @include container;
 	margin: 0 auto;
 	max-width: 1000px;

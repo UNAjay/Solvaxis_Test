@@ -692,11 +692,9 @@ footer .social-icons li a[title="Xing"] {
   width: 100%;
 }
 
-.section-inner,
 #breadcrumb,
 .tabs,
-footer .region-holder,
-.node-section > .body {
+footer .region-holder {
   *zoom: 1;
   max-width: 1004px;
   max-width: 62.75rem;
@@ -710,11 +708,9 @@ footer .region-holder,
   padding-left: 0;
   padding-right: 0;
 }
-.section-inner:after,
 #breadcrumb:after,
 .tabs:after,
-footer .region-holder:after,
-.node-section > .body:after {
+footer .region-holder:after {
   content: "";
   display: table;
   clear: both;
