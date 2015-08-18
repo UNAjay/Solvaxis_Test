@@ -904,6 +904,8 @@ function monster_page_field_default_field_instances() {
         'offices' => 0,
         'partner' => 0,
         'promo_slideshow' => 0,
+        'ref_customers' => 'ref_customers',
+        'ref_news' => 'ref_news',
         'reference_landing_page_news' => 0,
         'success_stories' => 0,
         'videos' => 0,
