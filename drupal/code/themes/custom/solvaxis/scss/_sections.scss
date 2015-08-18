@@ -2,12 +2,36 @@
 // Sections
 //-----------------------------------------
 
-.node-section {
+.node {
   .region-holder {
     @include container;
     margin: 0 auto;
     max-width: 1000px;
     padding-left: 0;
     padding-right: 0;
+    position: relative;
+  }
+
+  &.node-section {
+    position: relative;
+    min-height: 200px;
+    padding: 20px 0;
+    .group-banner {
+      position: absolute;
+      margin-top: -90px;
+      width: 500px;
+      height: 150px;
+      border: 1px dotted #000;
+      z-index: 2;
+      right: 0;
+      padding: 20px;
+    }
+    &.banner-style-red {
+      .group-banner {
+        background-color: $crimson;
+        color: $white;
+      }
+    }
   }
 }
+

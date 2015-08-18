@@ -45,6 +45,19 @@ function monster_page_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_heading' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'h2',
+          'fi-cl' => 'section-title',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
   );
   $export['node|section|section_dark'] = $ds_fieldsetting;
 
@@ -55,11 +68,6 @@ function monster_page_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'section';
   $ds_fieldsetting->view_mode = 'section_light';
   $ds_fieldsetting->settings = array(
-    'field_view' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
     'field_acton_url' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -72,6 +80,19 @@ function monster_page_ds_field_settings_info() {
           'ow-def-cl' => FALSE,
           'ow-at' => '',
           'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_heading' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'h2',
+          'fi-cl' => 'section-title',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
         ),
       ),
     ),
@@ -149,25 +170,27 @@ function monster_page_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'body',
-        1 => 'field_view',
+        0 => 'group_banner',
+        1 => 'field_heading',
         2 => 'field_banner_image',
-        3 => 'field_banner_text',
-        4 => 'field_add_this',
-        5 => 'group_sidebar',
-        6 => 'group_banner',
-        7 => 'field_sidebar_text',
-        8 => 'field_acton_url',
+        3 => 'body',
+        4 => 'field_banner_text',
+        5 => 'field_view',
+        6 => 'field_add_this',
+        7 => 'group_sidebar',
+        8 => 'field_sidebar_text',
+        9 => 'field_acton_url',
       ),
     ),
     'fields' => array(
-      'body' => 'ds_content',
-      'field_view' => 'ds_content',
+      'group_banner' => 'ds_content',
+      'field_heading' => 'ds_content',
       'field_banner_image' => 'ds_content',
+      'body' => 'ds_content',
       'field_banner_text' => 'ds_content',
+      'field_view' => 'ds_content',
       'field_add_this' => 'ds_content',
       'group_sidebar' => 'ds_content',
-      'group_banner' => 'ds_content',
       'field_sidebar_text' => 'ds_content',
       'field_acton_url' => 'ds_content',
     ),
@@ -193,27 +216,29 @@ function monster_page_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'body',
+        0 => 'group_banner',
         1 => 'field_banner_image',
         2 => 'field_banner_text',
-        3 => 'field_view',
-        4 => 'field_add_this',
-        5 => 'field_sidebar_text',
-        6 => 'group_sidebar',
+        3 => 'field_heading',
+        4 => 'field_sidebar_text',
+        5 => 'body',
+        6 => 'field_view',
         7 => 'field_acton_url',
-        8 => 'group_banner',
+        8 => 'field_add_this',
+        9 => 'group_sidebar',
       ),
     ),
     'fields' => array(
-      'body' => 'ds_content',
+      'group_banner' => 'ds_content',
       'field_banner_image' => 'ds_content',
       'field_banner_text' => 'ds_content',
-      'field_view' => 'ds_content',
-      'field_add_this' => 'ds_content',
+      'field_heading' => 'ds_content',
       'field_sidebar_text' => 'ds_content',
-      'group_sidebar' => 'ds_content',
+      'body' => 'ds_content',
+      'field_view' => 'ds_content',
       'field_acton_url' => 'ds_content',
-      'group_banner' => 'ds_content',
+      'field_add_this' => 'ds_content',
+      'group_sidebar' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(

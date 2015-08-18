@@ -1103,7 +1103,7 @@ footer .footer-info .region {
     margin-left: 0;
   }
 }
-.node-section .region-holder {
+.node .region-holder {
   *zoom: 1;
   max-width: 1004px;
   max-width: 62.75rem;
@@ -1116,9 +1116,29 @@ footer .footer-info .region {
   max-width: 1000px;
   padding-left: 0;
   padding-right: 0;
+  position: relative;
 }
-.node-section .region-holder:after {
+.node .region-holder:after {
   content: "";
   display: table;
   clear: both;
+}
+.node.node-section {
+  position: relative;
+  min-height: 200px;
+  padding: 20px 0;
+}
+.node.node-section .group-banner {
+  position: absolute;
+  margin-top: -90px;
+  width: 500px;
+  height: 150px;
+  border: 1px dotted #000;
+  z-index: 2;
+  right: 0;
+  padding: 20px;
+}
+.node.node-section.banner-style-red .group-banner {
+  background-color: #E30043;
+  color: #fff;
 }

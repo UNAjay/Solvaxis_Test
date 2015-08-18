@@ -44,7 +44,7 @@ function monster_page_field_default_field_instances() {
           'view_mode' => 'view_mode_selector',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -186,14 +186,14 @@ function monster_page_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'section_light' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'section_text' => array(
         'label' => 'hidden',
@@ -243,7 +243,7 @@ function monster_page_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 7,
+      'weight' => 18,
     ),
   );
 
@@ -368,7 +368,7 @@ function monster_page_field_default_field_instances() {
           'share_services' => 'facebook,twitter',
         ),
         'type' => 'addthis_basic_toolbox',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'section_light' => array(
         'label' => 'hidden',
@@ -380,7 +380,7 @@ function monster_page_field_default_field_instances() {
           'share_services' => 'facebook,twitter',
         ),
         'type' => 'addthis_basic_toolbox',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'section_text' => array(
         'label' => 'hidden',
@@ -428,7 +428,7 @@ function monster_page_field_default_field_instances() {
       'module' => 'addthis',
       'settings' => array(),
       'type' => 'addthis_button_widget',
-      'weight' => 9,
+      'weight' => 20,
     ),
   );
 
@@ -556,13 +556,13 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 31,
       ),
       'section_light' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 41,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -670,6 +670,80 @@ function monster_page_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-section-field_heading'
+  $field_instances['node-section-field_heading'] = array(
+    'bundle' => 'section',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 10,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'section_dark' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'section_light' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_heading',
+    'label' => 'Heading',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'mediafront' => array(
+        'custom' => '',
+        'field_type' => 0,
+        'media_type' => 'media',
+        'preview' => 0,
+        'thumbnail' => 0,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 17,
+    ),
+  );
+
   // Exported field_instance: 'node-section-field_sidebar_text'
   $field_instances['node-section-field_sidebar_text'] = array(
     'bundle' => 'section',
@@ -769,14 +843,14 @@ function monster_page_field_default_field_instances() {
         'module' => 'viewfield',
         'settings' => array(),
         'type' => 'viewfield_default',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'section_light' => array(
         'label' => 'hidden',
         'module' => 'viewfield',
         'settings' => array(),
         'type' => 'viewfield_default',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'section_text' => array(
         'label' => 'hidden',
@@ -851,7 +925,7 @@ function monster_page_field_default_field_instances() {
       'module' => 'viewfield',
       'settings' => array(),
       'type' => 'viewfield_select',
-      'weight' => 8,
+      'weight' => 19,
     ),
   );
 
@@ -882,13 +956,13 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 41,
+        'weight' => 43,
       ),
       'section_light' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 41,
+        'weight' => 43,
       ),
       'section_text' => array(
         'label' => 'above',
@@ -1054,13 +1128,13 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 40,
+        'weight' => 42,
       ),
       'section_light' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 40,
+        'weight' => 42,
       ),
       'section_text' => array(
         'label' => 'above',
@@ -1122,6 +1196,7 @@ function monster_page_field_default_field_instances() {
   t('Banner style');
   t('Banner text');
   t('Body');
+  t('Heading');
   t('Section');
   t('Sidebar text');
   t('Social sharing');
