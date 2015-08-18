@@ -23,9 +23,10 @@ function promo_field_group_info() {
     'label' => 'Categories',
     'weight' => '2',
     'children' => array(
-      0 => 'field_product',
-      1 => 'field_industry',
-      2 => 'field_region',
+      0 => 'field_industry',
+      1 => 'field_region',
+      2 => 'field_market',
+      3 => 'field_product',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -52,9 +53,9 @@ function promo_field_group_info() {
     'label' => 'Content',
     'weight' => '1',
     'children' => array(
-      0 => 'body',
-      1 => 'field_background_image',
-      2 => 'field_promo_link',
+      0 => 'field_background_image',
+      1 => 'field_promo_link',
+      2 => 'body',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

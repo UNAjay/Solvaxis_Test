@@ -26,6 +26,7 @@ function landing_pages_field_group_info() {
       0 => 'field_acc_region',
       1 => 'field_industry',
       2 => 'field_product',
+      3 => 'field_market',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -54,8 +55,7 @@ function landing_pages_field_group_info() {
     'children' => array(
       0 => 'body',
       1 => 'field_acton_url',
-      2 => 'field_info_tab',
-      3 => 'field_sidebar_text',
+      2 => 'field_sidebar_text',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -112,8 +112,7 @@ function landing_pages_field_group_info() {
       0 => 'field_basic_pages',
       1 => 'field_clients',
       2 => 'field_files',
-      3 => 'field_page_sections',
-      4 => 'field_ref_news',
+      3 => 'field_ref_news',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

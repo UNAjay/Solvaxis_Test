@@ -23,9 +23,10 @@ function events_field_group_info() {
     'label' => 'Categories',
     'weight' => '4',
     'children' => array(
-      0 => 'field_product',
-      1 => 'field_industry',
-      2 => 'field_region',
+      0 => 'field_industry',
+      1 => 'field_region',
+      2 => 'field_product',
+      3 => 'field_market',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -83,9 +84,7 @@ function events_field_group_info() {
   $field_group->data = array(
     'label' => 'Teaser image',
     'weight' => '1',
-    'children' => array(
-      0 => 'field_news_image',
-    ),
+    'children' => array(),
     'format_type' => 'tab',
     'format_settings' => array(
       'formatter' => 'closed',

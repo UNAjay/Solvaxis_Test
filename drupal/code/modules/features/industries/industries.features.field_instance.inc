@@ -322,7 +322,7 @@ function industries_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 24,
+      'weight' => 19,
     ),
   );
 
@@ -368,7 +368,7 @@ function industries_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 23,
+      'weight' => 18,
     ),
   );
 
@@ -420,7 +420,7 @@ function industries_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 26,
+      'weight' => 20,
     ),
   );
 

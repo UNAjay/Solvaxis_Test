@@ -663,7 +663,7 @@ function news_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 9,
+      'weight' => 11,
     ),
   );
 
@@ -709,7 +709,7 @@ function news_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 11,
+      'weight' => 9,
     ),
   );
 

@@ -70,7 +70,6 @@ dependencies[] = region_language_workflow
 dependencies[] = jeeveserp_layout
 dependencies[] = employees
 dependencies[] = promo
-dependencies[] = video
 dependencies[] = attachments
 dependencies[] = industries
 dependencies[] = blogs

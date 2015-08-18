@@ -70,6 +70,7 @@ features[field_instance][] = node-landing_page-field_basic_pages
 features[field_instance][] = node-landing_page-field_clients
 features[field_instance][] = node-landing_page-field_files
 features[field_instance][] = node-landing_page-field_industry
+features[field_instance][] = node-landing_page-field_market
 features[field_instance][] = node-landing_page-field_product
 features[field_instance][] = node-landing_page-field_ref_news
 features[field_instance][] = node-landing_page-field_sidebar_text

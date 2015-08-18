@@ -97,6 +97,9 @@ function events_strongarm() {
         'xmlsitemap' => array(
           'weight' => '11',
         ),
+        'language' => array(
+          'weight' => '5',
+        ),
       ),
       'display' => array(),
     ),

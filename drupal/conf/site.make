@@ -275,6 +275,8 @@ projects[shs][download][revision] = ee6f612914764a4e6f48494d44c2c8325b896ca5
 
 projects[viewfield][version] = 2.0
 
+projects[views_selective_filters][version] = 1.4
+
 projects[view_mode_selector][version] = 1.x-dev
 projects[view_mode_selector][subdir] = contrib
 projects[view_mode_selector][revision] = 2e299d1be927e0181b4dfe3b330ddf1403e74efa
