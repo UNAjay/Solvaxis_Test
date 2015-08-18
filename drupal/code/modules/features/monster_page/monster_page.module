@@ -89,7 +89,49 @@ function monster_page_form_alter(&$form, $form_state, $form_id) {
       }
     }
   }
-
-
 }
+
+
+function monster_page_field_widget_form_alter(&$element, &$form_state, $context) {
+
+  if ($context['field']['type'] == 'viewfield') {
+    $field = $context['field'];
+    $instance = $context['instance'];
+    $options = _monster_page_viewfield_potential_references($field, $instance);
+    $element['vname']['#options'] = $options;
+    unset($element['vargs'], $element['token_help']);
+  }
+}
+
+
+/**
+ * Returns a select options list of views displays of enabled and allowed views.
+ */
+function _monster_page_viewfield_potential_references($field, $instance) {
+  // Retrieve all currently available views.
+  $views = views_get_enabled_views();
+  // Limit to allowed values, if any.
+  if (isset($instance['settings']['allowed_views']) && is_array($instance['settings']['allowed_views'])) {
+    // Only intersect if at least one view has been enabled; otherwise, we would
+    // end up with empty $views.
+    if ($allowed = array_filter($instance['settings']['allowed_views'])) {
+      $views = array_intersect_key($views, $allowed);
+    }
+  }
+  $options = array();
+  foreach ($views as $view_name => $view) {
+    foreach ($view->display as $display) {
+      if ($display->id != 'default') {
+        $options[$view->name . '|' . $display->id] = $view->human_name . ' - ' . $display->display_title;
+      }
+    }
+  }
+  return $options;
+}
+
+
+
+
+
+
 
