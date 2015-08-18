@@ -2,7 +2,12 @@
 // Sections
 //-----------------------------------------
 
-.node {
+.node-section {
+  position: relative;
+  min-height: 200px;
+  padding: 20px 0;
+  width: 100%;
+  
   .region-holder {
     @include container;
     margin: 0 auto;
@@ -11,27 +16,36 @@
     padding-right: 0;
     position: relative;
   }
-
-  &.node-section {
-    position: relative;
-    min-height: 200px;
-    padding: 20px 0;
-    .group-banner {
-      position: absolute;
-      margin-top: -90px;
-      width: 500px;
-      height: 150px;
-      border: 1px dotted #000;
-      z-index: 2;
-      right: 0;
-      padding: 20px;
-    }
-    &.banner-style-red {
-      .group-banner {
-        background-color: $crimson;
-        color: $white;
-      }
-    }
+  
+  &.section_light {
+    background: transparent;
+  }
+  &.section_dark {
+     background: $gray-dark;
   }
 }
 
+// banner styles
+.group-banner {
+  position: absolute;
+  margin-top: -90px;
+  width: 500px;
+  height: 150px;
+  border: 1px dotted #000;
+  z-index: 2;
+  right: 0;
+  padding: 20px;
+  
+  .banner-style-red & {
+    background-color: $crimson;
+    color: $white;
+  }
+  .banner-style-dark & {
+    background-color: $gray-dark;
+    color: $white;
+  }
+  .banner-style-light & {
+    background-color: $gray-lighter;
+    color: $gray;
+  }
+}

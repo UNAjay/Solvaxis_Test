@@ -181,12 +181,12 @@
 // main menu
 //-----------------------------------------
 .header-secondary {
-  //position: fixed;
-//  left: 0;
-//  top: 0;
-//  width: 100%;
-//  border-bottom: 1px solid transparent;
-//  z-index: 9999;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  z-index: 100;
   
   @include at-breakpoint(0 $second - 1) {
 		background: url('../images/bg-mobile-menu.png') repeat-x;
@@ -317,7 +317,8 @@
 #header-secondary-float {
   position: fixed;
   left: 0;
-  top: 0;
+  top: 0 !important;
   width: 100%;
   border-bottom: 1px solid #ddd;
+  z-index:200 !important;
 }

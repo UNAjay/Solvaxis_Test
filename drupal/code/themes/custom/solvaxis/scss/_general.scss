@@ -21,6 +21,12 @@ body {
 // general elements
 //-----------------------------------------
 
+#page {
+  @include at-breakpoint($second) {
+    padding-top: 0
+  }
+}
+
 .region-holder {
   width: 100%;
 	margin: 0 auto;

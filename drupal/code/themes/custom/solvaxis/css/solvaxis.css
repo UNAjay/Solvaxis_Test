@@ -37,6 +37,12 @@ body {
   font-size: 1.4rem;
 }
 
+@media (min-width: 800px) {
+  #page {
+    padding-top: 0;
+  }
+}
+
 .region-holder {
   width: 100%;
   margin: 0 auto;
@@ -338,6 +344,14 @@ body {
   display: none;
 }
 
+.header-secondary {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  z-index: 100;
+}
 @media (max-width: 799px) {
   .header-secondary {
     background: url("../images/bg-mobile-menu.png") repeat-x;
@@ -466,9 +480,10 @@ body {
 #header-secondary-float {
   position: fixed;
   left: 0;
-  top: 0;
+  top: 0 !important;
   width: 100%;
   border-bottom: 1px solid #ddd;
+  z-index: 200 !important;
 }
 
 .block-site-socialicons label,
@@ -680,22 +695,11 @@ footer .social-icons li a[title="Xing"] {
   color: #000;
 }
 
-.section_dark {
-  background: #3C3F42;
-}
-
-.section_light {
-  background: transparent;
-}
-
-.node-section {
-  width: 100%;
-}
-
 #breadcrumb,
 .tabs,
 footer .region-holder,
-.node-section .region-holder {
+header .region-holder,
+#leader .flexslider {
   *zoom: 1;
   max-width: 1004px;
   max-width: 62.75rem;
@@ -712,7 +716,8 @@ footer .region-holder,
 #breadcrumb:after,
 .tabs:after,
 footer .region-holder:after,
-.node-section .region-holder:after {
+header .region-holder:after,
+#leader .flexslider:after {
   content: "";
   display: table;
   clear: both;
@@ -1029,7 +1034,6 @@ footer .footer-info .region {
 
 #leader {
   position: relative;
-  background-color: #000;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -1045,8 +1049,20 @@ footer .footer-info .region {
   background-position: 50% 50%;
   background-size: cover;
 }
+#leader .flexslider {
+  background: none;
+  border: 0 none;
+  margin-top: 0;
+  padding-top: 180px;
+}
 #leader .flexslider .slides img {
   display: none;
+}
+#leader .flexslider .slides > li h2 {
+  color: #000;
+  font-size: 51px;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 #leader .view-promo-slideshow > .view-content {
   height: 425px;
@@ -1101,7 +1117,13 @@ footer .footer-info .region {
     margin-left: 0;
   }
 }
-.node .region-holder {
+.node-section {
+  position: relative;
+  min-height: 200px;
+  padding: 20px 0;
+  width: 100%;
+}
+.node-section .region-holder {
   *zoom: 1;
   max-width: 1004px;
   max-width: 62.75rem;
@@ -1116,17 +1138,19 @@ footer .footer-info .region {
   padding-right: 0;
   position: relative;
 }
-.node .region-holder:after {
+.node-section .region-holder:after {
   content: "";
   display: table;
   clear: both;
 }
-.node.node-section {
-  position: relative;
-  min-height: 200px;
-  padding: 20px 0;
+.node-section.section_light {
+  background: transparent;
 }
-.node.node-section .group-banner {
+.node-section.section_dark {
+  background: #3C3F42;
+}
+
+.group-banner {
   position: absolute;
   margin-top: -90px;
   width: 500px;
@@ -1136,7 +1160,15 @@ footer .footer-info .region {
   right: 0;
   padding: 20px;
 }
-.node.node-section.banner-style-red .group-banner {
+.banner-style-red .group-banner {
   background-color: #E30043;
   color: #fff;
+}
+.banner-style-dark .group-banner {
+  background-color: #3C3F42;
+  color: #fff;
+}
+.banner-style-light .group-banner {
+  background-color: #F2F2F2;
+  color: #73797C;
 }
