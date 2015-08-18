@@ -170,7 +170,8 @@
 
 #breadcrumb, 
 .tabs,
-footer .region-holder {
+footer .region-holder,
+.node-section .region-holder {
   @include container;
 	margin: 0 auto;
 	max-width: 1000px;

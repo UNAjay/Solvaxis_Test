@@ -38,7 +38,7 @@ function monster_page_preprocess_node(&$variables) {
 
 
 function monster_page_entity_view($entity, $type, $view_mode, $langcode) {
-  if ($type == 'node' && $entity->type == 'section' && $view_mode == 'full') {
+  if ($type == 'node' && $entity->type == 'section' && ($view_mode == 'full' || $view_mode == 'teaser')) {
     $page_wrapper = entity_metadata_wrapper('node', $entity);
     $page = $page_wrapper->field_section_node_eb->value(); // field_section_node_eb comes from Entityreference backreference
     if ($page) {
