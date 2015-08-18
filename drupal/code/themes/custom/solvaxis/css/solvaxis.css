@@ -78,7 +78,8 @@ body {
 }
 
 .view-filters {
-  background: #e0ece7;
+  background: transparent;
+  padding: 0;
 }
 
 @font-face {
@@ -565,16 +566,16 @@ footer .social-icons li a[title="Xing"] {
   background: #3C3F42;
 }
 
-.view-partner .view-content {
+.view-ref-customers .view-content {
   overflow: hidden;
   width: 100%;
 }
 @media (min-width: 1014px) {
-  .view-partner .view-content {
+  .view-ref-customers .view-content {
     display: inline-flex;
   }
 }
-.view-partner .views-row {
+.view-ref-customers .views-row {
   margin-bottom: 20px;
   width: 49.00398%;
   float: left;
@@ -583,45 +584,41 @@ footer .social-icons li a[title="Xing"] {
   margin-right: 0;
   margin-left: 2%;
 }
-.view-partner .views-row:first-child {
+.view-ref-customers .views-row:first-child {
   margin-left: 0;
 }
-.view-partner .views-row:nth-child(3) {
+.view-ref-customers .views-row:nth-child(3) {
   clear: left;
 }
 @media (min-width: 800px) {
-  .view-partner .views-row {
+  .view-ref-customers .views-row {
     width: 23.50598%;
     float: left;
     margin-right: 1.99203%;
     margin-right: 0;
     margin-left: 2%;
   }
-  .view-partner .views-row:nth-child(3) {
+  .view-ref-customers .views-row:nth-child(3) {
     clear: none;
   }
 }
 @media (min-width: 1014px) {
-  .view-partner .views-row {
+  .view-ref-customers .views-row {
     width: 23.50598%;
     float: left;
     margin-right: 1.99203%;
     margin-right: 0;
     margin-left: 4%;
   }
-  .view-partner .views-row:nth-child(3) {
+  .view-ref-customers .views-row:nth-child(3) {
     margin-left: 4%;
     clear: none;
   }
 }
-.view-partner .views-row .views-field-title,
-.view-partner .views-row .views-field-field-partner-office-contactinfo {
-  display: none;
-}
-.view-partner .views-row .views-field-field-partner-logo .field-content {
+.view-ref-customers .views-row .views-field-field-image .field-content {
   text-align: center;
 }
-.view-partner .views-row .views-field-field-partner-logo img {
+.view-ref-customers .views-row .views-field-field-image img {
   float: left;
   width: 100%;
   height: auto;
@@ -631,68 +628,9 @@ footer .social-icons li a[title="Xing"] {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
-.view-partner .views-row .views-field-field-partner-logo:hover img {
+.view-ref-customers .views-row .views-field-field-image:hover img {
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
-}
-
-.node-section .view-filters {
-  display: none;
-}
-.node-section .section-title {
-  margin-bottom: 26px;
-  padding-bottom: 12px;
-  position: relative;
-  font-size: 20px;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-.node-section .section-title:before {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  width: 40px;
-  height: 1px;
-  background: #E30043;
-}
-.node-section.section_dark .section-title {
-  color: #fff;
-}
-
-.view-news .item-list ul {
-  margin: 0;
-}
-.view-news .item-list ul li {
-  list-style-type: none;
-  width: 100%;
-  margin: 0;
-  padding: 11px 0 7px;
-}
-@media (min-width: 600px) {
-  .view-news .item-list ul li {
-    display: inline-block;
-    float: left;
-    width: 32%;
-    margin: 0 0 0 2%;
-    border-left: 1px solid #CCC;
-    padding: 11px 0 7px 10px;
-  }
-  .view-news .item-list ul li:first-child {
-    border-left: 0 none;
-    margin: 0;
-    padding: 11px 0 7px 0;
-  }
-}
-.view-news .item-list ul li .views-field-title-field {
-  color: #000;
-  font-size: 15px;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-.view-news .item-list ul li .views-field-title-field a {
-  color: #000;
 }
 
 #breadcrumb,
@@ -1150,6 +1088,28 @@ footer .footer-info .region {
   background: #3C3F42;
 }
 
+.section-title {
+  margin-bottom: 26px;
+  padding-bottom: 12px;
+  position: relative;
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.section-title:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 40px;
+  height: 1px;
+  background: #E30043;
+}
+.section_dark .section-title {
+  color: #fff;
+}
+
 .group-banner {
   position: absolute;
   margin-top: -90px;
@@ -1171,4 +1131,38 @@ footer .footer-info .region {
 .banner-style-light .group-banner {
   background-color: #F2F2F2;
   color: #73797C;
+}
+
+.view-news .item-list ul {
+  margin: 0;
+}
+.view-news .item-list ul li {
+  list-style-type: none;
+  width: 100%;
+  margin: 0;
+  padding: 11px 0 7px;
+}
+@media (min-width: 600px) {
+  .view-news .item-list ul li {
+    display: inline-block;
+    float: left;
+    width: 32%;
+    margin: 0 0 0 2%;
+    border-left: 1px solid #CCC;
+    padding: 11px 0 7px 10px;
+  }
+  .view-news .item-list ul li:first-child {
+    border-left: 0 none;
+    margin: 0;
+    padding: 11px 0 7px 0;
+  }
+}
+.view-news .item-list ul li .views-field-title-field {
+  color: #000;
+  font-size: 15px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.view-news .item-list ul li .views-field-title-field a {
+  color: #000;
 }

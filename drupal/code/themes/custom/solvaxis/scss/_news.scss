@@ -1,0 +1,41 @@
+// news
+.view-news {
+  .item-list {
+    ul {
+      margin: 0;
+      li {
+        list-style-type: none;
+        width: 100%;
+        margin: 0;
+        padding: 11px 0 7px;
+        
+        @include at-breakpoint($first) {
+         
+          //margin-right: 0;
+          display: inline-block;
+          float: left;
+          width: 32%;
+          margin: 0 0 0 2%;
+          border-left: 1px solid $gray-light;
+          padding: 11px 0 7px 10px;
+          &:first-child {
+            border-left: 0 none;
+            margin: 0;
+            padding: 11px 0 7px 0;
+          }
+        }
+        
+        .views-field-title-field {
+          color: $black;
+          font-size: 15px;
+          font-weight: 300;
+          text-transform: uppercase;
+          //margin: 10px 0 0 0;
+          a {
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}
