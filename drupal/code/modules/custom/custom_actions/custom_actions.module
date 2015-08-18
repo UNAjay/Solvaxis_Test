@@ -839,7 +839,7 @@ function custom_actions_form_views_exposed_form_alter(&$form, $form_state) {
         // Set drop down value for first item.
         $filter_field['#default_value'] = $options['All'];
 
-        if (isset($form[$field_id])) $form[$field_id]['#options']['All'] = t($form['#info']['filter-'.$field_id]['label']);
+        if (isset($form[$field_id])) $form[$field_id]['#options']['All'] = t($form['#info']['filter-'.$field]['label']);
       }
     }
   }

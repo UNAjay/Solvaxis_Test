@@ -130,6 +130,22 @@ function _monster_page_viewfield_potential_references($field, $instance) {
 }
 
 
+/**
+ * Function to do custom order of filter selectboxes
+ * @param type $form
+ * @param type $form_state
+ * @return type
+ */
+function monster_page_form_views_exposed_form_alter(&$form, $form_state) {
+
+  foreach ($form_state['view']->filter as $field => $filter) {
+    if ($filter->options['exposed']) {
+      $field_id = $form['#info']["filter-$field"]['value'];
+      asort($form[$field_id]['#options']);
+      if (isset($form[$field_id])) $form[$field_id]['#options']['All'] = t($form['#info']['filter-'.$field]['label']);
+    }
+  }
+}
 
 
 
