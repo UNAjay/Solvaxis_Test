@@ -459,7 +459,7 @@ function monster_page_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'news_image',
         ),
         'type' => 'image',
         'weight' => 1,
@@ -469,7 +469,7 @@ function monster_page_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'news_image',
         ),
         'type' => 'image',
         'weight' => 0,

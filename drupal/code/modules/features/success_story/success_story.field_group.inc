@@ -24,8 +24,9 @@ function success_story_field_group_info() {
     'weight' => '5',
     'children' => array(
       0 => 'field_industry',
-      1 => 'field_product',
-      2 => 'field_region',
+      1 => 'field_region',
+      2 => 'field_market',
+      3 => 'field_product',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -54,7 +55,6 @@ function success_story_field_group_info() {
     'children' => array(
       0 => 'body',
       1 => 'field_customer_website',
-      2 => 'field_acton_url',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

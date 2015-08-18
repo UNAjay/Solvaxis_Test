@@ -556,6 +556,9 @@ function jeeveserp_layout_strongarm() {
       'section_view' => array(
         'custom_settings' => FALSE,
       ),
+      'section_light' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

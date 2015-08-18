@@ -28,3 +28,4 @@ features[field_instance][] = node-customer-field_partners
 features[mediafront_views][] = micro_verticals
 features[views_view][] = micro_verticals
 features_exclude[dependencies][ctools] = ctools
+project path = sites/all/modules/features

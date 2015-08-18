@@ -34,7 +34,7 @@ function success_story_views_default_views() {
   $handler->display->display_options['relationships']['reverse_field_industry_node']['id'] = 'reverse_field_industry_node';
   $handler->display->display_options['relationships']['reverse_field_industry_node']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['relationships']['reverse_field_industry_node']['field'] = 'reverse_field_industry_node';
-  /* Field: Taxonomy term: Name (translated) */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['name_i18n']['id'] = 'name_i18n';
   $handler->display->display_options['fields']['name_i18n']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['name_i18n']['field'] = 'name_i18n';
@@ -53,7 +53,7 @@ function success_story_views_default_views() {
     'image_style' => 'related_listing_image',
     'image_link' => 'content',
   );
-  /* Field: Taxonomy term: Term description (translated) */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['description_i18n']['id'] = 'description_i18n';
   $handler->display->display_options['fields']['description_i18n']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['description_i18n']['field'] = 'description_i18n';
@@ -75,6 +75,25 @@ function success_story_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block_1');
+  $translatables['micro_verticals'] = array(
+    t('Master'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('Content referencing Taxonomy term from field_industry'),
+    t('All'),
+    t('Block'),
+  );
   $export['micro_verticals'] = $view;
 
   return $export;

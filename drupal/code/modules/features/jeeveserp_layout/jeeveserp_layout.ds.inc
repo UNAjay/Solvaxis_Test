@@ -163,7 +163,7 @@ function jeeveserp_layout_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '0',
+      'weight' => '1',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -838,13 +838,15 @@ function jeeveserp_layout_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'title',
-        1 => 'body',
-        2 => 'field_section',
-        3 => 'field_basic_pages',
+        0 => 'group_region_holder',
+        1 => 'title',
+        2 => 'body',
+        3 => 'field_section',
+        4 => 'field_basic_pages',
       ),
     ),
     'fields' => array(
+      'group_region_holder' => 'ds_content',
       'title' => 'ds_content',
       'body' => 'ds_content',
       'field_section' => 'ds_content',
