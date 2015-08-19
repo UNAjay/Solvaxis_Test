@@ -426,10 +426,11 @@ body {
   .header-secondary .menu {
     float: right;
     margin-top: 69px;
+    overflow: visible;
   }
 }
 @media (min-width: 800px) {
-  .header-secondary li {
+  .header-secondary .menu li {
     display: inline-block;
     float: left;
     font-size: 14px;
@@ -439,29 +440,46 @@ body {
     padding: 0;
     position: relative;
   }
-  .header-secondary li:first-child {
+  .header-secondary .menu li:first-child {
     margin: 0 20px 0 0;
   }
-  .header-secondary li a {
+  .header-secondary .menu li a {
+    background: none;
     color: #000;
     text-decoration: none;
     padding: 0;
   }
 }
+.header-secondary .menu li > li {
+  position: relative;
+}
 @media (max-width: 799px) {
-  .header-secondary li.last a {
+  .header-secondary .menu li.last a {
     border-bottom: 1px solid #989898;
   }
 }
-.header-secondary .content a {
+.header-secondary .menu .content a {
   color: #000;
   display: block;
   text-transform: uppercase;
   padding: 0;
 }
-.header-secondary .content a.active, .header-secondary .content a.active-trail, .header-secondary .content a:hover {
+.header-secondary .menu .content a.active, .header-secondary .menu .content a.active-trail, .header-secondary .menu .content a:hover {
   background: transparent;
   color: #000;
+}
+
+.header-secondary .menu > li .menu {
+  display: none;
+  background: #fff;
+  position: absolute;
+  right: 0;
+  top: 18px;
+  width: 220px;
+  margin-top: 0;
+}
+.header-secondary .menu > li:hover .menu {
+  display: block;
 }
 
 .node-type-full-page #header-secondary-float,
