@@ -100,9 +100,6 @@ function promo_strongarm() {
         'xmlsitemap' => array(
           'weight' => '8',
         ),
-        'language' => array(
-          'weight' => '5',
-        ),
       ),
       'display' => array(
         'language' => array(

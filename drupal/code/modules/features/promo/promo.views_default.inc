@@ -200,12 +200,12 @@ function promo_views_default_views() {
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['relationship'] = 'reverse_field_promo_node';
   $handler->display->display_options['fields']['view_node']['label'] = '';
-  $handler->display->display_options['fields']['view_node']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['view_node']['alter']['text'] = 'Läs mer';
   $handler->display->display_options['fields']['view_node']['alter']['alt'] = 'Läs mer';
+  $handler->display->display_options['fields']['view_node']['element_class'] = 'button';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['view_node']['text'] = 'Läs mer';
   /* Field: Content: Background image */
   $handler->display->display_options['fields']['field_background_image']['id'] = 'field_background_image';
   $handler->display->display_options['fields']['field_background_image']['table'] = 'field_data_field_background_image';
@@ -236,6 +236,8 @@ function promo_views_default_views() {
   $handler->display->display_options['fields']['field_promo_link']['table'] = 'field_data_field_promo_link';
   $handler->display->display_options['fields']['field_promo_link']['field'] = 'field_promo_link';
   $handler->display->display_options['fields']['field_promo_link']['label'] = '';
+  $handler->display->display_options['fields']['field_promo_link']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_promo_link']['element_class'] = 'button';
   $handler->display->display_options['fields']['field_promo_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_promo_link']['click_sort_column'] = 'url';
   /* Sort criterion: Content: Post date */
@@ -278,6 +280,73 @@ function promo_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Field: Title */
+  $handler->display->display_options['fields']['title_field']['id'] = 'title_field';
+  $handler->display->display_options['fields']['title_field']['table'] = 'field_data_title_field';
+  $handler->display->display_options['fields']['title_field']['field'] = 'title_field';
+  $handler->display->display_options['fields']['title_field']['label'] = '';
+  $handler->display->display_options['fields']['title_field']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title_field']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title_field']['link_to_entity'] = 0;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['more_link'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['preserve_tags'] = '<p>';
+  $handler->display->display_options['fields']['body']['element_type'] = 'p';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '600',
+  );
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['relationship'] = 'reverse_field_promo_node';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['view_node']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['view_node']['alter']['link_class'] = 'button';
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  /* Field: Content: Background image */
+  $handler->display->display_options['fields']['field_background_image']['id'] = 'field_background_image';
+  $handler->display->display_options['fields']['field_background_image']['table'] = 'field_data_field_background_image';
+  $handler->display->display_options['fields']['field_background_image']['field'] = 'field_background_image';
+  $handler->display->display_options['fields']['field_background_image']['label'] = '';
+  $handler->display->display_options['fields']['field_background_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_background_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_background_image']['type'] = 'cs_adaptive_image';
+  $handler->display->display_options['fields']['field_background_image']['settings'] = array(
+    'image_link' => '',
+    'styles' => array(
+      'breakpoint_1' => '700',
+      'style_1' => 'image-w-800-scale',
+      'breakpoint_2' => '3000',
+      'style_2' => 'image-w-2000-scale',
+      'breakpoint_3' => '',
+      'style_3' => '',
+      'breakpoint_4' => '',
+      'style_4' => '',
+      'breakpoint_5' => '',
+      'style_5' => '',
+      'max_style' => '',
+      'fallback_style' => '',
+    ),
+  );
+  /* Field: Content: Promo Link */
+  $handler->display->display_options['fields']['field_promo_link']['id'] = 'field_promo_link';
+  $handler->display->display_options['fields']['field_promo_link']['table'] = 'field_data_field_promo_link';
+  $handler->display->display_options['fields']['field_promo_link']['field'] = 'field_promo_link';
+  $handler->display->display_options['fields']['field_promo_link']['label'] = '';
+  $handler->display->display_options['fields']['field_promo_link']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_promo_link']['element_class'] = 'button';
+  $handler->display->display_options['fields']['field_promo_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_promo_link']['click_sort_column'] = 'url';
   $translatables['promo_slideshow'] = array(
     t('Master'),
     t('more'),

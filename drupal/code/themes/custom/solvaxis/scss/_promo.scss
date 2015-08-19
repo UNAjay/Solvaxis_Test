@@ -22,7 +22,13 @@
     border: 0 none;
     margin-top: 0;
     padding-top: 180px;
-  
+    
+    .flex-direction-nav,
+    .flex-control-nav {
+      display: none;
+    }
+    
+    
     .slides img {
       display: none;
     }
@@ -33,6 +39,7 @@
         font-size: 51px;
         font-weight: 300;
         text-transform: uppercase;
+        margin-bottom: 20px;
       }
     }
   }
