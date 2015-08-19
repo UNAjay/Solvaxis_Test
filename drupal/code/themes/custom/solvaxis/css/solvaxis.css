@@ -372,6 +372,7 @@ body {
 @media (min-width: 800px) {
   .header-secondary #logo {
     margin-top: 47px;
+    margin-bottom: 18px;
     padding: 0;
   }
 }

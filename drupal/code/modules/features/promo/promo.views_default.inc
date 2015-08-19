@@ -309,6 +309,7 @@ function promo_views_default_views() {
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['relationship'] = 'reverse_field_promo_node';
   $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
   $handler->display->display_options['fields']['view_node']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['view_node']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['view_node']['alter']['link_class'] = 'button';
@@ -343,9 +344,14 @@ function promo_views_default_views() {
   $handler->display->display_options['fields']['field_promo_link']['table'] = 'field_data_field_promo_link';
   $handler->display->display_options['fields']['field_promo_link']['field'] = 'field_promo_link';
   $handler->display->display_options['fields']['field_promo_link']['label'] = '';
-  $handler->display->display_options['fields']['field_promo_link']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_promo_link']['element_class'] = 'button';
+  $handler->display->display_options['fields']['field_promo_link']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_promo_link']['alter']['text'] = '[field_promo_link-title]';
+  $handler->display->display_options['fields']['field_promo_link']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_promo_link']['alter']['path'] = '[field_promo_link-url] ';
+  $handler->display->display_options['fields']['field_promo_link']['alter']['link_class'] = 'button';
+  $handler->display->display_options['fields']['field_promo_link']['element_type'] = '0';
   $handler->display->display_options['fields']['field_promo_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_promo_link']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_promo_link']['click_sort_column'] = 'url';
   $translatables['promo_slideshow'] = array(
     t('Master'),
@@ -360,6 +366,7 @@ function promo_views_default_views() {
     t('Läs mer'),
     t('All'),
     t('Block'),
+    t('[field_promo_link-title]'),
   );
   $export['promo_slideshow'] = $view;
 
