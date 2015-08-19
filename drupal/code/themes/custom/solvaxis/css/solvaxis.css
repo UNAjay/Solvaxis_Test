@@ -1053,7 +1053,8 @@ footer .footer-info .region {
   background: none;
   border: 0 none;
   margin-top: 0;
-  padding-top: 180px;
+  padding-top: 159px;
+  padding-bottom: 136px;
 }
 #leader .flexslider .flex-direction-nav,
 #leader .flexslider .flex-control-nav {
@@ -1065,12 +1066,11 @@ footer .footer-info .region {
 #leader .flexslider .slides > li h2 {
   color: #000;
   font-size: 51px;
+  line-height: 1.3em;
   font-weight: 300;
   text-transform: uppercase;
-  margin-bottom: 20px;
-}
-#leader .view-promo-slideshow > .view-content {
-  height: 425px;
+  margin-bottom: 24px;
+  width: 50%;
 }
 
 .top-bg-image {
@@ -1084,7 +1084,7 @@ footer .footer-info .region {
   height: 100%;
   position: absolute;
   background: #fff;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 /* =====================================
