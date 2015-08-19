@@ -350,32 +350,32 @@ function custom_actions_preprocess_node(&$variables) {
  * @param type $vars
  */
 function custom_actions_preprocess_views_view_fields(&$vars) {
-  $view = $vars['view'];
-  if($view->name == "promo_slideshow") {
-      foreach ($vars['fields'] as $id => $field) {
+  // $view = $vars['view'];
+  // if($view->name == "promo_slideshow") {
+  //     foreach ($vars['fields'] as $id => $field) {
 
-        if ($id == 'field_promo_link') {
-            $custom_link = $vars['fields'][$id]->content;
+  //       if ($id == 'field_promo_link') {
+  //           $custom_link = $vars['fields'][$id]->content;
 
-            if ($custom_link) {
-              // if fully defined link, then replace read-more link with it
-              if (strpos($custom_link, "<a")!==FALSE) {
-                $vars['fields']['view_node']->content = $custom_link;
-              } else {
-                // if defined only title, create new readmore link with this title
+  //           if ($custom_link) {
+  //             // if fully defined link, then replace read-more link with it
+  //             if (strpos($custom_link, "<a")!==FALSE) {
+  //               $vars['fields']['view_node']->content = $custom_link;
+  //             } else {
+  //               // if defined only title, create new readmore link with this title
 
-                $regexp = "<a\s[^>]*href=(\"??)([^\" >]*?)\\1[^>]*>(.*)<\/a>";
-                if(preg_match_all("/$regexp/siU", $vars['fields']['view_node']->content, $matches)) {
-                  if ($matches[2][0]) {
-                    $vars['fields']['view_node']->content = '<a href="'.$matches[2][0].'">'.$custom_link.'</a>';
-                  }
-              }
-            }
-          }
-        $vars['fields'][$id]->content = '';
-      }
-    }
-  }
+  //               $regexp = "<a\s[^>]*href=(\"??)([^\" >]*?)\\1[^>]*>(.*)<\/a>";
+  //               if(preg_match_all("/$regexp/siU", $vars['fields']['view_node']->content, $matches)) {
+  //                 if ($matches[2][0]) {
+  //                   $vars['fields']['view_node']->content = '<a href="'.$matches[2][0].'">'.$custom_link.'</a>';
+  //                 }
+  //             }
+  //           }
+  //         }
+  //       $vars['fields'][$id]->content = '';
+  //     }
+  //   }
+  // }
 }
 
 /**
