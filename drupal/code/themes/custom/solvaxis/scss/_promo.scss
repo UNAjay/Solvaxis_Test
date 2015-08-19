@@ -42,4 +42,18 @@
   }
 }
 
+.top-bg-image {
+  -webkit-filter: grayscale(100%); 
+  filter: grayscale(100%);
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: $white;
+    opacity: 0.5;
+  }
+}
+
 

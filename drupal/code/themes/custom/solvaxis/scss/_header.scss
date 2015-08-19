@@ -53,7 +53,7 @@
 	}
 }
 
-// todo: add unique class to these blocks
+
 #block-jeeveserp-layout-jeeveserp-layout-phone {
   float: left;
 }
@@ -250,7 +250,7 @@
 	}
 
 	.menu {
-		display: none;
+		//display: none;
 
 	  @include at-breakpoint(0 $second - 1) {
 	  	@include full-width;
