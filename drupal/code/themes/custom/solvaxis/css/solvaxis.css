@@ -350,7 +350,7 @@ body {
   left: 0;
   top: 0;
   width: 100%;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid transparent;
   z-index: 100;
 }
 @media (max-width: 799px) {
@@ -438,7 +438,7 @@ body {
     font-weight: 300;
     text-transform: uppercase;
     margin: 0 20px;
-    padding: 0;
+    padding: 0 0 6px;
     position: relative;
   }
   .header-secondary .menu li:first-child {
@@ -450,34 +450,80 @@ body {
     text-decoration: none;
     padding: 0;
   }
-}
-.header-secondary .menu li > li {
-  position: relative;
+  .header-secondary .menu li:hover:after {
+    display: block;
+    content: "";
+    height: 1px;
+    width: 100%;
+    background: #000;
+    position: absolute;
+    bottom: 3px;
+  }
 }
 @media (max-width: 799px) {
   .header-secondary .menu li.last a {
     border-bottom: 1px solid #989898;
   }
 }
-.header-secondary .menu .content a {
+.header-secondary .content a {
   color: #000;
   display: block;
   text-transform: uppercase;
   padding: 0;
 }
-.header-secondary .menu .content a.active, .header-secondary .menu .content a.active-trail, .header-secondary .menu .content a:hover {
+.header-secondary .content a.active, .header-secondary .content a.active-trail, .header-secondary .content a:hover {
   background: transparent;
   color: #000;
 }
 
 .header-secondary .menu > li .menu {
   display: none;
-  background: #fff;
   position: absolute;
   right: 0;
-  top: 18px;
-  width: 220px;
+  top: 20px;
+  width: 160px;
   margin-top: 0;
+  padding: 15px 0;
+  background: transparent;
+  z-index: 1;
+}
+.header-secondary .menu > li .menu li {
+  margin: 0;
+  background: #fff;
+  width: 100%;
+  padding: 4px 15px 6px;
+}
+.header-secondary .menu > li .menu li:first-child {
+  padding: 11px 15px 6px;
+}
+.header-secondary .menu > li .menu li:hover:after {
+  display: none;
+}
+.header-secondary .menu > li .menu li a {
+  position: relative;
+  padding: 0 0 3px;
+}
+.header-secondary .menu > li .menu li a:hover:after {
+  display: block;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  z-index: 999;
+}
+.header-secondary .menu > li .menu:before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 9px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5.5px 6px 5.5px;
+  border-color: transparent transparent #ffffff;
 }
 .header-secondary .menu > li:hover .menu {
   display: block;

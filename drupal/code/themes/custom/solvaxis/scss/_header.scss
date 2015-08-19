@@ -185,7 +185,7 @@
   left: 0;
   top: 0;
   width: 100%;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid transparent;
   z-index: 100;
   
   @include at-breakpoint(0 $second - 1) {
@@ -270,7 +270,7 @@
         font-weight: 300;
         text-transform: uppercase;
         margin: 0 20px;
-        padding: 0;
+        padding: 0 0 6px;
         position: relative;
         &:first-child {
           margin: 0 20px 0 0;
@@ -282,11 +282,18 @@
           text-decoration: none;
           padding: 0;
         }
+        &:hover {
+          &:after {
+            display: block;
+            content: "";
+            height: 1px;
+            width: 100%;
+            background: $black;
+            position: absolute;
+            bottom: 3px;
+          }
+        }
   	  }
-      
-      > li {
-        position: relative;
-      }
 
   	  &.last a {
   		  @include at-breakpoint(0 $second - 1) {
@@ -294,19 +301,20 @@
   		  }
   	  }
   	}
-  	.content a {
-  		color: $black;
-  		display: block;
-      text-transform: uppercase;
-      padding: 0;
+  	
+	}
+	.content a {
+		color: $black;
+		display: block;
+    text-transform: uppercase;
+    padding: 0;
 
-  	  &.active,
-  	  &.active-trail,
-  	  &:hover {
-  	  	background: transparent;
-  	  	color: $black;
-  	  }
-  	}
+	  &.active,
+	  &.active-trail,
+	  &:hover {
+      background: transparent;
+	  	color: $black;
+	  }
 	}
 }
 
@@ -316,12 +324,65 @@
     > li {
       .menu {
         display: none;
-        background: $white;
         position: absolute;
         right: 0;
-        top: 18px;
-        width: 220px;
+        top: 20px;
+        width: 160px;
         margin-top: 0;
+        //box-shadow: 3px 3px 0 0 $gray-light;
+        padding: 15px 0;
+        background: transparent;
+        z-index: 1;
+        
+        li {
+          margin: 0;
+          background: $white;
+          width: 100%;
+          //margin-left: -15px;
+          //margin-right: -15px;
+          padding: 4px 15px 6px;
+          
+          &:first-child {
+            padding: 11px 15px 6px;
+          }
+          
+          &:hover {
+            &:after {
+              display: none;
+            }
+          }
+          
+          a {
+            position: relative;
+            padding: 0 0 3px;
+            &:hover {
+              &:after {
+                display: block;
+                content: "";
+                height: 1px;
+                width: 100%;
+                background: $black;
+                position: absolute;
+                bottom: 0;
+                z-index: 999;
+              }
+            }
+          }
+        }
+        
+        &:before {
+          display: block;
+          content: "";
+          position: absolute;
+          top: 9px;
+          right: 0;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 5.5px 6px 5.5px;
+          border-color: transparent transparent #ffffff ;
+        }
+        
       }
       &:hover {
         .menu {
