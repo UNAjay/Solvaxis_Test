@@ -31,52 +31,34 @@ function jeeveserp_layout_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'jeeveserp_layout-jeeveserp_layout_phone' => array(
-          'module' => 'jeeveserp_layout',
-          'delta' => 'jeeveserp_layout_phone',
-          'region' => 'header_primary',
+        'system-main-menu' => array(
+          'module' => 'system',
+          'delta' => 'main-menu',
+          'region' => 'header_secondary',
           'weight' => '-10',
-        ),
-        'jeeveserp_layout-jeeveserp_layout_chat' => array(
-          'module' => 'jeeveserp_layout',
-          'delta' => 'jeeveserp_layout_chat',
-          'region' => 'header_primary',
-          'weight' => '-8',
-        ),
-        'jeeveserp_layout-jeeveserp_layout_username' => array(
-          'module' => 'jeeveserp_layout',
-          'delta' => 'jeeveserp_layout_username',
-          'region' => 'header_primary',
-          'weight' => '-7',
-        ),
-        'search-form' => array(
-          'module' => 'search',
-          'delta' => 'form',
-          'region' => 'header_primary',
-          'weight' => '-6',
         ),
         'lang_dropdown-language' => array(
           'module' => 'lang_dropdown',
           'delta' => 'language',
-          'region' => 'header_primary',
-          'weight' => '-5',
+          'region' => 'header_secondary',
+          'weight' => '-9',
+        ),
+        'search-form' => array(
+          'module' => 'search',
+          'delta' => 'form',
+          'region' => 'header_secondary',
+          'weight' => '-8',
         ),
         'site_socialicons-site_socialicons_global' => array(
           'module' => 'site_socialicons',
           'delta' => 'site_socialicons_global',
           'region' => 'footer_primary',
-          'weight' => '-38',
+          'weight' => '-37',
         ),
         'block-1' => array(
           'module' => 'block',
           'delta' => '1',
           'region' => 'footer_col_1',
-          'weight' => '-10',
-        ),
-        'menu_block-1' => array(
-          'module' => 'menu_block',
-          'delta' => '1',
-          'region' => 'footer_col_2',
           'weight' => '-10',
         ),
         'block-2' => array(
