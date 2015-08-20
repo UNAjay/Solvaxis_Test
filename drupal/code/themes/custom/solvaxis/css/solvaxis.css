@@ -719,7 +719,8 @@ footer .social-icons li a[title="Xing"] {
 .tabs,
 footer .region-holder,
 header .region-holder,
-#leader .flexslider {
+#leader .flexslider,
+.page-user #content .region-holder {
   *zoom: 1;
   max-width: 1000px;
   max-width: 62.5rem;
@@ -737,10 +738,15 @@ header .region-holder,
 .tabs:after,
 footer .region-holder:after,
 header .region-holder:after,
-#leader .flexslider:after {
+#leader .flexslider:after,
+.page-user #content .region-holder:after {
   content: "";
   display: table;
   clear: both;
+}
+
+.page-user #content {
+  margin-top: 250px;
 }
 
 #content {
@@ -1037,8 +1043,10 @@ footer .block-block {
   }
 }
 footer .footer-info {
-  width: 60%;
+  width: 66%;
   float: left;
+  margin-right: 2%;
+  display: inline;
   background-color: #E30043;
   color: #fff;
   padding: 20px;
@@ -1050,6 +1058,14 @@ footer .footer-info h3 {
 footer .footer-info .region {
   float: left;
   width: 50%;
+}
+
+.region-footer-primary {
+  width: 32%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
+  display: inline;
 }
 
 #leader {
@@ -1282,7 +1298,9 @@ footer .footer-info .region {
 }
 
 .view-ref-news.view-display-id-hot_news .views-row {
-  padding-bottom: 20px;
+  display: inline-block;
+  margin-bottom: 20px;
+  overflow: hidden;
 }
 .view-ref-news.view-display-id-hot_news .views-row .views-field-field-news-image {
   width: 32%;

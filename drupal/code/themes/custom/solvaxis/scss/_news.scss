@@ -43,8 +43,9 @@
 // hot news
 .view-ref-news.view-display-id-hot_news {
   .views-row {
-    
-      padding-bottom: 20px;
+    display: inline-block;
+      margin-bottom: 20px;
+      overflow: hidden;
      
           .views-field-field-news-image {
             @include span-columns(4,12);

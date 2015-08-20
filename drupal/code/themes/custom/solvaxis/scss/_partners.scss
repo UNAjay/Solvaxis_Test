@@ -74,12 +74,17 @@
 .tabs,
 footer .region-holder,
 header .region-holder,
-#leader .flexslider {
+#leader .flexslider,
+.page-user #content .region-holder {
   @include container;
 	margin: 0 auto;
 	max-width: 1000px;
   padding-left: 0;
   padding-right: 0;
+}
+
+.page-user #content {
+  margin-top: 250px;
 }
 
 #content {
