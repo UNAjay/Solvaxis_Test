@@ -339,7 +339,7 @@
   .menu {
     > li {
       .menu {
-        display: none;
+        display: none !important;
         position: absolute;
         right: 0;
         top: 20px;
@@ -401,7 +401,7 @@
       }
       &:hover {
         .menu {
-          display: block;
+          display: block !important;
         }
       }
     }

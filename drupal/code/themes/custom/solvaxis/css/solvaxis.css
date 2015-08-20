@@ -497,7 +497,7 @@ body {
 }
 
 .header-secondary .menu > li .menu {
-  display: none;
+  display: none !important;
   position: absolute;
   right: 0;
   top: 20px;
@@ -546,7 +546,7 @@ body {
   border-color: transparent transparent #ffffff;
 }
 .header-secondary .menu > li:hover .menu {
-  display: block;
+  display: block !important;
 }
 
 .node-type-full-page #header-secondary-float,
