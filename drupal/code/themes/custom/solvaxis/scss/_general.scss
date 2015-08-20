@@ -49,6 +49,7 @@ body {
 // breadcrumbs
 //-----------------------------------------
 .breadcrumb {
+  display: none;
   a,
   .current {
     background: url('../images/bg-breadcrumb.png') repeat-x;
@@ -72,4 +73,17 @@ body {
 .view-filters {
   background: transparent;
   padding: 0;
+}
+
+
+#content {
+  margin: 0;
+}
+
+.region-content {
+  padding: 0;
+}
+
+.field-add-this {
+  display: none;
 }

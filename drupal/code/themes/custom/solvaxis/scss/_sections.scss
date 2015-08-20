@@ -5,15 +5,14 @@
 .node-section {
   position: relative;
   min-height: 200px;
-  padding: 20px 0;
+  padding: 0;
   width: 100%;
   
   .region-holder {
     @include container;
     margin: 0 auto;
     max-width: 1000px;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 28px 0;
     position: relative;
   }
   
@@ -23,12 +22,22 @@
   &.section_dark {
      background: $gray-dark;
   }
+  
+  //section with sidebar
+  &.with-sidebar {
+    .body {
+      @include span-columns(11,16);
+    }
+    .group-sidebar {
+      @include span-columns(5 omega,16);
+    }
+  }
 }
 
 // section title
 .section-title {
-  margin-bottom: 26px;
-  padding-bottom: 12px;
+  margin-bottom: 33px;
+  padding-bottom: 0;
   position: relative;
   font-size: 20px;
   font-weight: 300;
@@ -39,7 +48,7 @@
     display: block;
     position: absolute;
     left: 0;
-    bottom: -1px;
+    bottom: -8px;
     width: 40px;
     height: 1px;
     background: $crimson;
@@ -52,12 +61,11 @@
 // banner styles
 .group-banner {
   position: absolute;
-  margin-top: -90px;
-  width: 500px;
-  height: 150px;
-  border: 1px dotted #000;
+  width: 690px;
+  height: 182px;
   z-index: 2;
-  right: 0;
+  right: -30px;
+  top: -116px;
   padding: 20px;
   
   .banner-style-red & {

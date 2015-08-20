@@ -2,7 +2,7 @@
 	Customers
 	====================================== */
 
-.view.customers-list {
+.view-ref-customers.view-display-id-customers_block {
   img {
     filter: brightness(0) invert(1);
     //width: 100%;
@@ -36,7 +36,7 @@
 }
 
 @include at-breakpoint($first) {
-  .view.customers-list {
+  .view-ref-customers.view-display-id-customers_block {
   	margin-top: 0;
 		.views-row {
 			width: 32%;
