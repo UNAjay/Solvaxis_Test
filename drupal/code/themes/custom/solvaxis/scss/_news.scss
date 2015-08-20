@@ -39,3 +39,33 @@
     }
   }
 }
+
+// hot news
+.view-ref-news.view-display-id-hot_news {
+  .views-row {
+    
+      padding-bottom: 20px;
+     
+          .views-field-field-news-image {
+            @include span-columns(4,12);
+          }
+          .views-field-body,
+          .views-field-title-field { 
+            @include span-columns(8 omega,12);
+          }
+          .views-field-title-field {
+            font-size: 15px;
+            font-weight: 300;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+          }
+        }
+}
+
+.views-exposed-widget {
+  input[type="submit"] {
+    border: 1px solid transparent;
+    color: $white;
+    text-transform: normal;
+  }
+}

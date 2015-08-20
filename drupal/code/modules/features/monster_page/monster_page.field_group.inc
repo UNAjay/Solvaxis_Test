@@ -149,7 +149,6 @@ function monster_page_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'body',
-      1 => 'title',
     ),
     'format_type' => 'div',
     'format_settings' => array(

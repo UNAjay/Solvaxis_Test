@@ -10,7 +10,7 @@
   .views-row {
     //background: green;
     margin-bottom: 20px;
-    @include span-columns(8,16);
+    @include span-columns(6,12);
     margin-right: 0;
     margin-left: 2%;
     &:first-child {
@@ -22,7 +22,7 @@
     }
    
     @include at-breakpoint($second) {
-      @include span-columns(4,16);
+      @include span-columns(3,12);
       //background: pink;
       margin-right: 0;
       margin-left: 2%;
@@ -33,7 +33,7 @@
     }
     @include at-breakpoint($third) {
       //background: red;
-      @include span-columns(4,16);
+      @include span-columns(3,12);
       margin-right: 0;
       margin-left: 4%;
       &:nth-child(3) {
