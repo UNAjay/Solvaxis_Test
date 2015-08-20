@@ -91,17 +91,18 @@
 
 #block-lang-dropdown-language {
 	float: right;
+  margin-top: 67px;
+  margin-left: 20px;
 
   @include at-breakpoint($second) {
-  	padding: 7px 0;
+  	padding: 0;
   }
-
-	h2,
-	.content {
+  
+  .content {
 		display: inline-block;
 	}
 	h2 {
-		margin-right: 5px;
+		display: none;
 	}
   span.title {
     margin-right: 5px;
@@ -112,8 +113,16 @@
 	select {
 		width: auto !important;
 		padding-right: 5px;
-    color: #9FA09F;
+    height: 0;
 	}
+  .sbHolder {
+    margin-top: 0;
+  }
+  .sbHolder a {
+    color: $black;
+    font-size: 14px;
+    font-weight: 300;
+  }
 	.sbOptions {
 	  background: #000;
 	  width: 105px;
@@ -129,13 +138,15 @@
 // search-block in desktop
 //-----------------------------------------
 .header-secondary #block-search-form {
-	display: none;
+	//display: none;
 	float: right;
+  width: auto;
 
   @include at-breakpoint($second) {
   	display: block;
   	margin-left: 40px;
-		padding: 4px 0;
+		//padding: 4px 0;
+    padding: 0;
   }
 
 	input[type="text"] {
@@ -162,19 +173,24 @@
 // search-block in mobile
 //-----------------------------------------
 .header-secondary #block-search-form {
-  display: none;
-	background: #ECECEC;
-	border-bottom: 1px solid #B3B3B3;
-	padding: 15px;
-  @include full-width;
+  //display: none;
+  //background: #ECECEC;
+  background: none;
+  //border-bottom: 1px solid #B3B3B3;
+  border-bottom: 0 none;
+  //padding: 15px;
+  padding: 0;
+  //@include full-width;
+  width: auto;
+  margin-top: 60px;
 
-	input[type="text"] {
+  input[type="text"] {
     @extend %textfield-textarea;
-  	@include full-width;
-	}
-	input[type="submit"] {
-		display: none;
-	}
+    @include full-width;
+  }
+  input[type="submit"] {
+    //display: none;
+  }
 }
 
 //-----------------------------------------

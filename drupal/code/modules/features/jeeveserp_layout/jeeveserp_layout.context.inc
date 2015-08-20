@@ -35,7 +35,7 @@ function jeeveserp_layout_context_default_contexts() {
           'module' => 'system',
           'delta' => 'main-menu',
           'region' => 'header_secondary',
-          'weight' => '-10',
+          'weight' => '-8',
         ),
         'lang_dropdown-language' => array(
           'module' => 'lang_dropdown',
@@ -47,7 +47,7 @@ function jeeveserp_layout_context_default_contexts() {
           'module' => 'search',
           'delta' => 'form',
           'region' => 'header_secondary',
-          'weight' => '-8',
+          'weight' => '-10',
         ),
         'site_socialicons-site_socialicons_global' => array(
           'module' => 'site_socialicons',
