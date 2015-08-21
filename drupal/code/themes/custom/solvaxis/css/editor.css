@@ -1,0 +1,375 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700);
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+}
+
+html {
+  background: #F2F2F2;
+}
+
+body {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 800px) {
+  #page {
+    padding-top: 0;
+  }
+}
+
+.region-holder {
+  width: 100%;
+  margin: 0 auto;
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.region-content {
+  background: transparent;
+  padding: 20px 0;
+  float: left;
+  width: 100%;
+}
+@media (min-width: 600px) {
+  .region-content {
+    padding: 20px 0;
+  }
+}
+
+.breadcrumb {
+  display: none;
+}
+.breadcrumb a,
+.breadcrumb .current {
+  background: url("../images/bg-breadcrumb.png") repeat-x;
+}
+.breadcrumb .home-icon {
+  background-color: #46725c;
+}
+.breadcrumb .home-text {
+  background: url("../images/bg-breadcrumb-first.png") repeat-x transparent;
+}
+.breadcrumb .current span {
+  background: url("../images/bg-breadcrumb-end.png") no-repeat;
+}
+
+.view-filters {
+  background: transparent;
+  padding: 0;
+}
+
+#content {
+  margin: 0;
+}
+
+.region-content {
+  padding: 0;
+}
+
+.field-add-this {
+  display: none;
+}
+
+@font-face {
+  font-family: 'solvaxis-icn';
+  src: url("../fonts/solvaxis-icons/font/solvaxis-icn.eot?35242246");
+  src: url("../fonts/solvaxis-icons/font/solvaxis-icn.eot?35242246#iefix") format("embedded-opentype"), url("../fonts/solvaxis-icons/font/solvaxis-icn.woff?35242246") format("woff"), url("../fonts/solvaxis-icons/font/solvaxis-icn.ttf?35242246") format("truetype"), url("../fonts/solvaxis-icons/font/solvaxis-icn.svg?35242246#solvaxis-icn") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'solvaxis-icn';
+    src: url('../fonts/solvaxis-icons/font/solvaxis-icn.svg?35242246#solvaxis-icn') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "solvaxis-icn";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+[class^="icon-"]:hover,
+[class^="icon-"]:active {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 0;
+}
+
+.icon-twitter:before {
+  content: '\e800';
+}
+
+.icon-facebook-official:before {
+  content: '\e801';
+}
+
+.icon-facebook:before {
+  content: '\e802';
+}
+
+.icon-linkedin:before {
+  content: '\e803';
+}
+
+.icon-xing:before {
+  content: '\e804';
+}
+
+.sbOptions a:hover,
+.sbOptions a:focus,
+.sbOptions a.sbFocus {
+  background: #55967a;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #F2F2F2;
+}
+
+/*
+** Override formalize settigns
+*/
+button,
+a.button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"],
+.button, .region-content input[type="submit"], #colorbox input[type="submit"], .node-type-full-page .view-promo-slideshow .slides {
+  background: none transparent;
+  padding: 17px 22px 19px;
+  border: 1px solid #E30043;
+  background: transparent;
+  color: #E30043;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 0;
+  text-transform: uppercase;
+  text-shadow: none;
+}
+button:hover, button:focus,
+a.button:hover,
+a.button:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+input[type="button"]:hover,
+input[type="button"]:focus,
+.button:hover,
+.button:focus, .region-content input[type="submit"]:hover, .region-content input[type="submit"]:focus, #colorbox input[type="submit"]:hover, #colorbox input[type="submit"]:focus, .node-type-full-page .view-promo-slideshow .slides:hover, .node-type-full-page .view-promo-slideshow .slides:focus {
+  border: 1px solid #E30043;
+  background: #E30043;
+  color: #fff;
+}
+button:active,
+a.button:active,
+input[type="reset"]:active,
+input[type="submit"]:active,
+input[type="button"]:active,
+.button:active, .region-content input[type="submit"]:active, #colorbox input[type="submit"]:active, .node-type-full-page .view-promo-slideshow .slides:active {
+  border: 1px solid #c70038;
+  background: #c70038;
+  color: #fff;
+}
+
+a.button {
+  display: inline-block;
+  text-decoration: none;
+}
+a.button:active {
+  color: #fff;
+}
+a.button:hover, a.button:focus {
+  text-decoration: none;
+}
+a.button:active {
+  text-decoration: none;
+}
+
+#edit-preview {
+  background: none;
+  border: none;
+  text-decoration: underline;
+}
+
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  height: auto;
+  max-width: 100%;
+  padding: 0 8px;
+  border: 1px solid transparent;
+  background: #fff;
+  font-size: 14px;
+  color: #3C3F42;
+  font-family: inherit;
+  line-height: 28px;
+}
+textarea:focus,
+select:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus {
+  border: 1px solid #CCC;
+  outline: none;
+}
+
+a {
+  color: #E30043;
+}
+a:hover, a:active, a:focus {
+  color: #000;
+  text-decoration: underline;
+}
+a:hover.icon, a:active.icon, a:focus.icon {
+  text-decoration: none;
+}
+a:focus {
+  outline: none;
+}
+a :visited {
+  color: #000;
+}
+a.call-to-action {
+  background: transparent;
+  border: 1px solid #000;
+  margin-bottom: 10px;
+  height: 50px;
+  width: 100%;
+  position: relative;
+  padding: 0 10px 0 70px;
+  background-size: 25px auto;
+  background-position: 20px 10px;
+  background-repeat: no-repeat;
+}
+a.call-to-action span {
+  color: #000;
+  font-size: 15px;
+  line-height: 48px;
+  font-weight: 300;
+}
+a.call-to-action.download-pdf {
+  background-image: url("../images/pdf.png");
+}
+a.call-to-action.registration {
+  background-image: url("../images/pen.png");
+}
+a.call-to-action.support {
+  background-image: url("../images/arrow.png");
+}
+
+p a {
+  color: #E30043;
+}
+
+.current > a,
+.active > a {
+  text-decoration: underline;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: inherit;
+}
+h1 a:hover, h1 a:active, h1 a:focus, h2 a:hover, h2 a:active, h2 a:focus, h3 a:hover, h3 a:active, h3 a:focus, h4 a:hover, h4 a:active, h4 a:focus, h5 a:hover, h5 a:active, h5 a:focus, h6 a:hover, h6 a:active, h6 a:focus {
+  color: #000;
+}
+
+a.call-to-action {
+  background: transparent;
+  border: 1px solid #000;
+  margin-bottom: 10px;
+  height: 50px;
+  width: 100%;
+  position: relative;
+  padding: 0 10px 0 70px;
+  background-size: 25px auto;
+  background-position: 20px 10px;
+  background-repeat: no-repeat;
+}
+a.call-to-action span {
+  color: #000;
+  font-size: 15px;
+  line-height: 48px;
+  font-weight: 300;
+}
+a.call-to-action.download-pdf {
+  background-image: url("../images/pdf.png");
+}
+a.call-to-action.registration {
+  background-image: url("../images/pen.png");
+}
+a.call-to-action.support {
+  background-image: url("../images/arrow.png");
+}

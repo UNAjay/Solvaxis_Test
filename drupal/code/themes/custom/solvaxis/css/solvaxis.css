@@ -898,6 +898,33 @@ a:focus {
 a :visited {
   color: #000;
 }
+a.call-to-action {
+  background: transparent;
+  border: 1px solid #000;
+  margin-bottom: 10px;
+  height: 50px;
+  width: 100%;
+  position: relative;
+  padding: 0 10px 0 70px;
+  background-size: 25px auto;
+  background-position: 20px 10px;
+  background-repeat: no-repeat;
+}
+a.call-to-action span {
+  color: #000;
+  font-size: 15px;
+  line-height: 48px;
+  font-weight: 300;
+}
+a.call-to-action.download-pdf {
+  background-image: url("../images/pdf.png");
+}
+a.call-to-action.registration {
+  background-image: url("../images/pen.png");
+}
+a.call-to-action.support {
+  background-image: url("../images/arrow.png");
+}
 
 p a {
   color: #E30043;
@@ -1327,32 +1354,4 @@ footer .footer-info .region {
   border: 1px solid transparent;
   color: #fff;
   text-transform: normal;
-}
-
-p.call-to-action {
-  background: transparent;
-  border: 1px solid #000;
-  margin-bottom: 10px;
-  height: 50px;
-  width: 100%;
-  position: relative;
-  padding: 0 10px 0 70px;
-  background-size: 25px auto;
-  background-position: 20px 10px;
-  background-repeat: no-repeat;
-}
-p.call-to-action span {
-  color: #000;
-  font-size: 15px;
-  line-height: 48px;
-  font-weight: 300;
-}
-p.call-to-action.download-pdf {
-  background-image: url("../images/pdf.png");
-}
-p.call-to-action.registration {
-  background-image: url("../images/pen.png");
-}
-p.call-to-action.support {
-  background-image: url("../images/arrow.png");
 }

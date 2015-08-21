@@ -19,3 +19,12 @@
   }
 
 })(jQuery, Drupal, this, this.document);
+
+
+Drupal.behaviors.FullscreenPagesStickyNav = function (context) {
+  return;
+};
+Drupal.behaviors.jeeves_images = function (context) {
+  return;
+};
+
