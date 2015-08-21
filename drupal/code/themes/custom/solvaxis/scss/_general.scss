@@ -73,6 +73,19 @@ body {
 .view-filters {
   background: transparent;
   padding: 0;
+  clear: both;
+  @include full-width;
+
+  label {
+    display: none;
+  }
+	// Custom selects in filter 
+	.sbSelector {
+		white-space: nowrap; 
+		max-width: 85%; 
+		overflow: hidden;
+		text-overflow: ellipsis; 
+	}
 }
 
 
@@ -87,3 +100,6 @@ body {
 .field-add-this {
   display: none;
 }
+
+
+

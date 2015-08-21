@@ -26,7 +26,8 @@
   
   //section with sidebar
   &.with-sidebar {
-    .body {
+    .body,
+    .field-view {
       @include span-columns(8,12);
     }
     .group-sidebar {
