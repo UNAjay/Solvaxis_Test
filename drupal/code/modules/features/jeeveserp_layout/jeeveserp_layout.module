@@ -6,6 +6,52 @@
 
 include_once 'jeeveserp_layout.features.inc';
 
+function jeeveserp_layout_wysiwyg_editor_settings_alter(&$settings, $context) {
+
+//  krumo($settings);
+//  krumo($context);
+
+  // CKEditor - You can separate lines by using a multidimensional array,
+  // and by placing a "/" string in between arrays. "-" also counts as a separator just as in FCKEditor
+  if ($context['profile']->editor == 'ckeditor' && $context['profile']->format == 'full_html') {
+    $settings['toolbar'] = array(
+      array (
+        'Format',
+        '-',
+        'CreateDiv',
+        '-',
+        'Italic',
+        'Bold',
+        '-',
+        'PasteText',
+        'PasteFromWord',
+        '-',
+        'BulletedList',
+        'NumberedList',
+        // 'Outdent',
+        // 'Indent',
+        '-',
+        'Superscript',
+        // 'Subscript',
+        '-',
+        'RemoveFormat',
+        '-',
+        'Table',
+        'SpecialChar',
+        '-',
+        'linkit',
+        '-',
+        'shortcode_wysiwyg',
+        '-',
+        'Link',
+        '-',
+        'Styles',
+        '-',
+        'custom_link'),
+    );
+  }
+}
+
 /**
  * Implements hook_block_info().
  */

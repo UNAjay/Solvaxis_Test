@@ -37,7 +37,10 @@ projects[token][version] = "1.6"
 projects[better_exposed_filters][version] = "3.2"
 projects[link][version] = "1.2"
 projects[context][version] = "3.6"
-projects[wysiwyg][version] = "2.2"
+projects[wysiwyg][version] = 2.x-dev
+projects[wysiwyg][subdir] = contrib
+projects[wysiwyg][revision] = 898d022cf7d0b6c6a6e7d813199d561b4ad39f8b
+projects[wysiwyg][patch][2243413] = https://www.drupal.org/files/issues/add_item_ajax_error-2243413-3.patch
 projects[libraries][version] = "2.2"
 projects[imce][version] = "1.9"
 projects[imce_wysiwyg][version] = "1.0"
@@ -293,9 +296,9 @@ libraries[colorbox][download][type] = "get"
 libraries[colorbox][download][url] = "https://github.com/jackmoore/colorbox/archive/1.x.zip"
 libraries[colorbox][destination] = "libraries"
 
-libraries[ckeditor][download][type] = "get"
-libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.6.1/ckeditor_3.6.6.1.zip"
-libraries[ckeditor][destination] = "libraries"
+libraries[ckeditor][download][type] = file
+libraries[ckeditor][download][url] = https://github.com/ckeditor/ckeditor-releases/archive/4.3.0/full.zip
+libraries[ckeditor][destination] = libraries
 
 libraries[flexslider][download][type] = "get"
 libraries[flexslider][download][url] = "https://github.com/woothemes/FlexSlider/archive/master.zip"

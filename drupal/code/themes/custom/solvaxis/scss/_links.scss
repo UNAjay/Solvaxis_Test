@@ -22,6 +22,52 @@ a {
   :visited {
     color: $link-color-hover;
   }
+
+  &.call-to-action {
+    background: transparent;
+    border: 1px solid $black;
+    margin-bottom: 10px;
+    height: 50px;
+    width: 100%;
+    position: relative;
+    padding: 0 10px 0 70px;
+    background-size: 25px auto;
+    background-position: 20px 10px;
+    background-repeat: no-repeat;
+
+    span {
+      color: $black;
+      font-size: 15px;
+      line-height: 48px;
+      font-weight: 300;
+    }
+
+    //&:before {
+//      content: '\e802';
+//      display: block;
+//      position: absolute;
+//      top: 10px;
+//      left: 6px;
+//      font-family: 'solvaxis-icn';
+//      font-size: 20px;
+//      font-weight: normal;
+//      color: $crimson;
+//    }
+
+      &.download-pdf {
+        background-image: url('../images/pdf.png');
+
+      }
+
+      &.registration {
+        background-image: url('../images/pen.png');
+
+      }
+
+      &.support {
+        background-image: url('../images/arrow.png');
+      }
+  }
 }
 
 // Links within paragraphs
