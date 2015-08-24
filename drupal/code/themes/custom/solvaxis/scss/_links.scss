@@ -25,48 +25,59 @@ a {
 
   &.call-to-action {
     background: transparent;
+    background-repeat: no-repeat;
+    background-size: 48px 48px;
+    background-position: 0 0;
     border: 1px solid $black;
+    color: $black;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 48px;
+    font-weight: 300;
     margin-bottom: 10px;
     height: 50px;
     width: 100%;
+    max-width: 300px;
     position: relative;
     padding: 0 10px 0 70px;
-    background-size: 25px auto;
-    background-position: 20px 10px;
-    background-repeat: no-repeat;
-
-    span {
-      color: $black;
-      font-size: 15px;
-      line-height: 48px;
-      font-weight: 300;
+    text-decoration: none;
+   
+    &:hover {
+      background-color: $crimson;
+      border: 1px solid $crimson;
+      color: $white;
     }
-
-    //&:before {
-//      content: '\e802';
-//      display: block;
-//      position: absolute;
-//      top: 10px;
-//      left: 6px;
-//      font-family: 'solvaxis-icn';
-//      font-size: 20px;
-//      font-weight: normal;
-//      color: $crimson;
-//    }
-
-      &.download-pdf {
-        background-image: url('../images/pdf.png');
-
+    &:active,
+    &:focus {
+      background-color: $crimson-darker;
+      border: 1px solid $crimson-darker;
+      color: $white;
+    }
+    
+    &.download-pdf {
+      background-image: url('../images/pdf@2x.png');
+      &:hover,
+      &:active,
+      &:focus {
+        background-image: url('../images/pdf-white@2x.png');
       }
-
-      &.registration {
-        background-image: url('../images/pen.png');
-
+    }
+    &.registration-form {
+      background-image: url('../images/pen@2x.png');
+      &:hover,
+      &:active,
+      &:focus {
+        background-image: url('../images/pen-white@2x.png');
       }
-
-      &.support {
-        background-image: url('../images/arrow.png');
+    }
+    &.e-media {
+      background-image: url('../images/arrow@2x.png');
+      &:hover,
+      &:active,
+      &:focus {
+        background-image: url('../images/arrow-white@2x.png');
       }
+    }
   }
 }
 

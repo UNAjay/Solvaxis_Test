@@ -111,6 +111,32 @@ input[type="week"] {
   }
 }
 
+// button in filter
+.views-exposed-form {
+  input[type="submit"] {
+    background: url('../images/clear.png') 0 4px no-repeat;
+    height: auto;
+    min-height: 20px;
+    padding: 9px 0 9px 15px;
+    border: 0 none;
+    color: $white;
+    font-size: 12px;
+    text-transform: none;
+    &:hover,
+    &:focus {
+      background: url('../images/clear-hover.png') 0 4px no-repeat;
+      border: 0 none;
+      color: $gray;
+    }
+    &:active {
+      background: url('../images/clear-hover.png') 0 4px no-repeat;
+      border: 0 none;
+      color: $gray;
+    }
+  }
+}
+
+
 // buttons on dark background
 button,
 a.button,

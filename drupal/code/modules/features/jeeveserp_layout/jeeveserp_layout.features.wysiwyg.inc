@@ -106,9 +106,6 @@ function jeeveserp_layout_wysiwyg_default_profiles() {
           'Iframe' => 1,
           'Scayt' => 1,
         ),
-        'custom_link' => array(
-          'collapse_text' => 1,
-        ),
         'imce' => array(
           'imce' => 1,
         ),
@@ -116,7 +113,6 @@ function jeeveserp_layout_wysiwyg_default_profiles() {
           'linkit' => 1,
         ),
         'drupal' => array(
-          'shortcode_wysiwyg' => 1,
           'break' => 1,
         ),
       ),
@@ -129,6 +125,8 @@ function jeeveserp_layout_wysiwyg_default_profiles() {
       'css_setting' => 'self',
       'css_path' => '/sites/all/themes/custom/solvaxis/css/editor.css',
       'stylesSet' => 'Download PDF=a.call-to-action.download-pdf
+Registration form=a.call-to-action.registration-form
+Access e-media=a.call-to-action.e-media
 Call to action=p.call-to-action
 Heading 1=h1
 Heading 2=h2
