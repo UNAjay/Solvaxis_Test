@@ -2,55 +2,101 @@
 	Customers
 	====================================== */
 
-.view-ref-customers.view-display-id-customers_block {
-  img {
-    filter: brightness(0) invert(1);
-    //width: 100%;
-//    height: auto;
-//    max-height: 85px;
-  }
+.view-ref-customers {
+  .view-content {
   
-	.views-row {
-    border: 1px solid $white;
-		float: left;
-		width: 100%;
-		margin: 0;
-    padding: 0;
-		text-align: center;
-    margin-bottom: 20px;
-		height: 130px;
-		display: table;
-		text-align: center;
-    
-		a { display: inline-block; }
-		.wrapper {
-			display: table-cell;
-			vertical-align: middle;
-			img {
-				display: inline-block;
-				max-width: 100%;
-				height: auto;
-			}
-		}
-	}
+  }
+  .views-row {
+    .views-field-field-image {
+      display: table;
+      width: 100%;
+      height: 100%;
+      
+      .field-content {
+        display: table;
+        width: 100%;
+        height: 100%;
+        
+        a {
+          display: table-cell;
+          text-align: center;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
 }
 
-@include at-breakpoint($first) {
-  .view-ref-customers.view-display-id-customers_block {
-  	margin-top: 0;
-		.views-row {
-			width: 32%;
-			margin: 0;
-      margin-left: 2%;
+// Meet our customers
+.view-ref-customers {
+  &.view-display-id-customers_block {
+    
+    margin-top: 0;
+  	.views-row {
+      border: 1px solid $white;
       margin-bottom: 20px;
-      padding: 0;
-			
-      &:first-child {
-        margin-left: 0;
+  		height: 130px;
+ 
+      img {
+        filter: brightness(0) invert(1);
       }
-      &:nth-child(4) {
-        margin-left: 0;
+      
+  		&:hover,
+      &:active {
+        background: $white;
+        img {
+          filter: none;
+        }
       }
-	  }
+      
+      @include at-breakpoint($first) {
+        @include span-columns(4,12);
+        &:nth-child(3n+3) {
+          //background: red;
+          @include span-columns(4 omega,12);
+        }
+      }
+  	}
   }
 }
+
+// They trust us
+.view-ref-customers {
+  &.view-display-id-they_trust_us {
+    .views-row {
+      //background: gray;
+      img {
+        //max-width: 220px;
+        -webkit-filter: grayscale(100%); 
+        filter: grayscale(100%);
+        
+    		&:hover,
+        &:active {
+          -webkit-filter: grayscale(0%); 
+          filter: grayscale(0%);
+        }
+      }
+      
+      @include at-breakpoint($first) {
+        @include span-columns(6,12);
+        &:nth-child(2n+2) {
+          @include span-columns(6 omega,12);
+          //background: green;
+        }
+      }
+      @include at-breakpoint($second) {
+        @include span-columns(3,12);
+        
+         &:nth-child(2n+2) {
+           @include span-columns(3,12);
+           //background: gray;
+         }
+        &:nth-child(4n+4) {
+          @include span-columns(3 omega,12);
+          //background: red;
+        }
+      }
+    }
+  }
+}
+
