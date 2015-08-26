@@ -148,6 +148,60 @@ function monster_page_form_views_exposed_form_alter(&$form, $form_state) {
 }
 
 
+/**
+ * Implementation of hook_filter_info().
+ */
+function monster_page_filter_info_alter(&$info) {
+  $info['insert_block']['tips callback'] = 'monster_page_insert_block_tips';
+}
+
+
+function monster_page_insert_block_tips($filter, $format, $long = FALSE) {
+  module_load_include('inc', 'block', 'block.admin');
+  global $theme_key;
+  $blocks = block_admin_display_prepare_blocks($theme_key);
+  $modules = array('views', 'block');
+  foreach ($blocks as $block) {
+    if (in_array($block['module'], $modules)) {
+      // $block_list[$block['delta']] = $block['info'] . ': [block:' . $block['module'] . '='. $block['delta'] . ']';
+
+      $title = $block['info'];
+      $key = '[block:' . $block['module'] . '='. $block['delta'] . ']';
+      $rows[$block['delta']] = array($title, $key);
+      if ($block['module'] == 'views' && substr($block['delta'], 0, 3) != 'ref') {
+        // unset($block_list[$block['delta']]);
+        unset($rows[$block['delta']]);
+      }
+
+    }
+  }
+  // $data['#attributes'] = array('class' => array('block-list'));
+  // $data['items'] = $block_list;
+
+  $table_data = array(
+      'header'     => array('Title', 'Key'),
+      'rows'       => $rows,
+      'sticky'     => FALSE,
+      'empty'      => 'No results found',
+      'attributes' => array(),
+      'colgroups'  => array(),
+      'caption'    => NULL
+    );
+
+
+
+
+  $output = '';
+  $output .= t('You may use <a href="@insert_block_help">[block:<em>module</em>=<em>delta</em>] tags</a> to display the contents of block <em>delta</em> for module <em>module</em>.',
+    array("@insert_block_help" => url("filter/tips/$format->format", array('fragment' => 'filter-insert_block'))));
+
+  // $output .= theme('item_list', $data);
+  $output .= theme_table($table_data);
+  return $output;
+}
+
+
+
 
 
 

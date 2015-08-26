@@ -122,6 +122,7 @@ function monster_page_field_group_info() {
       1 => 'field_add_this',
       2 => 'field_view',
       3 => 'field_heading',
+      4 => 'field_block',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -234,7 +235,7 @@ function monster_page_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Sidebar',
-    'weight' => '5',
+    'weight' => '6',
     'children' => array(
       0 => 'field_acton_url',
       1 => 'field_sidebar_text',

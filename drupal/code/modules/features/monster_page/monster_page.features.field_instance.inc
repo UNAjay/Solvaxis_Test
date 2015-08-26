@@ -368,7 +368,7 @@ function monster_page_field_default_field_instances() {
           'share_services' => 'facebook,twitter',
         ),
         'type' => 'addthis_basic_toolbox',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'section_light' => array(
         'label' => 'hidden',
@@ -428,7 +428,7 @@ function monster_page_field_default_field_instances() {
       'module' => 'addthis',
       'settings' => array(),
       'type' => 'addthis_button_widget',
-      'weight' => 20,
+      'weight' => 21,
     ),
   );
 
@@ -556,7 +556,7 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 31,
+        'weight' => 42,
       ),
       'section_light' => array(
         'label' => 'above',
@@ -958,7 +958,7 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 43,
+        'weight' => 44,
       ),
       'section_light' => array(
         'label' => 'above',
@@ -1130,7 +1130,7 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 42,
+        'weight' => 43,
       ),
       'section_light' => array(
         'label' => 'above',
