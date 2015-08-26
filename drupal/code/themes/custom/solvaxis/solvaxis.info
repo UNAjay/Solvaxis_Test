@@ -15,7 +15,6 @@ scripts[] = scripts/solvaxis.js
 
 
 ; Regions
-regions[header_primary] = 'Header primary'
 regions[header_secondary] = 'Header secondary'
 regions[content] = 'Content'
 regions[menu_tabs] = 'Menu tabs'

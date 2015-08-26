@@ -1,7 +1,17 @@
 (function ($, Drupal, window, document, undefined) {
   Drupal.behaviors.solvaxis = {
     attach: function(context, settings) {
-
+      
+      // Sticky header
+      $(window).scroll(function() {
+      if ($(this).scrollTop() > 1){  
+          $('.header-secondary').addClass("sticky");
+        }
+        else{
+          $('.header-secondary').removeClass("sticky");
+        }
+      });
+      
       // Add class to pager outer div.
       $('.item-list:has(.pager)').addClass('pager-outer');
       
@@ -23,9 +33,6 @@
 })(jQuery, Drupal, this, this.document);
 
 
-Drupal.behaviors.FullscreenPagesStickyNav = function (context) {
-  return;
-};
 Drupal.behaviors.jeeves_images = function (context) {
   return;
 };
