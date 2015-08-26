@@ -17,6 +17,7 @@ dependencies[] = filter
 dependencies[] = image
 dependencies[] = industries
 dependencies[] = inline_entity_form
+dependencies[] = insert_block
 dependencies[] = lang_dropdown
 dependencies[] = link
 dependencies[] = linkit
