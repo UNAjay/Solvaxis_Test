@@ -334,11 +334,6 @@
 }
 
 .header-secondary.sticky {
-  position: fixed;
-  left: 0;
-  top: 0 !important;
-  width: 100%;
-  background: $white;
-  border-bottom: 1px solid #ddd;
-  z-index:200 !important;
+  background: rgba($white, 0.99);
+  border-bottom: 1px solid $gray-light;
 }
