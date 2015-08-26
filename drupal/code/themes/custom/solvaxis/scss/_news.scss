@@ -44,22 +44,67 @@
 .view-ref-news.view-display-id-hot_news {
   .views-row {
     display: inline-block;
-      margin-bottom: 20px;
-      overflow: hidden;
-     
-          .views-field-field-news-image {
-            @include span-columns(4,12);
-          }
-          .views-field-body,
-          .views-field-title-field { 
-            @include span-columns(8 omega,12);
-          }
-          .views-field-title-field {
-            font-size: 15px;
-            font-weight: 300;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-          }
-        }
+    float: left;
+    margin-bottom: 20px;
+    overflow: hidden;
+    clear: both;
+    .views-field-field-news-image {
+      @include span-columns(4,12);
+      
+      img {
+        display: inline-block;
+        float: left;
+      }
+    }
+    .views-field-body,
+    .views-field-title-field { 
+      @include span-columns(8 omega,12);
+    }
+    .views-field-body {
+      line-height: 1.2em;
+    }
+    .views-field-title-field {
+      font-size: 15px;
+      font-weight: 300;
+      text-transform: uppercase;
+      margin: -5px 0 15px;
+    }
+  } 
+}
+
+//-----------------------------------------
+// pager
+//-----------------------------------------
+.pager-outer {
+  @include full-width;
+  .pager {
+    float: none;
+    text-align: center;
+    margin: 0 auto;
+    width: 160px;
+
+    li {
+      
+      display: inline-block;
+      float: left;
+      margin: 0;
+      color: $white;
+      font-weight: 300;
+      line-height: 20px;
+      height: 20px;
+      min-width: 20px;
+      padding: 0 3px;
+		
+  		a {
+  			color: $white;
+  		}
+    
+      &.pager-previous,
+      &.pager-next {
+       background: $gray-lighter;
+       width: 20px;
+      }
+    }
+  }
 }
 
