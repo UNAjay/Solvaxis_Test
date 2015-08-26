@@ -2,7 +2,9 @@
   Drupal.behaviors.solvaxis = {
     attach: function(context, settings) {
 
-
+      // Add class to pager outer div.
+      $('.item-list:has(.pager)').addClass('pager-outer');
+      
       // Scroll to hash.
       // ------------------------------------------------------------------------------------------------
 
