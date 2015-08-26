@@ -28,7 +28,6 @@ dependencies[] = title
 dependencies[] = view_mode_selector
 dependencies[] = viewfield
 dependencies[] = views
-features[ckeditor_style_rules][] = section_title
 features[ctools][] = ds:ds:1
 features[ctools][] = field_group:field_group:1
 features[ctools][] = strongarm:strongarm:1

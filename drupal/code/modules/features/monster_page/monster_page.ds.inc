@@ -45,11 +45,6 @@ function monster_page_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_banner_image' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
     'field_heading' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -86,11 +81,6 @@ function monster_page_ds_field_settings_info() {
           'ow-at' => '',
           'ow-def-at' => FALSE,
         ),
-      ),
-    ),
-    'field_banner_image' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
       ),
     ),
     'field_heading' => array(
