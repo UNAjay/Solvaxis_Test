@@ -816,7 +816,7 @@ a.call-to-action {
   margin-bottom: 10px;
   height: 50px;
   width: 100%;
-  max-width: 300px;
+  max-width: 320px;
   position: relative;
   padding: 0 10px 0 70px;
   text-decoration: none;
@@ -837,16 +837,16 @@ a.call-to-action.download-pdf {
 a.call-to-action.download-pdf:hover, a.call-to-action.download-pdf:active, a.call-to-action.download-pdf:focus {
   background-image: url("../images/pdf-white@2x.png");
 }
-a.call-to-action.registration-form {
+a.call-to-action.fill-form {
   background-image: url("../images/pen@2x.png");
 }
-a.call-to-action.registration-form:hover, a.call-to-action.registration-form:active, a.call-to-action.registration-form:focus {
+a.call-to-action.fill-form:hover, a.call-to-action.fill-form:active, a.call-to-action.fill-form:focus {
   background-image: url("../images/pen-white@2x.png");
 }
-a.call-to-action.e-media {
+a.call-to-action.external-link {
   background-image: url("../images/arrow@2x.png");
 }
-a.call-to-action.e-media:hover, a.call-to-action.e-media:active, a.call-to-action.e-media:focus {
+a.call-to-action.external-link:hover, a.call-to-action.external-link:active, a.call-to-action.external-link:focus {
   background-image: url("../images/arrow-white@2x.png");
 }
 
