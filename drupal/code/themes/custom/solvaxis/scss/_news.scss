@@ -75,36 +75,74 @@
 //-----------------------------------------
 // pager
 //-----------------------------------------
-.pager-outer {
-  @include full-width;
-  .pager {
-    float: none;
-    text-align: center;
-    margin: 0 auto;
-    width: 160px;
+.pager {
+  float: none;
+  text-align: center;
+  margin: 0 auto;
+  width: 160px;
+  clear: both;
+  overflow: hidden;
+  padding: 20px 0 0;
 
-    li {
-      
-      display: inline-block;
-      float: left;
-      margin: 0;
-      color: $white;
-      font-weight: 300;
-      line-height: 20px;
-      height: 20px;
-      min-width: 20px;
-      padding: 0 3px;
-		
-  		a {
-  			color: $white;
-  		}
+  li {
+    display: inline-block;
+    float: left;
+    margin: 0;
+    color: $white;
+    font-weight: 300;
+    line-height: 20px;
+    height: 20px;
+    min-width: 20px;
+    padding: 0 3px;
+	
+		a {
+			color: $white;
+		}
     
-      &.pager-previous,
-      &.pager-next {
-       background: $gray-lighter;
-       width: 20px;
-      }
+    .pager-current {
+      text-decoration: underline;
+    }
+    
+    &.pager-previous,
+    &.pager-next {
+     background: $gray-lighter;
+     width: 20px;
+     position: relative;
+     cursor: pointer;
+     
+     &:before {
+       content: '\e807';
+       display: block;
+       position: absolute;
+       top: 1px;
+       left: 5px;
+       font-family: 'solvaxis-icn';
+       font-size: 18px;
+       font-weight: normal;
+       color: $gray-dark;
+     }
+     &.pager-next {
+       &:before {
+         content: '\e808';
+       }
+     }
+     &:hover {
+       background: $gray-light;
+     }
+     &:focus,
+     &:active {
+       background: $gray;
+       &:before {
+         color: $white;
+       }
+     }
     }
   }
 }
+
+
+  
+  
+
+
 

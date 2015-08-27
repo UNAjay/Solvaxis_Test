@@ -38,6 +38,7 @@
   		height: 130px;
  
       img {
+        -webkit-filter: brightness(0) invert(1);
         filter: brightness(0) invert(1);
       }
       
@@ -45,6 +46,7 @@
       &:active {
         background: $white;
         img {
+          -webkit-filter: none;
           filter: none;
         }
       }
