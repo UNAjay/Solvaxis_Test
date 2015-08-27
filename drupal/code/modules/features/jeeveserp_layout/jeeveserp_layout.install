@@ -82,3 +82,13 @@ function jeeveserp_layout_update_7005() {
   module_enable(array('monster_page'));
 }
 
+
+/**
+ * Enable Insert Block module.
+ */
+function jeeveserp_layout_update_7006() {
+  module_enable(array('insert_block', 'media_wysiwyg', 'media_wysiwyg_view_mode'));
+}
+
+
+
