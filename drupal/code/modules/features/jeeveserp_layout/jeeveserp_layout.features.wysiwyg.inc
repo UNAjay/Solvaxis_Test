@@ -18,6 +18,7 @@ function jeeveserp_layout_wysiwyg_default_profiles() {
       'default' => 1,
       'user_choose' => 0,
       'show_toggle' => 1,
+      'add_to_summaries' => 1,
       'theme' => 'advanced',
       'language' => 'en',
       'buttons' => array(
@@ -47,27 +48,19 @@ function jeeveserp_layout_wysiwyg_default_profiles() {
         'imce' => array(
           'imce' => 1,
         ),
-        'drupal_path' => array(
-          'Link' => 1,
-        ),
       ),
-      'toolbar_align' => 'left',
-      'path_loc' => 'bottom',
-      'verify_html' => 1,
-      'preformatted' => 0,
-      'convert_fonts_to_spans' => 1,
-      'remove_linebreaks' => 1,
-      'block_formats' => 'p,address,pre,h2,h3,h4,h5,h6,div',
-      'css_setting' => 'theme',
-      'css_path' => '',
-      'ckeditor_styles' => array(
-        'stylesheetparser' => 0,
-      ),
-      'simple_source_formatting' => 0,
-      'resize_enabled' => 1,
       'toolbarLocation' => 'top',
-      'forcePasteAsPlainText' => 1,
+      'resize_enabled' => 1,
+      'default_toolbar_grouping' => 0,
+      'simple_source_formatting' => 0,
+      'acf_mode' => 0,
+      'acf_allowed_content' => '',
+      'css_setting' => 'none',
+      'css_path' => '',
       'stylesSet' => '',
+      'block_formats' => 'p,address,pre,h2,h3,h4,h5,h6,div',
+      'advanced__active_tab' => 'edit-css',
+      'forcePasteAsPlainText' => 1,
     ),
   );
 
@@ -123,7 +116,7 @@ function jeeveserp_layout_wysiwyg_default_profiles() {
       'simple_source_formatting' => 0,
       'acf_mode' => 0,
       'acf_allowed_content' => '',
-      'css_setting' => 'self',
+      'css_setting' => 'none',
       'css_path' => '/sites/all/themes/custom/solvaxis/css/editor.css',
       'stylesSet' => 'Download PDF=a.call-to-action.download-pdf
 Registration form=a.call-to-action.registration-form
@@ -136,7 +129,7 @@ Key features bullets=ul.key_features
 Paragraph=p
 Section title=h2.section-title',
       'block_formats' => 'p,address,h2,h3,div',
-      'advanced__active_tab' => 'edit-basic',
+      'advanced__active_tab' => 'edit-css',
       'forcePasteAsPlainText' => 1,
     ),
   );
