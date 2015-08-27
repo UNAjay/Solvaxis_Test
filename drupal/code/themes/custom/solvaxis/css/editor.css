@@ -436,31 +436,3 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 h1 a:hover, h1 a:active, h1 a:focus, h2 a:hover, h2 a:active, h2 a:focus, h3 a:hover, h3 a:active, h3 a:focus, h4 a:hover, h4 a:active, h4 a:focus, h5 a:hover, h5 a:active, h5 a:focus, h6 a:hover, h6 a:active, h6 a:focus {
   color: #000;
 }
-
-a.call-to-action {
-  background: transparent;
-  border: 1px solid #000;
-  margin-bottom: 10px;
-  height: 50px;
-  width: 100%;
-  position: relative;
-  padding: 0 10px 0 70px;
-  background-size: 25px auto;
-  background-position: 20px 10px;
-  background-repeat: no-repeat;
-}
-a.call-to-action span {
-  color: #000;
-  font-size: 15px;
-  line-height: 48px;
-  font-weight: 300;
-}
-a.call-to-action.download-pdf {
-  background-image: url("../images/pdf.png");
-}
-a.call-to-action.registration {
-  background-image: url("../images/pen.png");
-}
-a.call-to-action.support {
-  background-image: url("../images/arrow.png");
-}
