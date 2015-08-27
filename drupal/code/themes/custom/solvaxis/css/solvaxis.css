@@ -850,6 +850,19 @@ a.call-to-action.e-media:hover, a.call-to-action.e-media:active, a.call-to-actio
   background-image: url("../images/arrow-white@2x.png");
 }
 
+.more-link {
+  clear: both;
+  text-align: center;
+  padding: 20px 0 0;
+}
+.more-link a {
+  color: #fff;
+}
+.more-link a:hover, .more-link a:active, .more-link a:focus {
+  color: #73797C;
+  text-decoration: none;
+}
+
 p a {
   color: #E30043;
 }
@@ -1078,6 +1091,10 @@ footer .footer-info .region {
 /* =====================================
 	Customers
 	====================================== */
+.view-ref-customers .view-content {
+  clear: both;
+  overflow: hidden;
+}
 .view-ref-customers .views-row .views-field-field-image {
   display: table;
   width: 100%;

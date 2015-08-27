@@ -81,6 +81,21 @@ a {
   }
 }
 
+.more-link {
+  clear: both;
+  text-align: center;
+  padding: 20px 0 0;
+  a {
+    color: $white;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $gray;
+      text-decoration: none;
+    }  
+  }
+}
+
 // Links within paragraphs
 p a {
   color: $link-color;
