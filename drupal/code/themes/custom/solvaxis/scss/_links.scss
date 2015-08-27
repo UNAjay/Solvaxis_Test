@@ -37,7 +37,7 @@ a {
     margin-bottom: 10px;
     height: 50px;
     width: 100%;
-    max-width: 300px;
+    max-width: 320px;
     position: relative;
     padding: 0 10px 0 70px;
     text-decoration: none;
@@ -62,7 +62,7 @@ a {
         background-image: url('../images/pdf-white@2x.png');
       }
     }
-    &.registration-form {
+    &.fill-form {
       background-image: url('../images/pen@2x.png');
       &:hover,
       &:active,
@@ -70,7 +70,7 @@ a {
         background-image: url('../images/pen-white@2x.png');
       }
     }
-    &.e-media {
+    &.external-link {
       background-image: url('../images/arrow@2x.png');
       &:hover,
       &:active,
