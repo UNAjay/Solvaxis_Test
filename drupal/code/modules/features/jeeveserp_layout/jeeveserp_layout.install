@@ -87,7 +87,14 @@ function jeeveserp_layout_update_7005() {
  * Enable Insert Block module.
  */
 function jeeveserp_layout_update_7006() {
-  module_enable(array('insert_block', 'media_wysiwyg', 'media_wysiwyg_view_mode', 'better_formats'));
+  module_enable(array('insert_block'));
+}
+
+/**
+ * Enable Media WYSIWYG, Media WYSIWYG View Mode, Better Formats, Jeeves Media modules.
+ */
+function jeeveserp_layout_update_7007() {
+  module_enable(array('media_wysiwyg', 'media_wysiwyg_view_mode', 'better_formats', 'jeeves_media'));
 }
 
 
