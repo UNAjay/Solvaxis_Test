@@ -1575,10 +1575,13 @@ footer .footer-info .region {
 }
 
 #block-lang-dropdown-language .sbToggle {
-  background: url(../img/bg-language-arrow.png) no-repeat right 8px transparent;
+  background: url(../images/bg-language-arrow.png) no-repeat right 8px transparent;
   display: block;
   height: 17px;
   width: 17px;
+}
+#block-lang-dropdown-language .sbToggle:before {
+  display: none;
 }
 
 #block-lang-dropdown-language .sbSelector {
@@ -1593,33 +1596,57 @@ footer .footer-info .region {
 }
 
 #block-lang-dropdown-language .sbOptions {
-  -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
-  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
-  left: 0;
-  top: 20px !important;
-  overflow-y: hidden;
+  background: #fff;
+  border: 1px solid transparent;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  list-style: none;
+  left: -1px;
+  margin: 0;
+  padding: 0 0 1px;
+  position: absolute;
+  top: 19px !important;
+  width: auto;
+  z-index: 1;
+  overflow-y: auto;
+}
+
+#block-lang-dropdown-language .sbOptions li {
+  height: 20px;
+  padding: 0 4px 1px;
+}
+
+#block-lang-dropdown-language .sbOptions li a {
+  padding: 0;
+  border-bottom: 1px solid transparent;
+}
+#block-lang-dropdown-language .sbOptions li a:hover {
+  border-bottom: 1px solid #3C3F42;
 }
 
 #block-lang-dropdown-language .sbOptions a {
-  font-size: 1.2rem;
+  display: block;
+  outline: none;
+  padding: 0;
 }
 
-#block-lang-dropdown-language .sbOptions a:link, #block-lang-dropdown-language .sbOptions a:visited {
-  color: #9FA09F;
-  padding-right: 5px;
+#block-lang-dropdown-language .sbOptions a:link,
+#block-lang-dropdown-language .sbOptions a:visited {
+  color: #3C3F42;
   text-decoration: none;
 }
 
 #block-lang-dropdown-language .sbOptions a:hover,
 #block-lang-dropdown-language .sbOptions a:focus,
 #block-lang-dropdown-language .sbOptions a.sbFocus {
-  background: #3a76d0;
-  color: #fff;
+  background: transparent;
+  color: #3C3F42;
 }
 
-#block-lang-dropdown-language .sbOptions li a {
-  color: #9FA09F;
-  height: auto;
-  padding: 1px 3px;
+#block-lang-dropdown-language .sbOptions li.last a {
+  border-bottom: none;
 }
