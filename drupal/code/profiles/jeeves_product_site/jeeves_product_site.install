@@ -13,6 +13,6 @@
  */
 function jeeves_product_site_install() {
 
-  variable_set('theme_default', 'jeeves');
+  variable_set('theme_default', 'solvaxis');
 
 }

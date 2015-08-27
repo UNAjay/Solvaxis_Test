@@ -55,6 +55,11 @@ function jeeveserp_layout_filter_default_formats() {
           'check_roles' => 0,
         ),
       ),
+      'media_filter' => array(
+        'weight' => 2,
+        'status' => 1,
+        'settings' => array(),
+      ),
       'pathologic' => array(
         'weight' => 50,
         'status' => 1,
