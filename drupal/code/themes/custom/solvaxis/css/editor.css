@@ -172,6 +172,14 @@ body {
   content: '\e806';
 }
 
+.icon-left-small:before {
+  content: '\e807';
+}
+
+.icon-right-small:before {
+  content: '\e808';
+}
+
 .region-content .form-type-select,
 .region-content .webform-component-select {
   margin-bottom: 20px;

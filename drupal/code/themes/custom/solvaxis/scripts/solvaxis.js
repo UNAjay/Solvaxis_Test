@@ -12,8 +12,8 @@
         }
       });
       
-      // Add class to pager outer div.
-      $('.item-list:has(.pager)').addClass('pager-outer');
+      // Add 100% width to pager outer element.
+      $( "ul.pager" ).parent().css( "width", "100%" );
       
       // Scroll to hash.
       // ------------------------------------------------------------------------------------------------
