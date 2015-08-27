@@ -94,4 +94,5 @@ features[variable][] = node_preview_section
 features[variable][] = node_submitted_section
 features[views_view][] = ref_customers
 features[views_view][] = ref_news
+no autodetect = 1
 project path = sites/all/modules/features
