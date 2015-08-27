@@ -41,7 +41,7 @@ function jeeveserp_layout_wysiwyg_editor_settings_alter(&$settings, $context) {
         '-',
         'linkit',
         '-',
-        'shortcode_wysiwyg',
+        'media',
         '-',
         'Link',
         '-',

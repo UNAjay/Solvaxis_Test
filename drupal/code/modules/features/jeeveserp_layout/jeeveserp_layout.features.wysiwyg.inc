@@ -113,6 +113,7 @@ function jeeveserp_layout_wysiwyg_default_profiles() {
           'linkit' => 1,
         ),
         'drupal' => array(
+          'media' => 1,
           'break' => 1,
         ),
       ),
@@ -135,7 +136,7 @@ Key features bullets=ul.key_features
 Paragraph=p
 Section title=h2.section-title',
       'block_formats' => 'p,address,h2,h3,div',
-      'advanced__active_tab' => 'edit-css',
+      'advanced__active_tab' => 'edit-basic',
       'forcePasteAsPlainText' => 1,
     ),
   );
