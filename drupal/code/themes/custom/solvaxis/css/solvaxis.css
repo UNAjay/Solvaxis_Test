@@ -1226,7 +1226,7 @@ footer .footer-info .region {
 .group-banner {
   position: absolute;
   width: 690px;
-  height: 182px;
+  height: 188px;
   z-index: 2;
   right: -30px;
   top: -116px;
@@ -1243,6 +1243,11 @@ footer .footer-info .region {
 .banner-style-light .group-banner {
   background-color: #F2F2F2;
   color: #73797C;
+}
+.group-banner .image {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .view-news .item-list ul {

@@ -64,7 +64,7 @@
 .group-banner {
   position: absolute;
   width: 690px;
-  height: 182px;
+  height: 188px;
   z-index: 2;
   right: -30px;
   top: -116px;
@@ -81,5 +81,11 @@
   .banner-style-light & {
     background-color: $gray-lighter;
     color: $gray;
+  }
+  
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
