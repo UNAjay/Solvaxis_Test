@@ -893,10 +893,13 @@ footer {
 @media (min-width: 1014px) {
   footer {
     background: url("../images/bg-footer.png") repeat-x;
-    height: 46px;
-    padding-right: 10px;
-    padding-left: 10px;
+    height: 287px;
+    padding: 0;
+    margin-bottom: -287px;
   }
+}
+footer .region-holder {
+  height: 100%;
 }
 footer ul {
   margin-bottom: 10px;
@@ -1014,6 +1017,8 @@ footer .footer-info {
   background-color: #E30043;
   color: #fff;
   padding: 20px;
+  position: relative;
+  height: 100%;
 }
 footer .footer-info h3 {
   text-transform: uppercase;
@@ -1022,6 +1027,16 @@ footer .footer-info h3 {
 footer .footer-info .region {
   float: left;
   width: 50%;
+}
+footer .footer-info:before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 30px;
+  background: #E30043;
+  left: -30px;
+  top: 0;
 }
 
 .region-footer-primary {
@@ -1285,6 +1300,9 @@ footer .footer-info .region {
   width: 100%;
   margin: 0;
   padding: 10px 0 7px;
+}
+.view-news .item-list ul li .views-field-body {
+  line-height: 1.2em;
 }
 @media (min-width: 600px) {
   .view-news .item-list ul li {
