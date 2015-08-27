@@ -334,6 +334,168 @@ function monster_page_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'ee-embed_list-field_view'
+  $field_instances['ee-embed_list-field_view'] = array(
+    'bundle' => 'embed_list',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'viewfield',
+        'settings' => array(),
+        'type' => 'viewfield_default',
+        'weight' => 1,
+      ),
+      'embed' => array(
+        'label' => 'hidden',
+        'module' => 'viewfield',
+        'settings' => array(),
+        'type' => 'viewfield_default',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'ee',
+    'field_name' => 'field_view',
+    'label' => 'View',
+    'required' => 0,
+    'settings' => array(
+      'allowed_views' => array(
+        'Customers' => 0,
+        'administration_embed' => 0,
+        'authors' => 0,
+        'blogs' => 0,
+        'employees' => 0,
+        'events' => 0,
+        'files' => 0,
+        'global_rss' => 0,
+        'industries' => 0,
+        'landing_page_slides' => 0,
+        'media_default' => 0,
+        'message' => 0,
+        'micro_verticals' => 0,
+        'news' => 0,
+        'news_slideshow' => 0,
+        'offices' => 0,
+        'partner' => 0,
+        'promo_slideshow' => 0,
+        'ref_customers' => 'ref_customers',
+        'ref_news' => 'ref_news',
+        'reference_landing_page_news' => 0,
+        'success_stories' => 0,
+        'videos' => 0,
+        'webinars' => 0,
+      ),
+      'entity_translation_sync' => FALSE,
+      'force_default' => 0,
+      'mediafront' => array(
+        'custom' => '',
+        'field_type' => 0,
+        'media_type' => 'media',
+        'preview' => 0,
+        'thumbnail' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'viewfield',
+      'settings' => array(),
+      'type' => 'viewfield_select',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'ee-embed_list-title_field'
+  $field_instances['ee-embed_list-title_field'] = array(
+    'bundle' => 'embed_list',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'embed' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'ee',
+    'field_name' => 'title_field',
+    'label' => 'Title',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'basic_html' => 'basic_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'basic_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'mediafront' => array(
+        'custom' => '',
+        'field_type' => 0,
+        'media_type' => 'media',
+        'preview' => 0,
+        'thumbnail' => 0,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 0,
+    ),
+  );
+
   // Exported field_instance: 'node-page-field_section'
   $field_instances['node-page-field_section'] = array(
     'bundle' => 'page',

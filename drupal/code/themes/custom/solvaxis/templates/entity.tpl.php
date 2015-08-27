@@ -34,8 +34,8 @@
 
 <article class="<?php print $classes; ?>"<?php print $attributes; ?>>
 
-  <?php print render($title_prefix); ?>
-  <?php print render($title_suffix); ?>
+  <?php // print render($title_prefix); ?>
+  <?php // print render($title_suffix); ?>
 
   <div class="content"<?php print $content_attributes; ?>>
     <?php print render($content); ?>
