@@ -52,8 +52,8 @@ function monster_page_field_group_info() {
     'label' => 'Banner',
     'weight' => '0',
     'children' => array(
-      0 => 'field_banner_text',
-      1 => 'field_banner_image',
+      0 => 'field_banner_image',
+      1 => 'field_banner_text',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -85,8 +85,8 @@ function monster_page_field_group_info() {
     'label' => 'Banner',
     'weight' => '0',
     'children' => array(
-      0 => 'field_banner_text',
-      1 => 'field_banner_image',
+      0 => 'field_banner_image',
+      1 => 'field_banner_text',
     ),
     'format_type' => 'div',
     'format_settings' => array(
