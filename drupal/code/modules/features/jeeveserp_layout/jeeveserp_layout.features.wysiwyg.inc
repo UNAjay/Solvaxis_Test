@@ -26,27 +26,30 @@ function jeeveserp_layout_wysiwyg_default_profiles() {
           'Bold' => 1,
           'Italic' => 1,
           'Underline' => 1,
-          'JustifyLeft' => 1,
-          'JustifyCenter' => 1,
-          'JustifyRight' => 1,
-          'JustifyBlock' => 1,
           'BulletedList' => 1,
           'NumberedList' => 1,
           'Outdent' => 1,
           'Indent' => 1,
           'Link' => 1,
-          'Image' => 1,
-          'Cut' => 1,
+          'Unlink' => 1,
+          'Superscript' => 1,
+          'Subscript' => 1,
+          'PasteText' => 1,
           'PasteFromWord' => 1,
+          'RemoveFormat' => 1,
+          'SpecialChar' => 1,
           'Styles' => 1,
           'Table' => 1,
           'Flash' => 1,
-          'CreateDiv' => 1,
-          'Iframe' => 1,
-          'Scayt' => 1,
         ),
         'imce' => array(
           'imce' => 1,
+        ),
+        'linkit' => array(
+          'linkit' => 1,
+        ),
+        'drupal' => array(
+          'media' => 1,
         ),
       ),
       'toolbarLocation' => 'top',
@@ -60,6 +63,20 @@ function jeeveserp_layout_wysiwyg_default_profiles() {
       'stylesSet' => '',
       'block_formats' => 'p,address,pre,h2,h3,h4,h5,h6,div',
       'advanced__active_tab' => 'edit-paste',
+      'css_setting' => 'self',
+      'css_path' => '/sites/all/themes/custom/solvaxis/css/editor.css',
+      'stylesSet' => 'Download PDF=a.call-to-action.download-pdf
+Fill a form=a.call-to-action.fill-form
+External link=a.call-to-action.external-link
+Call to action=p.call-to-action
+Heading 1=h1
+Heading 2=h2
+Heading 3=h3
+Key features bullets=ul.key_features
+Paragraph=p
+Section title=h2.section-title',
+      'block_formats' => 'p,address,pre,h2,h3,h4,h5,h6,div',
+      'advanced__active_tab' => 'edit-basic',
       'forcePasteAsPlainText' => 1,
     ),
   );

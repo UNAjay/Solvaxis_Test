@@ -333,6 +333,15 @@ function monster_page_ds_view_modes_info() {
 
   $ds_view_mode = new stdClass();
   $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'embed';
+  $ds_view_mode->label = 'Embed';
+  $ds_view_mode->entities = array(
+    'ee' => 'ee',
+  );
+  $export['embed'] = $ds_view_mode;
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
   $ds_view_mode->view_mode = 'section_dark';
   $ds_view_mode->label = 'Section: Dark';
   $ds_view_mode->entities = array(

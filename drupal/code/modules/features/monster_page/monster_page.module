@@ -5,6 +5,7 @@
  */
 
 include_once 'monster_page.features.inc';
+include_once 'monster_page.embed.inc';
 
 
 /**
@@ -60,6 +61,56 @@ function monster_page_entity_view_alter(&$build, $entity_type) {
     $ref_view = field_get_items($entity_type, $node, 'field_view');
     if ($ref_view) {
       $build['field_add_this']['#access'] = FALSE;
+    }
+  }
+}
+
+
+/**
+ * Change an entity's label dynamically.
+ *
+ * More constrained versions of this hook also exist:
+ * hook_eck_entity_<entity_type>_label
+ * hook_eck_entity_<entity_type>_<bundle>_label
+ *
+ * This hook is mainly useful for dynamic labels, or for using values
+ * in a field as labels.
+ *
+ * If you are storing the label of the entity in a property already, you
+ * should modify the entity_info array's label key, instead of using this hook.
+ *
+ * @param Entity $entity
+ *   The entity object.
+ * @param int $entity_id
+ *   The id of the entity.
+ *
+ * @return mixed
+ *   The label for the entity.
+ */
+function monster_page_eck_entity_ee_label($entity, $entity_id) {
+  $title = field_get_items('ee', $entity, 'title_field');
+  $title = $title[0]['value'];
+  return $title;
+}
+
+
+function monster_page_menu_local_tasks_alter(&$data, $router_item, $root_path) {
+  if ($root_path == 'admin/content/embed' || $root_path == 'admin/content/embed/blocks') {
+    $item = menu_get_item('admin/structure/entity-type/ee/embed_block/add');
+    if ($item['access']) {
+      $item['localized_options']['query']['destintation'] = 'admin/content/embed';
+      $data['actions']['output'][] = array(
+        '#theme' => 'menu_local_action',
+        '#link' => $item,
+      );
+    }
+    $item = menu_get_item('admin/structure/entity-type/ee/embed_form/add');
+    if ($item['access']) {
+      $item['localized_options']['query']['destintation'] = 'admin/content/embed';
+      $data['actions']['output'][] = array(
+        '#theme' => 'menu_local_action',
+        '#link' => $item,
+      );
     }
   }
 }

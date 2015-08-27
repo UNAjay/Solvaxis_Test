@@ -211,6 +211,10 @@ projects[menu_position][version] = "1.1"
 projects[google_analytics][version] = "1.4"
 projects[tracking_code][version] = "1.6"
 
+projects[better_formats][version] = 1.x-dev
+projects[better_formats][subdir] = contrib
+projects[better_formats][revision] = 3b4a8c92b317add4e218216a002b2bc777fbc736
+
 
 ; Development
 projects[diff][version] = "3.2"
@@ -282,6 +286,9 @@ projects[insert_block][subdir] = contrib
 projects[insert_block][revision] = be4314aef56af4b6bdf78d2f18e005c959d8cdd9
 
 projects[views_selective_filters][version] = 1.4
+
+projects[entity_view_mode][version] = 1.0-rc1
+projects[entity_view_mode][subdir] = contrib
 
 projects[view_mode_selector][version] = 1.x-dev
 projects[view_mode_selector][subdir] = contrib

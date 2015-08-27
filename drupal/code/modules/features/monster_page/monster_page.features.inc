@@ -27,6 +27,62 @@ function monster_page_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_eck_bundle_info().
+ */
+function monster_page_eck_bundle_info() {
+  $items = array(
+    'ee_embed_block' => array(
+      'machine_name' => 'ee_embed_block',
+      'entity_type' => 'ee',
+      'name' => 'embed_block',
+      'label' => 'block',
+    ),
+    'ee_embed_form' => array(
+      'machine_name' => 'ee_embed_form',
+      'entity_type' => 'ee',
+      'name' => 'embed_form',
+      'label' => 'form',
+    ),
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_eck_entity_type_info().
+ */
+function monster_page_eck_entity_type_info() {
+  $items = array(
+    'ee' => array(
+      'name' => 'ee',
+      'label' => 'Embed',
+      'properties' => array(
+        'uid' => array(
+          'label' => 'Author',
+          'type' => 'integer',
+          'behavior' => 'author',
+        ),
+        'created' => array(
+          'label' => 'Created',
+          'type' => 'integer',
+          'behavior' => 'created',
+        ),
+        'changed' => array(
+          'label' => 'Changed',
+          'type' => 'integer',
+          'behavior' => 'changed',
+        ),
+        'language' => array(
+          'label' => 'Entity language',
+          'type' => 'language',
+          'behavior' => 'language',
+        ),
+      ),
+    ),
+  );
+  return $items;
+}
+
+/**
  * Implements hook_image_default_styles().
  */
 function monster_page_image_default_styles() {
