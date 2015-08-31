@@ -58,11 +58,6 @@ function jeeveserp_layout_wysiwyg_default_profiles() {
       'simple_source_formatting' => 0,
       'acf_mode' => 0,
       'acf_allowed_content' => '',
-      'css_setting' => 'none',
-      'css_path' => '',
-      'stylesSet' => '',
-      'block_formats' => 'p,address,pre,h2,h3,h4,h5,h6,div',
-      'advanced__active_tab' => 'edit-paste',
       'css_setting' => 'self',
       'css_path' => '/sites/all/themes/custom/solvaxis/css/editor.css',
       'stylesSet' => 'Download PDF=a.call-to-action.download-pdf

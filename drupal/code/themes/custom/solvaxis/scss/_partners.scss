@@ -1,10 +1,11 @@
-//layout styles - ielikt atseviksa faila
+//layout styles
 #breadcrumb, 
 .tabs,
 footer .region-holder,
 header .region-holder,
 #leader .flexslider,
-.page-user #content .region-holder {
+.page-user #content .region-holder,
+.page-node .region-holder {
   @include container;
 	margin: 0 auto;
 	max-width: 1000px;
@@ -20,3 +21,8 @@ header .region-holder,
   margin-left: 0;
   margin-right: 0;
 }
+
+.page-node #content {
+  margin-top: 120px;
+}
+

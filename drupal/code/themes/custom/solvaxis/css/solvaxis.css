@@ -37,6 +37,38 @@ body {
   font-size: 1.4rem;
 }
 
+#content h1 {
+  margin-bottom: 33px;
+  padding-bottom: 0;
+  position: relative;
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+  float: left;
+  width: 100%;
+}
+#content h1:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 40px;
+  height: 1px;
+  background: #E30043;
+}
+
+#content h2 {
+  color: #000;
+  padding: 0 0 22px;
+  font-size: 15px;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  float: left;
+  width: 100%;
+}
+
 @media (min-width: 800px) {
   #page {
     padding-top: 0;
@@ -603,7 +635,8 @@ footer .social-icons li a[title="Xing"] {
 footer .region-holder,
 header .region-holder,
 #leader .flexslider,
-.page-user #content .region-holder {
+.page-user #content > .region-holder,
+.page-node #content > .region-holder {
   *zoom: 1;
   max-width: 1000px;
   max-width: 62.5rem;
@@ -622,7 +655,8 @@ header .region-holder,
 footer .region-holder:after,
 header .region-holder:after,
 #leader .flexslider:after,
-.page-user #content .region-holder:after {
+.page-user #content > .region-holder:after,
+.page-node #content > .region-holder:after {
   content: "";
   display: table;
   clear: both;
@@ -635,6 +669,33 @@ header .region-holder:after,
 #content {
   margin-left: 0;
   margin-right: 0;
+}
+
+.page-node #content {
+  margin-top: 120px;
+}
+
+.ds-2col .group-left {
+  float: left;
+  width: 100%;
+}
+@media (min-width: 800px) {
+  .ds-2col .group-left {
+    width: 66%;
+    float: left;
+    margin-right: 2%;
+  }
+}
+.ds-2col .group-right {
+  float: left;
+  width: 100%;
+}
+@media (min-width: 800px) {
+  .ds-2col .group-right {
+    width: 32%;
+    float: right;
+    margin-right: 0;
+  }
 }
 
 html {
@@ -1401,6 +1462,14 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   font-weight: 300;
   text-transform: uppercase;
   margin: -5px 0 15px;
+}
+
+.node-type-news .view-mode-full .title-field h2 {
+  padding: 0 0 12px;
+}
+.node-type-news .view-mode-full .body {
+  clear: both;
+  padding: 0 0 16px;
 }
 
 .pager {
