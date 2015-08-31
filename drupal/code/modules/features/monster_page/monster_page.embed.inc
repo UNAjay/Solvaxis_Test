@@ -39,10 +39,12 @@ function _embed_entity($text, $filter, $format) {
 
       $entity_type = 'ee';
       $entity = entity_load_single($entity_type, $entity_id);
-      $entity = clone $entity;
-      $build = entity_view($entity_type, array($entity), 'embed');
+      if ($entity && is_object($entity)) {
+        $entity = clone $entity;
+        $build = entity_view($entity_type, array($entity), 'embed');
 
-      $output = drupal_render($build);
+        $output = drupal_render($build);
+      }
       $search[] = $value;
       $replace[] = !empty($output) ? $output : '';
     }
