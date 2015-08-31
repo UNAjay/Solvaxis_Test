@@ -36,6 +36,18 @@
   }
 }
 
+.with-sidebar.sidebar-position-right {
+  .body,
+  .field-view {
+    @include span-columns(8 omega,12);
+    float: right;
+  }
+  .group-sidebar {
+    @include span-columns(4,12);
+    float: left;
+  }
+}
+
 // section title
 .section-title {
   margin-bottom: 33px;
