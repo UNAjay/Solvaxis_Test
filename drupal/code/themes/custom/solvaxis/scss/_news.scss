@@ -76,6 +76,19 @@
   } 
 }
 
+// news -full mode
+.node-type-news {
+  .view-mode-full {
+    .title-field h2 {
+      padding: 0 0 12px;
+    }
+    .body {
+      clear: both;
+      padding: 0 0 16px;
+    }
+  }
+}
+
 //-----------------------------------------
 // pager
 //-----------------------------------------

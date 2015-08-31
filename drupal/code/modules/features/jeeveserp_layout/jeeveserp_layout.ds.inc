@@ -1226,6 +1226,45 @@ function jeeveserp_layout_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|product_news|default';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'product_news';
+  $ds_layout->view_mode = 'default';
+  $ds_layout->layout = 'ds_2col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'left' => array(
+        0 => 'title_field',
+        1 => 'field_news_image',
+        2 => 'body',
+        3 => 'field_add_this',
+        4 => 'field_product',
+        5 => 'field_market',
+      ),
+    ),
+    'fields' => array(
+      'title_field' => 'left',
+      'field_news_image' => 'left',
+      'body' => 'left',
+      'field_add_this' => 'left',
+      'field_product' => 'left',
+      'field_market' => 'left',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'left' => 'div',
+      'right' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|product_news|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'taxonomy_term|industries|teaser';
   $ds_layout->entity_type = 'taxonomy_term';
   $ds_layout->bundle = 'industries';
