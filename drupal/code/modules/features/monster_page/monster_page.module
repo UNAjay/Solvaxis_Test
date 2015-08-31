@@ -21,12 +21,19 @@ function monster_page_preprocess_node(&$variables) {
     $variables['classes_array'][] = $view_mode;
 
     if ($node->type == 'section') {
+
       $variables['classes_array'][] = drupal_html_class('node-' . $node->nid);
 
       $sidebar = field_get_items($entity_type, $node, 'field_sidebar_text');
       $acton = field_get_items($entity_type, $node, 'field_acton_url');
+      $sidebar_position = field_get_items($entity_type, $node, 'field_sidebar_position');
       if ($sidebar || $acton) {
         $variables['classes_array'][] = drupal_html_class('with-sidebar');
+        if ($sidebar_position && $sidebar_position[0]['value'] == 'right') {
+          $variables['elements']['#groups']['group_sidebar']->weight = 1;
+          $variables['elements']['body']['#weight'] = 2;
+          $variables['classes_array'][] = drupal_html_class('sidebar-position-right');
+        }
       }
       $banner_style = field_get_items($entity_type, $node, 'field_banner_style');
       if ($banner_style) {
@@ -49,7 +56,6 @@ function monster_page_entity_view($entity, $type, $view_mode, $langcode) {
       drupal_goto($page_uri['path'], array('fragment' => $fragment));
     }
   }
-
 }
 
 
@@ -113,6 +119,14 @@ function monster_page_menu_local_tasks_alter(&$data, $router_item, $root_path) {
       );
     }
     $item = menu_get_item('admin/structure/entity-type/ee/embed_list/add');
+    if ($item['access']) {
+      $item['localized_options']['query']['destintation'] = 'admin/content/embed';
+      $data['actions']['output'][] = array(
+        '#theme' => 'menu_local_action',
+        '#link' => $item,
+      );
+    }
+    $item = menu_get_item('admin/structure/entity-type/ee/embed_map/add');
     if ($item['access']) {
       $item['localized_options']['query']['destintation'] = 'admin/content/embed';
       $data['actions']['output'][] = array(
