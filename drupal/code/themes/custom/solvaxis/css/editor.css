@@ -88,10 +88,6 @@ body {
   padding: 0;
 }
 
-.field-add-this {
-  display: none;
-}
-
 @font-face {
   font-family: 'solvaxis-icn';
   src: url("../fonts/solvaxis-icons/font/solvaxis-icn.eot?35242246");

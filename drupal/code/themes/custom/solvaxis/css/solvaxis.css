@@ -105,10 +105,6 @@ body {
   padding: 0;
 }
 
-.field-add-this {
-  display: none;
-}
-
 @font-face {
   font-family: 'solvaxis-icn';
   src: url("../fonts/solvaxis-icons/font/solvaxis-icn.eot?35242246");
@@ -1376,6 +1372,13 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   margin-right: 0;
   *margin-left: -20px;
   display: inline;
+}
+.node-section .group-social {
+  width: 100%;
+  float: left;
+  margin-right: 2%;
+  display: inline;
+  padding-top: 20px;
 }
 
 .with-sidebar.sidebar-position-right .body,
