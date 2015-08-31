@@ -17,14 +17,9 @@ function news_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'news';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
-    'resources_right_menu' => array(
-      'weight' => '0',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
     'more_news' => array(
       'weight' => '6',
-      'label' => 'above',
+      'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
         'ft' => array(
@@ -39,11 +34,6 @@ function news_ds_field_settings_info() {
           'ow-def-at' => FALSE,
         ),
       ),
-    ),
-    'social_icons_news' => array(
-      'weight' => '4',
-      'label' => 'hidden',
-      'format' => 'default',
     ),
     'field_add_this' => array(
       'formatter_settings' => array(
@@ -175,38 +165,44 @@ function news_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'news';
   $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'jeeves_eleven_five';
+  $ds_layout->layout = 'ds_2col';
   $ds_layout->settings = array(
     'regions' => array(
-      'main_primary' => array(
+      'left' => array(
         0 => 'title_field',
-        2 => 'field_news_image',
-        3 => 'body',
-        4 => 'field_add_this',
+        1 => 'field_news_image',
+        2 => 'body',
       ),
-      'aside_primary' => array(
-        1 => 'resources_right_menu',
-        5 => 'social_icons_news',
-        6 => 'more_news',
+      'right' => array(
+        3 => 'field_add_this',
+        4 => 'more_news',
+        5 => 'field_industry',
+        6 => 'field_region',
+        7 => 'field_market',
+        8 => 'field_product',
       ),
     ),
     'fields' => array(
-      'title_field' => 'main_primary',
-      'resources_right_menu' => 'aside_primary',
-      'field_news_image' => 'main_primary',
-      'body' => 'main_primary',
-      'field_add_this' => 'main_primary',
-      'social_icons_news' => 'aside_primary',
-      'more_news' => 'aside_primary',
+      'title_field' => 'left',
+      'field_news_image' => 'left',
+      'body' => 'left',
+      'field_add_this' => 'right',
+      'more_news' => 'right',
+      'field_industry' => 'right',
+      'field_region' => 'right',
+      'field_market' => 'right',
+      'field_product' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'main_primary' => 'div',
-      'aside_primary' => 'div',
+      'left' => 'div',
+      'right' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
     'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
   );
   $export['node|news|default'] = $ds_layout;
 
