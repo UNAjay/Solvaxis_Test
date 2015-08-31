@@ -262,5 +262,12 @@ function monster_page_user_default_permissions() {
     'module' => 'override_node_options',
   );
 
+  // Exported permission: 'translate ee entities'.
+  $permissions['translate ee entities'] = array(
+    'name' => 'translate ee entities',
+    'roles' => array(),
+    'module' => 'entity_translation',
+  );
+
   return $permissions;
 }
