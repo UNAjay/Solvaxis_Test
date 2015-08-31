@@ -70,3 +70,34 @@ function getUrlVars(url)
     }
     return vars;
 }
+
+
+jQuery(function($){
+  // Use strict mode to avoid errors: https://developer.mozilla.org/en/JavaScript/Strict_mode
+  "use strict";
+
+  var $searchButton = $('<div class="search-button-desktop"><span></span></div>');
+  var $searchForm = $('#block-search-form');
+  var $navButton = $('.navigate');
+
+  $('.region-header-secondary').prepend($searchButton);
+
+  // toggle search
+  $searchButton.click(function(){
+    $searchForm.toggle();
+  });
+
+  // Make sure the main-menu is shown correct in different layouts. The navButton
+  // is shown/hidden with css and can be used to verify which menu-version is being used.
+  var hideSearch = function(){
+    // mobile menu
+    if ($navButton.is(':visible')) {
+
+      $searchForm.hide();
+    }
+  };
+  $(window).resize(hideSearch);
+
+});
+
+
