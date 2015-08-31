@@ -1272,7 +1272,7 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   margin-right: auto;
   margin: 0 auto;
   max-width: 1000px;
-  padding: 28px 0 95px;
+  padding: 28px 0 130px;
   position: relative;
 }
 .node-section .region-holder:after {
@@ -1282,6 +1282,7 @@ article .media-element-container.media-logo img:hover, article .media-element-co
 }
 .node-section.section_light {
   background: transparent;
+  border-bottom: 1px solid #CCC;
 }
 .node-section.section_dark {
   background: #3C3F42;
