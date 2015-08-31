@@ -519,6 +519,81 @@ select {
   border-bottom: 1px solid #CCC;
 }
 
+.region-header-secondary {
+  position: relative;
+}
+
+.search-button-desktop {
+  float: right;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  background: url("../images/search-icon.png") no-repeat;
+  background-position: center 0;
+  margin-top: 69px;
+  margin-left: 20px;
+}
+
+#block-search-form {
+  display: none;
+}
+
+#block-search-form {
+  top: 100px;
+  position: absolute;
+  right: 0;
+  padding: 15px;
+  margin-top: 0 !important;
+}
+#block-search-form .form-text {
+  background: #F2F2F2;
+  width: 165px;
+  line-height: 18px;
+}
+#block-search-form:before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: 0;
+  border-style: solid;
+  border-width: 0 5.5px 6px 5.5px;
+  border-color: transparent transparent #ffffff;
+}
+#block-search-form #search-block-form {
+  background: #fff;
+  padding: 15px;
+}
+#block-search-form .form-actions {
+  float: right;
+  position: relative;
+}
+#block-search-form .form-actions:before {
+  content: '\e808';
+  display: block;
+  position: absolute;
+  top: -2px;
+  left: 8px;
+  font-family: 'solvaxis-icn';
+  font-size: 18px;
+  font-weight: normal;
+  color: #fff;
+}
+
+@media (min-width: 800px) {
+  #block-search-form.mobile {
+    display: none;
+  }
+}
+
+.header-secondary #block-search-form input[type="submit"] {
+  display: block;
+  background: #E30043;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+}
+
 .block-site-socialicons label,
 .block-site-socialicons .name,
 .block-site-socialicons .title {
