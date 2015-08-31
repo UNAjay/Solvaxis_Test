@@ -87,8 +87,6 @@ jQuery(function($){
     $searchForm.toggle();
   });
 
-  // Make sure the main-menu is shown correct in different layouts. The navButton
-  // is shown/hidden with css and can be used to verify which menu-version is being used.
   var hideSearch = function(){
     // mobile menu
     if ($navButton.is(':visible')) {
