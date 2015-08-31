@@ -103,3 +103,34 @@
   }
 }
 
+// media elements
+article {
+  .media-element-container {
+    min-height: 80px;
+    &.media-logo img {
+      -webkit-filter: grayscale(100%); 
+      filter: grayscale(100%);
+      
+  		&:hover,
+      &:active {
+        -webkit-filter: grayscale(0%); 
+        filter: grayscale(0%);
+      }
+    }
+    
+    @include at-breakpoint($first) {
+      display: inline-block;
+      float: left;
+      width: 48%;
+      margin: 0 1%;
+      margin-bottom: 20px;
+    }
+    @include at-breakpoint($second) {
+      display: inline-block;
+      float: left;
+      width: 23%;
+      margin: 0 1%;
+      margin-bottom: 20px;
+    }
+  }
+}
