@@ -11,6 +11,8 @@ jQuery(function($){
   var $searchForm = $('#block-search-form').clone();
   var $mainMenu = $('header .menu');
 
+  $searchForm.addClass('mobile');
+
   // add buttons and search-form for mobile
   $('.region-header-secondary').prepend($searchButton, $navButton).append($searchForm);
 
