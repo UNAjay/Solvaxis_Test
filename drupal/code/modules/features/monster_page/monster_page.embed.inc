@@ -55,6 +55,8 @@ function _embed_entity($text, $filter, $format) {
 
 function _embed_entity_tips($filter, $format, $long = FALSE) {
 
+  $output = '';
+
   // Get all entity instances of this type.
   $query = new EntityFieldQuery();
   $query
@@ -82,16 +84,14 @@ function _embed_entity_tips($filter, $format, $long = FALSE) {
       'colgroups'  => array(),
       'caption'    => NULL
     );
+
+
+    $output .= t('You may use [entity:<em>type</em>=<em>ID</em>] tags to display the contents of entity.');
+
+    // $output .= theme('item_list', $data);
+    $output .= theme_table($table_data);
   }
 
-
-
-
-  $output = '';
-  $output .= t('You may use [entity:<em>type</em>=<em>ID</em>] tags to display the contents of entity.');
-
-  // $output .= theme('item_list', $data);
-  $output .= theme_table($table_data);
   return $output;
 }
 

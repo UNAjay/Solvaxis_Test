@@ -1,20 +1,20 @@
 (function ($, Drupal, window, document, undefined) {
   Drupal.behaviors.solvaxis = {
     attach: function(context, settings) {
-      
+
       // Sticky header
       $(window).scroll(function() {
-      if ($(this).scrollTop() > 1){  
+      if ($(this).scrollTop() > 1){
           $('.header-secondary').addClass("sticky");
         }
         else{
           $('.header-secondary').removeClass("sticky");
         }
       });
-      
+
       // Add 100% width to pager outer element.
       $( "ul.pager" ).parent().css( "width", "100%" );
-      
+
       // Scroll to hash.
       // ------------------------------------------------------------------------------------------------
 
@@ -44,7 +44,7 @@ Drupal.behaviors.jeeves_images = function (context) {
   Drupal.behaviors.action_colorbox = {
     attach: function (context, settings) {
 
-        $('a.call-to-action.download-pdf').each(function() {
+        $('a.call-to-action.fill-form').each(function() {
           var href = $(this).attr('href');
           var urlVars = getUrlVars(href)['width'];
           if (urlVars == null) {

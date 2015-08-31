@@ -31,6 +31,174 @@ function monster_page_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'eck add ee embed_block entities'.
+  $permissions['eck add ee embed_block entities'] = array(
+    'name' => 'eck add ee embed_block entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: 'eck add ee embed_form entities'.
+  $permissions['eck add ee embed_form entities'] = array(
+    'name' => 'eck add ee embed_form entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: 'eck add ee embed_list entities'.
+  $permissions['eck add ee embed_list entities'] = array(
+    'name' => 'eck add ee embed_list entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: 'eck add ee embed_map entities'.
+  $permissions['eck add ee embed_map entities'] = array(
+    'name' => 'eck add ee embed_map entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: 'eck administer ee embed_block entities'.
+  $permissions['eck administer ee embed_block entities'] = array(
+    'name' => 'eck administer ee embed_block entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: 'eck administer ee embed_form entities'.
+  $permissions['eck administer ee embed_form entities'] = array(
+    'name' => 'eck administer ee embed_form entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: 'eck administer ee embed_list entities'.
+  $permissions['eck administer ee embed_list entities'] = array(
+    'name' => 'eck administer ee embed_list entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: 'eck administer ee embed_map entities'.
+  $permissions['eck administer ee embed_map entities'] = array(
+    'name' => 'eck administer ee embed_map entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: 'eck delete ee embed_block entities'.
+  $permissions['eck delete ee embed_block entities'] = array(
+    'name' => 'eck delete ee embed_block entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: 'eck delete ee embed_form entities'.
+  $permissions['eck delete ee embed_form entities'] = array(
+    'name' => 'eck delete ee embed_form entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: 'eck delete ee embed_list entities'.
+  $permissions['eck delete ee embed_list entities'] = array(
+    'name' => 'eck delete ee embed_list entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: 'eck delete ee embed_map entities'.
+  $permissions['eck delete ee embed_map entities'] = array(
+    'name' => 'eck delete ee embed_map entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: 'eck edit ee embed_block entities'.
+  $permissions['eck edit ee embed_block entities'] = array(
+    'name' => 'eck edit ee embed_block entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: 'eck edit ee embed_form entities'.
+  $permissions['eck edit ee embed_form entities'] = array(
+    'name' => 'eck edit ee embed_form entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: 'eck edit ee embed_list entities'.
+  $permissions['eck edit ee embed_list entities'] = array(
+    'name' => 'eck edit ee embed_list entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: 'eck edit ee embed_map entities'.
+  $permissions['eck edit ee embed_map entities'] = array(
+    'name' => 'eck edit ee embed_map entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: 'eck list ee embed_block entities'.
+  $permissions['eck list ee embed_block entities'] = array(
+    'name' => 'eck list ee embed_block entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: 'eck list ee embed_form entities'.
+  $permissions['eck list ee embed_form entities'] = array(
+    'name' => 'eck list ee embed_form entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: 'eck list ee embed_list entities'.
+  $permissions['eck list ee embed_list entities'] = array(
+    'name' => 'eck list ee embed_list entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: 'eck list ee embed_map entities'.
+  $permissions['eck list ee embed_map entities'] = array(
+    'name' => 'eck list ee embed_map entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: 'eck view ee embed_block entities'.
+  $permissions['eck view ee embed_block entities'] = array(
+    'name' => 'eck view ee embed_block entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: 'eck view ee embed_form entities'.
+  $permissions['eck view ee embed_form entities'] = array(
+    'name' => 'eck view ee embed_form entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: 'eck view ee embed_list entities'.
+  $permissions['eck view ee embed_list entities'] = array(
+    'name' => 'eck view ee embed_list entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
+  // Exported permission: 'eck view ee embed_map entities'.
+  $permissions['eck view ee embed_map entities'] = array(
+    'name' => 'eck view ee embed_map entities',
+    'roles' => array(),
+    'module' => 'eck',
+  );
+
   // Exported permission: 'edit any section content'.
   $permissions['edit any section content'] = array(
     'name' => 'edit any section content',

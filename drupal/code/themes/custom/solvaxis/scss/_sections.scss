@@ -7,7 +7,7 @@
   min-height: 200px;
   padding: 0;
   width: 100%;
-  
+
   .region-holder {
     @include container;
     margin: 0 auto;
@@ -15,7 +15,7 @@
     padding: 28px 0 95px;
     position: relative;
   }
-  
+
   &.section_light {
     background: transparent;
   }
@@ -23,7 +23,7 @@
      background: $gray-dark;
      color: $white;
   }
-  
+
   //section with sidebar
   &.with-sidebar {
     .body,
@@ -44,7 +44,7 @@
   font-size: 20px;
   font-weight: 300;
   text-transform: uppercase;
-  
+
   &:before {
     content: '';
     display: block;
@@ -69,7 +69,7 @@
   right: -30px;
   top: -116px;
   padding: 20px;
-  
+
   .banner-style-red & {
     background-color: $crimson;
     color: $white;
@@ -82,10 +82,22 @@
     background-color: $gray-lighter;
     color: $gray;
   }
-  
+
   .image {
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  .banner-link {
+    a {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      text-indent: -10000px;
+    }
   }
 }

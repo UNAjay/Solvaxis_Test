@@ -49,6 +49,12 @@ function monster_page_eck_bundle_info() {
       'name' => 'embed_list',
       'label' => 'list',
     ),
+    'ee_embed_map' => array(
+      'machine_name' => 'ee_embed_map',
+      'entity_type' => 'ee',
+      'name' => 'embed_map',
+      'label' => 'map',
+    ),
   );
   return $items;
 }
