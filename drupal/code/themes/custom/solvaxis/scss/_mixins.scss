@@ -28,5 +28,17 @@
 	@if $line > 0 {
 		line-height: $line / $size;
 	}
-	
+}
+
+//-----------------------------------------
+// clearing float
+//-----------------------------------------
+@mixin clear-float () {
+	&:after {
+		clear: both;
+		content: ".";
+		display: block;
+		height: 0;
+		visibility: hidden;
+	}
 }

@@ -345,8 +345,8 @@
 }
 .search-button-desktop {
   float: right;
-  width: 30px;
-  height: 30px;
+  width: 16px;
+  height: 16px;
   position: relative;
   background: url('../images/search-icon.png') no-repeat;
   background-position: center 0;
@@ -359,9 +359,24 @@
 }
 
 .search-button-desktop:hover {
+  
   #block-search-form {
     //display: block;
   }
+}
+.search-button-desktop {
+&:hover {
+  &:after {
+    display: block;
+    content: "";
+    height: 1px;
+    width: 100%;
+    background: $black;
+    position: absolute;
+    bottom: -4px;
+    z-index: 999;
+  }
+}
 }
 
 #block-search-form {
@@ -369,11 +384,14 @@
   position: absolute;
   right: 0;
   padding: 15px;
-  margin-top: 0 !important;
+  margin-top: 4px !important;
   .form-text {
     background: $gray-lighter;
-    width: 165px;
+    width: 166px;
     line-height: 18px;
+    min-height: 18px;
+    float: left;
+    font-size: 10px;
   }
   &:before {
     display: block;
@@ -390,7 +408,7 @@
   #search-block-form {
     background: $white;
     padding: 15px;
-   
+    overflow: hidden;
   }
   .form-actions {
     float: right;
@@ -400,8 +418,8 @@
       content: '\e808';
       display: block;
       position: absolute;
-      top: -2px;
-      left: 8px;
+      top: -3px;
+      left: 4px;
       font-family: 'solvaxis-icn';
       font-size: 18px;
       font-weight: normal;
@@ -422,4 +440,5 @@
   width: 20px;
   height: 20px;
   padding: 0;
+  margin: 0 0 0 -1px;
 }

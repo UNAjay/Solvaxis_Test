@@ -43,3 +43,11 @@ function solvaxis_page_alter(&$page) {
 //   );
 
 }
+
+/**
+* Implements hook_css_alter().
+*/
+function solvaxis_css_alter(&$css) {
+   // base theme styles
+   unset($css[drupal_get_path('theme', 'jeeves') . '/css/jeeves.css']);
+}
