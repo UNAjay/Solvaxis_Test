@@ -63,6 +63,10 @@ function jeeveserp_layout_wysiwyg_default_profiles() {
       'stylesSet' => 'Download PDF=a.call-to-action.download-pdf
 Fill a form=a.call-to-action.fill-form
 External link=a.call-to-action.external-link
+More details=a.call-to-action.more-details
+Read more=a.call-to-action.read-more
+Attached=a.call-to-action.attached
+Tips & Tricks=a.call-to-action.tips-tricks
 Call to action=p.call-to-action
 Heading 1=h1
 Heading 2=h2
@@ -71,7 +75,7 @@ Key features bullets=ul.key_features
 Paragraph=p
 Section title=h2.section-title',
       'block_formats' => 'p,address,pre,h2,h3,h4,h5,h6,div',
-      'advanced__active_tab' => 'edit-basic',
+      'advanced__active_tab' => 'edit-css',
       'forcePasteAsPlainText' => 1,
     ),
   );
@@ -133,6 +137,10 @@ Section title=h2.section-title',
       'stylesSet' => 'Download PDF=a.call-to-action.download-pdf
 Fill a form=a.call-to-action.fill-form
 External link=a.call-to-action.external-link
+More details=a.call-to-action.more-details
+Read more=a.call-to-action.read-more
+Attached=a.call-to-action.attached
+Tips & Tricks=a.call-to-action.tips-tricks
 Call to action=p.call-to-action
 Heading 1=h1
 Heading 2=h2

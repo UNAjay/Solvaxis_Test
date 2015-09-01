@@ -22,12 +22,9 @@ a {
   :visited {
     color: $link-color-hover;
   }
-
+  
+  // Call to action buttons
   &.call-to-action {
-    background: transparent;
-    background-repeat: no-repeat;
-    background-size: 48px 48px;
-    background-position: 0 0;
     border: 1px solid $black;
     color: $black;
     display: inline-block;
@@ -41,7 +38,20 @@ a {
     position: relative;
     padding: 0 10px 0 70px;
     text-decoration: none;
-   
+    overflow: hidden;
+    &:before {
+      display: block;
+      content: "";
+      width: 48px;
+      height: 96px;
+      background-image: url('../images/sprite1@2x.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
     &:hover {
       background-color: $crimson;
       border: 1px solid $crimson;
@@ -55,29 +65,96 @@ a {
     }
     
     &.download-pdf {
-      background-image: url('../images/pdf@2x.png');
+      &:before {
+        background-position: -96px 0;
+      }
       &:hover,
       &:active,
       &:focus {
-        background-image: url('../images/pdf-white@2x.png');
+        &:before {
+          background-position: -96px -48px;
+        }
       }
     }
+    
     &.fill-form {
-      background-image: url('../images/pen@2x.png');
+      &:before {
+        background-position: 0 0;
+      }
       &:hover,
       &:active,
       &:focus {
-        background-image: url('../images/pen-white@2x.png');
+        &:before {
+          background-position: 0 -48px;
+        }
       }
     }
+    
     &.external-link {
-      background-image: url('../images/arrow@2x.png');
+      &:before {
+        background-position: -48px 0;
+      }
       &:hover,
       &:active,
       &:focus {
-        background-image: url('../images/arrow-white@2x.png');
+        &:before {
+          background-position: -48px -48px;
+        }
       }
     }
+    
+    &.more-details {
+      &:before {
+        background-position: -144px 0;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        &:before {
+          background-position: -144px -48px;
+        }
+      }
+    }
+    
+    &.read-more {
+      &:before {
+        background-position: -192px 0;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        &:before {
+          background-position: -192px -48px;
+        }
+      }
+    }
+    
+    &.tips-tricks {
+      &:before {
+        background-position: -240px 0;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        &:before {
+          background-position: -240px -48px;
+        }
+      }
+    }
+    
+    &.attached {
+      &:before {
+        background-position: -288px 0;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        &:before {
+          background-position: -288px -48px;
+        }
+      }
+    }
+    
   }
 }
 
@@ -101,24 +178,4 @@ p a {
   color: $link-color;
 }
 
-// current / active link
-.current,
-.active {
-  & > a {
-    text-decoration: underline;
-  }
-}
 
-// links in headlines
-h1, h2, h3, h4, h5, h6 {
-  a {
-    //@extend %element-inline-block; es aizkomenteju
-    color: inherit;
-    //word-break: break-all;
-    &:hover,
-    &:active,
-    &:focus{
-      color: $link-color-hover;
-    }
-  }
-}

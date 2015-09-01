@@ -20,6 +20,11 @@ body {
 //-----------------------------------------
 // general elements
 //-----------------------------------------
+.element-invisible,
+.skip-link {
+  display: none;
+}
+
 #page {
   @include at-breakpoint($second) {
     padding-top: 0
@@ -27,9 +32,9 @@ body {
 }
 
 .region-holder {
-  width: 100%;
+  @include container;
 	margin: 0 auto;
-	max-width: none;
+	max-width: 1000px;
   padding-left: 0;
   padding-right: 0;
 }

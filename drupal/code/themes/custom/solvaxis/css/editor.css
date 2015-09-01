@@ -20,6 +20,11 @@ body {
   font-size: 1.4rem;
 }
 
+.element-invisible,
+.skip-link {
+  display: none;
+}
+
 @media (min-width: 800px) {
   #page {
     padding-top: 0;
@@ -27,11 +32,23 @@ body {
 }
 
 .region-holder {
-  width: 100%;
-  margin: 0 auto;
-  max-width: none;
+  *zoom: 1;
+  max-width: 1000px;
+  max-width: 62.5rem;
+  _width: 1000px;
   padding-left: 0;
   padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.region-holder:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .region-content {
@@ -382,10 +399,6 @@ a :visited {
   color: #000;
 }
 a.call-to-action {
-  background: transparent;
-  background-repeat: no-repeat;
-  background-size: 48px 48px;
-  background-position: 0 0;
   border: 1px solid #000;
   color: #000;
   display: inline-block;
@@ -399,6 +412,20 @@ a.call-to-action {
   position: relative;
   padding: 0 10px 0 70px;
   text-decoration: none;
+  overflow: hidden;
+}
+a.call-to-action:before {
+  display: block;
+  content: "";
+  width: 48px;
+  height: 96px;
+  background-image: url("../images/sprite1@2x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 a.call-to-action:hover {
   background-color: #E30043;
@@ -410,23 +437,47 @@ a.call-to-action:active, a.call-to-action:focus {
   border: 1px solid #C70038;
   color: #fff;
 }
-a.call-to-action.download-pdf {
-  background-image: url("../images/pdf@2x.png");
+a.call-to-action.download-pdf:before {
+  background-position: -96px 0;
 }
-a.call-to-action.download-pdf:hover, a.call-to-action.download-pdf:active, a.call-to-action.download-pdf:focus {
-  background-image: url("../images/pdf-white@2x.png");
+a.call-to-action.download-pdf:hover:before, a.call-to-action.download-pdf:active:before, a.call-to-action.download-pdf:focus:before {
+  background-position: -96px -48px;
 }
-a.call-to-action.fill-form {
-  background-image: url("../images/pen@2x.png");
+a.call-to-action.fill-form:before {
+  background-position: 0 0;
 }
-a.call-to-action.fill-form:hover, a.call-to-action.fill-form:active, a.call-to-action.fill-form:focus {
-  background-image: url("../images/pen-white@2x.png");
+a.call-to-action.fill-form:hover:before, a.call-to-action.fill-form:active:before, a.call-to-action.fill-form:focus:before {
+  background-position: 0 -48px;
 }
-a.call-to-action.external-link {
-  background-image: url("../images/arrow@2x.png");
+a.call-to-action.external-link:before {
+  background-position: -48px 0;
 }
-a.call-to-action.external-link:hover, a.call-to-action.external-link:active, a.call-to-action.external-link:focus {
-  background-image: url("../images/arrow-white@2x.png");
+a.call-to-action.external-link:hover:before, a.call-to-action.external-link:active:before, a.call-to-action.external-link:focus:before {
+  background-position: -48px -48px;
+}
+a.call-to-action.more-details:before {
+  background-position: -144px 0;
+}
+a.call-to-action.more-details:hover:before, a.call-to-action.more-details:active:before, a.call-to-action.more-details:focus:before {
+  background-position: -144px -48px;
+}
+a.call-to-action.read-more:before {
+  background-position: -192px 0;
+}
+a.call-to-action.read-more:hover:before, a.call-to-action.read-more:active:before, a.call-to-action.read-more:focus:before {
+  background-position: -192px -48px;
+}
+a.call-to-action.tips-tricks:before {
+  background-position: -240px 0;
+}
+a.call-to-action.tips-tricks:hover:before, a.call-to-action.tips-tricks:active:before, a.call-to-action.tips-tricks:focus:before {
+  background-position: -240px -48px;
+}
+a.call-to-action.attached:before {
+  background-position: -288px 0;
+}
+a.call-to-action.attached:hover:before, a.call-to-action.attached:active:before, a.call-to-action.attached:focus:before {
+  background-position: -288px -48px;
 }
 
 .more-link {
@@ -444,16 +495,4 @@ a.call-to-action.external-link:hover, a.call-to-action.external-link:active, a.c
 
 p a {
   color: #E30043;
-}
-
-.current > a,
-.active > a {
-  text-decoration: underline;
-}
-
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-  color: inherit;
-}
-h1 a:hover, h1 a:active, h1 a:focus, h2 a:hover, h2 a:active, h2 a:focus, h3 a:hover, h3 a:active, h3 a:focus, h4 a:hover, h4 a:active, h4 a:focus, h5 a:hover, h5 a:active, h5 a:focus, h6 a:hover, h6 a:active, h6 a:focus {
-  color: #000;
 }

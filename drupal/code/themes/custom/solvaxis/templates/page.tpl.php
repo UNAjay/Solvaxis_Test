@@ -75,21 +75,11 @@
 
 <div id="page">
 
-
-
   <section id="leader" role="complementary">
 
     <?php print '<div class="top-bg-image"></div>'; ?>
 
     <?php print $slideshow; ?>
-
-    <header class="header-primary clearfix" role="banner">
-      <div class="region-holder">
-        <?php if (!empty($page['header_primary'])): ?>
-          <?php print render($page['header_primary']); ?>
-        <?php endif; ?>
-      </div>
-    </header>
 
     <header class="header-secondary clearfix" role="banner">
       <div class="region-holder">
@@ -112,27 +102,27 @@
   </section>
 
     <section id="content" class="content clearfix" role="main">
-      <div class="region-holder">
-
-        <?php if ($breadcrumb): ?>
-          <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-        <?php endif; ?>
-
-        <?php if (!empty($page['menu_tabs'])): ?>
-          <?php print render($page['menu_tabs']); ?>
-        <?php endif; ?>
-
-        <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
-        <?php print render($page['help']); ?>
-        <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
-
-        <?php if ($messages): ?><div class="messages-wrapper"><?php print $messages; ?></div><?php endif; ?>
-
+        <div class="region-holder">
+          <?php if ($breadcrumb): ?>
+            <div id="breadcrumb"><?php print $breadcrumb; ?></div>
+          <?php endif; ?>
+        </div>
+        
+        <div class="region-holder">
+          <?php if (!empty($page['menu_tabs'])): ?>
+            <?php print render($page['menu_tabs']); ?>
+          <?php endif; ?>
+        
+          <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+          <?php print render($page['help']); ?>
+          <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+        
+          <?php if ($messages): ?><div class="messages-wrapper"><?php print $messages; ?></div><?php endif; ?>
+        </div>
+        
         <?php if (!empty($page['content'])): ?>
           <?php print render($page['content']); ?>
         <?php endif; ?>
-
-      </div>
     </section>
 
 
