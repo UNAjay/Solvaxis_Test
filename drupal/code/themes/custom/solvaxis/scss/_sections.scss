@@ -35,6 +35,12 @@
       @include span-columns(4 omega,12);
     }
   }
+
+  .group-social {
+    @include span-columns(12);
+    padding-top: 20px;
+  }
+
 }
 
 .with-sidebar.sidebar-position-right {

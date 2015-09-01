@@ -83,12 +83,12 @@ body {
   label {
     display: none;
   }
-	// Custom selects in filter 
+	// Custom selects in filter
 	.sbSelector {
-		white-space: nowrap; 
-		max-width: 85%; 
+		white-space: nowrap;
+		max-width: 85%;
 		overflow: hidden;
-		text-overflow: ellipsis; 
+		text-overflow: ellipsis;
 	}
 }
 
@@ -102,7 +102,7 @@ body {
 }
 
 .field-add-this {
-  display: none;
+  // display: none;
 }
 
 
