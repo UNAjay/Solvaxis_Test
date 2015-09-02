@@ -203,7 +203,14 @@ function monster_page_strongarm() {
           'weight' => '2',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'embed' => array(
+          'embed' => array(
+            'weight' => '0',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_ee__embed_map'] = $strongarm;
