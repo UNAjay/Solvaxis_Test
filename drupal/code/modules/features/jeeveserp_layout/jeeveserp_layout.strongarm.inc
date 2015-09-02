@@ -45,7 +45,7 @@ function jeeveserp_layout_strongarm() {
   $strongarm->value = array(
     'node' => 'node',
     'taxonomy_term' => 'taxonomy_term',
-    'embed' => 'embed',
+    'ee' => 'ee',
     'slide' => 0,
     'file' => 0,
     'user' => 0,

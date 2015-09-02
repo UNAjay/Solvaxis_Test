@@ -39,6 +39,13 @@ function monster_page_preprocess_node(&$variables) {
       if ($banner_style) {
         $variables['classes_array'][] = drupal_html_class('banner-style-' . $banner_style[0]['value']);
       }
+      $show_social = field_get_items($entity_type, $node, 'field_show_social_icons');
+      if ($show_social && $show_social[0]['value'] == '1') {
+        $variables['content']['field_add_this']['#access'] = TRUE;
+      }
+      else {
+        $variables['content']['field_add_this']['#access'] = FALSE;
+      }
     }
   }
 
