@@ -10,6 +10,7 @@ stylesheets[all][] = css/solvaxis.css
 stylesheets[print][] = css/print.css
 
 ; Javascripts
+scripts[] = scripts/libraries/underscore/underscore-min.js
 scripts[] = scripts/setbackground.js
 scripts[] = scripts/solvaxis.js
 
