@@ -79,6 +79,7 @@ jQuery(function($){
   var $searchButton = $('<div class="search-button-desktop"><span></span></div>');
   var $searchForm = $('#block-search-form');
   var $navButton = $('.navigate');
+  $searchForm.hide();
 
   $('.region-header-secondary').prepend($searchButton);
 

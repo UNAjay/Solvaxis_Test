@@ -63,8 +63,38 @@ function monster_page_entity_view($entity, $type, $view_mode, $langcode) {
       drupal_goto($page_uri['path'], array('fragment' => $fragment));
     }
   }
+  if ($type == 'ee' && $entity->type == 'embed_map' && $view_mode == 'embed') {
+    $map_field = field_get_items('ee', $entity, 'field_location');
+    if ($map_field) {
+      global $language;
+      $map = '<div id="map-canvas"></div>';
+      $entity->content['map'] = array(
+        '#markup' => $map,
+      );
+      $latlon['lat'] = $map_field[0]['lat'];
+      $latlon['lon'] = $map_field[0]['lon'];
+      drupal_add_js(array('embed_map' => $latlon), array('type' => 'setting'));
+      drupal_add_js('https://maps.googleapis.com/maps/api/js?language=' . $language->language, 'external');
+      drupal_add_js(drupal_get_path('module', 'monster_page') . '/monster_page.js');
+      drupal_add_css(' #map-canvas {width: 100%;height: 300px;}', 'inline');
+    }
+  }
 }
 
+
+/**
+ * Implements hook_field_extra_fields().
+ */
+function monster_page_field_extra_fields() {
+  $return = array();
+
+  $return['ee']['embed_map']['display']['embed'] = array(
+    'label' => 'Google JS Map',
+    'weight' =>'0',
+  );
+
+  return $return;
+}
 
 
 function monster_page_entity_view_alter(&$build, $entity_type) {

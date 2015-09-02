@@ -670,14 +670,14 @@ function jeeveserp_layout_strongarm() {
   $strongarm->value = (object) array(
     'language' => 'en',
     'name' => 'U.S. English',
-    'native' => 'English',
+    'native' => 'EN',
     'direction' => '0',
     'enabled' => 1,
     'plurals' => '0',
     'formula' => '',
     'domain' => '',
     'prefix' => 'en',
-    'weight' => '-9',
+    'weight' => '-10',
     'javascript' => '',
   );
   $export['language_default'] = $strongarm;
