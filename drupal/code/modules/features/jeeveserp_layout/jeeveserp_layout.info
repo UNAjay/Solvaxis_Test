@@ -129,6 +129,7 @@ features[language][] = en
 features[language][] = fr
 features[language][] = zh-hant
 features[linkit_profiles][] = editor
+features[linkit_profiles][] = field
 features[menu_custom][] = menu-footer-menu
 features[node][] = page
 features[variable][] = admin_theme

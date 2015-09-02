@@ -1011,7 +1011,7 @@ function monster_page_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 18,
+      'weight' => 19,
     ),
   );
 
@@ -1130,10 +1130,10 @@ function monster_page_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'addthis_displays',
         'settings' => array(
-          'buttons_size' => 'addthis_16x16_style',
+          'buttons_size' => 'addthis_32x32_style',
           'counter_orientation' => 'horizontal',
           'extra_css' => '',
-          'share_services' => 'facebook,twitter',
+          'share_services' => 'facebook,twitter,linkedin,xing',
         ),
         'type' => 'addthis_basic_toolbox',
         'weight' => 5,
@@ -1142,13 +1142,13 @@ function monster_page_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'addthis_displays',
         'settings' => array(
-          'buttons_size' => 'addthis_16x16_style',
+          'buttons_size' => 'addthis_32x32_style',
           'counter_orientation' => 'horizontal',
           'extra_css' => '',
-          'share_services' => 'facebook,twitter',
+          'share_services' => 'facebook,twitter,linkedin,xing',
         ),
         'type' => 'addthis_basic_toolbox',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'section_text' => array(
         'label' => 'hidden',
@@ -1330,7 +1330,7 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 41,
+        'weight' => 42,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1573,8 +1573,8 @@ function monster_page_field_default_field_instances() {
       'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Search',
-        'enable' => 0,
-        'profile' => '',
+        'enable' => 1,
+        'profile' => 'field',
       ),
       'mediafront' => array(
         'custom' => '',
@@ -1597,6 +1597,76 @@ function monster_page_field_default_field_instances() {
       'settings' => array(),
       'type' => 'link_field',
       'weight' => 15,
+    ),
+  );
+
+  // Exported field_instance: 'node-section-field_show_social_icons'
+  $field_instances['node-section-field_show_social_icons'] = array(
+    'bundle' => 'section',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 13,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'section_dark' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'section_light' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_show_social_icons',
+    'label' => 'Show Social icons',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'mediafront' => array(
+        'custom' => '',
+        'field_type' => 0,
+        'media_type' => 'media',
+        'preview' => 0,
+        'thumbnail' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 3,
     ),
   );
 
@@ -1634,7 +1704,7 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 31,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1851,7 +1921,7 @@ function monster_page_field_default_field_instances() {
       'module' => 'viewfield',
       'settings' => array(),
       'type' => 'viewfield_select',
-      'weight' => 19,
+      'weight' => 20,
     ),
   );
 
@@ -1888,7 +1958,7 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 43,
+        'weight' => 44,
       ),
       'section_text' => array(
         'label' => 'above',
@@ -2060,7 +2130,7 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 42,
+        'weight' => 43,
       ),
       'section_text' => array(
         'label' => 'above',
@@ -2129,6 +2199,7 @@ function monster_page_field_default_field_instances() {
   t('Location');
   t('Promo Link');
   t('Section');
+  t('Show Social icons');
   t('Sidebar position');
   t('Sidebar text');
   t('Social sharing');
