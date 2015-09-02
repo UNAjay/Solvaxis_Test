@@ -29,10 +29,20 @@
   &.with-sidebar {
     .body,
     .field-view {
-      @include span-columns(8,12);
+      width: 100%;
+      padding: 0 10px;
+      @include at-breakpoint($second) {
+        @include span-columns(8,12);
+        padding: 0;
+      }
     }
     .group-sidebar {
-      @include span-columns(4 omega,12);
+      width: 100%;
+      padding: 0 10px;
+      @include at-breakpoint($second) {
+        @include span-columns(4 omega,12);
+        padding: 0;
+      }
     }
   }
 
@@ -46,18 +56,24 @@
 .with-sidebar.sidebar-position-right {
   .body,
   .field-view {
-    @include span-columns(8 omega,12);
-    float: right;
+    width: 100%;
+    @include at-breakpoint($second) {
+      @include span-columns(8 omega,12);
+      float: right;
+    }
   }
   .group-sidebar {
-    @include span-columns(4,12);
-    float: left;
+    width: 100%;
+    @include at-breakpoint($second) {
+      @include span-columns(4,12);
+      float: left;
+    }
   }
 }
 
 // section title
 .section-title {
-  margin-bottom: 33px;
+  margin: 0 10px 33px;
   padding-bottom: 0;
   position: relative;
   font-size: 20px;
@@ -76,6 +92,9 @@
   }
   .section_dark & {
     color: $white;
+  }
+  @include at-breakpoint($second) {
+    margin: 0 0 33px;
   }
 }
 

@@ -13,11 +13,12 @@
 .region-content {
   .form-type-select,
   .webform-component-select {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     @include full-width;
 
     @include at-breakpoint($second) {
       margin-right: 20px;
+      margin-bottom: 20px;
       width: 150px;
     }
   }
@@ -43,8 +44,6 @@ select {
   background: transparent;
   border: 0;
 }
-
-
 
 
 

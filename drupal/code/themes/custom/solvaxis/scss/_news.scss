@@ -3,6 +3,7 @@
   .item-list {
     ul {
       margin: 0;
+      padding: 0;
       li {
         list-style-type: none;
         width: 100%;
@@ -49,20 +50,31 @@
   .views-row {
     display: inline-block;
     float: left;
-    margin-bottom: 20px;
-    overflow: hidden;
+    margin-bottom: 40px;
     clear: both;
+    @include at-breakpoint($second) {
+      //margin-bottom: 40px;
+    }
     .views-field-field-news-image {
-      @include span-columns(4,12);
+      width: 100%;
+      overflow: hidden;
       
       img {
         display: inline-block;
         float: left;
       }
+      @include at-breakpoint($second) {
+        @include span-columns(4,12);
+      }
     }
     .views-field-body,
     .views-field-title-field { 
-      @include span-columns(8 omega,12);
+      width: 100%;
+      padding: 0 10px;
+      @include at-breakpoint($second) {
+        @include span-columns(8 omega,12);
+        padding: 0;
+      }
     }
     .views-field-body {
       line-height: 1.2em;
@@ -71,7 +83,10 @@
       font-size: 15px;
       font-weight: 300;
       text-transform: uppercase;
-      margin: -5px 0 15px;
+      margin: 15px 0;
+      @include at-breakpoint($second) {
+        margin: -5px 0 15px;
+      }
     }
   } 
 }
