@@ -1658,6 +1658,11 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   margin-bottom: 40px;
   clear: both;
 }
+@media (min-width: 800px) {
+  .view-ref-news.view-display-id-hot_news .views-row {
+    margin-bottom: 20px;
+  }
+}
 .view-ref-news.view-display-id-hot_news .views-row .views-field-field-news-image {
   width: 100%;
   overflow: hidden;
