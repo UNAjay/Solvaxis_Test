@@ -120,11 +120,13 @@
           <?php if ($messages): ?><div class="messages-wrapper"><?php print $messages; ?></div><?php endif; ?>
         </div>
         
-        <?php if (!empty($page['content'])): ?>
-          <?php print render($page['content']); ?>
-        <?php endif; ?>
+        <div class="region-holder-content">
+          <?php if (!empty($page['content'])): ?>
+            <?php print render($page['content']); ?>
+          <?php endif; ?>
+        </div>
+        
     </section>
-
 
   <footer class="footer clearfix" role="contentinfo">
     <div class="region-holder">

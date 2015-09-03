@@ -30,7 +30,7 @@
 
 // Meet our customers
 .view-ref-customers {
-  &.view-display-id-customers_block {
+  &.view-id-ref_customers {
     
     margin-top: 0;
   	.views-row {
@@ -64,44 +64,42 @@
 }
 
 // They trust us
-.view-ref-customers {
-  &.view-display-id-they_trust_us {
-    .views-row {
-      //background: gray;
-      img {
-        //max-width: 220px;
-        -webkit-filter: grayscale(100%); 
-        filter: grayscale(100%);
-        
-    		&:hover,
-        &:active {
-          -webkit-filter: grayscale(0%); 
-          filter: grayscale(0%);
-        }
-      }
-      
-      @include at-breakpoint($first) {
-        @include span-columns(6,12);
-        &:nth-child(2n+2) {
-          @include span-columns(6 omega,12);
-          //background: green;
-        }
-      }
-      @include at-breakpoint($second) {
-        @include span-columns(3,12);
-        
-         &:nth-child(2n+2) {
-           @include span-columns(3,12);
-           //background: gray;
-         }
-        &:nth-child(4n+4) {
-          @include span-columns(3 omega,12);
-          //background: red;
-        }
-      }
-    }
-  }
-}
+//.view-ref-customers {
+//  &.view-display-id-they_trust_us {
+//    .views-row {
+//      img {
+//        -webkit-filter: grayscale(100%);
+//        filter: grayscale(100%);
+//
+//        &:hover,
+//        &:active {
+//          -webkit-filter: grayscale(0%);
+//          filter: grayscale(0%);
+//        }
+//      }
+//
+//      @include at-breakpoint($first) {
+//        @include span-columns(6,12);
+//        &:nth-child(2n+2) {
+//          @include span-columns(6 omega,12);
+//          //background: green;
+//        }
+//      }
+//      @include at-breakpoint($second) {
+//        @include span-columns(3,12);
+//
+//         &:nth-child(2n+2) {
+//           @include span-columns(3,12);
+//           //background: gray;
+//         }
+//        &:nth-child(4n+4) {
+//          @include span-columns(3 omega,12);
+//          //background: red;
+//        }
+//      }
+//    }
+//  }
+//}
 
 // media elements
 article {
@@ -134,3 +132,4 @@ article {
     }
   }
 }
+

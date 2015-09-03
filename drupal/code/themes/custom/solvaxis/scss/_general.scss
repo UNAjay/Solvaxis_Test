@@ -15,6 +15,7 @@ html {
 }
 
 body {
+  min-height: 100%;
   @include font-size(14);
 }
 
@@ -28,12 +29,16 @@ body {
 
 #page {
   position: relative;
+  min-height: 100%;
   @include at-breakpoint($second) {
     padding-top: 0
   }
 }
 
-.region-holder {
+.region-holder,
+.region-holder-content .region-content .region-holder,
+.region-holder-content .content > .view,
+.page-user .region-content {
   @include container;
 	margin: 0 auto;
 	max-width: 1000px;
@@ -41,10 +46,14 @@ body {
   padding-right: 0;
 }
 
+.page-user .region-content {
+  padding: 40px 0;
+}
+
 .region-content {
   background: transparent;
 	padding: 20px 0;
-  @include full-width;
+  //@include full-width;
 
   @include at-breakpoint($first) {
     padding: 20px 0;

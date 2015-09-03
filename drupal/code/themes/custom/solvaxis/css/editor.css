@@ -17,6 +17,7 @@ html {
 }
 
 body {
+  min-height: 100%;
   font-size: 14px;
   font-size: 1.4rem;
 }
@@ -28,6 +29,7 @@ body {
 
 #page {
   position: relative;
+  min-height: 100%;
 }
 @media (min-width: 800px) {
   #page {
@@ -35,7 +37,10 @@ body {
   }
 }
 
-.region-holder {
+.region-holder,
+.region-holder-content .region-content .region-holder,
+.region-holder-content .content > .view,
+.page-user .region-content {
   *zoom: 1;
   max-width: 1000px;
   max-width: 62.5rem;
@@ -49,17 +54,22 @@ body {
   padding-left: 0;
   padding-right: 0;
 }
-.region-holder:after {
+.region-holder:after,
+.region-holder-content .region-content .region-holder:after,
+.region-holder-content .content > .view:after,
+.page-user .region-content:after {
   content: "";
   display: table;
   clear: both;
 }
 
+.page-user .region-content {
+  padding: 40px 0;
+}
+
 .region-content {
   background: transparent;
   padding: 20px 0;
-  float: left;
-  width: 100%;
 }
 @media (min-width: 600px) {
   .region-content {

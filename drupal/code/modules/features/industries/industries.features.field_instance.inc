@@ -137,13 +137,8 @@ function industries_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'links' => 1,
-          'use_content_language' => TRUE,
-          'view_mode' => 'full',
-        ),
-        'type' => 'entityreference_entity_view',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 9,
       ),
       'teaser' => array(
@@ -203,25 +198,8 @@ function industries_field_default_field_instances() {
       ),
       'default' => array(
         'label' => 'hidden',
-        'module' => 'cs_adaptive_image',
-        'settings' => array(
-          'image_link' => '',
-          'styles' => array(
-            'breakpoint_1' => 2000,
-            'breakpoint_2' => 800,
-            'breakpoint_3' => 600,
-            'breakpoint_4' => '',
-            'breakpoint_5' => '',
-            'fallback_style' => 'logo_listing_image',
-            'max_style' => '',
-            'style_1' => 'logo_listing_image',
-            'style_2' => 'thumbnail',
-            'style_3' => 'thumbnail',
-            'style_4' => '',
-            'style_5' => '',
-          ),
-        ),
-        'type' => 'cs_adaptive_image',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 6,
       ),
       'teaser' => array(
@@ -289,9 +267,8 @@ function industries_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
+        'type' => 'hidden',
         'weight' => 49,
       ),
       'teaser' => array(
@@ -335,9 +312,8 @@ function industries_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'i18n_taxonomy',
         'settings' => array(),
-        'type' => 'i18n_taxonomy_term_reference_link',
+        'type' => 'hidden',
         'weight' => 48,
       ),
       'teaser' => array(

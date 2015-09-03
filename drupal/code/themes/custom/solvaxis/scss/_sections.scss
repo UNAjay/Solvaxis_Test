@@ -71,6 +71,12 @@
   }
 }
 
+// social icons block
+.group-social {
+  @include full-width;
+  margin: 0;
+}
+
 // section title
 .section-title {
   margin: 0 10px 33px;

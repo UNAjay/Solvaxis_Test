@@ -313,44 +313,34 @@ function industries_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'customer';
   $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'jeeves_eleven_five';
+  $ds_layout->layout = 'ds_2col';
   $ds_layout->settings = array(
     'regions' => array(
-      'main_primary' => array(
+      'left' => array(
         0 => 'title',
         1 => 'field_success_story_title',
         2 => 'field_success_story',
         3 => 'body',
         4 => 'field_partners',
       ),
-      'aside_primary' => array(
-        5 => 'resources_right_menu',
-        6 => 'field_image',
-        7 => 'micro_vertical',
-        8 => 'field_acton_url',
-        9 => 'field_files',
-      ),
     ),
     'fields' => array(
-      'title' => 'main_primary',
-      'field_success_story_title' => 'main_primary',
-      'field_success_story' => 'main_primary',
-      'body' => 'main_primary',
-      'field_partners' => 'main_primary',
-      'resources_right_menu' => 'aside_primary',
-      'field_image' => 'aside_primary',
-      'micro_vertical' => 'aside_primary',
-      'field_acton_url' => 'aside_primary',
-      'field_files' => 'aside_primary',
+      'title' => 'left',
+      'field_success_story_title' => 'left',
+      'field_success_story' => 'left',
+      'body' => 'left',
+      'field_partners' => 'left',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'main_primary' => 'div',
-      'aside_primary' => 'div',
+      'left' => 'div',
+      'right' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
     'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
   );
   $export['node|customer|default'] = $ds_layout;
 

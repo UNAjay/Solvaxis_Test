@@ -18,7 +18,7 @@ function news_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
     'more_news' => array(
-      'weight' => '6',
+      'weight' => '4',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -172,9 +172,9 @@ function news_ds_layout_settings_info() {
         0 => 'title_field',
         1 => 'field_news_image',
         2 => 'body',
+        3 => 'field_add_this',
       ),
       'right' => array(
-        3 => 'field_add_this',
         4 => 'more_news',
         5 => 'field_industry',
         6 => 'field_region',
@@ -186,7 +186,7 @@ function news_ds_layout_settings_info() {
       'title_field' => 'left',
       'field_news_image' => 'left',
       'body' => 'left',
-      'field_add_this' => 'right',
+      'field_add_this' => 'left',
       'more_news' => 'right',
       'field_industry' => 'right',
       'field_region' => 'right',

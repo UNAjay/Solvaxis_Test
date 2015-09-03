@@ -132,7 +132,7 @@ Section title=h2.section-title',
       'simple_source_formatting' => 0,
       'acf_mode' => 0,
       'acf_allowed_content' => '',
-      'css_setting' => 'self',
+      'css_setting' => 'none',
       'css_path' => '/sites/all/themes/custom/solvaxis/css/editor.css',
       'stylesSet' => 'Download PDF=a.call-to-action.download-pdf
 Fill a form=a.call-to-action.fill-form
