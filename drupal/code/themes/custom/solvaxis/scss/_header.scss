@@ -117,6 +117,10 @@
   border-bottom: 1px solid transparent;
   z-index: 100;
   
+  .not-front & {
+    border-bottom: 1px solid $gray-light;
+  }
+  
   @include at-breakpoint(0 $second - 1) {
 		background: url('../images/bg-mobile-menu.png') repeat-x;
   }
@@ -441,4 +445,10 @@
   height: 20px;
   padding: 0;
   margin: 0 0 0 -1px;
+}
+
+.header-secondary {
+  h1, h2 {
+    margin: 0;
+  }
 }

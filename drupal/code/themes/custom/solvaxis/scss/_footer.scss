@@ -7,10 +7,14 @@ footer {
   height: auto;
 	padding: 0;
   overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  clear: both;
 
 	@include at-breakpoint($second) {
 		min-height: $footerHeightDesktop;
     padding: 0;
+    margin-top: $footerHeightDesktop;
   }
   
   .region-holder {
