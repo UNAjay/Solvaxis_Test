@@ -526,12 +526,27 @@ function monster_page_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['next'] = '';
   $handler->display->display_options['pager']['options']['tags']['last'] = '';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Field: Image */
+  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
+  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
+  $handler->display->display_options['fields']['field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_image']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['settings'] = array(
+    'image_style' => 'hot_news_image',
+    'image_link' => 'content',
+  );
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_news_image']['id'] = 'field_news_image';
   $handler->display->display_options['fields']['field_news_image']['table'] = 'field_data_field_news_image';
   $handler->display->display_options['fields']['field_news_image']['field'] = 'field_news_image';
   $handler->display->display_options['fields']['field_news_image']['label'] = '';
   $handler->display->display_options['fields']['field_news_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_news_image']['empty'] = '[field_image]';
+  $handler->display->display_options['fields']['field_news_image']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_news_image']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['field_news_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_news_image']['settings'] = array(
     'image_style' => 'hot_news_image',
@@ -567,6 +582,59 @@ function monster_page_views_default_views() {
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '400',
+  );
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'diverse' => 'diverse',
+    'news' => 'news',
+    'product_news' => 'product_news',
+  );
+  $handler->display->display_options['filters']['type']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['type']['expose']['operator_id'] = 'type_op';
+  $handler->display->display_options['filters']['type']['expose']['label'] = 'Filter by type';
+  $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
+  $handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
+  $handler->display->display_options['filters']['type']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+  );
+  $handler->display->display_options['filters']['type']['expose']['reduce'] = TRUE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type_1']['id'] = 'type_1';
+  $handler->display->display_options['filters']['type_1']['table'] = 'node';
+  $handler->display->display_options['filters']['type_1']['field'] = 'type';
+  $handler->display->display_options['filters']['type_1']['value'] = array(
+    'blog_post' => 'blog_post',
+    'diverse' => 'diverse',
+    'event' => 'event',
+    'job_posting' => 'job_posting',
+    'news' => 'news',
+    'product_news' => 'product_news',
+  );
+  /* Filter criterion: Entity translation: Language */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'entity_translation';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['relationship'] = 'entity_translations';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+    'und' => 'und',
   );
 
   /* Display: Latest News */
@@ -648,6 +716,7 @@ function monster_page_views_default_views() {
     t('[created] - [title_field]'),
     t('Filter by type'),
     t('Hot News'),
+    t('[field_image]'),
     t('Latest News'),
   );
   $export['ref_news'] = $view;
