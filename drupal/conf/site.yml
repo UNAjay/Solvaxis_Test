@@ -91,6 +91,13 @@ commands:
     - update
     - shell: cp conf/_ping.php current
 
+  # Aegir argument to build without running updb 
+  aegir:
+    - make
+    - backup
+    - finalize
+    - shell: cp conf/_ping.php current
+
   # This is just an example on how to create custom commands,
   # this will create a .tgz out of the drupal installation without
   # touching the current installation.
