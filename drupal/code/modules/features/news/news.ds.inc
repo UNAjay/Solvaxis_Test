@@ -17,6 +17,11 @@ function news_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'news';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
+    'resources_right_menu' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
     'more_news' => array(
       'weight' => '4',
       'label' => 'hidden',
@@ -168,21 +173,23 @@ function news_ds_layout_settings_info() {
   $ds_layout->layout = 'ds_2col';
   $ds_layout->settings = array(
     'regions' => array(
-      'left' => array(
-        0 => 'title_field',
-        1 => 'field_news_image',
-        2 => 'body',
-        3 => 'field_add_this',
-      ),
       'right' => array(
-        4 => 'more_news',
-        5 => 'field_industry',
-        6 => 'field_region',
-        7 => 'field_market',
-        8 => 'field_product',
+        0 => 'resources_right_menu',
+        5 => 'more_news',
+        6 => 'field_industry',
+        7 => 'field_region',
+        8 => 'field_market',
+        9 => 'field_product',
+      ),
+      'left' => array(
+        1 => 'title_field',
+        2 => 'field_news_image',
+        3 => 'body',
+        4 => 'field_add_this',
       ),
     ),
     'fields' => array(
+      'resources_right_menu' => 'right',
       'title_field' => 'left',
       'field_news_image' => 'left',
       'body' => 'left',

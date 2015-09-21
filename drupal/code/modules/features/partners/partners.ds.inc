@@ -124,30 +124,30 @@ function partners_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'partner';
   $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'jeeves_eleven_five';
+  $ds_layout->layout = 'ds_2col';
   $ds_layout->settings = array(
     'regions' => array(
-      'main_primary' => array(
+      'left' => array(
         0 => 'title',
         1 => 'body',
         2 => 'field_partner_office_contactinfo',
         3 => 'related_success_stories',
       ),
-      'aside_primary' => array(
+      'right' => array(
         4 => 'field_partner_logo',
       ),
     ),
     'fields' => array(
-      'title' => 'main_primary',
-      'body' => 'main_primary',
-      'field_partner_office_contactinfo' => 'main_primary',
-      'related_success_stories' => 'main_primary',
-      'field_partner_logo' => 'aside_primary',
+      'title' => 'left',
+      'body' => 'left',
+      'field_partner_office_contactinfo' => 'left',
+      'related_success_stories' => 'left',
+      'field_partner_logo' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'main_primary' => 'div',
-      'aside_primary' => 'div',
+      'left' => 'div',
+      'right' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',

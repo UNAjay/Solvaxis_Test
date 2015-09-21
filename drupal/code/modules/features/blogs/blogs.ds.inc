@@ -52,13 +52,8 @@ function blogs_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'blog_post';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
-    'resources_right_menu' => array(
-      'weight' => '8',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
     'tag_cloud' => array(
-      'weight' => '9',
+      'weight' => '8',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -66,6 +61,11 @@ function blogs_ds_field_settings_info() {
           'func' => 'theme_ds_field_expert',
         ),
       ),
+    ),
+    'resources_right_menu' => array(
+      'weight' => '7',
+      'label' => 'hidden',
+      'format' => 'default',
     ),
     'title' => array(
       'weight' => '0',
@@ -82,6 +82,11 @@ function blogs_ds_field_settings_info() {
       'weight' => '1',
       'label' => 'hidden',
       'format' => 'ds_post_date_medium',
+    ),
+    'field_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
     ),
   );
   $export['node|blog_post|default'] = $ds_fieldsetting;
@@ -243,42 +248,44 @@ function blogs_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'blog_post';
   $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'jeeves_eleven_five';
+  $ds_layout->layout = 'ds_2col';
   $ds_layout->settings = array(
     'regions' => array(
-      'main_primary' => array(
+      'left' => array(
         0 => 'title',
         1 => 'post_date',
         2 => 'field_author',
-        3 => 'field_add_this',
-        4 => 'field_image',
-        5 => 'body',
-        6 => 'field_tags',
+        3 => 'field_image',
+        4 => 'body',
+        5 => 'field_tags',
+        6 => 'field_add_this',
       ),
-      'aside_primary' => array(
+      'right' => array(
         7 => 'resources_right_menu',
         8 => 'tag_cloud',
       ),
     ),
     'fields' => array(
-      'title' => 'main_primary',
-      'post_date' => 'main_primary',
-      'field_author' => 'main_primary',
-      'field_add_this' => 'main_primary',
-      'field_image' => 'main_primary',
-      'body' => 'main_primary',
-      'field_tags' => 'main_primary',
-      'resources_right_menu' => 'aside_primary',
-      'tag_cloud' => 'aside_primary',
+      'title' => 'left',
+      'post_date' => 'left',
+      'field_author' => 'left',
+      'field_image' => 'left',
+      'body' => 'left',
+      'field_tags' => 'left',
+      'field_add_this' => 'left',
+      'resources_right_menu' => 'right',
+      'tag_cloud' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'main_primary' => 'div',
-      'aside_primary' => 'div',
+      'left' => 'div',
+      'right' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
     'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
   );
   $export['node|blog_post|default'] = $ds_layout;
 

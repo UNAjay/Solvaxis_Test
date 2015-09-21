@@ -3,6 +3,7 @@ core = 7.x
 package = Features
 dependencies[] = addthis
 dependencies[] = addthis_displays
+dependencies[] = colorbox
 dependencies[] = ds
 dependencies[] = entityreference
 dependencies[] = features
