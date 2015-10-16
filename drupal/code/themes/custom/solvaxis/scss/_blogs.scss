@@ -1,0 +1,17 @@
+// sidebar
+.tag-cloud,
+.block-tagclouds {
+	.content {
+		padding: 0 0 15px;
+	}
+	a {
+	  color: $crimson;
+
+	  &:hover {
+	  	text-decoration: underline;
+	  }
+	}
+	.tagclouds-term {
+		margin-right: 10px;
+	}
+}

@@ -24,8 +24,8 @@ function blogs_field_group_info() {
     'weight' => '5',
     'children' => array(
       0 => 'field_industry',
-      1 => 'field_region',
-      2 => 'field_product',
+      1 => 'field_product',
+      2 => 'field_region',
       3 => 'field_market',
     ),
     'format_type' => 'tab',

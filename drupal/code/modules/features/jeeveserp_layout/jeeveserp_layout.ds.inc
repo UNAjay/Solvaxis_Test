@@ -1233,22 +1233,22 @@ function jeeveserp_layout_ds_layout_settings_info() {
   $ds_layout->layout = 'ds_2col';
   $ds_layout->settings = array(
     'regions' => array(
-      'right' => array(
-        0 => 'resources_right_menu',
-      ),
       'left' => array(
-        1 => 'title',
-        2 => 'field_news_image',
-        3 => 'body',
-        4 => 'field_add_this',
+        0 => 'field_news_image',
+        1 => 'body',
+        2 => 'field_add_this',
+      ),
+      'right' => array(
+        3 => 'field_sidebar_text',
+        4 => 'resources_right_menu',
       ),
     ),
     'fields' => array(
-      'resources_right_menu' => 'right',
-      'title' => 'left',
       'field_news_image' => 'left',
       'body' => 'left',
       'field_add_this' => 'left',
+      'field_sidebar_text' => 'right',
+      'resources_right_menu' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(

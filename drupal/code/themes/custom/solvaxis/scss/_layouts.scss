@@ -1,6 +1,12 @@
 //-----------------------------------------
 // layouts
 //-----------------------------------------
+.not-front {
+  #leader {
+    display: none;
+  }
+}
+
 #leader .flexslider {
   @include container;
 	margin: 0 auto;
@@ -22,14 +28,28 @@
 .ds-2col {
   .group-left {
     @include full-width;
-    @include at-breakpoint($second) {
+    //background: green;
+    padding: 0 15px;
+    @include at-breakpoint($bp-med) {
       @include span-columns(8,12);
+      padding: 0;
+    }
+    .section-title {
+      margin: 0 0 40px;
+    }
+    .image {
+      img {
+        @extend %full-width-image;
+      }
     }
   }
   .group-right {
      @include full-width;
-     @include at-breakpoint($second) {
+     //background: pink;
+     @include at-breakpoint($bp-med) {
        @include span-columns(4 omega,12);
      }
    }
 }
+
+// internal pages

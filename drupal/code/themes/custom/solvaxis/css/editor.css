@@ -10,6 +10,8 @@ body {
   height: 100%;
   font-family: "Raleway", Helvetica, Arial, sans-serif;
   margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 html {
@@ -17,7 +19,6 @@ html {
 }
 
 body {
-  min-height: 100%;
   font-size: 14px;
   font-size: 1.4rem;
 }
@@ -31,10 +32,19 @@ body {
   position: relative;
   min-height: 100%;
 }
-@media (min-width: 800px) {
+@media (min-width: 46.8em) {
   #page {
     padding-top: 0;
   }
+}
+
+#content {
+  margin: 0;
+  padding-bottom: 287px;
+}
+
+.not-front #content {
+  padding-bottom: 320px;
 }
 
 .region-holder,
@@ -42,9 +52,8 @@ body {
 .region-holder-content .content > .view,
 .page-user .region-content {
   *zoom: 1;
-  max-width: 1000px;
-  max-width: 62.5rem;
-  _width: 1000px;
+  max-width: 71.42857em;
+  _width: 71.42857em;
   padding-left: 0;
   padding-right: 0;
   margin-left: auto;
@@ -71,7 +80,7 @@ body {
   background: transparent;
   padding: 20px 0;
 }
-@media (min-width: 600px) {
+@media (min-width: 24em) {
   .region-content {
     padding: 20px 0;
   }
@@ -101,7 +110,7 @@ body {
   float: left;
   width: 100%;
 }
-@media (min-width: 800px) {
+@media (min-width: 46.8em) {
   .view-filters {
     padding: 0;
   }
@@ -115,18 +124,24 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-@media (min-width: 800px) {
+@media (min-width: 46.8em) {
   .view-filters .sbSelector {
     max-width: 85%;
   }
 }
 
-#content {
-  margin: 0;
-}
-
 .region-content {
   padding: 0;
+}
+
+.content .body h2, .content .body h3 {
+  color: #000;
+  font-size: 15px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.content .body h3 {
+  color: #73797C;
 }
 
 @font-face {
@@ -223,7 +238,7 @@ body {
   float: left;
   width: 100%;
 }
-@media (min-width: 800px) {
+@media (min-width: 46.8em) {
   .region-content .form-type-select,
   .region-content .webform-component-select {
     margin-right: 20px;
@@ -243,7 +258,7 @@ body {
   float: left;
   width: 100%;
 }
-@media (min-width: 800px) {
+@media (min-width: 46.8em) {
   .region-content select {
     width: inherit;
   }
@@ -262,13 +277,7 @@ html {
   box-sizing: inherit;
 }
 
-html {
-  overflow-y: scroll;
-}
-
 body {
-  padding: 0;
-  margin: 0;
   background: #F2F2F2;
 }
 

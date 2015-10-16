@@ -36,13 +36,12 @@ function news_image_default_styles() {
   $styles['news_image'] = array(
     'label' => 'news_image',
     'effects' => array(
-      4 => array(
+      7 => array(
         'name' => 'imagefield_focus_scale_and_crop',
         'data' => array(
-          'width' => 640,
-          'height' => 250,
-          'strength' => 'high',
-          'fallback' => 'smartcrop',
+          'width' => 660,
+          'height' => 280,
+          'strength' => 'medium',
         ),
         'weight' => 2,
       ),

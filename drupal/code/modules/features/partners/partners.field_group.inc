@@ -55,9 +55,9 @@ function partners_field_group_info() {
     'children' => array(
       0 => 'body',
       1 => 'field_partner_logo',
-      2 => 'field_partner_type',
-      3 => 'field_partner_office_contactinfo',
-      4 => 'field_partner_office_location',
+      2 => 'field_partner_office_contactinfo',
+      3 => 'field_partner_office_location',
+      4 => 'field_partner_type',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -83,9 +83,7 @@ function partners_field_group_info() {
   $field_group->data = array(
     'label' => 'References',
     'weight' => '3',
-    'children' => array(
-      0 => 'field_partner_offices',
-    ),
+    'children' => array(),
     'format_type' => 'tab',
     'format_settings' => array(
       'formatter' => 'closed',

@@ -52,7 +52,7 @@
         }
       }
       
-      @include at-breakpoint($first) {
+      @include at-breakpoint($bp-small) {
         @include span-columns(4,12);
         &:nth-child(3n+3) {
           //background: red;
@@ -78,14 +78,14 @@
 //        }
 //      }
 //
-//      @include at-breakpoint($first) {
+//      @include at-breakpoint($bp-small) {
 //        @include span-columns(6,12);
 //        &:nth-child(2n+2) {
 //          @include span-columns(6 omega,12);
 //          //background: green;
 //        }
 //      }
-//      @include at-breakpoint($second) {
+//      @include at-breakpoint($bp-med) {
 //        @include span-columns(3,12);
 //
 //         &:nth-child(2n+2) {
@@ -116,14 +116,14 @@ article {
       }
     }
     
-    @include at-breakpoint($first) {
+    @include at-breakpoint($bp-small) {
       display: inline-block;
       float: left;
       width: 48%;
       margin: 0 1%;
       margin-bottom: 20px;
     }
-    @include at-breakpoint($second) {
+    @include at-breakpoint($bp-med) {
       display: inline-block;
       float: left;
       width: 23%;

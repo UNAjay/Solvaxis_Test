@@ -50,6 +50,7 @@ features[field_instance][] = node-partner-field_partner_office_location
 features[field_instance][] = node-partner-field_partner_type
 features[field_instance][] = node-partner-field_product
 features[field_instance][] = node-partner-field_region
+features[field_instance][] = node-partner-field_sidebar_text
 features[field_instance][] = taxonomy_term-partner_location-name_field
 features[field_instance][] = taxonomy_term-partner_type-name_field
 features[image][] = partner_badge

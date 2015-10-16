@@ -4,11 +4,6 @@
 %full-width-image {
   width: 100%;
   height: auto;
-  padding: 0 15px 15px;
-
-  @include at-breakpoint($first) {
-    padding: 0 0 15px;
-  }
 }
 
 //-----------------------------------------
@@ -21,7 +16,7 @@
   margin-bottom: 15px;
   @include full-width;
 
-  @include at-breakpoint($first) {
+  @include at-breakpoint($bp-small) {
     border-right: 1px solid #E9E9E9;
     border-left: 1px solid #E9E9E9;
   }

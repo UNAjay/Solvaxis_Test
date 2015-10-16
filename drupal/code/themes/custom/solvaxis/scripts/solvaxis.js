@@ -4,11 +4,11 @@
 
       // Sticky header
       $(window).scroll(function() {
-      if ($(this).scrollTop() > 1){
-          $('.header-secondary').addClass("sticky");
+      if ($(this).scrollTop() > 0){
+          $('.header-secondary').addClass( "sticky" );
         }
         else{
-          $('.header-secondary').removeClass("sticky");
+          $('.header-secondary').removeClass( "sticky" );
         }
       });
 
@@ -75,27 +75,44 @@ function getUrlVars(url)
 jQuery(function($){
   // Use strict mode to avoid errors: https://developer.mozilla.org/en/JavaScript/Strict_mode
   "use strict";
-
-  var $searchButton = $('<div class="search-button-desktop"><span></span></div>');
-  var $searchForm = $('#block-search-form');
+ 
   var $navButton = $('.navigate');
+  var $searchButton = $('<div class="search-button"></div>');
+  var $searchForm = $('#block-search-form').clone();
+  
+  $searchForm.addClass('desktop');
+  
   $searchForm.hide();
-
-  $('.region-header-secondary').prepend($searchButton);
+  $('.region-header-secondary').hide();
+  
+  $('.header-secondary .region-holder').prepend($navButton, $searchButton, $searchForm);
 
   // toggle search
   $searchButton.click(function(){
     $searchForm.toggle();
   });
-
-  var hideSearch = function(){
-    // mobile menu
-    if ($navButton.is(':visible')) {
-
-      $searchForm.hide();
-    }
-  };
-  $(window).resize(hideSearch);
+  
+  // search utton active
+  $searchButton.click(function(){
+    $searchButton.toggleClass( "active" );
+  });
+  
+  // header class when hidden on mobile
+  $navButton.click(function(){
+    $('.region-header-secondary').toggle();
+    $('.region-header-secondary').toggleClass( "expanded" );
+    $navButton.toggleClass( "close" );
+  });
+  
+  
+  // var hideSearch = function(){
+ //    // mobile menu
+ //    if ($navButton.is(':visible')) {
+ //
+ //      $searchForm.hide();
+ //    }
+ //  };
+ //  $(window).resize(hideSearch);
 
 });
 

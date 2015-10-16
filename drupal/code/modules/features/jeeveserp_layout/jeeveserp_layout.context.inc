@@ -35,19 +35,19 @@ function jeeveserp_layout_context_default_contexts() {
           'module' => 'system',
           'delta' => 'main-menu',
           'region' => 'header_secondary',
-          'weight' => '-8',
-        ),
-        'lang_dropdown-language' => array(
-          'module' => 'lang_dropdown',
-          'delta' => 'language',
-          'region' => 'header_secondary',
-          'weight' => '-9',
+          'weight' => '-39',
         ),
         'search-form' => array(
           'module' => 'search',
           'delta' => 'form',
           'region' => 'header_secondary',
-          'weight' => '-10',
+          'weight' => '-38',
+        ),
+        'lang_dropdown-language' => array(
+          'module' => 'lang_dropdown',
+          'delta' => 'language',
+          'region' => 'header_secondary',
+          'weight' => '-37',
         ),
         'site_socialicons-site_socialicons_global' => array(
           'module' => 'site_socialicons',

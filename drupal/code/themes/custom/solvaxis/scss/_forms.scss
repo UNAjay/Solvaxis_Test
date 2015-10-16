@@ -16,7 +16,7 @@
     margin-bottom: 10px;
     @include full-width;
 
-    @include at-breakpoint($second) {
+    @include at-breakpoint($bp-med) {
       margin-right: 20px;
       margin-bottom: 20px;
       width: 150px;
@@ -35,7 +35,7 @@
     @include font-family;
     @include full-width;
 
-    @include at-breakpoint($second) {
+    @include at-breakpoint($bp-med) {
       width: inherit;
     }
   }

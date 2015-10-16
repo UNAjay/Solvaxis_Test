@@ -67,26 +67,10 @@ function blogs_ds_field_settings_info() {
       'label' => 'hidden',
       'format' => 'default',
     ),
-    'title' => array(
+    'post_date' => array(
       'weight' => '0',
       'label' => 'hidden',
-      'format' => 'default',
-      'formatter_settings' => array(
-        'link' => '0',
-        'wrapper' => 'h1',
-        'class' => '',
-        'ft' => array(),
-      ),
-    ),
-    'post_date' => array(
-      'weight' => '1',
-      'label' => 'hidden',
       'format' => 'ds_post_date_medium',
-    ),
-    'field_image' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
     ),
   );
   $export['node|blog_post|default'] = $ds_fieldsetting;
@@ -252,27 +236,27 @@ function blogs_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'left' => array(
-        0 => 'title',
-        1 => 'post_date',
-        2 => 'field_author',
-        3 => 'field_image',
-        4 => 'body',
-        5 => 'field_tags',
-        6 => 'field_add_this',
+        0 => 'post_date',
+        1 => 'field_author',
+        2 => 'field_image',
+        3 => 'body',
+        4 => 'field_tags',
+        5 => 'field_add_this',
       ),
       'right' => array(
+        6 => 'field_sidebar_text',
         7 => 'resources_right_menu',
         8 => 'tag_cloud',
       ),
     ),
     'fields' => array(
-      'title' => 'left',
       'post_date' => 'left',
       'field_author' => 'left',
       'field_image' => 'left',
       'body' => 'left',
       'field_tags' => 'left',
       'field_add_this' => 'left',
+      'field_sidebar_text' => 'right',
       'resources_right_menu' => 'right',
       'tag_cloud' => 'right',
     ),

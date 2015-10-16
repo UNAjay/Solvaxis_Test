@@ -22,7 +22,7 @@ function partners_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -103,7 +103,7 @@ function partners_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 40,
+        'weight' => 38,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -153,7 +153,7 @@ function partners_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 43,
+        'weight' => 41,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -291,7 +291,7 @@ function partners_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -344,7 +344,7 @@ function partners_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 42,
+        'weight' => 40,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -396,7 +396,7 @@ function partners_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 39,
+        'weight' => 37,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -440,7 +440,7 @@ function partners_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 44,
+        'weight' => 42,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -492,7 +492,7 @@ function partners_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 41,
+        'weight' => 39,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -523,6 +523,82 @@ function partners_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_buttons',
       'weight' => 15,
+    ),
+  );
+
+  // Exported field_instance: 'node-partner-field_sidebar_text'
+  $field_instances['node-partner-field_sidebar_text'] = array(
+    'bundle' => 'partner',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Custom sidebar content',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_sidebar_text',
+    'label' => 'Sidebar text',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'basic_html' => 'basic_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'basic_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'mediafront' => array(
+        'custom' => '',
+        'field_type' => 0,
+        'media_type' => 'media',
+        'preview' => 0,
+        'thumbnail' => 0,
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 18,
     ),
   );
 
@@ -604,6 +680,7 @@ function partners_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Body');
   t('Contact information');
+  t('Custom sidebar content');
   t('Industry');
   t('Logo');
   t('Market');
@@ -612,6 +689,7 @@ function partners_field_default_field_instances() {
   t('Partner type');
   t('Product');
   t('Region');
+  t('Sidebar text');
 
   return $field_instances;
 }

@@ -24,9 +24,9 @@ function news_field_group_info() {
     'weight' => '3',
     'children' => array(
       0 => 'field_industry',
-      1 => 'field_region',
+      1 => 'field_market',
       2 => 'field_product',
-      3 => 'field_market',
+      3 => 'field_region',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -84,9 +84,9 @@ function news_field_group_info() {
     'weight' => '3',
     'children' => array(
       0 => 'field_industry',
-      1 => 'field_region',
+      1 => 'field_market',
       2 => 'field_product',
-      3 => 'field_market',
+      3 => 'field_region',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -115,7 +115,6 @@ function news_field_group_info() {
     'children' => array(
       0 => 'body',
       1 => 'field_add_this',
-      2 => 'field_news_type',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -172,7 +171,6 @@ function news_field_group_info() {
     'children' => array(
       0 => 'body',
       1 => 'field_add_this',
-      2 => 'field_news_type',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

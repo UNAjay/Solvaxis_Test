@@ -59,6 +59,7 @@ features[field_instance][] = node-blog_post-field_industry
 features[field_instance][] = node-blog_post-field_market
 features[field_instance][] = node-blog_post-field_product
 features[field_instance][] = node-blog_post-field_region
+features[field_instance][] = node-blog_post-field_sidebar_text
 features[field_instance][] = node-blog_post-field_tags
 features[field_instance][] = node-blog_post-title_field
 features[node][] = blog_post

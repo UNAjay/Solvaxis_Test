@@ -8,25 +8,33 @@
         list-style-type: none;
         width: 100%;
         margin: 0;
-        padding: 10px 0 7px;
+        padding: 5px 0 7px;
+        border-bottom: 1px solid $gray-light;
         
         .views-field-body {
           line-height: 1.2em;
         }
         
-        @include at-breakpoint($first) {
-         
+        .views-more-link {
+          display: none;
+        }
+        
+        @include at-breakpoint($bp-med-2) {
           //margin-right: 0;
           display: inline-block;
           float: left;
           width: 32%;
           margin: 0 0 0 2%;
           border-left: 1px solid $gray-light;
+          border-bottom: 0 none;
           padding: 11px 0 7px 10px;
           &:first-child {
             border-left: 0 none;
             margin: 0;
             padding: 11px 0 7px 0;
+          }
+          .views-more-link {
+            display: inline-block;
           }
         }
         
@@ -52,7 +60,7 @@
     float: left;
     margin-bottom: 40px;
     clear: both;
-    @include at-breakpoint($second) {
+    @include at-breakpoint($bp-med) {
       margin-bottom: 20px;
     }
     .views-field-field-news-image {
@@ -63,7 +71,7 @@
         display: inline-block;
         float: left;
       }
-      @include at-breakpoint($second) {
+      @include at-breakpoint($bp-med) {
         @include span-columns(4,12);
       }
     }
@@ -71,7 +79,7 @@
     .views-field-title-field { 
       width: 100%;
       padding: 0 10px;
-      @include at-breakpoint($second) {
+      @include at-breakpoint($bp-med) {
         @include span-columns(8 omega,12);
         padding: 0;
       }
@@ -84,7 +92,7 @@
       font-weight: 300;
       text-transform: uppercase;
       margin: 15px 0;
-      @include at-breakpoint($second) {
+      @include at-breakpoint($bp-med) {
         margin: -5px 0 15px;
       }
     }

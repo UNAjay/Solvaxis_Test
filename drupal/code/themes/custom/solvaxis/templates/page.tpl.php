@@ -74,30 +74,30 @@
 ?>
 
 <div id="page">
+  <header class="header-secondary clearfix" role="banner">
+    <div class="region-holder">
+      <?php if ($logo): ?>
 
+      <?php $h = $is_front ? 'h1' : 'h2'; ?>
+      <<?php print $h; ?>>
+        <a href="<?php print $front_page; ?>" title="<?php print $site_name; ?>" rel="home" id="logo">
+          <img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>" />
+        </a>
+      </<?php print $h; ?>>
+      <?php endif; ?>
+
+      <?php if (!empty($page['header_secondary'])): ?>
+        <?php print render($page['header_secondary']); ?>
+      <?php endif; ?>
+    </div>
+  </header>
   <section id="leader" role="complementary">
 
     <?php print '<div class="top-bg-image"></div>'; ?>
 
     <?php print $slideshow; ?>
 
-    <header class="header-secondary clearfix" role="banner">
-      <div class="region-holder">
-        <?php if ($logo): ?>
-
-        <?php $h = $is_front ? 'h1' : 'h2'; ?>
-        <<?php print $h; ?>>
-          <a href="<?php print $front_page; ?>" title="<?php print $site_name; ?>" rel="home" id="logo">
-            <img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>" />
-          </a>
-        </<?php print $h; ?>>
-        <?php endif; ?>
-
-        <?php if (!empty($page['header_secondary'])): ?>
-          <?php print render($page['header_secondary']); ?>
-        <?php endif; ?>
-      </div>
-    </header>
+    
 
   </section>
 

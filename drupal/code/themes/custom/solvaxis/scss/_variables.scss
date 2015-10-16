@@ -6,16 +6,25 @@
 $total-columns: 12;
 // width of each column
 // $column-width: 65px;
-$column-width: 65px;
+$column-width: 4.642857142857143em;
+
 // space between columns
-$gutter-width: 20px;
+//$gutter-width: 20px;
+$gutter-width: 1.4285714285714286em;
 // space on the right and left of the grid
 $grid-padding: 0;
 
 // breakpoints
-$first: 600px;
-$second: 800px;
-$third: 1014px;
+$bp-small: 24em;
+$bp-small-2: 29.75em;
+$bp-small-3: 39.8em;
+$bp-med: 46.8em;
+$bp-med-2: 48em;
+$bp-large: 50em;
+$bp-large-2: 54.5em;
+$bp-xl: 60em;
+$bp-xl-2: 67em;
+
 
 //-----------------------------------------
 // general variables

@@ -5,9 +5,17 @@
 .node-section {
   position: relative;
   min-height: 200px;
-  padding: 0;
+  padding: 0 35px;
   width: 100%;
-
+  
+  @include at-breakpoint($bp-med-2) {
+    //padding: 0;
+  }
+  
+  @include at-breakpoint($bp-xl) {
+    padding: 0;
+  }
+  
   .region-holder {
     @include container;
     margin: 0 auto;
@@ -30,16 +38,19 @@
     .body,
     .field-view {
       width: 100%;
-      padding: 0 10px;
-      @include at-breakpoint($second) {
+      //padding: 0 10px;
+      margin-bottom: 40px;
+      padding: 0;
+      @include at-breakpoint($bp-med-2) {
         @include span-columns(8,12);
-        padding: 0;
+        //padding: 0;
+        margin-bottom: 0;
       }
     }
     .group-sidebar {
       width: 100%;
       padding: 0 10px;
-      @include at-breakpoint($second) {
+      @include at-breakpoint($bp-med-2) {
         @include span-columns(4 omega,12);
         padding: 0;
       }
@@ -57,14 +68,14 @@
   .body,
   .field-view {
     width: 100%;
-    @include at-breakpoint($second) {
+    @include at-breakpoint($bp-med-2) {
       @include span-columns(8 omega,12);
       float: right;
     }
   }
   .group-sidebar {
     width: 100%;
-    @include at-breakpoint($second) {
+    @include at-breakpoint($bp-med-2) {
       @include span-columns(4,12);
       float: left;
     }
@@ -79,7 +90,7 @@
 
 // section title
 .section-title {
-  margin: 0 10px 33px;
+  margin: 0 0 8px;
   padding-bottom: 0;
   position: relative;
   font-size: 20px;
@@ -99,20 +110,23 @@
   .section_dark & {
     color: $white;
   }
-  @include at-breakpoint($second) {
+  @include at-breakpoint($bp-med-2) {
     margin: 0 0 33px;
   }
 }
 
-// banner styles
+//-----------------------------------------
+// Banners
+//-----------------------------------------
+
+// mobile
 .group-banner {
-  position: absolute;
-  width: 690px;
-  height: 188px;
+  position: relative;
+  width: 100%;
+  height: auto;
   z-index: 2;
-  right: -30px;
-  top: -116px;
-  padding: 20px;
+  margin: -80px 0 12px;
+  padding: 5px 10px;
 
   .banner-style-red & {
     background-color: $crimson;
@@ -131,6 +145,11 @@
     position: absolute;
     top: 0;
     left: 0;
+    
+    img {
+      float: left;
+      width: 100%;
+    }
   }
 
   .banner-link {
@@ -143,5 +162,25 @@
       left: 0px;
       text-indent: -10000px;
     }
+  }
+}
+
+// tablet
+.group-banner {
+  @include at-breakpoint($bp-med-2) {
+    float: right;
+    width: 455px;
+    height: 188px;
+    padding: 10px 15px;
+    margin: -144px 0 12px;
+  }
+}
+
+// desktop
+.group-banner {
+  @include at-breakpoint($bp-xl) {
+    width: 690px;
+    height: 188px;
+    margin: -188px -30px 12px 0;
   }
 }

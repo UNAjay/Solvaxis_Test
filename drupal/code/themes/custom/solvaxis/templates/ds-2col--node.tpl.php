@@ -10,9 +10,16 @@
   <?php if (isset($title_suffix['contextual_links'])): ?>
   <?php print render($title_suffix['contextual_links']); ?>
   <?php endif; ?>
-
+  
+  <?php print render($title_suffix['contextual_links']); ?>
+  
   <<?php print $left_wrapper ?> class="group-left<?php print $left_classes; ?>">
+    <?php if (!empty($title)): ?>
+      <h1 class="section-title"><?php print $title; ?></h1>
+    <?php endif; ?>
+    
     <?php print $left; ?>
+    
   </<?php print $left_wrapper ?>>
 
   <<?php print $right_wrapper ?> class="group-right<?php print $right_classes; ?>">

@@ -18,20 +18,9 @@ function partners_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
     'related_success_stories' => array(
-      'weight' => '3',
+      'weight' => '2',
       'label' => 'above',
       'format' => 'default',
-    ),
-    'title' => array(
-      'weight' => '0',
-      'label' => 'hidden',
-      'format' => 'default',
-      'formatter_settings' => array(
-        'link' => '0',
-        'wrapper' => 'h1',
-        'class' => '',
-        'ft' => array(),
-      ),
     ),
     'body' => array(
       'formatter_settings' => array(
@@ -128,20 +117,20 @@ function partners_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'left' => array(
-        0 => 'title',
-        1 => 'body',
-        2 => 'field_partner_office_contactinfo',
-        3 => 'related_success_stories',
+        0 => 'body',
+        1 => 'field_partner_office_contactinfo',
+        2 => 'related_success_stories',
       ),
       'right' => array(
+        3 => 'field_sidebar_text',
         4 => 'field_partner_logo',
       ),
     ),
     'fields' => array(
-      'title' => 'left',
       'body' => 'left',
       'field_partner_office_contactinfo' => 'left',
       'related_success_stories' => 'left',
+      'field_sidebar_text' => 'right',
       'field_partner_logo' => 'right',
     ),
     'classes' => array(),
