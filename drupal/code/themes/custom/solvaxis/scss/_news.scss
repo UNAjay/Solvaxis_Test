@@ -60,7 +60,7 @@
     float: left;
     margin-bottom: 40px;
     clear: both;
-    @include at-breakpoint($bp-med) {
+    @include at-breakpoint($bp-med-2) {
       margin-bottom: 20px;
     }
     .views-field-field-news-image {
@@ -70,16 +70,17 @@
       img {
         display: inline-block;
         float: left;
+        width: 100%;
       }
-      @include at-breakpoint($bp-med) {
+      @include at-breakpoint($bp-med-2) {
         @include span-columns(4,12);
       }
     }
     .views-field-body,
     .views-field-title-field { 
       width: 100%;
-      padding: 0 10px;
-      @include at-breakpoint($bp-med) {
+      padding: 0;
+      @include at-breakpoint($bp-med-2) {
         @include span-columns(8 omega,12);
         padding: 0;
       }
@@ -92,7 +93,7 @@
       font-weight: 300;
       text-transform: uppercase;
       margin: 15px 0;
-      @include at-breakpoint($bp-med) {
+      @include at-breakpoint($bp-med-2) {
         margin: -5px 0 15px;
       }
     }

@@ -6,7 +6,7 @@
 
 #block-system-main-menu {
   @include at-breakpoint($bp-xl) {
-    margin-right: 120px;
+    margin-right: 69px;
   }
 }
 
@@ -47,7 +47,7 @@
 	  background: #000;
 	  width: 105px;
 
-	  @include at-breakpoint($bp-med) {
+	  @include at-breakpoint($bp-med-2) {
 	    background: #484848;
 	    width: 120px;
 	  }
@@ -68,7 +68,7 @@
   // desktop
   @include at-breakpoint($bp-xl) {
     position: absolute;
-    right: 50px;
+    right: 20px;
     top: 69px;
     width: auto;
   }
@@ -149,7 +149,7 @@
     @include at-breakpoint($bp-med-2) {
       display: inline-block;
       background-position: -50px 0;
-      right: 25px;
+      right: 35px;
       z-index: 0;
       width: 20px;
       height: 35px;
@@ -388,11 +388,7 @@
           color: $black;
           text-decoration: none;
           padding: 0;
-      	  &.active,
-      	  &.active-trail,
       	  &:hover {
-          }  
-          &:hover {
             &:after {
               display: block;
               content: "";
@@ -402,7 +398,11 @@
               position: absolute;
               bottom: 3px;
             }
-          }
+          } 
+      	  &.active,
+      	  &.active-trail {
+      	    
+      	  } 
         }
         &.first {
           margin: 0 20px 0 0;
@@ -415,16 +415,20 @@
         & > .menu {
           display: none !important;
           position: absolute;
-          right: 0;
+          right: -11px;
           top: 20px;
           border-top: 0 none;
           border-bottom: 0 none;
           width: 160px;
           margin-top: 0;
-          padding: 15px 0;
+          padding: 18px 2px 15px 0;
           background: transparent;
           z-index: 1;
+          overflow: hidden;
           li {
+            -moz-box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+            -webkit-box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+            box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
             margin: 0;
             background: $white;
             width: 100%;
@@ -440,6 +444,7 @@
                   width: 100%;
                   background: $black;
                   position: absolute;
+                  left: 0;
                   bottom: 0;
                   z-index: 999;
                 }
@@ -447,11 +452,27 @@
             }
             &.first {
               padding: 11px 15px 6px;
+              &:before {
+                display: block;
+                content: "";
+                position: absolute;
+                top: -11px;
+                right: -3px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 13px 13px 13px;
+                border-color: transparent transparent rgba(0,0,0,0.1) transparent;
+                z-index: -1;
+              }
             }
             &:hover {
               &:after {
                 display: none;
               }
+            }
+            &.last {
+              padding-bottom: 10px;
             }
           }
           
@@ -459,13 +480,13 @@
             display: block;
             content: "";
             position: absolute;
-            top: 9px;
-            right: 0;
+            top: 7px;
+            right: 2px;
             width: 0;
             height: 0;
             border-style: solid;
-            border-width: 0 5.5px 6px 5.5px;
-            border-color: transparent transparent #ffffff;
+            border-width: 0 12px 12px 12px;
+            border-color: transparent transparent $white transparent;
           }
         }
         &:hover > .menu {
@@ -533,6 +554,7 @@
         width: 100%;
         line-height: 24px;
         min-height: 24px;
+        text-transform: uppercase;
       }  
       .form-actions {
         position: absolute;
@@ -555,34 +577,33 @@
   &.desktop {
     display: none;
     background: $white;
+    -moz-box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+    -webkit-box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
     //overflow: hidden;
     position: absolute;
-    right: 0;
-    top: 110px;
+    right: 24px;
+    top: 75px;
     padding: 15px;
     //margin-top: 4px !important;
     &:before {
       display: block;
       content: "";
       position: absolute;
-      top: -6px;
+      top: -11px;
       right: 0;
-    
       border-style: solid;
-      border-width: 0 5.5px 6px 5.5px;
-      border-color: transparent transparent #ffffff;
+      border-width: 0 12px 12px 12px;
+      border-color: transparent transparent $white transparent;
     }
     
-    @include at-breakpoint($bp-med-2) {
-      display: block;
+    @include at-breakpoint($bp-xl) {
+      right: -11px;
+      top: 109px;
     }
   	float: right;
     width: auto;
     #search-block-form  {
-      .form-item {
-        label {
-        }
-      }
       .form-text {
         background: $gray-lighter;
         width: 166px;

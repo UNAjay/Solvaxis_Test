@@ -49,10 +49,9 @@
     }
     .group-sidebar {
       width: 100%;
-      padding: 0 10px;
+      padding: 0;
       @include at-breakpoint($bp-med-2) {
         @include span-columns(4 omega,12);
-        padding: 0;
       }
     }
   }
@@ -63,6 +62,20 @@
   }
 
 }
+
+// Remove border bottom from last section
+.node-page {
+  .field-items {
+    .field-item {
+      &:last-child {
+        .node-section.section_light {
+          border-bottom: 0 none;
+        }
+      }
+    }
+  }
+}
+
 
 .with-sidebar.sidebar-position-right {
   .body,

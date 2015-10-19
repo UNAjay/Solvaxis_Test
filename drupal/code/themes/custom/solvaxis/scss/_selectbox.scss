@@ -146,6 +146,10 @@
 }
 
 /*Selectbox in language dropdown*/
+#block-lang-dropdown-language select{ 
+  width: 30px !important;
+}
+
 #block-lang-dropdown-language .sbHolder {
   background-color: transparent;
   border: 0 none;
@@ -155,10 +159,11 @@
   padding-right: 0;
 }
 #block-lang-dropdown-language .sbToggle{
-  background: url(../images/bg-language-arrow.png) no-repeat right 8px transparent;
-  display: block;
-  height: 17px;
-  width: 17px;
+  //background: url(../images/bg-language-arrow.png) no-repeat right 8px transparent;
+//  display: block;
+//  height: 17px;
+//  width: 17px;
+display: none;
   &:before {
     display: none;
   }
@@ -187,8 +192,8 @@
   margin: 0;
   padding: 0 0 1px;
   position: absolute;
-  top: 19px !important;
-  width: auto;
+  top: 25px !important;
+  width: 50px;
   z-index: 1;
   overflow-y: auto;
 }

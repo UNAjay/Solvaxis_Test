@@ -105,6 +105,7 @@
 article {
   .media-element-container {
     min-height: 80px;
+    margin-bottom: 20px;
     &.media-logo img {
       -webkit-filter: grayscale(100%); 
       filter: grayscale(100%);

@@ -100,11 +100,11 @@ body {
 //-----------------------------------------
 .view-filters {
   background: transparent;
-  padding: 0 10px 20px;
+  padding: 20px 0;
   clear: both;
   @include full-width;
   
-  @include at-breakpoint($bp-med) {
+  @include at-breakpoint($bp-med-2) {
     padding: 0;
   }
 

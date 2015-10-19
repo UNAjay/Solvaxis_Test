@@ -105,12 +105,12 @@ body {
 
 .view-filters {
   background: transparent;
-  padding: 0 10px 20px;
+  padding: 20px 0;
   clear: both;
   float: left;
   width: 100%;
 }
-@media (min-width: 46.8em) {
+@media (min-width: 48em) {
   .view-filters {
     padding: 0;
   }
