@@ -449,10 +449,9 @@ a.call-to-action:before {
   content: "";
   width: 48px;
   height: 96px;
-  background-image: url("../images/sprite1@2x.png");
+  background-image: url("../images/call-to-action.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 0 0;
+  background-size: 336px 96px;
   position: absolute;
   top: 0;
   left: 0;
@@ -510,6 +509,14 @@ a.call-to-action.attached:hover:before, a.call-to-action.attached:active:before,
   background-position: -288px -48px;
 }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  a.call-to-action:before {
+    /* Reference the @2x Sprite */
+    background-image: url("../images/call-to-action@2x.png");
+    /* Translate the @2x sprite's dimensions back to 1x */
+    background-size: 336px 96px;
+  }
+}
 .more-link {
   clear: both;
   text-align: center;
