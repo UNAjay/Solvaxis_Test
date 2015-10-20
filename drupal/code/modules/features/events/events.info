@@ -57,6 +57,7 @@ features[field_instance][] = node-event-field_market
 features[field_instance][] = node-event-field_product
 features[field_instance][] = node-event-field_recording_url
 features[field_instance][] = node-event-field_region
+features[field_instance][] = node-event-field_sidebar_text
 features[field_instance][] = node-event-title_field
 features[field_instance][] = taxonomy_term-event_locations-name_field
 features[node][] = event

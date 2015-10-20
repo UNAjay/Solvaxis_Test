@@ -82,6 +82,21 @@ function events_strongarm() {
       'ds_section' => array(
         'custom_settings' => FALSE,
       ),
+      'view_mode_selector' => array(
+        'custom_settings' => FALSE,
+      ),
+      'ds_contact_us' => array(
+        'custom_settings' => FALSE,
+      ),
+      'ds_press_releases' => array(
+        'custom_settings' => FALSE,
+      ),
+      'section_dark' => array(
+        'custom_settings' => FALSE,
+      ),
+      'section_light' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

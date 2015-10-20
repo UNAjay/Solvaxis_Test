@@ -188,46 +188,44 @@ function events_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'event';
   $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'panels-eleven-five';
+  $ds_layout->layout = 'ds_2col';
   $ds_layout->settings = array(
     'regions' => array(
-      'main_primary' => array(
-        0 => 'title_field',
-        2 => 'body',
-        3 => 'field_recording_url',
-        4 => 'field_product',
-        5 => 'field_add_this',
+      'left' => array(
+        0 => 'body',
+        1 => 'field_recording_url',
+        2 => 'field_add_this',
+        3 => 'field_event_date',
+        4 => 'field_event_type',
+        5 => 'field_event_location',
+        6 => 'field_event_link',
+        7 => 'field_files',
       ),
-      'aside_primary' => array(
-        1 => 'resources_right_menu',
-        6 => 'field_event_date',
-        7 => 'field_event_type',
-        8 => 'field_event_location',
-        9 => 'field_event_link',
-        10 => 'field_files',
+      'right' => array(
+        8 => 'field_sidebar_text',
       ),
     ),
     'fields' => array(
-      'title_field' => 'main_primary',
-      'resources_right_menu' => 'aside_primary',
-      'body' => 'main_primary',
-      'field_recording_url' => 'main_primary',
-      'field_product' => 'main_primary',
-      'field_add_this' => 'main_primary',
-      'field_event_date' => 'aside_primary',
-      'field_event_type' => 'aside_primary',
-      'field_event_location' => 'aside_primary',
-      'field_event_link' => 'aside_primary',
-      'field_files' => 'aside_primary',
+      'body' => 'left',
+      'field_recording_url' => 'left',
+      'field_add_this' => 'left',
+      'field_event_date' => 'left',
+      'field_event_type' => 'left',
+      'field_event_location' => 'left',
+      'field_event_link' => 'left',
+      'field_files' => 'left',
+      'field_sidebar_text' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'main_primary' => 'div',
-      'aside_primary' => 'div',
+      'left' => 'div',
+      'right' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
     'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
   );
   $export['node|event|default'] = $ds_layout;
 
