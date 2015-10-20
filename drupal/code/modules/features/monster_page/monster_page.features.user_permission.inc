@@ -13,7 +13,9 @@ function monster_page_user_default_permissions() {
   // Exported permission: 'create section content'.
   $permissions['create section content'] = array(
     'name' => 'create section content',
-    'roles' => array(),
+    'roles' => array(
+      'Regional editor' => 'Regional editor',
+    ),
     'module' => 'node',
   );
 
@@ -27,7 +29,9 @@ function monster_page_user_default_permissions() {
   // Exported permission: 'delete own section content'.
   $permissions['delete own section content'] = array(
     'name' => 'delete own section content',
-    'roles' => array(),
+    'roles' => array(
+      'Regional editor' => 'Regional editor',
+    ),
     'module' => 'node',
   );
 
@@ -209,7 +213,9 @@ function monster_page_user_default_permissions() {
   // Exported permission: 'edit own section content'.
   $permissions['edit own section content'] = array(
     'name' => 'edit own section content',
-    'roles' => array(),
+    'roles' => array(
+      'Regional editor' => 'Regional editor',
+    ),
     'module' => 'node',
   );
 

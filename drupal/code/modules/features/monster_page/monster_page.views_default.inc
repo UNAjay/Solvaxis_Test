@@ -110,18 +110,32 @@ function monster_page_views_default_views() {
   $handler->display->display_options['fields']['changed']['field'] = 'changed';
   $handler->display->display_options['fields']['changed']['date_format'] = 'short';
   $handler->display->display_options['fields']['changed']['second_date_format'] = 'html5_tools_iso8601';
-  /* Field: Embed: Edit link */
-  $handler->display->display_options['fields']['edit_link']['id'] = 'edit_link';
-  $handler->display->display_options['fields']['edit_link']['table'] = 'eck_ee';
-  $handler->display->display_options['fields']['edit_link']['field'] = 'edit_link';
-  $handler->display->display_options['fields']['edit_link']['label'] = '';
-  $handler->display->display_options['fields']['edit_link']['element_label_colon'] = FALSE;
   /* Field: Embed: Delete link */
   $handler->display->display_options['fields']['delete_link']['id'] = 'delete_link';
   $handler->display->display_options['fields']['delete_link']['table'] = 'eck_ee';
   $handler->display->display_options['fields']['delete_link']['field'] = 'delete_link';
   $handler->display->display_options['fields']['delete_link']['label'] = '';
+  $handler->display->display_options['fields']['delete_link']['exclude'] = TRUE;
   $handler->display->display_options['fields']['delete_link']['element_label_colon'] = FALSE;
+  /* Field: Embed: ee type */
+  $handler->display->display_options['fields']['type_1']['id'] = 'type_1';
+  $handler->display->display_options['fields']['type_1']['table'] = 'eck_ee';
+  $handler->display->display_options['fields']['type_1']['field'] = 'type';
+  $handler->display->display_options['fields']['type_1']['label'] = '';
+  $handler->display->display_options['fields']['type_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['type_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['type_1']['machine_name'] = TRUE;
+  /* Field: Embed: Id */
+  $handler->display->display_options['fields']['id_1']['id'] = 'id_1';
+  $handler->display->display_options['fields']['id_1']['table'] = 'eck_ee';
+  $handler->display->display_options['fields']['id_1']['field'] = 'id';
+  $handler->display->display_options['fields']['id_1']['label'] = '';
+  $handler->display->display_options['fields']['id_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['id_1']['alter']['text'] = 'edit';
+  $handler->display->display_options['fields']['id_1']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['id_1']['alter']['path'] = 'ee/[type_1]/[id_1]/edit';
+  $handler->display->display_options['fields']['id_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['id_1']['separator'] = '';
   /* Sort criterion: Embed: Changed */
   $handler->display->display_options['sorts']['changed']['id'] = 'changed';
   $handler->display->display_options['sorts']['changed']['table'] = 'eck_ee';
