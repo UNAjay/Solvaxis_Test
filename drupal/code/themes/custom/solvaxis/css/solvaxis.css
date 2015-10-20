@@ -2236,6 +2236,14 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   border-bottom: none;
 }
 
+.page-search #block-system-main .region-holder {
+  padding: 0 35px;
+}
+@media (min-width: 60em) {
+  .page-search #block-system-main .region-holder {
+    padding: 0;
+  }
+}
 .page-search #block-system-main #search-form {
   display: none;
 }
@@ -2247,6 +2255,7 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   float: left;
   margin-bottom: 40px;
   clear: both;
+  width: 100%;
   padding: 0;
 }
 @media (min-width: 48em) {
@@ -2285,22 +2294,43 @@ article .media-element-container.media-logo img:hover, article .media-element-co
 .page-search .search-results .search-result .title a {
   color: #000;
 }
-.page-search .search-results .search-result .image,
-.page-search .search-results .search-result .logo {
+.page-search .search-results .search-result .image {
   width: 100%;
   overflow: hidden;
 }
-.page-search .search-results .search-result .image img,
-.page-search .search-results .search-result .logo img {
+@media (min-width: 48em) {
+  .page-search .search-results .search-result .image {
+    width: 32.0%;
+    float: left;
+    margin-right: 2.0%;
+  }
+}
+.page-search .search-results .search-result .image img {
   display: inline-block;
   float: left;
   width: 100%;
 }
+.page-search .search-results .search-result .logo {
+  background: #fff;
+  display: table;
+  width: 100%;
+  height: 100%;
+}
 @media (min-width: 48em) {
-  .page-search .search-results .search-result .image,
   .page-search .search-results .search-result .logo {
     width: 32.0%;
     float: left;
     margin-right: 2.0%;
   }
+}
+.page-search .search-results .search-result .logo .field-item {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.page-search .search-results .search-result .logo .field-item a {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  height: 130px;
 }

@@ -221,7 +221,7 @@ function partners_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => 'content',
-          'image_style' => 'medium',
+          'image_style' => 'partner_logo',
         ),
         'type' => 'image',
         'weight' => 0,
