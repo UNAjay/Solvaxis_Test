@@ -256,16 +256,15 @@
     height: 100%;
     background: $gray-lighter;
     border-left: 1px solid $gray-light;
-    
+   
     #block-system-main-menu {
       //background: pink;
       height: 82%;
       margin-top: 80px;
       //margin-top: 60px;
-      overflow-y: scroll;
+      overflow-y: auto;
       z-index: 200;
     }
-    
     &.expanded {
     }
   }

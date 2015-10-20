@@ -17,14 +17,6 @@ function events_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'event';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
-    'resources_right_menu' => array(
-      'weight' => '0',
-      'label' => 'hidden',
-      'format' => 'default',
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
     'body' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -38,13 +30,6 @@ function events_ds_field_settings_info() {
         ),
       ),
     ),
-    'title_field' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_reset',
-        ),
-      ),
-    ),
     'field_add_this' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -52,19 +37,6 @@ function events_ds_field_settings_info() {
           'ow' => TRUE,
           'ow-el' => 'div',
           'ow-cl' => 'field this',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
-    'field_product' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'field product',
           'ow-def-cl' => FALSE,
           'ow-at' => '',
           'ow-def-at' => FALSE,
@@ -86,6 +58,11 @@ function events_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_news_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
   );
   $export['node|event|default'] = $ds_fieldsetting;
 
@@ -102,7 +79,7 @@ function events_ds_field_settings_info() {
       'format' => 'default',
     ),
     'node_link' => array(
-      'weight' => '3',
+      'weight' => '4',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -110,11 +87,6 @@ function events_ds_field_settings_info() {
       'weight' => '1',
       'label' => 'hidden',
       'format' => 'ds_post_date_short',
-    ),
-    'body' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
     ),
   );
   $export['node|event|teaser'] = $ds_fieldsetting;
@@ -192,20 +164,22 @@ function events_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'left' => array(
-        0 => 'body',
-        1 => 'field_recording_url',
-        2 => 'field_add_this',
-        3 => 'field_event_date',
-        4 => 'field_event_type',
-        5 => 'field_event_location',
-        6 => 'field_event_link',
-        7 => 'field_files',
+        0 => 'field_news_image',
+        1 => 'body',
+        2 => 'field_recording_url',
+        3 => 'field_add_this',
+        4 => 'field_event_date',
+        5 => 'field_event_type',
+        6 => 'field_event_location',
+        7 => 'field_event_link',
+        8 => 'field_files',
       ),
       'right' => array(
-        8 => 'field_sidebar_text',
+        9 => 'field_sidebar_text',
       ),
     ),
     'fields' => array(
+      'field_news_image' => 'left',
       'body' => 'left',
       'field_recording_url' => 'left',
       'field_add_this' => 'left',
@@ -241,13 +215,15 @@ function events_ds_layout_settings_info() {
       'ds_content' => array(
         0 => 'title',
         1 => 'post_date',
-        2 => 'body',
-        3 => 'node_link',
+        2 => 'field_news_image',
+        3 => 'body',
+        4 => 'node_link',
       ),
     ),
     'fields' => array(
       'title' => 'ds_content',
       'post_date' => 'ds_content',
+      'field_news_image' => 'ds_content',
       'body' => 'ds_content',
       'node_link' => 'ds_content',
     ),

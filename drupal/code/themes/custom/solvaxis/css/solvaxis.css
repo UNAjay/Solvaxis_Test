@@ -561,7 +561,7 @@ a {
 .header-secondary .region-header-secondary #block-system-main-menu {
   height: 82%;
   margin-top: 80px;
-  overflow-y: scroll;
+  overflow-y: auto;
   z-index: 200;
 }
 .header-secondary .menu {
@@ -2234,4 +2234,73 @@ article .media-element-container.media-logo img:hover, article .media-element-co
 
 #block-lang-dropdown-language .sbOptions li.last a {
   border-bottom: none;
+}
+
+.page-search #block-system-main #search-form {
+  display: none;
+}
+.page-search .search-results {
+  padding: 0;
+}
+.page-search .search-results .search-result {
+  display: inline-block;
+  float: left;
+  margin-bottom: 40px;
+  clear: both;
+  padding: 0;
+}
+@media (min-width: 48em) {
+  .page-search .search-results .search-result {
+    margin-bottom: 20px;
+  }
+}
+.page-search .search-results .search-result .search-snippet-info,
+.page-search .search-results .search-result .title {
+  width: 100%;
+  padding: 0;
+}
+@media (min-width: 48em) {
+  .page-search .search-results .search-result .search-snippet-info,
+  .page-search .search-results .search-result .title {
+    width: 66.0%;
+    float: right;
+    margin-right: 0;
+    padding: 0;
+  }
+}
+.page-search .search-results .search-result .search-snippet-info {
+  line-height: 1.2em;
+}
+.page-search .search-results .search-result .title {
+  font-size: 15px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 15px 0;
+}
+@media (min-width: 48em) {
+  .page-search .search-results .search-result .title {
+    margin: -5px 0 15px;
+  }
+}
+.page-search .search-results .search-result .title a {
+  color: #000;
+}
+.page-search .search-results .search-result .image,
+.page-search .search-results .search-result .logo {
+  width: 100%;
+  overflow: hidden;
+}
+.page-search .search-results .search-result .image img,
+.page-search .search-results .search-result .logo img {
+  display: inline-block;
+  float: left;
+  width: 100%;
+}
+@media (min-width: 48em) {
+  .page-search .search-results .search-result .image,
+  .page-search .search-results .search-result .logo {
+    width: 32.0%;
+    float: left;
+    margin-right: 2.0%;
+  }
 }

@@ -51,3 +51,13 @@ function solvaxis_css_alter(&$css) {
    // base theme styles
    unset($css[drupal_get_path('theme', 'jeeves') . '/css/jeeves.css']);
 }
+
+/**
+ * Implements hook_preprocess_search_result()
+ */
+function solvaxis_preprocess_search_result(&$variables) {    
+    $node = $variables['result']['node'];
+    if (is_object($node) && $node->nid) { // if the result is a node we can load the teaser
+        $variables['teaser'] = node_view($node, 'teaser');
+    }
+}

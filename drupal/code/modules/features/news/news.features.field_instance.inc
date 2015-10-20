@@ -264,11 +264,11 @@ function news_field_default_field_instances() {
         'weight' => 1,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
-          'image_link' => '',
-          'image_style' => 'news_image',
+          'image_link' => 'content',
+          'image_style' => 'hot_news_image',
         ),
         'type' => 'image',
         'weight' => 0,
