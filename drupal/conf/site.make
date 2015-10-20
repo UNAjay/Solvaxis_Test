@@ -37,19 +37,18 @@ projects[token][version] = "1.6"
 projects[better_exposed_filters][version] = "3.2"
 projects[link][version] = "1.2"
 projects[context][version] = "3.6"
+
 projects[wysiwyg][version] = 2.x-dev
-projects[wysiwyg][subdir] = contrib
 projects[wysiwyg][revision] = 898d022cf7d0b6c6a6e7d813199d561b4ad39f8b
 projects[wysiwyg][patch][2243413] = https://www.drupal.org/files/issues/add_item_ajax_error-2243413-3.patch
+
 projects[libraries][version] = "2.2"
 projects[imce][version] = "1.9"
 projects[imce_wysiwyg][version] = "1.0"
 
 projects[linkit][version] = 3.3
-projects[linkit][subdir] = contrib
 
 projects[pathologic][version] = 3.0-beta2
-projects[pathologic][subdir] = contrib
 
 projects[navigation404][version] = "1.0"
 projects[menu_trail_by_path][version] = "2.0"
@@ -107,7 +106,7 @@ projects[inline_entity_form][revision] = "8d8ee06592d991f717d202419f7e3323c59913
 projects[inline_entity_form][patch][] = https://www.drupal.org/files/issues/d7_entity_translation_0.patch
 
 projects[media][version] = 2.0-beta1
-projects[media][subdir] = contrib
+projects[media][patch][] = https://www.drupal.org/files/issues/media_remove_file_display_alter-2104193-100.patchf.diff
 
 projects[media_youtube][version] = 3.0
 
@@ -270,7 +269,7 @@ projects[backup_migrate_files][revision] = "51562f652b6935ce005dddddd2529b4f7392
 projects[backup_migrate_sftp][version] = "1.0"
 
 ; stage file proxt for swe staging
-projects[stage_file_proxy][version] = "1.4"
+projects[stage_file_proxy][version] = "1.7"
 
 
 ; Issues

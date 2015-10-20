@@ -21,11 +21,25 @@ function jeeves_media_user_default_permissions() {
     'module' => 'media',
   );
 
+  // Exported permission: 'administer files'.
+  $permissions['administer files'] = array(
+    'name' => 'administer files',
+    'roles' => array(),
+    'module' => 'file_entity',
+  );
+
   // Exported permission: 'administer media wysiwyg view mode'.
   $permissions['administer media wysiwyg view mode'] = array(
     'name' => 'administer media wysiwyg view mode',
     'roles' => array(),
     'module' => 'media_wysiwyg_view_mode',
+  );
+
+  // Exported permission: 'create files'.
+  $permissions['create files'] = array(
+    'name' => 'create files',
+    'roles' => array(),
+    'module' => 'file_entity',
   );
 
   // Exported permission: 'use media wysiwyg'.
@@ -37,6 +51,16 @@ function jeeves_media_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'media_wysiwyg',
+  );
+
+  // Exported permission: 'view files'.
+  $permissions['view files'] = array(
+    'name' => 'view files',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'file_entity',
   );
 
   return $permissions;

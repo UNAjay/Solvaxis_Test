@@ -97,5 +97,12 @@ function jeeveserp_layout_update_7007() {
   module_enable(array('media_wysiwyg', 'media_wysiwyg_view_mode', 'better_formats', 'jeeves_media'));
 }
 
+/**
+ * Enable Media YouTube, Media Vimeo, Media Internet Sources, FitVids.
+ */
+function jeeveserp_layout_update_7008() {
+  module_enable(array('media_internet', 'media_youtube', 'media_vimeo', 'fitvids'));
+}
+
 
 
