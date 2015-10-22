@@ -110,13 +110,13 @@ function partners_strongarm() {
           'weight' => '1',
         ),
         'title' => array(
-          'weight' => '1',
+          'weight' => '0',
         ),
         'path' => array(
-          'weight' => '8',
+          'weight' => '6',
         ),
         'metatags' => array(
-          'weight' => '9',
+          'weight' => '7',
         ),
         'xmlsitemap' => array(
           'weight' => '10',

@@ -1240,7 +1240,6 @@ function jeeveserp_layout_ds_layout_settings_info() {
       ),
       'right' => array(
         3 => 'field_sidebar_text',
-        4 => 'resources_right_menu',
       ),
     ),
     'fields' => array(
@@ -1248,7 +1247,6 @@ function jeeveserp_layout_ds_layout_settings_info() {
       'body' => 'left',
       'field_add_this' => 'left',
       'field_sidebar_text' => 'right',
-      'resources_right_menu' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(

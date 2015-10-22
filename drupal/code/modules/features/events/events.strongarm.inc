@@ -104,16 +104,16 @@ function events_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '8',
+          'weight' => '7',
         ),
         'metatags' => array(
-          'weight' => '10',
+          'weight' => '9',
         ),
         'xmlsitemap' => array(
           'weight' => '11',
         ),
         'language' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
       ),
       'display' => array(),

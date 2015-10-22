@@ -67,6 +67,48 @@ function industries_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-customer-field_add_this'
+  $field_instances['node-customer-field_add_this'] = array(
+    'bundle' => 'customer',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'addthis_displays',
+        'settings' => array(
+          'buttons_size' => 'addthis_16x16_style',
+          'counter_orientation' => 'horizontal',
+          'extra_css' => '',
+          'share_services' => 'linkedin, facebook,twitter',
+        ),
+        'type' => 'addthis_basic_toolbox',
+        'weight' => 51,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_add_this',
+    'label' => 'Social sharing',
+    'required' => FALSE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'addthis',
+      'settings' => array(),
+      'type' => 'addthis_button_widget',
+      'weight' => 25,
+    ),
+  );
+
   // Exported field_instance: 'node-customer-field_customer_website'
   $field_instances['node-customer-field_customer_website'] = array(
     'bundle' => 'customer',
@@ -400,6 +442,82 @@ function industries_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-customer-field_sidebar_text'
+  $field_instances['node-customer-field_sidebar_text'] = array(
+    'bundle' => 'customer',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Custom sidebar content',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 50,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_sidebar_text',
+    'label' => 'Sidebar text',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'basic_html' => 'basic_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'basic_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'mediafront' => array(
+        'custom' => '',
+        'field_type' => 0,
+        'media_type' => 'media',
+        'preview' => 0,
+        'thumbnail' => 0,
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 23,
+    ),
+  );
+
   // Exported field_instance: 'node-customer-field_success_story'
   $field_instances['node-customer-field_success_story'] = array(
     'bundle' => 'customer',
@@ -459,7 +577,7 @@ function industries_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'title',
         'settings' => array(
-          'title_class' => '',
+          'title_class' => 'section-title',
           'title_link' => '',
           'title_style' => 'h2',
         ),
@@ -1301,6 +1419,7 @@ function industries_field_default_field_instances() {
   t('Attachments');
   t('Basic page');
   t('Body');
+  t('Custom sidebar content');
   t('Customer Cases');
   t('Description');
   t('Description page');
@@ -1311,6 +1430,8 @@ function industries_field_default_field_instances() {
   t('Product');
   t('Reference to page that describes this term. We use this field to redirect term page on listings.');
   t('Region');
+  t('Sidebar text');
+  t('Social sharing');
   t('Success story description');
   t('Success story title');
   t('Videos');

@@ -21,7 +21,7 @@ function blogs_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Categories',
-    'weight' => '5',
+    'weight' => '6',
     'children' => array(
       0 => 'field_industry',
       1 => 'field_product',
@@ -94,6 +94,34 @@ function blogs_field_group_info() {
     ),
   );
   $export['group_image|node|blog_post|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_sidebar_text|node|blog_post|form';
+  $field_group->group_name = 'group_sidebar_text';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'blog_post';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Sidebar text',
+    'weight' => '5',
+    'children' => array(
+      0 => 'field_sidebar_text',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'label' => 'Sidebar text',
+      'instance_settings' => array(
+        'required_fields' => 0,
+        'classes' => 'group-sidebar-text field-group-tab',
+        'description' => '',
+      ),
+      'formatter' => 'closed',
+    ),
+  );
+  $export['group_sidebar_text|node|blog_post|form'] = $field_group;
 
   return $export;
 }

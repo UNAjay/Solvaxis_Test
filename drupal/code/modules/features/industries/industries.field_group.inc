@@ -129,6 +129,34 @@ function industries_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_sidebar_text|node|customer|form';
+  $field_group->group_name = 'group_sidebar_text';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'customer';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Sidebar text',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_sidebar_text',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'label' => 'Sidebar text',
+      'instance_settings' => array(
+        'required_fields' => 0,
+        'classes' => 'group-sidebar-text field-group-tab',
+        'description' => '',
+      ),
+      'formatter' => 'closed',
+    ),
+  );
+  $export['group_sidebar_text|node|customer|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_system|taxonomy_term|industries|form';
   $field_group->group_name = 'group_system';
   $field_group->entity_type = 'taxonomy_term';

@@ -21,7 +21,7 @@ function success_story_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Categories',
-    'weight' => '5',
+    'weight' => '7',
     'children' => array(
       0 => 'field_industry',
       1 => 'field_region',
@@ -51,7 +51,7 @@ function success_story_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Content',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'body',
       1 => 'field_customer_website',
@@ -79,7 +79,7 @@ function success_story_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Teaser image',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'field_image',
     ),
@@ -106,7 +106,7 @@ function success_story_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'References',
-    'weight' => '4',
+    'weight' => '6',
     'children' => array(
       0 => 'field_partners',
       1 => 'field_files',
@@ -134,7 +134,7 @@ function success_story_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Success story',
-    'weight' => '3',
+    'weight' => '5',
     'children' => array(
       0 => 'field_success_story',
       1 => 'field_success_story_title',

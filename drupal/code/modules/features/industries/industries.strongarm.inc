@@ -156,7 +156,7 @@ function industries_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '8',
         ),
         'redirect' => array(
           'weight' => '30',
@@ -165,7 +165,7 @@ function industries_strongarm() {
           'weight' => '1',
         ),
         'metatags' => array(
-          'weight' => '7',
+          'weight' => '9',
         ),
         'xmlsitemap' => array(
           'weight' => '8',

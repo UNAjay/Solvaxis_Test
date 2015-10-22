@@ -51,6 +51,7 @@ features[field_base][] = title_field
 features[field_group][] = group_categories|node|blog_post|form
 features[field_group][] = group_content|node|blog_post|form
 features[field_group][] = group_image|node|blog_post|form
+features[field_group][] = group_sidebar_text|node|blog_post|form
 features[field_instance][] = node-blog_post-body
 features[field_instance][] = node-blog_post-field_add_this
 features[field_instance][] = node-blog_post-field_author

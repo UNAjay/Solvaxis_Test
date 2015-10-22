@@ -29,7 +29,7 @@
   .group-left {
     @include full-width;
     //background: green;
-    padding: 0 15px;
+    padding: 0 35px;
     @include at-breakpoint($bp-med) {
       @include span-columns(8,12);
       padding: 0;
@@ -46,10 +46,12 @@
   .group-right {
      @include full-width;
      //background: pink;
+     padding: 0 35px;
      @include at-breakpoint($bp-med) {
        @include span-columns(4 omega,12);
+       padding: 70px 0 0;
      }
    }
 }
 
-// internal pages
+

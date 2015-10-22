@@ -41,6 +41,11 @@ function partners_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_add_this' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
   );
   $export['node|partner|default'] = $ds_fieldsetting;
 
@@ -117,21 +122,21 @@ function partners_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'left' => array(
-        0 => 'body',
-        1 => 'field_partner_office_contactinfo',
+        0 => 'field_partner_logo',
+        1 => 'body',
         2 => 'related_success_stories',
+        4 => 'field_add_this',
       ),
       'right' => array(
         3 => 'field_sidebar_text',
-        4 => 'field_partner_logo',
       ),
     ),
     'fields' => array(
+      'field_partner_logo' => 'left',
       'body' => 'left',
-      'field_partner_office_contactinfo' => 'left',
       'related_success_stories' => 'left',
       'field_sidebar_text' => 'right',
-      'field_partner_logo' => 'right',
+      'field_add_this' => 'left',
     ),
     'classes' => array(),
     'wrappers' => array(

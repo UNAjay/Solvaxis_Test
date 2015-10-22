@@ -22,7 +22,7 @@ function blogs_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -72,7 +72,7 @@ function blogs_field_default_field_instances() {
           'share_services' => 'linkedin, facebook,twitter',
         ),
         'type' => 'addthis_basic_toolbox',
-        'weight' => 5,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -87,6 +87,7 @@ function blogs_field_default_field_instances() {
         'weight' => 4,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_add_this',
     'label' => 'Add This',
@@ -107,7 +108,7 @@ function blogs_field_default_field_instances() {
       'module' => 'addthis',
       'settings' => array(),
       'type' => 'addthis_button_widget',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -125,7 +126,7 @@ function blogs_field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -180,7 +181,7 @@ function blogs_field_default_field_instances() {
           'image_style' => 'news_image',
         ),
         'type' => 'image',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -284,7 +285,7 @@ function blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 39,
+        'weight' => 42,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -334,7 +335,7 @@ function blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 42,
+        'weight' => 45,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -379,7 +380,7 @@ function blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 41,
+        'weight' => 44,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -431,7 +432,7 @@ function blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 40,
+        'weight' => 43,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -477,7 +478,7 @@ function blogs_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -556,7 +557,7 @@ function blogs_field_default_field_instances() {
           'taxonomy_term_separator' => ', ',
         ),
         'type' => 'ds_taxonomy_separator',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -603,7 +604,7 @@ function blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 38,
+        'weight' => 41,
       ),
       'teaser' => array(
         'label' => 'above',

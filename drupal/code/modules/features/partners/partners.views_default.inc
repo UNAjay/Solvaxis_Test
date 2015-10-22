@@ -69,7 +69,7 @@ function partners_views_default_views() {
   $handler->display->display_options['fields']['field_partner_type']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_partner_type']['type'] = 'i18n_taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_partner_type']['delta_offset'] = '0';
-  /* Field: Content: Contact information */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_partner_office_contactinfo']['id'] = 'field_partner_office_contactinfo';
   $handler->display->display_options['fields']['field_partner_office_contactinfo']['table'] = 'field_data_field_partner_office_contactinfo';
   $handler->display->display_options['fields']['field_partner_office_contactinfo']['field'] = 'field_partner_office_contactinfo';
@@ -405,7 +405,7 @@ return isset($params[\'location\']) ? $params[\'location\'] : \'\';';
   $handler->display->display_options['fields']['field_partner_type']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_partner_type']['type'] = 'i18n_taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_partner_type']['delta_offset'] = '0';
-  /* Field: Content: Contact information */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_partner_office_contactinfo']['id'] = 'field_partner_office_contactinfo';
   $handler->display->display_options['fields']['field_partner_office_contactinfo']['table'] = 'field_data_field_partner_office_contactinfo';
   $handler->display->display_options['fields']['field_partner_office_contactinfo']['field'] = 'field_partner_office_contactinfo';

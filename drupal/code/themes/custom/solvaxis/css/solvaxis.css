@@ -557,12 +557,17 @@ a {
   height: 100%;
   background: #F2F2F2;
   border-left: 1px solid #CCC;
+  -moz-transition: all 0.3s ease 0s;
 }
 .header-secondary .region-header-secondary #block-system-main-menu {
   height: 82%;
   margin-top: 80px;
   overflow-y: auto;
   z-index: 200;
+}
+.header-secondary .region-header-secondary.expanded {
+  right: 0;
+  margin-right: 0;
 }
 .header-secondary .menu {
   background: transparent;
@@ -1018,7 +1023,7 @@ footer .social-icons li a[title="Xing"] {
 .ds-2col .group-left {
   float: left;
   width: 100%;
-  padding: 0 15px;
+  padding: 0 35px;
 }
 @media (min-width: 46.8em) {
   .ds-2col .group-left {
@@ -1034,12 +1039,14 @@ footer .social-icons li a[title="Xing"] {
 .ds-2col .group-right {
   float: left;
   width: 100%;
+  padding: 0 35px;
 }
 @media (min-width: 46.8em) {
   .ds-2col .group-right {
     width: 32.0%;
     float: right;
     margin-right: 0;
+    padding: 70px 0 0;
   }
 }
 
@@ -2333,4 +2340,26 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   text-align: center;
   vertical-align: middle;
   height: 130px;
+}
+
+@media (min-width: 48em) {
+  .group-right {
+    padding-top: 70px;
+  }
+}
+.group-right .field-sidebar-text p:first-child {
+  margin-top: 0;
+}
+
+.block-tagclouds h2 {
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.field-tags {
+  margin-bottom: 20px;
+}
+.field-tags .field-label {
+  float: left;
 }

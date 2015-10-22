@@ -250,12 +250,17 @@
   .region-header-secondary {
     display: block;
     position: fixed;
+    //right: 0;
     right: 0;
+    //margin-right: -90%;
     top: 0;
     width: 90%;
     height: 100%;
     background: $gray-lighter;
     border-left: 1px solid $gray-light;
+   
+  
+   -moz-transition: all 0.3s ease 0s;
    
     #block-system-main-menu {
       //background: pink;
@@ -264,8 +269,12 @@
       //margin-top: 60px;
       overflow-y: auto;
       z-index: 200;
+     
     }
     &.expanded {
+      right: 0;
+    	margin-right:0;
+      
     }
   }
   

@@ -1,7 +1,7 @@
 (function ($, Drupal, window, document, undefined) {
   Drupal.behaviors.solvaxis = {
     attach: function(context, settings) {
-
+      
       // Sticky header
       $(window).scroll(function() {
       if ($(this).scrollTop() > 0){

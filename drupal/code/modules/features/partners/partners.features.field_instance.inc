@@ -22,7 +22,7 @@ function partners_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -61,6 +61,48 @@ function partners_field_default_field_instances() {
       ),
       'type' => 'text_textarea_with_summary',
       'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-partner-field_add_this'
+  $field_instances['node-partner-field_add_this'] = array(
+    'bundle' => 'partner',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'addthis_displays',
+        'settings' => array(
+          'buttons_size' => 'addthis_16x16_style',
+          'counter_orientation' => 'horizontal',
+          'extra_css' => '',
+          'share_services' => 'linkedin,facebook,twitter',
+        ),
+        'type' => 'addthis_basic_toolbox',
+        'weight' => 44,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_add_this',
+    'label' => 'Social sharing',
+    'required' => FALSE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'addthis',
+      'settings' => array(),
+      'type' => 'addthis_button_widget',
+      'weight' => 20,
     ),
   );
 
@@ -103,7 +145,7 @@ function partners_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 38,
+        'weight' => 40,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -153,7 +195,7 @@ function partners_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 41,
+        'weight' => 42,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -214,7 +256,7 @@ function partners_field_default_field_instances() {
           ),
         ),
         'type' => 'cs_adaptive_image',
-        'weight' => 4,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -279,112 +321,6 @@ function partners_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-partner-field_partner_office_contactinfo'
-  $field_instances['node-partner-field_partner_office_contactinfo'] = array(
-    'bundle' => 'partner',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_partner_office_contactinfo',
-    'label' => 'Contact information',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'linkit' => array(
-        'button_text' => 'Search',
-        'enable' => 0,
-        'profile' => '',
-      ),
-      'mediafront' => array(
-        'custom' => '',
-        'field_type' => 0,
-        'media_type' => 'media',
-        'preview' => 0,
-        'thumbnail' => 0,
-      ),
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 7,
-    ),
-  );
-
-  // Exported field_instance: 'node-partner-field_partner_office_location'
-  $field_instances['node-partner-field_partner_office_location'] = array(
-    'bundle' => 'partner',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 40,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_partner_office_location',
-    'label' => 'Office location',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'mediafront' => array(
-        'custom' => '',
-        'field_type' => 0,
-        'media_type' => 'media',
-        'preview' => 0,
-        'thumbnail' => 0,
-      ),
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'shs',
-      'settings' => array(
-        'shs' => array(
-          'create_new_levels' => 1,
-          'create_new_terms' => 1,
-          'force_deepest' => 1,
-          'node_count' => 0,
-        ),
-      ),
-      'type' => 'taxonomy_shs',
-      'weight' => 4,
-    ),
-  );
-
   // Exported field_instance: 'node-partner-field_partner_type'
   $field_instances['node-partner-field_partner_type'] = array(
     'bundle' => 'partner',
@@ -396,7 +332,7 @@ function partners_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 37,
+        'weight' => 39,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -440,7 +376,7 @@ function partners_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 42,
+        'weight' => 43,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -492,7 +428,7 @@ function partners_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 39,
+        'weight' => 41,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -679,17 +615,16 @@ function partners_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
-  t('Contact information');
   t('Custom sidebar content');
   t('Industry');
   t('Logo');
   t('Market');
   t('Namn');
-  t('Office location');
   t('Partner type');
   t('Product');
   t('Region');
   t('Sidebar text');
+  t('Social sharing');
 
   return $field_instances;
 }

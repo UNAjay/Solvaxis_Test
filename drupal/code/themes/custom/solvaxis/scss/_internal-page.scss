@@ -1,0 +1,26 @@
+.group-right {
+  @include at-breakpoint($bp-med-2) {
+    padding-top: 70px;
+  }
+  .field-sidebar-text {
+    p {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+// Blogs
+.block-tagclouds h2 {
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.field-tags {
+  margin-bottom: 20px;
+  .field-label {
+    float: left;
+  }
+}

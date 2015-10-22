@@ -58,11 +58,6 @@ function events_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_news_image' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
   );
   $export['node|event|default'] = $ds_fieldsetting;
 
@@ -167,12 +162,12 @@ function events_ds_layout_settings_info() {
         0 => 'field_news_image',
         1 => 'body',
         2 => 'field_recording_url',
-        3 => 'field_add_this',
-        4 => 'field_event_date',
-        5 => 'field_event_type',
-        6 => 'field_event_location',
-        7 => 'field_event_link',
-        8 => 'field_files',
+        3 => 'field_event_date',
+        4 => 'field_event_type',
+        5 => 'field_event_location',
+        6 => 'field_event_link',
+        7 => 'field_files',
+        8 => 'field_add_this',
       ),
       'right' => array(
         9 => 'field_sidebar_text',
@@ -182,12 +177,12 @@ function events_ds_layout_settings_info() {
       'field_news_image' => 'left',
       'body' => 'left',
       'field_recording_url' => 'left',
-      'field_add_this' => 'left',
       'field_event_date' => 'left',
       'field_event_type' => 'left',
       'field_event_location' => 'left',
       'field_event_link' => 'left',
       'field_files' => 'left',
+      'field_add_this' => 'left',
       'field_sidebar_text' => 'right',
     ),
     'classes' => array(),
