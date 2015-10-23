@@ -11,6 +11,23 @@
   }
 }
 
+.group-left {
+  .body {
+    h2, h3 {
+      cursor: pointer;
+    }
+    .content-wrap {
+     // background: pink;
+      float: left;
+      clear: both;
+      width: 100%;
+      .content-wrap {
+        //background: green;
+      }
+    }
+  }
+}
+
 // Blogs
 .block-tagclouds h2 {
   font-size: 20px;

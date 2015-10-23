@@ -2351,6 +2351,15 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   margin-top: 0;
 }
 
+.group-left .body h2, .group-left .body h3 {
+  cursor: pointer;
+}
+.group-left .body .content-wrap {
+  float: left;
+  clear: both;
+  width: 100%;
+}
+
 .block-tagclouds h2 {
   font-size: 20px;
   font-weight: 300;

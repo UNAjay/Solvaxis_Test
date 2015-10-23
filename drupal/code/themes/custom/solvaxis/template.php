@@ -61,3 +61,4 @@ function solvaxis_preprocess_search_result(&$variables) {
         $variables['teaser'] = node_view($node, 'teaser');
     }
 }
+
