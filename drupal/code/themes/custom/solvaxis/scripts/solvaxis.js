@@ -1,7 +1,35 @@
 (function ($, Drupal, window, document, undefined) {
   Drupal.behaviors.solvaxis = {
     attach: function(context, settings) {
+      
+      // Sticky header
+      $(window).scroll(function() {
+      if ($(this).scrollTop() > 0){
+          $('.header-secondary').addClass( "sticky" );
+        }
+        else{
+          $('.header-secondary').removeClass( "sticky" );
+        }
+      });
 
+      // Add 100% width to pager outer element.
+      $( "ul.pager" ).parent().css( "width", "100%" );
+ 
+      // Collapse/expand text
+      // ------------------------------------------------------------------------------------------------
+      $('.not-front .body h2').each(function(index) { 
+          $(this).nextUntil('h2').wrapAll('<div class="content-wrap"></div>');
+      });
+ 
+      $('.content-wrap h3').each(function(index) { 
+          $(this).nextUntil('h3').wrapAll('<div class="content-wrap"></div>');
+      });
+     
+      $('.not-front .body h2, .content-wrap h3').click(function(){
+        $(this).next('.content-wrap').slideToggle( "slow", function() {
+        });
+      });
+      
       // Scroll to hash.
       // ------------------------------------------------------------------------------------------------
 
@@ -101,34 +129,6 @@ jQuery(function($){
  //  };
  //  $(window).resize(hideSearch);
  
- 
-     // Sticky header
-     $(window).scroll(function() {
-     if ($(this).scrollTop() > 0){
-         $('.header-secondary').addClass( "sticky" );
-       }
-       else{
-         $('.header-secondary').removeClass( "sticky" );
-       }
-     });
-
-     // Add 100% width to pager outer element.
-     $( "ul.pager" ).parent().css( "width", "100%" );
- 
-     // Collapse/expand text
-     // ------------------------------------------------------------------------------------------------
-     $('.not-front .body h2').each(function(index) { 
-         $(this).nextUntil('h2').wrapAll('<div class="content-wrap"></div>');
-     });
- 
-     $('.content-wrap h3').each(function(index) { 
-         $(this).nextUntil('h3').wrapAll('<div class="content-wrap"></div>');
-     });
-     
-     $('.not-front .body h2, .content-wrap h3').click(function(){
-       $(this).next('.content-wrap').slideToggle( "slow", function() {
-       });
-     });
 });
 
 

@@ -11,21 +11,65 @@
   }
 }
 
-.group-left {
-  .body {
-    h2, h3 {
-      cursor: pointer;
-    }
-    .content-wrap {
-     // background: pink;
-      float: left;
-      clear: both;
-      width: 100%;
+
+.not-front {
+  .node {
+      h2, h3 {
+        font-size: 15px;
+        font-weight: normal;
+        text-transform: uppercase;
+        cursor: pointer;
+        line-height: normal;
+        padding: 0;
+        margin-bottom: 13px;
+        clear: both;
+      }
+      .group-left {
+        h2, h3 {
+          &:hover {
+            color: $crimson;
+          }
+        }
+      }
+      ul {
+        margin-top: 0;
+        padding: 0;
+        clear: both;
+        li {
+          list-style-type: none;
+          position:relative;
+          padding-left: 9px;
+          &:before {
+            display: block;
+            content: "";
+            height: 4px;
+            width: 4px;
+            background: $black;
+            position: absolute;
+            top: 8px;
+            left: 0;
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            border-radius: 100%;
+          }
+        }
+      }
       .content-wrap {
-        //background: green;
+        //background: pink;
+        float: left;
+        clear: both;
+        width: 100%;
+        p {
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+        .content-wrap {
+          //background: green;
+        }
       }
     }
-  }
+  
 }
 
 // Blogs
@@ -40,4 +84,10 @@
   .field-label {
     float: left;
   }
+}
+
+.this {
+  display: inline-block;
+  clear: both;
+  margin-top: 70px;
 }

@@ -1034,7 +1034,7 @@ footer .social-icons li a[title="Xing"] {
   }
 }
 .ds-2col .group-left .section-title {
-  margin: 0 0 40px;
+  margin: 0 0 42px;
 }
 .ds-2col .group-right {
   float: left;
@@ -1170,6 +1170,11 @@ input[type="url"]:focus,
 input[type="week"]:focus {
   border: 1px solid #CCC;
   outline: none;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 
 .views-exposed-form input[type="submit"] {
@@ -2351,13 +2356,49 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   margin-top: 0;
 }
 
-.group-left .body h2, .group-left .body h3 {
+.not-front .node h2, .not-front .node h3 {
+  font-size: 15px;
+  font-weight: normal;
+  text-transform: uppercase;
   cursor: pointer;
+  line-height: normal;
+  padding: 0;
+  margin-bottom: 13px;
+  clear: both;
 }
-.group-left .body .content-wrap {
+.not-front .node .group-left h2:hover, .not-front .node .group-left h3:hover {
+  color: #E30043;
+}
+.not-front .node ul {
+  margin-top: 0;
+  padding: 0;
+  clear: both;
+}
+.not-front .node ul li {
+  list-style-type: none;
+  position: relative;
+  padding-left: 9px;
+}
+.not-front .node ul li:before {
+  display: block;
+  content: "";
+  height: 4px;
+  width: 4px;
+  background: #000;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+}
+.not-front .node .content-wrap {
   float: left;
   clear: both;
   width: 100%;
+}
+.not-front .node .content-wrap p:first-child {
+  margin-top: 0;
 }
 
 .block-tagclouds h2 {
@@ -2371,4 +2412,10 @@ article .media-element-container.media-logo img:hover, article .media-element-co
 }
 .field-tags .field-label {
   float: left;
+}
+
+.this {
+  display: inline-block;
+  clear: both;
+  margin-top: 70px;
 }

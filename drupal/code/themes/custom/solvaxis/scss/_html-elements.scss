@@ -111,6 +111,11 @@ input[type="week"] {
   }
 }
 
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
 // button in filter
 .views-exposed-form {
   input[type="submit"] {

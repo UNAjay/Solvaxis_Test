@@ -391,6 +391,11 @@ input[type="week"]:focus {
   outline: none;
 }
 
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
 .views-exposed-form input[type="submit"] {
   background: url("../images/clear.png") 0 4px no-repeat;
   height: auto;
