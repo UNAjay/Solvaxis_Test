@@ -54,51 +54,51 @@
 }
 
 // hot news
-.view-ref-news.view-display-id-hot_news {
-  .views-row {
-    display: inline-block;
-    float: left;
-    margin-bottom: 40px;
-    clear: both;
-    @include at-breakpoint($bp-med-2) {
-      margin-bottom: 20px;
-    }
-    .views-field-field-news-image {
-      width: 100%;
-      overflow: hidden;
-      
-      img {
-        display: inline-block;
-        float: left;
-        width: 100%;
-      }
-      @include at-breakpoint($bp-med-2) {
-        @include span-columns(4,12);
-      }
-    }
-    .views-field-body,
-    .views-field-title-field { 
-      width: 100%;
-      padding: 0;
-      @include at-breakpoint($bp-med-2) {
-        @include span-columns(8 omega,12);
-        padding: 0;
-      }
-    }
-    .views-field-body {
-      line-height: 1.2em;
-    }
-    .views-field-title-field {
-      font-size: 15px;
-      font-weight: 300;
-      text-transform: uppercase;
-      margin: 15px 0;
-      @include at-breakpoint($bp-med-2) {
-        margin: -5px 0 15px;
-      }
-    }
-  } 
-}
+//.view-ref-news.view-display-id-hot_news {
+//  .views-row {
+//    display: inline-block;
+//    float: left;
+//    margin-bottom: 40px;
+//    clear: both;
+//    @include at-breakpoint($bp-med-2) {
+//      margin-bottom: 20px;
+//    }
+//    .views-field-field-news-image {
+//      width: 100%;
+//      overflow: hidden;
+//
+//      img {
+//        display: inline-block;
+//        float: left;
+//        width: 100%;
+//      }
+//      @include at-breakpoint($bp-med-2) {
+//        @include span-columns(4,12);
+//      }
+//    }
+//    .views-field-body,
+//    .views-field-title-field {
+//      width: 100%;
+//      padding: 0;
+//      @include at-breakpoint($bp-med-2) {
+//        @include span-columns(8 omega,12);
+//        padding: 0;
+//      }
+//    }
+//    .views-field-body {
+//      line-height: 1.2em;
+//    }
+//    .views-field-title-field {
+//      font-size: 15px;
+//      font-weight: 300;
+//      text-transform: uppercase;
+//      margin: 15px 0;
+//      @include at-breakpoint($bp-med-2) {
+//        margin: -5px 0 15px;
+//      }
+//    }
+//  }
+//}
 
 // news -full mode
 .node-type-news {
@@ -176,6 +176,21 @@
        &:before {
          color: $white;
        }
+     }
+    }
+  }
+}
+
+.not-front {
+  .pager {
+    li {
+      color: $black;
+      a {
+        color: $black;
+      }
+      &.pager-previous,
+      &.pager-next {
+       background: $gray-light;
      }
     }
   }

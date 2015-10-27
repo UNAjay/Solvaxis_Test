@@ -1,3 +1,16 @@
+.not-front {
+  #block-system-main .region-holder,
+  #block-system-main > .content {
+    padding: 0 35px;
+    @include at-breakpoint($bp-xl) {
+      padding: 0;
+    }
+  }
+  #block-system-main > .content .region-holder {
+    padding: 0;
+  }
+}
+
 .group-right {
   @include at-breakpoint($bp-med-2) {
     padding-top: 70px;
@@ -89,5 +102,8 @@
 .this {
   display: inline-block;
   clear: both;
-  margin-top: 70px;
+  margin-top: 25px;
+  @include at-breakpoint($bp-med-2) {
+    margin-top: 70px;
+  }
 }

@@ -79,7 +79,7 @@ function news_field_default_field_instances() {
           'share_services' => 'linkedin, facebook,twitter',
         ),
         'type' => 'addthis_basic_toolbox',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -152,7 +152,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 39,
+        'weight' => 43,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -203,7 +203,7 @@ function news_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -234,6 +234,64 @@ function news_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_buttons',
       'weight' => 43,
+    ),
+  );
+
+  // Exported field_instance: 'node-diverse-field_new_test_field'
+  $field_instances['node-diverse-field_new_test_field'] = array(
+    'bundle' => 'diverse',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Add',
+          'delete' => 'Delete',
+          'description' => 1,
+          'edit' => 'Edit',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 45,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_new_test_field',
+    'label' => 'New test field',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'mediafront' => array(
+        'custom' => '',
+        'field_type' => 0,
+        'media_type' => 'media',
+        'preview' => 0,
+        'thumbnail' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'field_collection',
+      'settings' => array(
+        'collapsed' => 0,
+        'field_as_label' => '',
+        'last_item_collapsed' => 0,
+        'new_item_open' => 0,
+        'replace_label' => 0,
+      ),
+      'type' => 'field_collection_hidden',
+      'weight' => 48,
     ),
   );
 
@@ -345,7 +403,7 @@ function news_field_default_field_instances() {
         'module' => 'i18n_taxonomy',
         'settings' => array(),
         'type' => 'i18n_taxonomy_term_reference_link',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -397,7 +455,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 40,
+        'weight' => 44,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -443,7 +501,7 @@ function news_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -518,7 +576,7 @@ function news_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 28,
+        'weight' => 42,
       ),
       'news' => array(
         'label' => 'hidden',
@@ -1664,6 +1722,7 @@ function news_field_default_field_instances() {
   t('Image');
   t('Industry');
   t('Market');
+  t('New test field');
   t('Product');
   t('Region');
   t('Sidebar text');

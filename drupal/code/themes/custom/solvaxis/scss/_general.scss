@@ -44,7 +44,8 @@ body {
 }
 
 .not-front #content { 
-  padding-bottom: 320px;
+  //padding-bottom: 320px;
+  padding-bottom: 377px;
 }
 
 
@@ -100,7 +101,7 @@ body {
 //-----------------------------------------
 .view-filters {
   background: transparent;
-  padding: 20px 0;
+  padding: 0 0 20px;
   clear: both;
   @include full-width;
   

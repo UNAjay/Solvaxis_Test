@@ -64,6 +64,9 @@
     color: $gray-dark;
   }
 }
+.not-front .sbToggle{
+  background: $gray-light;
+}
 .sbToggle:hover,
 .sbToggleOpen,
 .sbToggleOpen:hover {

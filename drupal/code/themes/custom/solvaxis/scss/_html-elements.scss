@@ -109,8 +109,14 @@ input[type="week"] {
     border: 1px solid $gray-light;
     outline: none;
   }
+  // To Prevent iPhone/iOS Devices From Zooming on Input Forms
+  &:focus,
+  &:hover {
+    font-size: 16px; /* Adding 16px on focus/hover will prevent page zoom */
+  }
 }
 
+// Remove rounded corners on iPhone/iOS Devices
 input {
   -webkit-appearance: none;
   border-radius: 0;
@@ -137,6 +143,15 @@ input {
       background: url('../images/clear-hover.png') 0 4px no-repeat;
       border: 0 none;
       color: $gray;
+    }
+  }
+}
+
+.not-front {
+  .views-exposed-form {
+    input[type="submit"] {
+      color: $gray-dark;
+      background: url('../images/clear-hover.png') 0 4px no-repeat;
     }
   }
 }

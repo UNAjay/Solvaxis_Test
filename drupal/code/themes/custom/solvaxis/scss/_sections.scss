@@ -103,12 +103,13 @@
 
 // section title
 .section-title {
-  margin: 0 0 8px;
+  margin: 0 0 33px;
   padding-bottom: 0;
   position: relative;
   font-size: 20px;
   font-weight: 300;
   text-transform: uppercase;
+  clear: both;
 
   &:before {
     content: '';
@@ -122,9 +123,6 @@
   }
   .section_dark & {
     color: $white;
-  }
-  @include at-breakpoint($bp-med-2) {
-    margin: 0 0 33px;
   }
 }
 

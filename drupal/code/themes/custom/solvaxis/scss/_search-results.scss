@@ -1,10 +1,10 @@
 .page-search {
-  #block-system-main .region-holder {
-    padding: 0 35px;
-    @include at-breakpoint($bp-xl) {
-      padding: 0;
-    }
-  }
+  //#block-system-main .region-holder {
+//    padding: 0 35px;
+//    @include at-breakpoint($bp-xl) {
+//      padding: 0;
+//    }
+//  }
   #block-system-main {
     #search-form {
       display: none;

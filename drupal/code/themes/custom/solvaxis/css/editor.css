@@ -44,7 +44,7 @@ body {
 }
 
 .not-front #content {
-  padding-bottom: 320px;
+  padding-bottom: 377px;
 }
 
 .region-holder,
@@ -105,7 +105,7 @@ body {
 
 .view-filters {
   background: transparent;
-  padding: 20px 0;
+  padding: 0 0 20px;
   clear: both;
   float: left;
   width: 100%;
@@ -390,6 +390,38 @@ input[type="week"]:focus {
   border: 1px solid #CCC;
   outline: none;
 }
+textarea:focus, textarea:hover,
+select:focus,
+select:hover,
+input[type="date"]:focus,
+input[type="date"]:hover,
+input[type="datetime"]:focus,
+input[type="datetime"]:hover,
+input[type="datetime-local"]:focus,
+input[type="datetime-local"]:hover,
+input[type="email"]:focus,
+input[type="email"]:hover,
+input[type="month"]:focus,
+input[type="month"]:hover,
+input[type="number"]:focus,
+input[type="number"]:hover,
+input[type="password"]:focus,
+input[type="password"]:hover,
+input[type="search"]:focus,
+input[type="search"]:hover,
+input[type="tel"]:focus,
+input[type="tel"]:hover,
+input[type="text"]:focus,
+input[type="text"]:hover,
+input[type="time"]:focus,
+input[type="time"]:hover,
+input[type="url"]:focus,
+input[type="url"]:hover,
+input[type="week"]:focus,
+input[type="week"]:hover {
+  font-size: 16px;
+  /* Adding 16px on focus/hover will prevent page zoom */
+}
 
 input {
   -webkit-appearance: none;
@@ -415,6 +447,11 @@ input {
   background: url("../images/clear-hover.png") 0 4px no-repeat;
   border: 0 none;
   color: #73797C;
+}
+
+.not-front .views-exposed-form input[type="submit"] {
+  color: #3C3F42;
+  background: url("../images/clear-hover.png") 0 4px no-repeat;
 }
 
 a {
