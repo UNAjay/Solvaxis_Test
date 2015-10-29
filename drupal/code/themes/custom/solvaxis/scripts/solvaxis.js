@@ -1,7 +1,7 @@
 (function ($, Drupal, window, document, undefined) {
   Drupal.behaviors.solvaxis = {
     attach: function(context, settings) {
-      
+
       // Sticky header
       $(window).scroll(function() {
       if ($(this).scrollTop() > 0){
@@ -14,35 +14,35 @@
 
       // Add 100% width to pager outer element.
       $( "ul.pager" ).parent().css( "width", "100%" );
- 
+
       // Collapse/expand text
       // ------------------------------------------------------------------------------------------------
-      $('.not-front .group-left .field-items h2').each(function(index) { 
+      $('.not-front .group-left .field-items h2').each(function(index) {
           $(this).nextUntil('h2').wrapAll('<div class="content-wrap"></div>');
       });
- 
-      $('.content-wrap h3').each(function(index) { 
+
+      $('.content-wrap h3').each(function(index) {
           $(this).nextUntil('h3').wrapAll('<div class="content-wrap"></div>');
       });
-     
+
       $('.not-front .group-left .field-items h2, .content-wrap h3').click(function(){
         $(this).next('.content-wrap').slideToggle( "slow", function() {
         });
         $(this).toggleClass( "collapsed" );
       });
-      
+
       // Scroll to hash.
       // ------------------------------------------------------------------------------------------------
 
-      $(window, context).on('load hashchange', function(e){
-        var hash = window.location.hash.substr(1);
-        if (hash && hash.charAt(0).match(/[a-z]/i) && typeof $('.' + hash).offset() != 'undefined') {
-          $('html,body').animate({
-            scrollTop: $('.' + hash).offset().top - 144
-          });
-        }
+      // $(window, context).on('load hashchange', function(e){
+      //   var hash = window.location.hash.substr(1);
+      //   if (hash && hash.charAt(0).match(/[a-z]/i) && typeof $('.' + hash).offset() != 'undefined') {
+      //     $('html,body').animate({
+      //       scrollTop: $('.' + hash).offset().top - 144
+      //     });
+      //   }
 
-      });
+      // });
     }
   }
 
@@ -90,36 +90,36 @@ function getUrlVars(url)
 jQuery(function($){
   // Use strict mode to avoid errors: https://developer.mozilla.org/en/JavaScript/Strict_mode
   "use strict";
- 
+
   var $navButton = $('.navigate');
   var $searchButton = $('<div class="search-button"></div>');
   var $searchForm = $('#block-search-form').clone();
-  
+
   $searchForm.addClass('desktop');
-  
+
   $searchForm.hide();
   $('.region-header-secondary').hide();
-  
+
   $('.header-secondary .region-holder').prepend($navButton, $searchButton, $searchForm);
 
   // toggle search
   $searchButton.click(function(){
     $searchForm.toggle();
   });
-  
+
   // search utton active
   $searchButton.click(function(){
     $searchButton.toggleClass( "active" );
   });
-  
+
   // header class when hidden on mobile
   $navButton.click(function(){
     $('.region-header-secondary').toggle();
     $('.region-header-secondary').toggleClass( "expanded" );
     $navButton.toggleClass( "close" );
   });
-  
-  
+
+
   // var hideSearch = function(){
  //    // mobile menu
  //    if ($navButton.is(':visible')) {
@@ -128,7 +128,7 @@ jQuery(function($){
  //    }
  //  };
  //  $(window).resize(hideSearch);
- 
+
 });
 
 
