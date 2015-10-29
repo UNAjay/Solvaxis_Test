@@ -1,6 +1,7 @@
 name = Partners
 core = 7.x
 package = Features
+dependencies[] = addthis
 dependencies[] = addthis_displays
 dependencies[] = better_exposed_filters
 dependencies[] = cs_adaptive_image

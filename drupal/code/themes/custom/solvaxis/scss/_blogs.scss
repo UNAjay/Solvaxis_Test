@@ -12,6 +12,18 @@
 	  }
 	}
 	.tagclouds-term {
-		margin-right: 10px;
+		margin-right: 2px;
+    &:after {
+      content: ",";
+      color: $gray;
+    }
+    &:last-child {
+      &:after {
+        content: "";
+      }
+    }
+    a {
+      color: $gray;
+    }
 	}
 }

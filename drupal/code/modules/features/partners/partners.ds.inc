@@ -41,7 +41,7 @@ function partners_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_add_this' => array(
+    'field_partner_logo' => array(
       'formatter_settings' => array(
         'ft' => array(),
       ),

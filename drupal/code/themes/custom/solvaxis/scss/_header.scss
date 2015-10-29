@@ -14,27 +14,49 @@
 //-----------------------------------------
 // Language dropdown block
 //-----------------------------------------
+@include at-breakpoint($bp-xl) {
+  #block-lang-dropdown-language {
+    h2 {
+      display: none;
+    }
+    .sbHolder {
+      width: 100%;
+
+      .sbSelector {
+        display: none;
+      }
+    }
+    .sbOptions {
+      display: block !important;
+      width: 100%;
+      
+      li {
+        float: left;
+      }
+    }
+  }
+}
+
+
 
 #block-lang-dropdown-language {
-  
-  
   .content {
-		display: inline-block;
-	}
-	h2 {
-		display: none;
-	}
+    display: inline-block;
+  }
+  h2 {
+    display: none;
+  }
   span.title {
     margin-right: 5px;
   }
-	.form-type-select {
+  .form-type-select {
     // background: url('../images/bg-language-arrow.png') no-repeat right 8px transparent;
-	}
-	select {
-		width: auto !important;
-		padding-right: 5px;
+  }
+  select {
+    width: auto !important;
+    padding-right: 5px;
     height: 0;
-	}
+  }
   .sbHolder {
     margin-top: 0;
   }
@@ -43,15 +65,15 @@
     font-size: 14px;
     font-weight: 300;
   }
-	.sbOptions {
-	  background: #000;
-	  width: 105px;
+  .sbOptions {
+    background: #000;
+    width: 105px;
 
-	  @include at-breakpoint($bp-med-2) {
-	    background: #484848;
-	    width: 120px;
-	  }
-	}
+    @include at-breakpoint($bp-med-2) {
+      background: #484848;
+      width: 120px;
+    }
+  }
 }
 
 #block-lang-dropdown-language {
@@ -62,8 +84,8 @@
   width: 100%;
   padding: 10px 0 10px 50px;
   // tablet
-	@include at-breakpoint($bp-med-2) {
-  	padding: 0;
+  @include at-breakpoint($bp-med-2) {
+    padding: 0;
   }
   // desktop
   @include at-breakpoint($bp-xl) {
@@ -73,8 +95,6 @@
     width: auto;
   }
 }
-
-
 
 //-----------------------------------------
 // Logo
@@ -124,7 +144,7 @@
     position: absolute;
     top: 25px;
     background: url('../images/sprite.png') no-repeat;
-    background-size: 120px 40px;
+    background-size: 120px 51px;
     width: 40px;
     height: 40px;
     z-index:200;
@@ -137,7 +157,7 @@
       /* Reference the @2x Sprite */
 			background-image: url('../images/sprite@2x.png');
       /* Translate the @2x sprite's dimensions back to 1x */
-      background-size: 120px 40px;
+      background-size: 120px 51px;
     }
   }
  
@@ -329,7 +349,6 @@
 // tablet
 .header-secondary {
   @include at-breakpoint($bp-med-2) {
-    //background: green;
     .region-header-secondary {
     }
     .menu {

@@ -28,6 +28,7 @@
       $('.not-front .body h2, .content-wrap h3').click(function(){
         $(this).next('.content-wrap').slideToggle( "slow", function() {
         });
+        $(this).toggleClass( "collapsed" );
       });
       
       // Scroll to hash.
@@ -53,7 +54,6 @@ Drupal.behaviors.FullscreenPagesStickyNav = function (context) {
 Drupal.behaviors.jeeves_images = function (context) {
   return;
 };
-
 
 (function ($) {
   Drupal.behaviors.action_colorbox = {

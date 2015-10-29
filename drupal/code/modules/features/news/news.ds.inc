@@ -59,21 +59,21 @@ function news_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'teaser';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '0',
+      'weight' => '1',
       'label' => 'hidden',
       'format' => 'default',
     ),
     'node_link' => array(
-      'weight' => '3',
+      'weight' => '4',
       'label' => 'hidden',
       'format' => 'default',
     ),
     'post_date' => array(
-      'weight' => '1',
+      'weight' => '2',
       'label' => 'hidden',
       'format' => 'ds_post_date_short',
     ),
-    'body' => array(
+    'field_news_image' => array(
       'formatter_settings' => array(
         'ft' => array(),
       ),
@@ -208,13 +208,15 @@ function news_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'title',
-        1 => 'post_date',
-        2 => 'body',
-        3 => 'node_link',
+        0 => 'field_news_image',
+        1 => 'title',
+        2 => 'post_date',
+        3 => 'body',
+        4 => 'node_link',
       ),
     ),
     'fields' => array(
+      'field_news_image' => 'ds_content',
       'title' => 'ds_content',
       'post_date' => 'ds_content',
       'body' => 'ds_content',

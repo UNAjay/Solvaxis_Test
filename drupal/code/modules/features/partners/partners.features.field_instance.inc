@@ -237,25 +237,12 @@ function partners_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'cs_adaptive_image',
+        'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'styles' => array(
-            'breakpoint_1' => 2000,
-            'breakpoint_2' => 800,
-            'breakpoint_3' => 600,
-            'breakpoint_4' => '',
-            'breakpoint_5' => '',
-            'fallback_style' => 'logo_listing_image',
-            'max_style' => '',
-            'style_1' => 'logo_listing_image',
-            'style_2' => 'thumbnail',
-            'style_3' => 'thumbnail',
-            'style_4' => '',
-            'style_5' => '',
-          ),
+          'image_style' => 'news_image',
         ),
-        'type' => 'cs_adaptive_image',
+        'type' => 'image',
         'weight' => 0,
       ),
       'teaser' => array(
