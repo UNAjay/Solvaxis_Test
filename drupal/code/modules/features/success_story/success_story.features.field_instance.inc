@@ -49,7 +49,7 @@ function success_story_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 44,
+        'weight' => 43,
       ),
       'teaser' => array(
         'label' => 'above',

@@ -84,7 +84,7 @@ function industries_field_default_field_instances() {
           'share_services' => 'linkedin, facebook,twitter',
         ),
         'type' => 'addthis_basic_toolbox',
-        'weight' => 51,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -120,7 +120,7 @@ function industries_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 47,
+        'weight' => 45,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -181,7 +181,7 @@ function industries_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 42,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -240,9 +240,13 @@ function industries_field_default_field_instances() {
       ),
       'default' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'news_image',
+        ),
+        'type' => 'image',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -311,7 +315,7 @@ function industries_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 49,
+        'weight' => 47,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -356,7 +360,7 @@ function industries_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 48,
+        'weight' => 46,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -408,7 +412,7 @@ function industries_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 46,
+        'weight' => 44,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -454,7 +458,7 @@ function industries_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 50,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -582,7 +586,7 @@ function industries_field_default_field_instances() {
           'title_style' => 'h2',
         ),
         'type' => 'title_linked',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
