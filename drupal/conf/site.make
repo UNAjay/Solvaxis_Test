@@ -185,6 +185,8 @@ projects[message][revision] = "3bbdd5e62c56014c581c19f415a9ac0a3e3a824c"
 projects[message_notify][version] = "2.x-dev"
 projects[message_notify][revision] = "7247ec2f850c4d0a5095a857dab1dbe44583375d"
 
+projects[flippy][version] = "1.4"
+
 ; Maps
 projects[geofield][version] = "2.3"
 projects[geophp][version] = "1.7"
