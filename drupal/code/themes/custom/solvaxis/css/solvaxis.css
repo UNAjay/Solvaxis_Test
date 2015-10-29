@@ -1708,6 +1708,20 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   color: #73797C;
 }
 
+.region-content ul.flippy {
+  padding: 0;
+  margin-top: 60px;
+}
+.region-content ul.flippy li {
+  padding: 0;
+}
+.region-content ul.flippy li.prev {
+  float: left;
+}
+.region-content ul.flippy li.next {
+  float: right;
+}
+
 .node-section {
   position: relative;
   min-height: 200px;
@@ -2541,17 +2555,17 @@ article .media-element-container.media-logo img:hover, article .media-element-co
 .not-front .node .group-left h2:hover, .not-front .node .group-left h3:hover {
   color: #E30043;
 }
-.not-front .node ul {
+.not-front .node .field-items ul {
   margin-top: 0;
   padding: 0;
   clear: both;
 }
-.not-front .node ul li {
+.not-front .node .field-items ul li {
   list-style-type: none;
   position: relative;
   padding-left: 9px;
 }
-.not-front .node ul li:before {
+.not-front .node .field-items ul li:before {
   display: block;
   content: "";
   height: 4px;
