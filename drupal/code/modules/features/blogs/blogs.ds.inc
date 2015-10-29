@@ -231,10 +231,11 @@ function blogs_ds_layout_settings_info() {
         2 => 'body',
         3 => 'field_tags',
         4 => 'field_add_this',
+        6 => 'flippy_pager',
       ),
       'right' => array(
         5 => 'field_sidebar_text',
-        6 => 'tag_cloud',
+        7 => 'tag_cloud',
       ),
     ),
     'fields' => array(
@@ -244,6 +245,7 @@ function blogs_ds_layout_settings_info() {
       'field_tags' => 'left',
       'field_add_this' => 'left',
       'field_sidebar_text' => 'right',
+      'flippy_pager' => 'left',
       'tag_cloud' => 'right',
     ),
     'classes' => array(),

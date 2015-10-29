@@ -147,6 +147,12 @@ function blogs_strongarm() {
             'visible' => FALSE,
           ),
         ),
+        'flippy_pager' => array(
+          'default' => array(
+            'weight' => '5',
+            'visible' => TRUE,
+          ),
+        ),
       ),
     ),
   );
