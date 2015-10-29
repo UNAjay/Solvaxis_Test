@@ -2597,6 +2597,10 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   }
 }
 
+.page-user #block-system-main .form-item {
+  margin-bottom: 20px;
+}
+
 .view-ref-news.view-display-id-hot_news .views-row,
 .view-display-id-customers_page .views-row,
 .page-news-list .views-row {

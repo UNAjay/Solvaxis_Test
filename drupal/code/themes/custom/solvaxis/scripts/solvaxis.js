@@ -17,7 +17,7 @@
  
       // Collapse/expand text
       // ------------------------------------------------------------------------------------------------
-      $('.not-front .body h2').each(function(index) { 
+      $('.not-front .group-left .field-items h2').each(function(index) { 
           $(this).nextUntil('h2').wrapAll('<div class="content-wrap"></div>');
       });
  
@@ -25,7 +25,7 @@
           $(this).nextUntil('h3').wrapAll('<div class="content-wrap"></div>');
       });
      
-      $('.not-front .body h2, .content-wrap h3').click(function(){
+      $('.not-front .group-left .field-items h2, .content-wrap h3').click(function(){
         $(this).next('.content-wrap').slideToggle( "slow", function() {
         });
         $(this).toggleClass( "collapsed" );
