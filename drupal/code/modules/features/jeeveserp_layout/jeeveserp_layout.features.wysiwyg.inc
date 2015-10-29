@@ -51,9 +51,6 @@ function jeeveserp_layout_wysiwyg_default_profiles() {
         'linkit' => array(
           'linkit' => 1,
         ),
-        'templates' => array(
-          'Templates' => 1,
-        ),
         'drupal' => array(
           'media' => 1,
         ),
@@ -68,7 +65,7 @@ function jeeveserp_layout_wysiwyg_default_profiles() {
       'css_path' => '/sites/all/themes/custom/solvaxis/css/editor.css',
       'stylesSet' => 'Download PDF=a.call-to-action.download-pdf
 Fill a form=a.call-to-action.fill-form
-External link=a.call-to-action.external-link
+External link=a.call-to-action.go-to-link
 More details=a.call-to-action.more-details
 Read more=a.call-to-action.read-more
 Attached=a.call-to-action.attached
@@ -82,7 +79,7 @@ Paragraph=p
 Section title=h2.section-title
 Collapsible content=div.collapsible',
       'block_formats' => 'p,address,pre,h2,h3,h4,h5,h6,div',
-      'advanced__active_tab' => 'edit-basic',
+      'advanced__active_tab' => 'edit-css',
       'forcePasteAsPlainText' => 1,
     ),
   );
@@ -131,9 +128,6 @@ Collapsible content=div.collapsible',
         'linkit' => array(
           'linkit' => 1,
         ),
-        'templates' => array(
-          'Templates' => 1,
-        ),
         'drupal' => array(
           'media' => 1,
           'break' => 1,
@@ -149,7 +143,7 @@ Collapsible content=div.collapsible',
       'css_path' => '/sites/all/themes/custom/solvaxis/css/editor.css',
       'stylesSet' => 'Download PDF=a.call-to-action.download-pdf
 Fill a form=a.call-to-action.fill-form
-External link=a.call-to-action.external-link
+External link=a.call-to-action.go-to-link
 More details=a.call-to-action.more-details
 Read more=a.call-to-action.read-more
 Attached=a.call-to-action.attached
@@ -163,7 +157,7 @@ Paragraph=p
 Section title=h2.section-title
 Collapsible content=div.collapsible',
       'block_formats' => 'p,address,h2,h3,div',
-      'advanced__active_tab' => 'edit-basic',
+      'advanced__active_tab' => 'edit-css',
       'forcePasteAsPlainText' => 1,
     ),
   );

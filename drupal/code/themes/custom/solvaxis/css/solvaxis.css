@@ -1322,10 +1322,10 @@ a.call-to-action.fill-form:before {
 a.call-to-action.fill-form:hover:before, a.call-to-action.fill-form:active:before, a.call-to-action.fill-form:focus:before {
   background-position: 0 -48px;
 }
-a.call-to-action.external-link:before {
+a.call-to-action.go-to-link:before {
   background-position: -48px 0;
 }
-a.call-to-action.external-link:hover:before, a.call-to-action.external-link:active:before, a.call-to-action.external-link:focus:before {
+a.call-to-action.go-to-link:hover:before, a.call-to-action.go-to-link:active:before, a.call-to-action.go-to-link:focus:before {
   background-position: -48px -48px;
 }
 a.call-to-action.more-details:before {
