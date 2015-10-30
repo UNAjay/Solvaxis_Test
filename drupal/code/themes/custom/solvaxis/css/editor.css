@@ -575,3 +575,9 @@ a.call-to-action.attached:hover:before, a.call-to-action.attached:active:before,
 p a {
   color: #E30043;
 }
+
+@media (min-width: 60em) {
+  .block-floatbar {
+    top: 267px !important;
+  }
+}

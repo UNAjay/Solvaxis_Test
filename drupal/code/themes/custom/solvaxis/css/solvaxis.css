@@ -1378,6 +1378,12 @@ p a {
   color: #E30043;
 }
 
+@media (min-width: 60em) {
+  .block-floatbar {
+    top: 267px !important;
+  }
+}
+
 footer {
   position: absolute;
   bottom: 0;

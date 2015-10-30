@@ -190,4 +190,8 @@ p a {
   color: $link-color;
 }
 
-
+.block-floatbar {
+  @include at-breakpoint($bp-xl) {
+    top: 267px !important;
+  }
+}

@@ -49,6 +49,12 @@ function jeeveserp_layout_context_default_contexts() {
           'region' => 'header_secondary',
           'weight' => '-37',
         ),
+        'floatbar-floatbar' => array(
+          'module' => 'floatbar',
+          'delta' => 'floatbar',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
         'site_socialicons-site_socialicons_global' => array(
           'module' => 'site_socialicons',
           'delta' => 'site_socialicons_global',
