@@ -1,3 +1,7 @@
 iframe.external-iframe-display {
 	width:100%;
+  min-height: 320px;
+}
+iframe.external-iframe-display html body {
+  margin: 0;
 }

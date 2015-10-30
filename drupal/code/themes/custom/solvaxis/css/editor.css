@@ -291,7 +291,7 @@ input[type="submit"],
 input[type="button"],
 .button, .region-content input[type="submit"], #colorbox input[type="submit"], .node-type-full-page .view-promo-slideshow .slides {
   background: none transparent;
-  padding: 17px 22px 19px;
+  padding: 18px 22px;
   border: 1px solid #E30043;
   background: transparent;
   color: #E30043;

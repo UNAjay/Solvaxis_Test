@@ -1093,7 +1093,7 @@ input[type="submit"],
 input[type="button"],
 .button, .region-content input[type="submit"], #colorbox input[type="submit"], .node-type-full-page .view-promo-slideshow .slides {
   background: none transparent;
-  padding: 17px 22px 19px;
+  padding: 18px 22px;
   border: 1px solid #E30043;
   background: transparent;
   color: #E30043;
@@ -1706,20 +1706,6 @@ article .media-element-container.media-logo img:hover, article .media-element-co
 .tag-cloud .tagclouds-term a,
 .block-tagclouds .tagclouds-term a {
   color: #73797C;
-}
-
-.region-content ul.flippy {
-  padding: 0;
-  margin-top: 60px;
-}
-.region-content ul.flippy li {
-  padding: 0;
-}
-.region-content ul.flippy li.prev {
-  float: left;
-}
-.region-content ul.flippy li.next {
-  float: right;
 }
 
 .node-section {
@@ -2613,6 +2599,69 @@ article .media-element-container.media-logo img:hover, article .media-element-co
 
 .page-user #block-system-main .form-item {
   margin-bottom: 20px;
+}
+
+.region-content ul.flippy {
+  padding: 0;
+  margin: 30px 0 0;
+}
+.region-content ul.flippy li {
+  position: relative;
+  color: #E30043;
+  padding: 0;
+}
+.region-content ul.flippy li a {
+  font-size: 0;
+  min-width: 38px;
+}
+.region-content ul.flippy li a:before {
+  content: '\e807';
+  font-family: 'solvaxis-icn';
+  font-size: 18px;
+  font-weight: normal;
+}
+.region-content ul.flippy li.prev {
+  float: left;
+}
+.region-content ul.flippy li.prev .button {
+  padding: 18px 0;
+}
+.region-content ul.flippy li.prev .button:before {
+  float: left;
+  margin: 0 0 0 12px;
+}
+.region-content ul.flippy li.next {
+  float: right;
+}
+.region-content ul.flippy li.next .button {
+  padding: 18px 0;
+}
+.region-content ul.flippy li.next .button:before {
+  content: '\e808';
+  float: right;
+  margin: 0 12px 0 0;
+}
+@media (min-width: 48em) {
+  .region-content ul.flippy {
+    margin: 60px 0 0;
+  }
+  .region-content ul.flippy li a {
+    font-size: 14px;
+    font-size: 1.4rem;
+    min-width: 190px;
+  }
+  .region-content ul.flippy li.prev .button {
+    padding: 18px 22px 14px 35px;
+  }
+  .region-content ul.flippy li.prev .button:before {
+    margin: 0 20px 0 -20px;
+  }
+  .region-content ul.flippy li.next .button {
+    padding: 18px 35px 14px 22px;
+  }
+  .region-content ul.flippy li.next .button:before {
+    margin: 0 -20px 0 20px;
+  }
 }
 
 .view-ref-news.view-display-id-hot_news .views-row,

@@ -27,18 +27,3 @@
     }
 	}
 }
-
-// Pager
-.region-content ul.flippy {
-  padding: 0;
-  margin-top: 60px;
-  li {
-    padding: 0;
-    &.prev {
-      float: left;
-    }
-    &.next {
-      float: right;
-    }
-  }
-}
