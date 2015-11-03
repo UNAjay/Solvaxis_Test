@@ -24,7 +24,7 @@
 
 .not-front {
   .node {
-      h2, h3 {
+      h2, h3, h5 {
         font-size: 15px;
         font-weight: normal;
         text-transform: uppercase;
@@ -34,7 +34,7 @@
         clear: both;
       }
       .group-left {
-        h2, h3 {
+        h5 {
           border-bottom: 1px solid transparent;
           margin-bottom: 7px;
           padding: 0 0 6px 20px;
@@ -99,9 +99,7 @@
         }
       }
       
-      
       .content-wrap {
-        //background: pink;
         float: left;
         clear: both;
         width: 100%;
@@ -109,9 +107,6 @@
           &:first-child {
             margin-top: 0;
           }
-        }
-        .content-wrap {
-          //background: green;
         }
       }
     }

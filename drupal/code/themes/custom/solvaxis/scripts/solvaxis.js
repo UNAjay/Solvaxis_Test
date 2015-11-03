@@ -17,15 +17,11 @@
 
       // Collapse/expand text
       // ------------------------------------------------------------------------------------------------
-      $('.not-front .group-left .field-items h2').each(function(index) {
-          $(this).nextUntil('h2').wrapAll('<div class="content-wrap"></div>');
+      $('.not-front .group-left .field-items h5').each(function(index) {
+          $(this).nextUntil('h2,h3,h4,h5').wrapAll('<div class="content-wrap"></div>');
       });
 
-      $('.content-wrap h3').each(function(index) {
-          $(this).nextUntil('h3').wrapAll('<div class="content-wrap"></div>');
-      });
-
-      $('.not-front .group-left .field-items h2, .content-wrap h3').click(function(){
+      $('.not-front .group-left .field-items h5').click(function(){
         $(this).next('.content-wrap').slideToggle( "slow", function() {
         });
         $(this).toggleClass( "collapsed" );

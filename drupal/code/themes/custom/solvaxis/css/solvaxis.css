@@ -2644,7 +2644,7 @@ p.italic {
   margin-top: 0;
 }
 
-.not-front .node h2, .not-front .node h3 {
+.not-front .node h2, .not-front .node h3, .not-front .node h5 {
   font-size: 15px;
   font-weight: normal;
   text-transform: uppercase;
@@ -2653,14 +2653,14 @@ p.italic {
   margin-bottom: 13px;
   clear: both;
 }
-.not-front .node .group-left h2, .not-front .node .group-left h3 {
+.not-front .node .group-left h5 {
   border-bottom: 1px solid transparent;
   margin-bottom: 7px;
   padding: 0 0 6px 20px;
   position: relative;
   cursor: pointer;
 }
-.not-front .node .group-left h2:before, .not-front .node .group-left h3:before {
+.not-front .node .group-left h5:before {
   display: block;
   content: "";
   position: absolute;
@@ -2673,20 +2673,20 @@ p.italic {
   background-position: -11px -40px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
-  .not-front .node .group-left h2:before, .not-front .node .group-left h3:before {
+  .not-front .node .group-left h5:before {
     /* Reference the @2x Sprite */
     background-image: url("../images/sprite@2x.png");
     /* Translate the @2x sprite's dimensions back to 1x */
     background-size: 120px 51px;
   }
 }
-.not-front .node .group-left h2.collapsed, .not-front .node .group-left h3.collapsed {
+.not-front .node .group-left h5.collapsed {
   border-bottom: 1px solid #CCC;
 }
-.not-front .node .group-left h2.collapsed:before, .not-front .node .group-left h3.collapsed:before {
+.not-front .node .group-left h5.collapsed:before {
   background-position: 0 -40px;
 }
-.not-front .node .group-left h2:hover, .not-front .node .group-left h3:hover {
+.not-front .node .group-left h5:hover {
   color: #E30043;
 }
 .not-front .node .field-items ul {
