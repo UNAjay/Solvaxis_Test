@@ -27,6 +27,11 @@ function jeeveserp_layout_context_default_contexts() {
         1 => 1,
       ),
     ),
+    'theme' => array(
+      'values' => array(
+        'solvaxis' => 'solvaxis',
+      ),
+    ),
   );
   $context->reactions = array(
     'block' => array(

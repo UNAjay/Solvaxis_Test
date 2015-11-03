@@ -37,6 +37,7 @@ projects[token][version] = "1.6"
 projects[better_exposed_filters][version] = "3.2"
 projects[link][version] = "1.2"
 projects[context][version] = "3.6"
+projects[context_condition_theme][version] = "1.0"
 
 projects[wysiwyg][version] = 2.x-dev
 projects[wysiwyg][revision] = 898d022cf7d0b6c6a6e7d813199d561b4ad39f8b

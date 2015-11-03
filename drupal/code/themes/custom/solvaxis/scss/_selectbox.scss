@@ -30,7 +30,8 @@
   position: absolute;
   text-indent: 4px;
   top: 0;
-  width: 100%;
+  //width: 100%;
+  width: auto;
 }
 .sbSelector:link, .sbSelector:visited, .sbSelector:hover {
   color: $gray-dark;
@@ -189,62 +190,124 @@
       @include font-size(18);
       line-height: 40px;
       color: $black;
-      
-      &:hover,
+      &:link,
+      &:visited {
+        color: $black;
+      }
       &:focus,
+      &:active,
       &.sbFocus {
         background: transparent;
         color: $black;
+        text-decoration: underline;
       }
     }
   }
 }
 
-
 /*Selectbox in language dropdown - desktop*/
 @include at-breakpoint($bp-xl) {
   #block-lang-dropdown-language {
-    background: red;
     overflow: visible;
     height: auto;
     position: absolute;
     right: 20px;
-    top: 89px;
+    top: 69px;
     height: auto;
-    
+  }
+  #block-lang-dropdown-language .sbHolder{
+    width: auto;
+    position: relative;
+    height: auto;
+    margin: 0;
   }
   #block-lang-dropdown-language .sbOptions{
     height: auto;
-    overflow: hidden;
+    overflow: visible;
     display: block!important;
     visibility: hidden;
+    position: absolute;
+    left: -42px;
+    border-top: 0 none;
+    border-bottom: 0 none;
+    width: 50px;
+    margin-top: 0;
+    background: transparent;
+    z-index: 1;
+    background: transparent;
+    border: 1px solid transparent;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    top: 17px !important;
+    padding: 18px 2px 15px 0;
+    z-index: 1;
     li {
       display: block;
-      width: 100%;
+      width: auto;
+      min-width: 40px;
+      background: $white;
+      -moz-box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+      -webkit-box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+      box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+      height: auto;
+      padding: 4px 15px 6px;
+      clear: both;
       &:first-child {
-        padding-left: 1px;
+        padding: 11px 15px 6px;
+          &:before {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 7px;
+            right: -20px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 13px 13px 13px;
+            border-color: transparent transparent rgba(0,0,0,0.1) transparent;
+            z-index: -1;
+          }
       }
       a {
         @include font-size(14);
         line-height: normal;
+        &:focus,
+        &:active,
+        &.sbFocus {
+          text-decoration: none;
+        }
       }
+    }
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 7px;
+      right: -18px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 12px 12px 12px;
+      border-color: transparent transparent $white transparent;
     }
   }
   
   #block-lang-dropdown-language {
-    
-      &:hover {
+    &:hover {
         .sbOptions{
           visibility: visible;
         }
       }
-   
-  }
+    }
   
-  
-  
-  
-  #block-lang-dropdown-language select{ 
+ #block-lang-dropdown-language select{ 
     width: 30px !important;
   }
 
@@ -253,16 +316,13 @@
     border: 0 none;
     height: auto; 
     color: #9FA09F;
-    margin-top: -17px;
+    
     padding-right: 0;
     
     .sbSelector {
       display: inline-block;
     }
   }
-  
-  
-  
   
   #block-lang-dropdown-language .sbToggle{
   display: none;
@@ -273,36 +333,29 @@
   #block-lang-dropdown-language .sbSelector{
     color: #9FA09F;
     font-size: 1.2rem;
-    height: 17px;
-    line-height: 17px;
-    overflow: visible;
     padding-right: 0;
     position: relative;
     text-indent: 0;
-  }
-  #block-lang-dropdown-language .sbOptions{
-    background: $white;
-    border: 1px solid transparent;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    list-style: none;
-    left: -1px;
-    margin: 0;
-    padding: 0 0 1px;
-    position: absolute;
-    top: 25px !important;
-  
-    width: 50px;
-    z-index: 1;
-    overflow-y: auto;
+	  padding: 0;
+    background: none;
+    color: $black;
+    text-decoration: none;
+    
+	  &:hover {
+      &:after {
+        display: block;
+        content: "";
+        height: 1px;
+        width: 100%;
+        background: $black;
+        position: absolute;
+        bottom: -5px;
+      }
+    } 
   }
   #block-lang-dropdown-language .sbOptions li {
     height: 20px;
-    padding: 0 4px 1px;
+    padding: 4px 15px 6px;
   }
   #block-lang-dropdown-language .sbOptions li a {
     padding: 0;
@@ -331,5 +384,3 @@
     border-bottom: none;
   }
 }
-
-

@@ -9,6 +9,7 @@
     <title><?php print $head_title; ?></title>
     <?php print $styles; ?>
     <?php print $scripts; ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--[if IE 7]>
 			<script src="/<?php echo path_to_theme(); ?>/scripts/boxsizing.htc"></script>
 		<![endif]-->

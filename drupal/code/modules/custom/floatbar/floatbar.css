@@ -1,5 +1,4 @@
-.front .block-floatbar,
-.page-admin .block-floatbar {
+.front .block-floatbar {
   display: none;
 }
 

@@ -101,7 +101,8 @@
   margin: 0;
 }
 
-// section title
+// section title, banner title
+.group-banner h2,
 .section-title {
   margin: 0 0 33px;
   padding-bottom: 0;
@@ -125,6 +126,77 @@
     color: $white;
   }
 }
+.banner-style-red {
+  .group-banner h2 {
+    &:before {
+      background: $white;
+    }
+  }
+}
+
+
+.group-banner h2 {
+  @include at-breakpoint($bp-med-2) {
+    @include font-size(28);
+    margin-bottom: 35px;
+    &:before {
+      bottom: -10px;
+      width: 80px;
+    }
+  }
+}
+
+.group-banner h3 {
+  margin-top: 0;
+  margin-bottom: 38px;
+  padding-bottom: 0;
+  position: relative;
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -16px;
+    width: 80px;
+    height: 1px;
+    background: $white;
+  } 
+  @include at-breakpoint($bp-xl) {
+    margin-top: -6px;
+  } 
+}
+
+.group-banner {
+  p {
+    @include font-size(14,16);
+    margin: 0;
+    &:first-child {
+      margin-top: 2px;
+      margin-bottom: 1px;
+    }
+    @include at-breakpoint($bp-med-2) {
+      margin-top: -3px;
+    }
+  }
+  .external-link {
+    &:hover {
+      color: $crimson;
+    }
+  }
+}
+
+.banner-style-red {
+  .group-banner {
+    .external-link {
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
 
 //-----------------------------------------
 // Banners
@@ -138,7 +210,7 @@
   z-index: 2;
   margin: -80px 0 12px;
   padding: 5px 10px;
-
+  
   .banner-style-red & {
     background-color: $crimson;
     color: $white;
@@ -181,7 +253,7 @@
   @include at-breakpoint($bp-med-2) {
     float: right;
     width: 455px;
-    height: 188px;
+    height: auto;
     padding: 10px 15px;
     margin: -144px 0 12px;
   }
@@ -191,7 +263,23 @@
 .group-banner {
   @include at-breakpoint($bp-xl) {
     width: 690px;
-    height: 188px;
+    //height: 188px;
+    height: auto;
     margin: -188px -30px 12px 0;
+    padding: 27px 30px 24px;
+  }
+}
+
+
+// Styles in banners
+p {
+  &.italic {
+    font-family: Georgia, serif;
+    font-style: italic;
+    @include font-size(18,24);
+    margin-bottom: 5px;
+    @include at-breakpoint($bp-med-2) {
+      @include font-size(22,28);
+    }
   }
 }

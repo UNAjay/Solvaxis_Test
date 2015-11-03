@@ -49,9 +49,6 @@
   span.title {
     margin-right: 5px;
   }
-  .form-type-select {
-    // background: url('../images/bg-language-arrow.png') no-repeat right 8px transparent;
-  }
   select {
     width: auto !important;
     padding-right: 5px;
@@ -216,14 +213,6 @@
   }
 }  
 
-
-
-
-
-
-
-
-
 .search-button-desktop {
 &:hover {
   &:after {
@@ -246,21 +235,13 @@
 }
 
 
-
-// jaunais parkartotais navigation kods 
-
-
-
-
 //-----------------------------------------
 // Navigation - 1st and 2nd level
 //-----------------------------------------
 
 // mobile
 .header-secondary {
-  //background: pink;
   position: fixed;
-  //position: absolute;
   left: 0;
   top: 0;
   width: 100%;
@@ -270,23 +251,17 @@
   .region-header-secondary {
     display: block;
     position: fixed;
-    //right: 0;
     right: 0;
-    //margin-right: -90%;
     top: 0;
     width: 90%;
     height: 100%;
     background: $gray-lighter;
     border-left: 1px solid $gray-light;
    
-  
-   
-   
     #block-system-main-menu {
-      //background: pink;
       height: 82%;
-      margin-top: 80px;
-      //margin-top: 60px;
+      //margin-top: 80px;
+      margin-top: 60px;
       overflow-y: auto;
       z-index: 200;
      
@@ -294,7 +269,6 @@
     &.expanded {
       right: 0;
     	margin-right:0;
-      
     }
   }
   
@@ -318,12 +292,6 @@
     	  	color: $black;
         }  
       }
-      &.first {
-        
-      } 
-      &.last {
-        
-      } 
       
       // second level
       & > .menu {
@@ -340,49 +308,13 @@
           
         }
       }
-        
     }
   }
 }
-
-
-// tablet
-.header-secondary {
-  @include at-breakpoint($bp-med-2) {
-    .region-header-secondary {
-    }
-    .menu {
-      li {
-        a {
-      	  &.active,
-      	  &.active-trail,
-      	  &:hover {
-          }  
-        }
-        &.first {
-        
-        } 
-        &.last {
-        
-        } 
-      
-        // second level
-        & > li .menu {
-          li {
-          
-          }
-        }
-        
-      }
-    }
-  }
-}
-
 
 // desktop
 .header-secondary {
   @include at-breakpoint($bp-xl) {
-    //background: orange;
     .region-header-secondary {
       display: block !important;
       position: relative;
@@ -594,7 +526,6 @@
           width: 40px;
           height: 40px;
           font-size: 0;
-          
         }
       }
     }
@@ -607,12 +538,10 @@
     -moz-box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
     -webkit-box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
     box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
-    //overflow: hidden;
     position: absolute;
     right: 24px;
     top: 75px;
     padding: 15px;
-    //margin-top: 4px !important;
     &:before {
       display: block;
       content: "";
@@ -657,6 +586,7 @@
         .form-submit {
           display: block;
           background: $crimson;
+          font-size: 0;
           width: 20px;
           height: 20px;
           padding: 0;

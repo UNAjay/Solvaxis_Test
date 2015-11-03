@@ -578,7 +578,7 @@ a {
 }
 .header-secondary .region-header-secondary #block-system-main-menu {
   height: 82%;
-  margin-top: 80px;
+  margin-top: 60px;
   overflow-y: auto;
   z-index: 200;
 }
@@ -859,6 +859,7 @@ a {
 #block-search-form.desktop #search-block-form .form-actions .form-submit {
   display: block;
   background: #E30043;
+  font-size: 0;
   width: 20px;
   height: 20px;
   padding: 0;
@@ -1820,6 +1821,7 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   margin: 0;
 }
 
+.group-banner h2,
 .section-title {
   margin: 0 0 33px;
   padding-bottom: 0;
@@ -1829,6 +1831,7 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   text-transform: uppercase;
   clear: both;
 }
+.group-banner h2:before,
 .section-title:before {
   content: '';
   display: block;
@@ -1839,7 +1842,72 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   height: 1px;
   background: #E30043;
 }
-.section_dark .section-title {
+.section_dark .group-banner h2, .section_dark
+.section-title {
+  color: #fff;
+}
+
+.banner-style-red .group-banner h2:before {
+  background: #fff;
+}
+
+@media (min-width: 48em) {
+  .group-banner h2 {
+    font-size: 28px;
+    font-size: 2.8rem;
+    margin-bottom: 35px;
+  }
+  .group-banner h2:before {
+    bottom: -10px;
+    width: 80px;
+  }
+}
+
+.group-banner h3 {
+  margin-top: 0;
+  margin-bottom: 38px;
+  padding-bottom: 0;
+  position: relative;
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.group-banner h3:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -16px;
+  width: 80px;
+  height: 1px;
+  background: #fff;
+}
+@media (min-width: 60em) {
+  .group-banner h3 {
+    margin-top: -6px;
+  }
+}
+
+.group-banner p {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.14286;
+  margin: 0;
+}
+.group-banner p:first-child {
+  margin-top: 2px;
+  margin-bottom: 1px;
+}
+@media (min-width: 48em) {
+  .group-banner p {
+    margin-top: -3px;
+  }
+}
+.group-banner .external-link:hover {
+  color: #E30043;
+}
+
+.banner-style-red .group-banner .external-link:hover {
   color: #fff;
 }
 
@@ -1886,7 +1954,7 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   .group-banner {
     float: right;
     width: 455px;
-    height: 188px;
+    height: auto;
     padding: 10px 15px;
     margin: -144px 0 12px;
   }
@@ -1895,8 +1963,25 @@ article .media-element-container.media-logo img:hover, article .media-element-co
 @media (min-width: 60em) {
   .group-banner {
     width: 690px;
-    height: 188px;
+    height: auto;
     margin: -188px -30px 12px 0;
+    padding: 27px 30px 24px;
+  }
+}
+
+p.italic {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1.33333;
+  margin-bottom: 5px;
+}
+@media (min-width: 48em) {
+  p.italic {
+    font-size: 22px;
+    font-size: 2.2rem;
+    line-height: 1.27273;
   }
 }
 
@@ -2088,7 +2173,7 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   position: absolute;
   text-indent: 4px;
   top: 0;
-  width: 100%;
+  width: auto;
 }
 
 .sbSelector:link, .sbSelector:visited, .sbSelector:hover {
@@ -2260,40 +2345,108 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   line-height: 40px;
   color: #000;
 }
-#block-lang-dropdown-language .sbOptions li a:hover, #block-lang-dropdown-language .sbOptions li a:focus, #block-lang-dropdown-language .sbOptions li a.sbFocus {
+#block-lang-dropdown-language .sbOptions li a:link, #block-lang-dropdown-language .sbOptions li a:visited {
+  color: #000;
+}
+#block-lang-dropdown-language .sbOptions li a:focus, #block-lang-dropdown-language .sbOptions li a:active, #block-lang-dropdown-language .sbOptions li a.sbFocus {
   background: transparent;
   color: #000;
+  text-decoration: underline;
 }
 
 /*Selectbox in language dropdown - desktop*/
 @media (min-width: 60em) {
   #block-lang-dropdown-language {
-    background: red;
     overflow: visible;
     height: auto;
     position: absolute;
     right: 20px;
-    top: 89px;
+    top: 69px;
     height: auto;
+  }
+
+  #block-lang-dropdown-language .sbHolder {
+    width: auto;
+    position: relative;
+    height: auto;
+    margin: 0;
   }
 
   #block-lang-dropdown-language .sbOptions {
     height: auto;
-    overflow: hidden;
+    overflow: visible;
     display: block !important;
     visibility: hidden;
+    position: absolute;
+    left: -42px;
+    border-top: 0 none;
+    border-bottom: 0 none;
+    width: 50px;
+    margin-top: 0;
+    background: transparent;
+    z-index: 1;
+    background: transparent;
+    border: 1px solid transparent;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    top: 17px !important;
+    padding: 18px 2px 15px 0;
+    z-index: 1;
   }
   #block-lang-dropdown-language .sbOptions li {
     display: block;
-    width: 100%;
+    width: auto;
+    min-width: 40px;
+    background: #fff;
+    -moz-box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    height: auto;
+    padding: 4px 15px 6px;
+    clear: both;
   }
   #block-lang-dropdown-language .sbOptions li:first-child {
-    padding-left: 1px;
+    padding: 11px 15px 6px;
+  }
+  #block-lang-dropdown-language .sbOptions li:first-child:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: -20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 13px 13px 13px;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    z-index: -1;
   }
   #block-lang-dropdown-language .sbOptions li a {
     font-size: 14px;
     font-size: 1.4rem;
     line-height: normal;
+  }
+  #block-lang-dropdown-language .sbOptions li a:focus, #block-lang-dropdown-language .sbOptions li a:active, #block-lang-dropdown-language .sbOptions li a.sbFocus {
+    text-decoration: none;
+  }
+  #block-lang-dropdown-language .sbOptions:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: -18px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 12px 12px 12px;
+    border-color: transparent transparent #fff transparent;
   }
 
   #block-lang-dropdown-language:hover .sbOptions {
@@ -2309,7 +2462,6 @@ article .media-element-container.media-logo img:hover, article .media-element-co
     border: 0 none;
     height: auto;
     color: #9FA09F;
-    margin-top: -17px;
     padding-right: 0;
   }
   #block-lang-dropdown-language .sbHolder .sbSelector {
@@ -2326,37 +2478,27 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   #block-lang-dropdown-language .sbSelector {
     color: #9FA09F;
     font-size: 1.2rem;
-    height: 17px;
-    line-height: 17px;
-    overflow: visible;
     padding-right: 0;
     position: relative;
     text-indent: 0;
+    padding: 0;
+    background: none;
+    color: #000;
+    text-decoration: none;
   }
-
-  #block-lang-dropdown-language .sbOptions {
-    background: #fff;
-    border: 1px solid transparent;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    list-style: none;
-    left: -1px;
-    margin: 0;
-    padding: 0 0 1px;
+  #block-lang-dropdown-language .sbSelector:hover:after {
+    display: block;
+    content: "";
+    height: 1px;
+    width: 100%;
+    background: #000;
     position: absolute;
-    top: 25px !important;
-    width: 50px;
-    z-index: 1;
-    overflow-y: auto;
+    bottom: -5px;
   }
 
   #block-lang-dropdown-language .sbOptions li {
     height: 20px;
-    padding: 0 4px 1px;
+    padding: 4px 15px 6px;
   }
 
   #block-lang-dropdown-language .sbOptions li a {
