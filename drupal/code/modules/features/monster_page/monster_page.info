@@ -5,6 +5,7 @@ dependencies[] = addthis
 dependencies[] = addthis_displays
 dependencies[] = attachments
 dependencies[] = blogs
+dependencies[] = cs_adaptive_image
 dependencies[] = ctools
 dependencies[] = ds
 dependencies[] = eck

@@ -1855,7 +1855,7 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   .group-banner h2 {
     font-size: 28px;
     font-size: 2.8rem;
-    margin-bottom: 35px;
+    margin-bottom: 38px;
   }
   .group-banner h2:before {
     bottom: -10px;
@@ -1893,13 +1893,24 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   font-size: 1.4rem;
   line-height: 1.14286;
   margin: 0;
+  position: relative;
 }
 .group-banner p:first-child {
-  margin-top: 2px;
-  margin-bottom: 1px;
+  margin-top: 5px;
 }
 @media (min-width: 48em) {
-  .group-banner p {
+  .group-banner p:first-child {
+    margin-top: 0;
+  }
+}
+@media (min-width: 60em) {
+  .group-banner p:first-child {
+    margin-top: -3px;
+    margin-bottom: 2px;
+  }
+}
+@media (min-width: 48em) {
+  .group-banner h2 + p {
     margin-top: -3px;
   }
 }
@@ -1914,10 +1925,11 @@ article .media-element-container.media-logo img:hover, article .media-element-co
 .group-banner {
   position: relative;
   width: 100%;
-  height: auto;
+  min-height: 170px;
   z-index: 2;
   margin: -80px 0 12px;
   padding: 5px 10px;
+  overflow: hidden;
 }
 .banner-style-red .group-banner {
   background-color: #E30043;
@@ -1953,7 +1965,8 @@ article .media-element-container.media-logo img:hover, article .media-element-co
 @media (min-width: 48em) {
   .group-banner {
     float: right;
-    width: 455px;
+    width: 461px;
+    min-height: 196px;
     height: auto;
     padding: 10px 15px;
     margin: -144px 0 12px;
@@ -1963,7 +1976,7 @@ article .media-element-container.media-logo img:hover, article .media-element-co
 @media (min-width: 60em) {
   .group-banner {
     width: 690px;
-    height: auto;
+    min-height: 175px;
     margin: -188px -30px 12px 0;
     padding: 27px 30px 24px;
   }
@@ -1982,6 +1995,12 @@ p.italic {
     font-size: 22px;
     font-size: 2.2rem;
     line-height: 1.27273;
+    margin-bottom: 5px;
+  }
+}
+@media (min-width: 60em) {
+  p.italic {
+    margin-bottom: -3px;
   }
 }
 

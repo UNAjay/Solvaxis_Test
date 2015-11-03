@@ -138,7 +138,7 @@
 .group-banner h2 {
   @include at-breakpoint($bp-med-2) {
     @include font-size(28);
-    margin-bottom: 35px;
+    margin-bottom: 38px;
     &:before {
       bottom: -10px;
       width: 80px;
@@ -173,10 +173,19 @@
   p {
     @include font-size(14,16);
     margin: 0;
+    position: relative;
     &:first-child {
-      margin-top: 2px;
-      margin-bottom: 1px;
+      margin-top: 5px;
+      @include at-breakpoint($bp-med-2) {
+        margin-top: 0;
+      }
+      @include at-breakpoint($bp-xl) {
+        margin-top: -3px;
+        margin-bottom: 2px;
+      }
     }
+  }
+  h2 + p {
     @include at-breakpoint($bp-med-2) {
       margin-top: -3px;
     }
@@ -206,10 +215,11 @@
 .group-banner {
   position: relative;
   width: 100%;
-  height: auto;
+  min-height: 170px;
   z-index: 2;
   margin: -80px 0 12px;
   padding: 5px 10px;
+  overflow: hidden;
   
   .banner-style-red & {
     background-color: $crimson;
@@ -252,7 +262,8 @@
 .group-banner {
   @include at-breakpoint($bp-med-2) {
     float: right;
-    width: 455px;
+    width: 461px;
+    min-height: 196px;
     height: auto;
     padding: 10px 15px;
     margin: -144px 0 12px;
@@ -263,8 +274,8 @@
 .group-banner {
   @include at-breakpoint($bp-xl) {
     width: 690px;
-    //height: 188px;
-    height: auto;
+    //height: 190px;
+    min-height: 175px;
     margin: -188px -30px 12px 0;
     padding: 27px 30px 24px;
   }
@@ -280,6 +291,10 @@ p {
     margin-bottom: 5px;
     @include at-breakpoint($bp-med-2) {
       @include font-size(22,28);
+      margin-bottom: 5px;
+    }
+    @include at-breakpoint($bp-xl) {
+      margin-bottom: -3px;
     }
   }
 }

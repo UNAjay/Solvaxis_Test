@@ -46,7 +46,7 @@ function jeeveserp_layout_image_default_styles() {
         'name' => 'imagefield_focus_scale_and_crop',
         'data' => array(
           'width' => 690,
-          'height' => 188,
+          'height' => 190,
           'strength' => 'high',
         ),
         'weight' => 1,
