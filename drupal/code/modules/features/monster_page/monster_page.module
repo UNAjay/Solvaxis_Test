@@ -31,7 +31,9 @@ function monster_page_preprocess_node(&$variables) {
         $variables['classes_array'][] = drupal_html_class('with-sidebar');
         if ($sidebar_position && $sidebar_position[0]['value'] == 'right') {
           $variables['elements']['#groups']['group_sidebar']->weight = 1;
+          $variables['content']['group_sidebar']['#weight'] = 1;
           $variables['elements']['body']['#weight'] = 2;
+          $variables['content']['body']['#weight'] = 2;
           $variables['classes_array'][] = drupal_html_class('sidebar-position-right');
         }
       }
