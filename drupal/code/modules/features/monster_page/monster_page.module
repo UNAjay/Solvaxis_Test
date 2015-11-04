@@ -313,6 +313,12 @@ function monster_page_insert_block_tips($filter, $format, $long = FALSE) {
 }
 
 
+function monster_page_form_node_form_alter(&$form, &$form_state, $form_id) {
+  // if (isset($form['ds_extras'])) {
+  //   $form['ds_extras']['#weight'] = -100;
+  // }
+}
+
 
 
 

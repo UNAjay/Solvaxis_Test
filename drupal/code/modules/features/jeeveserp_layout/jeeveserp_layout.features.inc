@@ -42,14 +42,17 @@ function jeeveserp_layout_image_default_styles() {
   $styles['banner_image'] = array(
     'label' => 'Banner image',
     'effects' => array(
-      6 => array(
-        'name' => 'imagefield_focus_scale_and_crop',
+      4 => array(
+        'name' => 'focal_point_scale_and_crop',
         'data' => array(
           'width' => 690,
           'height' => 190,
-          'strength' => 'high',
+          'focal_point_advanced' => array(
+            'shift_x' => '',
+            'shift_y' => '',
+          ),
         ),
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
   );

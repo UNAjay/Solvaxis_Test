@@ -104,5 +104,15 @@ function jeeveserp_layout_update_7008() {
   module_enable(array('media_internet', 'media_youtube', 'media_vimeo', 'fitvids'));
 }
 
+/**
+ * Enable Focal Point. Update Monster Page weight.
+ */
+function jeeveserp_layout_update_7009() {
+  module_enable(array('focal_point'));
+  db_update('system')
+    ->fields(array('weight' => 3))
+    ->condition('name', 'monster_page', '=')
+    ->execute();
+}
 
 

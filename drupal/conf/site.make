@@ -116,6 +116,10 @@ projects[media_vimeo][revision] = "0841d8eb8982d6fe007316fbc43bdfb2402c05ab"
 
 projects[fitvids][version] = "1.17"
 
+projects[focal_point][version] = 1.x-dev
+projects[focal_point][subdir] = contrib
+projects[focal_point][revision] = 0fe8db00de4c3ada962b8816cc6ac906a3f8f417
+
 projects[mediafront][version] = "2.2"
 projects[html5_media][version] = "1.1"
 
