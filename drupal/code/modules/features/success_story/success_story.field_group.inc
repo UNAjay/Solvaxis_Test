@@ -21,7 +21,7 @@ function success_story_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Categories',
-    'weight' => '7',
+    'weight' => '6',
     'children' => array(
       0 => 'field_industry',
       1 => 'field_region',
@@ -55,6 +55,7 @@ function success_story_field_group_info() {
     'children' => array(
       0 => 'body',
       1 => 'field_customer_website',
+      2 => 'field_tags',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

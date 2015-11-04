@@ -623,63 +623,6 @@ function jeeveserp_permissions_user_default_permissions() {
     'module' => 'override_node_options',
   );
 
-  // Exported permission: 'override full_page authored by option'.
-  $permissions['override full_page authored by option'] = array(
-    'name' => 'override full_page authored by option',
-    'roles' => array(
-      'Product site admin' => 'Product site admin',
-      'Regional editor' => 'Regional editor',
-    ),
-    'module' => 'override_node_options',
-  );
-
-  // Exported permission: 'override full_page authored on option'.
-  $permissions['override full_page authored on option'] = array(
-    'name' => 'override full_page authored on option',
-    'roles' => array(
-      'Product site admin' => 'Product site admin',
-      'Regional editor' => 'Regional editor',
-    ),
-    'module' => 'override_node_options',
-  );
-
-  // Exported permission: 'override full_page published option'.
-  $permissions['override full_page published option'] = array(
-    'name' => 'override full_page published option',
-    'roles' => array(),
-    'module' => 'override_node_options',
-  );
-
-  // Exported permission: 'override landing_page authored by option'.
-  $permissions['override landing_page authored by option'] = array(
-    'name' => 'override landing_page authored by option',
-    'roles' => array(
-      'Product site admin' => 'Product site admin',
-      'Regional editor' => 'Regional editor',
-    ),
-    'module' => 'override_node_options',
-  );
-
-  // Exported permission: 'override landing_page authored on option'.
-  $permissions['override landing_page authored on option'] = array(
-    'name' => 'override landing_page authored on option',
-    'roles' => array(
-      'Product site admin' => 'Product site admin',
-      'Regional editor' => 'Regional editor',
-    ),
-    'module' => 'override_node_options',
-  );
-
-  // Exported permission: 'override landing_page published option'.
-  $permissions['override landing_page published option'] = array(
-    'name' => 'override landing_page published option',
-    'roles' => array(
-      'Product site admin' => 'Product site admin',
-      'Regional editor' => 'Regional editor',
-    ),
-    'module' => 'override_node_options',
-  );
-
   // Exported permission: 'override news authored by option'.
   $permissions['override news authored by option'] = array(
     'name' => 'override news authored by option',
@@ -781,27 +724,6 @@ function jeeveserp_permissions_user_default_permissions() {
       'Product site admin' => 'Product site admin',
       'Regional editor' => 'Regional editor',
     ),
-    'module' => 'override_node_options',
-  );
-
-  // Exported permission: 'override page_section authored by option'.
-  $permissions['override page_section authored by option'] = array(
-    'name' => 'override page_section authored by option',
-    'roles' => array(),
-    'module' => 'override_node_options',
-  );
-
-  // Exported permission: 'override page_section authored on option'.
-  $permissions['override page_section authored on option'] = array(
-    'name' => 'override page_section authored on option',
-    'roles' => array(),
-    'module' => 'override_node_options',
-  );
-
-  // Exported permission: 'override page_section published option'.
-  $permissions['override page_section published option'] = array(
-    'name' => 'override page_section published option',
-    'roles' => array(),
     'module' => 'override_node_options',
   );
 

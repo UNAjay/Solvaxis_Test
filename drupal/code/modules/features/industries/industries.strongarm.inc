@@ -149,6 +149,9 @@ function industries_strongarm() {
       'section_light' => array(
         'custom_settings' => FALSE,
       ),
+      'ds_job_listing' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

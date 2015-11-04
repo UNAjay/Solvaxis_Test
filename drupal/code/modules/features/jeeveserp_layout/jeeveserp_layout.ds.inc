@@ -1230,7 +1230,7 @@ function jeeveserp_layout_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'product_news';
   $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'ds_2col';
+  $ds_layout->layout = 'ds_2col_stacked';
   $ds_layout->settings = array(
     'regions' => array(
       'left' => array(
@@ -1241,17 +1241,23 @@ function jeeveserp_layout_ds_layout_settings_info() {
       'right' => array(
         3 => 'field_sidebar_text',
       ),
+      'footer' => array(
+        4 => 'field_section',
+      ),
     ),
     'fields' => array(
       'field_news_image' => 'left',
       'body' => 'left',
       'field_add_this' => 'left',
       'field_sidebar_text' => 'right',
+      'field_section' => 'footer',
     ),
     'classes' => array(),
     'wrappers' => array(
+      'header' => 'div',
       'left' => 'div',
       'right' => 'div',
+      'footer' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',

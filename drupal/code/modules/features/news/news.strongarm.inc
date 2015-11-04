@@ -100,6 +100,9 @@ function news_strongarm() {
       'ds_with_sidebar' => array(
         'custom_settings' => FALSE,
       ),
+      'ds_job_listing' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

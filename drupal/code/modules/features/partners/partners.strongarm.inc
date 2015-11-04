@@ -103,6 +103,9 @@ function partners_strongarm() {
       'section_light' => array(
         'custom_settings' => FALSE,
       ),
+      'ds_job_listing' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -113,10 +116,10 @@ function partners_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
         'metatags' => array(
-          'weight' => '7',
+          'weight' => '8',
         ),
         'xmlsitemap' => array(
           'weight' => '10',

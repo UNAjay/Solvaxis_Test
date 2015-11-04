@@ -97,6 +97,9 @@ function events_strongarm() {
       'section_light' => array(
         'custom_settings' => FALSE,
       ),
+      'ds_job_listing' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -104,16 +107,16 @@ function events_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '7',
+          'weight' => '8',
         ),
         'metatags' => array(
-          'weight' => '9',
+          'weight' => '11',
         ),
         'xmlsitemap' => array(
           'weight' => '11',
         ),
         'language' => array(
-          'weight' => '6',
+          'weight' => '1',
         ),
       ),
       'display' => array(),

@@ -246,6 +246,31 @@ function jobs_views_default_views() {
   $handler->display->display_options['bundles'] = array(
     0 => 'job_posting',
   );
+  $translatables['job_postings'] = array(
+    t('Master'),
+    t('News'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('Translations'),
+    t('Office'),
+    t('RSS Feed'),
+    t('Job listing'),
+    t('Apply now'),
+    t('Apply now to [title_field]'),
+    t('All'),
+    t('Sites'),
+  );
   $export['job_postings'] = $view;
 
   return $export;

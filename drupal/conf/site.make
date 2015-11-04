@@ -101,10 +101,9 @@ projects[file_entity][version] = 2.0-beta2
 ; projects[file_entity][patch][2192391] = https://www.drupal.org/files/issues/default_file_entities-2192391-51.patch
 projects[file_entity][patch][2312603] = https://www.drupal.org/files/issues/fix_entity_api_create_access-2312603-8.patch
 
-projects[inline_entity_form][version] = "1.x-dev"
-projects[inline_entity_form][revision] = "8d8ee06592d991f717d202419f7e3323c5991397"
+projects[inline_entity_form][version] = "1.6"
 ; projects[inline_entity_form][patch][] = https://www.drupal.org/files/issues/entity-translations-1545896-55.patch
-projects[inline_entity_form][patch][] = https://www.drupal.org/files/issues/d7_entity_translation_0.patch
+projects[inline_entity_form][patch][] = https://www.drupal.org/files/issues/d7_ief_et_autogenerate_title.patch
 
 projects[media][version] = 2.0-beta1
 projects[media][patch][] = https://www.drupal.org/files/issues/media_remove_file_display_alter-2104193-100.patchf.diff

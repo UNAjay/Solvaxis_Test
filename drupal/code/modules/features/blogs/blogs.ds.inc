@@ -222,36 +222,38 @@ function blogs_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'blog_post';
   $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'ds_2col';
+  $ds_layout->layout = 'ds_2col_stacked';
   $ds_layout->settings = array(
     'regions' => array(
       'left' => array(
         0 => 'field_author',
         1 => 'field_image',
         2 => 'body',
-        3 => 'field_tags',
-        4 => 'field_add_this',
-        6 => 'flippy_pager',
+        3 => 'field_add_this',
       ),
       'right' => array(
-        5 => 'field_sidebar_text',
-        7 => 'tag_cloud',
+        4 => 'field_sidebar_text',
+        5 => 'tag_cloud',
+      ),
+      'footer' => array(
+        6 => 'field_section',
       ),
     ),
     'fields' => array(
       'field_author' => 'left',
       'field_image' => 'left',
       'body' => 'left',
-      'field_tags' => 'left',
       'field_add_this' => 'left',
       'field_sidebar_text' => 'right',
-      'flippy_pager' => 'left',
       'tag_cloud' => 'right',
+      'field_section' => 'footer',
     ),
     'classes' => array(),
     'wrappers' => array(
+      'header' => 'div',
       'left' => 'div',
       'right' => 'div',
+      'footer' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',

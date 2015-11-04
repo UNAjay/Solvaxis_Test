@@ -41,7 +41,7 @@ function partners_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_partner_logo' => array(
+    'field_section' => array(
       'formatter_settings' => array(
         'ft' => array(),
       ),
@@ -118,7 +118,7 @@ function partners_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'partner';
   $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'ds_2col';
+  $ds_layout->layout = 'ds_2col_stacked';
   $ds_layout->settings = array(
     'regions' => array(
       'left' => array(
@@ -130,6 +130,9 @@ function partners_ds_layout_settings_info() {
       'right' => array(
         3 => 'field_sidebar_text',
       ),
+      'footer' => array(
+        5 => 'field_section',
+      ),
     ),
     'fields' => array(
       'field_partner_logo' => 'left',
@@ -137,11 +140,14 @@ function partners_ds_layout_settings_info() {
       'related_success_stories' => 'left',
       'field_sidebar_text' => 'right',
       'field_add_this' => 'left',
+      'field_section' => 'footer',
     ),
     'classes' => array(),
     'wrappers' => array(
+      'header' => 'div',
       'left' => 'div',
       'right' => 'div',
+      'footer' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',

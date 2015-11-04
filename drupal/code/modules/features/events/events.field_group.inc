@@ -21,7 +21,7 @@ function events_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Categories',
-    'weight' => '5',
+    'weight' => '7',
     'children' => array(
       0 => 'field_industry',
       1 => 'field_region',
@@ -51,7 +51,7 @@ function events_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Content',
-    'weight' => '2',
+    'weight' => '4',
     'children' => array(
       0 => 'body',
       1 => 'field_event_date',
@@ -59,6 +59,7 @@ function events_field_group_info() {
       3 => 'field_event_location',
       4 => 'field_event_type',
       5 => 'field_recording_url',
+      6 => 'field_tags',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -83,8 +84,10 @@ function events_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Teaser image',
-    'weight' => '1',
-    'children' => array(),
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_news_image',
+    ),
     'format_type' => 'tab',
     'format_settings' => array(
       'formatter' => 'closed',
@@ -108,7 +111,7 @@ function events_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'References',
-    'weight' => '4',
+    'weight' => '6',
     'children' => array(
       0 => 'field_files',
     ),
@@ -123,6 +126,34 @@ function events_field_group_info() {
     ),
   );
   $export['group_references|node|event|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_sections|node|event|form';
+  $field_group->group_name = 'group_sections';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'event';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Sections',
+    'weight' => '5',
+    'children' => array(
+      0 => 'field_section',
+      1 => 'field_promo',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-sections field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_sections|node|event|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
