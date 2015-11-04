@@ -345,6 +345,11 @@ function promo_field_default_field_instances() {
       ),
       'enable_tokens' => 1,
       'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 1,
+        'profile' => 'field',
+      ),
       'mediafront' => array(
         'custom' => '',
         'field_type' => 0,

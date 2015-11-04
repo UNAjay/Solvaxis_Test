@@ -206,10 +206,10 @@ function floatbar_floatbar_items($items) {
   //   ),
   //   'weight' => 13
   // );
-  
+
   $items[] = array(
     'text' => 'More',
-    // 'path' =>  'http://www.addthis.com/shareArticle?mini=true&url='.urlencode($url).'&title='.$title . '&source=' . $source,
+    'path' =>  $path,
     'options' => array(
       'html' => TRUE,
       'attributes' => array(
@@ -225,7 +225,7 @@ function floatbar_floatbar_items($items) {
     ),
     'weight' => 14
   );
-  
+
 
   return $items;
 }
