@@ -16,6 +16,9 @@
   </<?php print $header_wrapper ?>>
 
   <<?php print $left_wrapper ?> class="group-left<?php print $left_classes; ?>">
+    <?php if (!empty($title)): ?>
+      <h1 class="section-title"><?php print $title; ?></h1>
+    <?php endif; ?>
     <?php print $left; ?>
   </<?php print $left_wrapper ?>>
 
