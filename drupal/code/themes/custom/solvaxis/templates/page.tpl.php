@@ -73,7 +73,7 @@
  */
 ?>
 
-<div id="page">
+<div id="page" class="<?php print implode(' ', $classes_array); ?>">
   <header class="header-secondary clearfix" role="banner">
     <div class="region-holder">
       <?php if ($logo): ?>
@@ -97,7 +97,7 @@
 
     <?php print $slideshow; ?>
 
-    
+
 
   </section>
 
@@ -107,25 +107,25 @@
             <div id="breadcrumb"><?php print $breadcrumb; ?></div>
           <?php endif; ?>
         </div>
-        
+
         <div class="region-holder">
           <?php if (!empty($page['menu_tabs'])): ?>
             <?php print render($page['menu_tabs']); ?>
           <?php endif; ?>
-        
+
           <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
           <?php print render($page['help']); ?>
           <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
-        
+
           <?php if ($messages): ?><div class="messages-wrapper"><?php print $messages; ?></div><?php endif; ?>
         </div>
-        
+
         <div class="region-holder-content">
           <?php if (!empty($page['content'])): ?>
             <?php print render($page['content']); ?>
           <?php endif; ?>
         </div>
-        
+
     </section>
 
   <footer class="footer clearfix" role="contentinfo">

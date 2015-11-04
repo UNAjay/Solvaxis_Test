@@ -1,7 +1,7 @@
 //-----------------------------------------
 // layouts
 //-----------------------------------------
-.not-front {
+#page:not(.with-promos) {
   #leader {
     display: none;
   }
@@ -20,7 +20,7 @@
   margin-right: 0;
 }
 
-.not-front #content {
+#page:not(.with-promos) #content {
    margin-top: 100px;
    @include at-breakpoint($bp-med-2) {
      margin-top: 195px;

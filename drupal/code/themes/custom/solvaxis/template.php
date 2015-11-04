@@ -22,6 +22,10 @@ function solvaxis_preprocess_page(&$vars) {
   }
   $view = views_embed_view('promo_slideshow', 'block');
   $vars['slideshow'] = $view;
+
+  if ($vars['node']->type == 'page' && !empty($vars['node']->field_promo)) {
+    $vars['classes_array'][] = 'with-promos';
+  }
 }
 
 /**
@@ -55,7 +59,7 @@ function solvaxis_css_alter(&$css) {
 /**
  * Implements hook_preprocess_search_result()
  */
-function solvaxis_preprocess_search_result(&$variables) {    
+function solvaxis_preprocess_search_result(&$variables) {
     $node = $variables['result']['node'];
     if (is_object($node) && $node->nid) { // if the result is a node we can load the teaser
         $variables['teaser'] = node_view($node, 'teaser');
