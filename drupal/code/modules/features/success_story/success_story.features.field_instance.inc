@@ -67,7 +67,7 @@ function success_story_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 56,
+        'weight' => 50,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
