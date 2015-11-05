@@ -1237,12 +1237,13 @@ function jeeveserp_layout_ds_layout_settings_info() {
         0 => 'field_news_image',
         1 => 'body',
         2 => 'field_add_this',
+        4 => 'flippy_pager',
       ),
       'right' => array(
         3 => 'field_sidebar_text',
       ),
       'footer' => array(
-        4 => 'field_section',
+        5 => 'field_section',
       ),
     ),
     'fields' => array(
@@ -1250,6 +1251,7 @@ function jeeveserp_layout_ds_layout_settings_info() {
       'body' => 'left',
       'field_add_this' => 'left',
       'field_sidebar_text' => 'right',
+      'flippy_pager' => 'left',
       'field_section' => 'footer',
     ),
     'classes' => array(),

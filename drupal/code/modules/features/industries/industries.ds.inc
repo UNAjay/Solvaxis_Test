@@ -323,12 +323,13 @@ function industries_ds_layout_settings_info() {
         3 => 'body',
         4 => 'field_partners',
         5 => 'field_add_this',
+        6 => 'flippy_pager',
       ),
       'right' => array(
-        6 => 'field_sidebar_text',
+        7 => 'field_sidebar_text',
       ),
       'footer' => array(
-        7 => 'field_section',
+        8 => 'field_section',
       ),
     ),
     'fields' => array(
@@ -338,6 +339,7 @@ function industries_ds_layout_settings_info() {
       'body' => 'left',
       'field_partners' => 'left',
       'field_add_this' => 'left',
+      'flippy_pager' => 'left',
       'field_sidebar_text' => 'right',
       'field_section' => 'footer',
     ),

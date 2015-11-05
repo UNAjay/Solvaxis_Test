@@ -10,76 +10,6 @@
 function attachments_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-attachments-field_acton_url'
-  $field_instances['node-attachments-field_acton_url'] = array(
-    'bundle' => 'attachments',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'site_iframe_formatter',
-        'settings' => array(
-          'iframe_height' => 580,
-          'iframe_width' => 455,
-        ),
-        'type' => 'site_iframe_formatter_link',
-        'weight' => 8,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'site_iframe_formatter',
-        'settings' => array(
-          'iframe_height' => 580,
-          'iframe_width' => 455,
-        ),
-        'type' => 'site_iframe_formatter_link',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_acton_url',
-    'label' => 'ActOn URL',
-    'required' => 1,
-    'settings' => array(
-      'attributes' => array(
-        'class' => '',
-        'configurable_title' => 0,
-        'rel' => '',
-        'target' => 'default',
-        'title' => '',
-      ),
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 0,
-      'entity_translation_sync' => FALSE,
-      'mediafront' => array(
-        'custom' => '',
-        'field_type' => 0,
-        'media_type' => 'media',
-        'preview' => 0,
-        'thumbnail' => 0,
-      ),
-      'rel_remove' => 'default',
-      'title' => 'optional',
-      'title_maxlength' => 128,
-      'title_value' => '',
-      'url' => 0,
-      'user_register_form' => FALSE,
-      'validate_url' => 1,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'link',
-      'settings' => array(),
-      'type' => 'link_field',
-      'weight' => 3,
-    ),
-  );
-
   // Exported field_instance: 'node-attachments-field_attachment_type'
   $field_instances['node-attachments-field_attachment_type'] = array(
     'bundle' => 'attachments',
@@ -925,7 +855,6 @@ function attachments_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('ActOn URL');
   t('Description');
   t('Document type');
   t('File');

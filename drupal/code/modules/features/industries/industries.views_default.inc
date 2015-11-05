@@ -83,7 +83,7 @@ function industries_views_default_views() {
   $handler->display->display_options['fields']['field_customer_website']['empty'] = '[field_image]';
   $handler->display->display_options['fields']['field_customer_website']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['field_customer_website']['click_sort_column'] = 'url';
-  /* Sort criterion: Content: Success story description (field_success_story:format) */
+  /* Sort criterion: Broken/missing handler */
   $handler->display->display_options['sorts']['field_success_story_format']['id'] = 'field_success_story_format';
   $handler->display->display_options['sorts']['field_success_story_format']['table'] = 'field_data_field_success_story';
   $handler->display->display_options['sorts']['field_success_story_format']['field'] = 'field_success_story_format';
@@ -471,7 +471,7 @@ function industries_views_default_views() {
   $handler->display->display_options['fields']['title']['element_class'] = 'title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Success story title */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_success_story_title']['id'] = 'field_success_story_title';
   $handler->display->display_options['fields']['field_success_story_title']['table'] = 'field_data_field_success_story_title';
   $handler->display->display_options['fields']['field_success_story_title']['field'] = 'field_success_story_title';
@@ -480,13 +480,7 @@ function industries_views_default_views() {
   $handler->display->display_options['fields']['field_success_story_title']['element_type'] = 'p';
   $handler->display->display_options['fields']['field_success_story_title']['element_class'] = 'title success-story-title';
   $handler->display->display_options['fields']['field_success_story_title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_success_story_title']['type'] = 'title_linked';
-  $handler->display->display_options['fields']['field_success_story_title']['settings'] = array(
-    'title_style' => '_none',
-    'title_link' => 'content',
-    'title_class' => '',
-  );
-  /* Field: Content: Success story description */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_success_story']['id'] = 'field_success_story';
   $handler->display->display_options['fields']['field_success_story']['table'] = 'field_data_field_success_story';
   $handler->display->display_options['fields']['field_success_story']['field'] = 'field_success_story';
@@ -495,7 +489,6 @@ function industries_views_default_views() {
   $handler->display->display_options['fields']['field_success_story']['element_type'] = 'p';
   $handler->display->display_options['fields']['field_success_story']['element_class'] = 'story';
   $handler->display->display_options['fields']['field_success_story']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_success_story']['type'] = 'text_plain';
   /* Field: Content: Industry */
   $handler->display->display_options['fields']['field_industry']['id'] = 'field_industry';
   $handler->display->display_options['fields']['field_industry']['table'] = 'field_data_field_industry';
@@ -599,7 +592,7 @@ function industries_views_default_views() {
   $handler->display->display_options['filters']['term_node_tid_depth']['vocabulary'] = 'industries';
   $handler->display->display_options['filters']['term_node_tid_depth']['hierarchy'] = 1;
   $handler->display->display_options['filters']['term_node_tid_depth']['depth'] = '2';
-  /* Filter criterion: Content: Success story title (field_success_story_title) */
+  /* Filter criterion: Broken/missing handler */
   $handler->display->display_options['filters']['field_success_story_title_value']['id'] = 'field_success_story_title_value';
   $handler->display->display_options['filters']['field_success_story_title_value']['table'] = 'field_data_field_success_story_title';
   $handler->display->display_options['filters']['field_success_story_title_value']['field'] = 'field_success_story_title_value';
@@ -1009,7 +1002,7 @@ function industries_views_default_views() {
     'image_style' => 'thumbnail',
     'image_link' => '',
   );
-  /* Field: Content: Success story title */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_success_story_title']['id'] = 'field_success_story_title';
   $handler->display->display_options['fields']['field_success_story_title']['table'] = 'field_data_field_success_story_title';
   $handler->display->display_options['fields']['field_success_story_title']['field'] = 'field_success_story_title';
@@ -1018,8 +1011,7 @@ function industries_views_default_views() {
   $handler->display->display_options['fields']['field_success_story_title']['alter']['path'] = 'node/[nid]';
   $handler->display->display_options['fields']['field_success_story_title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_success_story_title']['element_wrapper_type'] = 'h3';
-  $handler->display->display_options['fields']['field_success_story_title']['type'] = 'text_plain';
-  /* Field: Content: Success story description */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_success_story']['id'] = 'field_success_story';
   $handler->display->display_options['fields']['field_success_story']['table'] = 'field_data_field_success_story';
   $handler->display->display_options['fields']['field_success_story']['field'] = 'field_success_story';
@@ -1030,7 +1022,6 @@ function industries_views_default_views() {
   $handler->display->display_options['fields']['field_success_story']['alter']['more_link_path'] = 'node/[nid]';
   $handler->display->display_options['fields']['field_success_story']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_success_story']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_success_story']['type'] = 'text_plain';
   /* Sort criterion: Global: Random */
   $handler->display->display_options['sorts']['random']['id'] = 'random';
   $handler->display->display_options['sorts']['random']['table'] = 'views';
@@ -1084,7 +1075,7 @@ function industries_views_default_views() {
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
     'en' => 'en',
   );
-  /* Filter criterion: Content: Success story title (field_success_story_title) */
+  /* Filter criterion: Broken/missing handler */
   $handler->display->display_options['filters']['field_success_story_title_value']['id'] = 'field_success_story_title_value';
   $handler->display->display_options['filters']['field_success_story_title_value']['table'] = 'field_data_field_success_story_title';
   $handler->display->display_options['filters']['field_success_story_title_value']['field'] = 'field_success_story_title_value';

@@ -48,11 +48,6 @@ function news_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_section' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
   );
   $export['node|news|default'] = $ds_fieldsetting;
 
@@ -166,6 +161,55 @@ function news_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|diverse|default';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'diverse';
+  $ds_layout->view_mode = 'default';
+  $ds_layout->layout = 'ds_2col_stacked';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'left' => array(
+        0 => 'field_news_image',
+        1 => 'body',
+        2 => 'field_add_this',
+        3 => 'field_market',
+        4 => 'field_product',
+        6 => 'flippy_pager',
+      ),
+      'right' => array(
+        5 => 'field_sidebar_text',
+      ),
+      'footer' => array(
+        7 => 'field_section',
+      ),
+    ),
+    'fields' => array(
+      'field_news_image' => 'left',
+      'body' => 'left',
+      'field_add_this' => 'left',
+      'field_market' => 'left',
+      'field_product' => 'left',
+      'field_sidebar_text' => 'right',
+      'flippy_pager' => 'left',
+      'field_section' => 'footer',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'header' => 'div',
+      'left' => 'div',
+      'right' => 'div',
+      'footer' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|diverse|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'node|news|default';
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'news';
@@ -177,13 +221,14 @@ function news_ds_layout_settings_info() {
         0 => 'field_news_image',
         1 => 'body',
         2 => 'field_add_this',
+        5 => 'flippy_pager',
       ),
       'right' => array(
         3 => 'field_sidebar_text',
         4 => 'more_news',
       ),
       'footer' => array(
-        5 => 'field_section',
+        6 => 'field_section',
       ),
     ),
     'fields' => array(
@@ -192,6 +237,7 @@ function news_ds_layout_settings_info() {
       'field_add_this' => 'left',
       'field_sidebar_text' => 'right',
       'more_news' => 'right',
+      'flippy_pager' => 'left',
       'field_section' => 'footer',
     ),
     'classes' => array(),

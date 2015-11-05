@@ -13,6 +13,33 @@ function jobs_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'entity_translation_hide_translation_links_job_posting';
+  $strongarm->value = 0;
+  $export['entity_translation_hide_translation_links_job_posting'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'entity_translation_node_metadata_job_posting';
+  $strongarm->value = '0';
+  $export['entity_translation_node_metadata_job_posting'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'entity_translation_settings_node__job_posting';
+  $strongarm->value = array(
+    'default_language' => 'und',
+    'hide_language_selector' => 0,
+    'exclude_language_none' => 0,
+    'lock_language' => 0,
+    'shared_fields_original_only' => 0,
+  );
+  $export['entity_translation_settings_node__job_posting'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__job_posting';
   $strongarm->value = array(
     'view_modes' => array(
@@ -88,6 +115,18 @@ function jobs_strongarm() {
       'ds_job_listing' => array(
         'custom_settings' => FALSE,
       ),
+      'view_mode_selector' => array(
+        'custom_settings' => FALSE,
+      ),
+      'section_light' => array(
+        'custom_settings' => FALSE,
+      ),
+      'ds_press_releases' => array(
+        'custom_settings' => FALSE,
+      ),
+      'section_dark' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -123,10 +162,128 @@ function jobs_strongarm() {
             'visible' => FALSE,
           ),
         ),
+        'flippy_pager' => array(
+          'default' => array(
+            'weight' => '5',
+            'visible' => TRUE,
+          ),
+        ),
       ),
     ),
   );
   $export['field_bundle_settings_node__job_posting'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_custom_sorting_job_posting';
+  $strongarm->value = 0;
+  $export['flippy_custom_sorting_job_posting'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_ellipse_job_posting';
+  $strongarm->value = '...';
+  $export['flippy_ellipse_job_posting'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_firstlast_job_posting';
+  $strongarm->value = 0;
+  $export['flippy_firstlast_job_posting'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_first_label_job_posting';
+  $strongarm->value = '« First';
+  $export['flippy_first_label_job_posting'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_head_job_posting';
+  $strongarm->value = 1;
+  $export['flippy_head_job_posting'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_job_posting';
+  $strongarm->value = 1;
+  $export['flippy_job_posting'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_last_label_job_posting';
+  $strongarm->value = 'Last »';
+  $export['flippy_last_label_job_posting'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_loop_job_posting';
+  $strongarm->value = 0;
+  $export['flippy_loop_job_posting'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_next_label_job_posting';
+  $strongarm->value = 'Next';
+  $export['flippy_next_label_job_posting'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_order_job_posting';
+  $strongarm->value = 'ASC';
+  $export['flippy_order_job_posting'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_prev_label_job_posting';
+  $strongarm->value = 'Previous';
+  $export['flippy_prev_label_job_posting'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_random_job_posting';
+  $strongarm->value = 0;
+  $export['flippy_random_job_posting'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_random_label_job_posting';
+  $strongarm->value = 'Random';
+  $export['flippy_random_label_job_posting'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_show_empty_job_posting';
+  $strongarm->value = 0;
+  $export['flippy_show_empty_job_posting'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_sort_job_posting';
+  $strongarm->value = 'created';
+  $export['flippy_sort_job_posting'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_truncate_job_posting';
+  $strongarm->value = '';
+  $export['flippy_truncate_job_posting'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -171,6 +328,20 @@ function jobs_strongarm() {
   $strongarm->name = 'node_submitted_job_posting';
   $strongarm->value = 0;
   $export['node_submitted_job_posting'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_job_posting_pattern';
+  $strongarm->value = 'jobs/[node:title]';
+  $export['pathauto_node_job_posting_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_job_posting_und_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_job_posting_und_pattern'] = $strongarm;
 
   return $export;
 }

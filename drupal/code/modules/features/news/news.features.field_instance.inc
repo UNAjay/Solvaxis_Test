@@ -170,7 +170,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 45,
+        'weight' => 46,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -296,8 +296,9 @@ function news_field_default_field_instances() {
       ),
       'default' => array(
         'label' => 'above',
+        'module' => 'partners',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'partners_badge_display_formatter',
         'weight' => 3,
       ),
       'ds_contact_us' => array(
@@ -515,8 +516,9 @@ function news_field_default_field_instances() {
       ),
       'default' => array(
         'label' => 'above',
+        'module' => 'partners',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'partners_badge_display_formatter',
         'weight' => 4,
       ),
       'ds_contact_us' => array(
@@ -639,7 +641,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 44,
+        'weight' => 45,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -774,7 +776,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 43,
+        'weight' => 44,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -902,7 +904,7 @@ function news_field_default_field_instances() {
           'view_mode' => 'view_mode_selector',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 6,
+        'weight' => 42,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -1113,7 +1115,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 46,
+        'weight' => 47,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -1220,7 +1222,7 @@ function news_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 42,
+        'weight' => 43,
       ),
       'news' => array(
         'label' => 'hidden',

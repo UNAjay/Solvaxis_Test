@@ -91,10 +91,11 @@ function jobs_ds_layout_settings_info() {
         3 => 'body',
         4 => 'job_postings_entity_view_1',
         5 => 'field_job_apply_info',
+        6 => 'flippy_pager',
       ),
       'aside_primary' => array(
-        6 => 'field_job_url',
-        7 => 'resources_right_menu',
+        7 => 'field_job_url',
+        8 => 'resources_right_menu',
       ),
     ),
     'fields' => array(
@@ -104,6 +105,7 @@ function jobs_ds_layout_settings_info() {
       'body' => 'main_primary',
       'job_postings_entity_view_1' => 'main_primary',
       'field_job_apply_info' => 'main_primary',
+      'flippy_pager' => 'main_primary',
       'field_job_url' => 'aside_primary',
       'resources_right_menu' => 'aside_primary',
     ),

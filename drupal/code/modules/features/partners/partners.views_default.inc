@@ -235,7 +235,7 @@ function partners_views_default_views() {
     'image_style' => '',
     'image_link' => '',
   );
-  /* Field: Content: Success story title */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_success_story_title']['id'] = 'field_success_story_title';
   $handler->display->display_options['fields']['field_success_story_title']['table'] = 'field_data_field_success_story_title';
   $handler->display->display_options['fields']['field_success_story_title']['field'] = 'field_success_story_title';
@@ -243,13 +243,7 @@ function partners_views_default_views() {
   $handler->display->display_options['fields']['field_success_story_title']['element_type'] = 'div';
   $handler->display->display_options['fields']['field_success_story_title']['element_class'] = 'title';
   $handler->display->display_options['fields']['field_success_story_title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_success_story_title']['type'] = 'title_linked';
-  $handler->display->display_options['fields']['field_success_story_title']['settings'] = array(
-    'title_style' => '_none',
-    'title_link' => 'content',
-    'title_class' => '',
-  );
-  /* Field: Content: Success story description */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_success_story']['id'] = 'field_success_story';
   $handler->display->display_options['fields']['field_success_story']['table'] = 'field_data_field_success_story';
   $handler->display->display_options['fields']['field_success_story']['field'] = 'field_success_story';

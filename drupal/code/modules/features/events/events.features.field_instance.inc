@@ -455,7 +455,7 @@ function events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 56,
+        'weight' => 51,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -583,7 +583,7 @@ function events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 55,
+        'weight' => 50,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -772,7 +772,7 @@ function events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 57,
+        'weight' => 52,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -894,7 +894,7 @@ function events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 54,
+        'weight' => 49,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -1092,7 +1092,7 @@ function events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 52,
+        'weight' => 48,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -1220,7 +1220,7 @@ function events_field_default_field_instances() {
           'view_mode' => 'view_mode_selector',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 53,
+        'weight' => 11,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -1338,7 +1338,7 @@ function events_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1431,7 +1431,7 @@ function events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 58,
+        'weight' => 53,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -1538,7 +1538,7 @@ function events_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 45,
+        'weight' => 47,
       ),
       'teaser' => array(
         'label' => 'above',

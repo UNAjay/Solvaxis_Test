@@ -58,11 +58,6 @@ function events_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_section' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
   );
   $export['node|event|default'] = $ds_fieldsetting;
 
@@ -173,12 +168,13 @@ function events_ds_layout_settings_info() {
         6 => 'field_event_link',
         7 => 'field_files',
         8 => 'field_add_this',
+        9 => 'flippy_pager',
       ),
       'right' => array(
-        9 => 'field_sidebar_text',
+        10 => 'field_sidebar_text',
       ),
       'footer' => array(
-        10 => 'field_section',
+        11 => 'field_section',
       ),
     ),
     'fields' => array(
@@ -191,6 +187,7 @@ function events_ds_layout_settings_info() {
       'field_event_link' => 'left',
       'field_files' => 'left',
       'field_add_this' => 'left',
+      'flippy_pager' => 'left',
       'field_sidebar_text' => 'right',
       'field_section' => 'footer',
     ),

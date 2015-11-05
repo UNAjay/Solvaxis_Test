@@ -181,7 +181,7 @@ function industries_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 42,
+        'weight' => 44,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -333,7 +333,7 @@ function industries_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 55,
+        'weight' => 49,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -456,7 +456,7 @@ function industries_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 57,
+        'weight' => 51,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -578,7 +578,7 @@ function industries_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 54,
+        'weight' => 48,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -713,7 +713,7 @@ function industries_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 52,
+        'weight' => 47,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -841,7 +841,7 @@ function industries_field_default_field_instances() {
           'view_mode' => 'view_mode_selector',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 53,
+        'weight' => 8,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -959,7 +959,7 @@ function industries_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1023,104 +1023,6 @@ function industries_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-customer-field_success_story'
-  $field_instances['node-customer-field_success_story'] = array(
-    'bundle' => 'customer',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'cover' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
-      ),
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 2,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 3,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_success_story',
-    'label' => 'Success story description',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 4,
-    ),
-  );
-
-  // Exported field_instance: 'node-customer-field_success_story_title'
-  $field_instances['node-customer-field_success_story_title'] = array(
-    'bundle' => 'customer',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'title',
-        'settings' => array(
-          'title_class' => 'section-title',
-          'title_link' => '',
-          'title_style' => 'h2',
-        ),
-        'type' => 'title_linked',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'title',
-        'settings' => array(
-          'title_class' => '',
-          'title_link' => '',
-          'title_style' => '',
-        ),
-        'type' => 'title_linked',
-        'weight' => 2,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_success_story_title',
-    'label' => 'Success story title',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 3,
-    ),
-  );
-
   // Exported field_instance: 'node-customer-field_tags'
   $field_instances['node-customer-field_tags'] = array(
     'bundle' => 'customer',
@@ -1150,7 +1052,7 @@ function industries_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 58,
+        'weight' => 52,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -1275,7 +1177,7 @@ function industries_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 50,
+        'weight' => 46,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -2185,8 +2087,6 @@ function industries_field_default_field_instances() {
   t('Section');
   t('Sidebar text');
   t('Social sharing');
-  t('Success story description');
-  t('Success story title');
   t('Tags');
   t('Title');
   t('Videos');

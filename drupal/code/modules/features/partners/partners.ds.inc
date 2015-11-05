@@ -41,11 +41,6 @@ function partners_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_section' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
   );
   $export['node|partner|default'] = $ds_fieldsetting;
 
@@ -125,21 +120,23 @@ function partners_ds_layout_settings_info() {
         0 => 'field_partner_logo',
         1 => 'body',
         2 => 'related_success_stories',
-        4 => 'field_add_this',
+        3 => 'field_add_this',
+        4 => 'flippy_pager',
       ),
       'right' => array(
-        3 => 'field_sidebar_text',
+        5 => 'field_sidebar_text',
       ),
       'footer' => array(
-        5 => 'field_section',
+        6 => 'field_section',
       ),
     ),
     'fields' => array(
       'field_partner_logo' => 'left',
       'body' => 'left',
       'related_success_stories' => 'left',
-      'field_sidebar_text' => 'right',
       'field_add_this' => 'left',
+      'flippy_pager' => 'left',
+      'field_sidebar_text' => 'right',
       'field_section' => 'footer',
     ),
     'classes' => array(),

@@ -81,7 +81,7 @@ function partners_field_default_field_instances() {
           'share_services' => 'linkedin,facebook,twitter',
         ),
         'type' => 'addthis_basic_toolbox',
-        'weight' => 44,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -163,7 +163,7 @@ function partners_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 49,
+        'weight' => 47,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -291,7 +291,7 @@ function partners_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 48,
+        'weight' => 46,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -475,7 +475,7 @@ function partners_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 42,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -528,7 +528,7 @@ function partners_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 39,
+        'weight' => 43,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -590,7 +590,7 @@ function partners_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 50,
+        'weight' => 48,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -712,7 +712,7 @@ function partners_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 47,
+        'weight' => 45,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -847,7 +847,7 @@ function partners_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 45,
+        'weight' => 44,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -975,7 +975,7 @@ function partners_field_default_field_instances() {
           'view_mode' => 'view_mode_selector',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 46,
+        'weight' => 6,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -1093,7 +1093,7 @@ function partners_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1186,7 +1186,7 @@ function partners_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 51,
+        'weight' => 49,
       ),
       'ds_contact_us' => array(
         'label' => 'above',

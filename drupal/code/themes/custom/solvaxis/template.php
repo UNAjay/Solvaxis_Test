@@ -23,7 +23,7 @@ function solvaxis_preprocess_page(&$vars) {
   $view = views_embed_view('promo_slideshow', 'block');
   $vars['slideshow'] = $view;
 
-  if ($vars['node']->type == 'page' && !empty($vars['node']->field_promo)) {
+  if (isset($vars['node']) && $vars['node']->type == 'page' && !empty($vars['node']->field_promo)) {
     $vars['classes_array'][] = 'with-promos';
   }
 }
