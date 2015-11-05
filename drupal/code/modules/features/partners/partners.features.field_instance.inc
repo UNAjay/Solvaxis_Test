@@ -517,58 +517,6 @@ function partners_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-partner-field_partner_office_location'
-  $field_instances['node-partner-field_partner_office_location'] = array(
-    'bundle' => 'partner',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 40,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_partner_office_location',
-    'label' => 'Office location',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'mediafront' => array(
-        'custom' => '',
-        'field_type' => 0,
-        'media_type' => 'media',
-        'preview' => 0,
-        'thumbnail' => 0,
-      ),
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'shs',
-      'settings' => array(
-        'shs' => array(
-          'create_new_levels' => 1,
-          'create_new_terms' => 1,
-          'force_deepest' => 1,
-          'node_count' => 0,
-        ),
-      ),
-      'type' => 'taxonomy_shs',
-      'weight' => 5,
-    ),
-  );
-
   // Exported field_instance: 'node-partner-field_partner_type'
   $field_instances['node-partner-field_partner_type'] = array(
     'bundle' => 'partner',
@@ -1417,7 +1365,6 @@ function partners_field_default_field_instances() {
   t('Logo');
   t('Market');
   t('Namn');
-  t('Office location');
   t('Partner type');
   t('Product');
   t('Promo');

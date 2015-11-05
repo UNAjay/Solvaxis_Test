@@ -23,12 +23,6 @@ function jeeveserp_layout_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'jeeves' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'jeeves',
-        'weight' => 0,
-      ),
       'solvaxis' => array(
         'region' => '',
         'status' => 0,
@@ -51,12 +45,6 @@ function jeeveserp_layout_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'jeeves' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'jeeves',
-        'weight' => 0,
-      ),
       'solvaxis' => array(
         'region' => '',
         'status' => 0,

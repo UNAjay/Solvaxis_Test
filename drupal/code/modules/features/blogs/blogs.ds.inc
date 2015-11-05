@@ -53,7 +53,7 @@ function blogs_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
     'tag_cloud' => array(
-      'weight' => '6',
+      'weight' => '7',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -230,13 +230,14 @@ function blogs_ds_layout_settings_info() {
         1 => 'field_image',
         2 => 'body',
         3 => 'field_add_this',
+        4 => 'flippy_pager',
       ),
       'right' => array(
-        4 => 'field_sidebar_text',
-        5 => 'tag_cloud',
+        5 => 'field_sidebar_text',
+        6 => 'tag_cloud',
       ),
       'footer' => array(
-        6 => 'field_section',
+        7 => 'field_section',
       ),
     ),
     'fields' => array(
@@ -244,6 +245,7 @@ function blogs_ds_layout_settings_info() {
       'field_image' => 'left',
       'body' => 'left',
       'field_add_this' => 'left',
+      'flippy_pager' => 'left',
       'field_sidebar_text' => 'right',
       'tag_cloud' => 'right',
       'field_section' => 'footer',

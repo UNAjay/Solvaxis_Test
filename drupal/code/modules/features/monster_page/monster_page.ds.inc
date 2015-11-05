@@ -45,11 +45,6 @@ function monster_page_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'section';
   $ds_fieldsetting->view_mode = 'section_light';
   $ds_fieldsetting->settings = array(
-    'field_banner_image' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
     'field_heading' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -196,29 +191,31 @@ function monster_page_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'group_banner',
-        1 => 'field_banner_image',
-        2 => 'field_banner_text',
-        3 => 'field_heading',
-        4 => 'body',
-        5 => 'field_promo_link',
+        0 => 'field_banner_image',
+        1 => 'group_banner',
+        2 => 'field_heading',
+        3 => 'field_banner_text',
+        4 => 'field_promo_link',
+        5 => 'body',
         6 => 'field_sidebar_text',
-        7 => 'group_sidebar',
-        8 => 'field_add_this',
+        7 => 'field_content_entity',
+        8 => 'group_sidebar',
         9 => 'group_social',
+        10 => 'field_add_this',
       ),
     ),
     'fields' => array(
-      'group_banner' => 'ds_content',
       'field_banner_image' => 'ds_content',
-      'field_banner_text' => 'ds_content',
+      'group_banner' => 'ds_content',
       'field_heading' => 'ds_content',
-      'body' => 'ds_content',
+      'field_banner_text' => 'ds_content',
       'field_promo_link' => 'ds_content',
+      'body' => 'ds_content',
       'field_sidebar_text' => 'ds_content',
+      'field_content_entity' => 'ds_content',
       'group_sidebar' => 'ds_content',
-      'field_add_this' => 'ds_content',
       'group_social' => 'ds_content',
+      'field_add_this' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(

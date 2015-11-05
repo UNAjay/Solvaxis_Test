@@ -22,7 +22,7 @@ function blogs_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -126,7 +126,7 @@ function blogs_field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -181,7 +181,7 @@ function blogs_field_default_field_instances() {
           'image_style' => 'news_image',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -303,7 +303,7 @@ function blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 54,
+        'weight' => 46,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -431,7 +431,7 @@ function blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 53,
+        'weight' => 45,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -554,7 +554,7 @@ function blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 55,
+        'weight' => 47,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -676,7 +676,7 @@ function blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 52,
+        'weight' => 44,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -811,7 +811,7 @@ function blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 50,
+        'weight' => 43,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -939,7 +939,7 @@ function blogs_field_default_field_instances() {
           'view_mode' => 'view_mode_selector',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 51,
+        'weight' => 8,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -1057,7 +1057,7 @@ function blogs_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1150,7 +1150,7 @@ function blogs_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 56,
+        'weight' => 48,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -1254,10 +1254,10 @@ function blogs_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 41,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',

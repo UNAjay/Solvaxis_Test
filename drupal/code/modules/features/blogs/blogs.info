@@ -14,6 +14,7 @@ dependencies[] = features
 dependencies[] = field_group
 dependencies[] = i18n_taxonomy
 dependencies[] = image
+dependencies[] = inline_entity_form
 dependencies[] = jeeveserp_layout
 dependencies[] = node
 dependencies[] = options

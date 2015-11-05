@@ -24,7 +24,11 @@ function jeeves_media_user_default_permissions() {
   // Exported permission: 'administer files'.
   $permissions['administer files'] = array(
     'name' => 'administer files',
-    'roles' => array(),
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
+      'administrator' => 'administrator',
+    ),
     'module' => 'file_entity',
   );
 
@@ -38,7 +42,11 @@ function jeeves_media_user_default_permissions() {
   // Exported permission: 'create files'.
   $permissions['create files'] = array(
     'name' => 'create files',
-    'roles' => array(),
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
+      'administrator' => 'administrator',
+    ),
     'module' => 'file_entity',
   );
 

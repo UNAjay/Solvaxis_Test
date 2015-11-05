@@ -21,7 +21,7 @@ function monster_page_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Banner',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
       0 => 'field_banner_text',
       1 => 'field_banner_image',
@@ -119,12 +119,11 @@ function monster_page_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Content',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(
       0 => 'body',
       1 => 'field_add_this',
-      2 => 'field_view',
-      3 => 'field_heading',
+      2 => 'field_heading',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -209,11 +208,10 @@ function monster_page_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Sidebar',
-    'weight' => '5',
+    'weight' => '6',
     'children' => array(
-      0 => 'field_acton_url',
-      1 => 'field_sidebar_text',
-      2 => 'field_sidebar_position',
+      0 => 'field_sidebar_text',
+      1 => 'field_sidebar_position',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -334,7 +332,7 @@ function monster_page_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Social',
-    'weight' => '47',
+    'weight' => '5',
     'children' => array(
       0 => 'field_add_this',
     ),

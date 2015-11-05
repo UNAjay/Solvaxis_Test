@@ -985,7 +985,7 @@ function monster_page_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 19,
+      'weight' => 18,
     ),
   );
 
@@ -1078,7 +1078,7 @@ function monster_page_field_default_field_instances() {
       'module' => 'addthis',
       'settings' => array(),
       'type' => 'addthis_button_widget',
-      'weight' => 21,
+      'weight' => 20,
     ),
   );
 
@@ -1238,7 +1238,7 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 42,
+        'weight' => 43,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1343,6 +1343,81 @@ function monster_page_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 17,
+    ),
+  );
+
+  // Exported field_instance: 'node-section-field_content_entity'
+  $field_instances['node-section-field_content_entity'] = array(
+    'bundle' => 'section',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 14,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'section_dark' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'section_light' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => TRUE,
+          'use_content_language' => TRUE,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_content_entity',
+    'label' => 'Content entity',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'mediafront' => array(
+        'custom' => '',
+        'field_type' => 0,
+        'media_type' => 'media',
+        'preview' => 0,
+        'thumbnail' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 4,
     ),
   );
 
@@ -1542,7 +1617,7 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 41,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1612,7 +1687,7 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 31,
+        'weight' => 42,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1753,7 +1828,7 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 44,
+        'weight' => 45,
       ),
       'section_text' => array(
         'label' => 'above',
@@ -1925,7 +2000,7 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 43,
+        'weight' => 44,
       ),
       'section_text' => array(
         'label' => 'above',
@@ -1988,6 +2063,7 @@ function monster_page_field_default_field_instances() {
   t('Banner text');
   t('Body');
   t('Content');
+  t('Content entity');
   t('External form');
   t('Heading');
   t('Location');
