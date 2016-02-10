@@ -45,8 +45,6 @@ function promo_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['nid']['node_in_colorbox_width'] = '600';
-  $handler->display->display_options['fields']['nid']['node_in_colorbox_height'] = '600';
   /* Field: Field: Title */
   $handler->display->display_options['fields']['title_field']['id'] = 'title_field';
   $handler->display->display_options['fields']['title_field']['table'] = 'field_data_title_field';
@@ -128,6 +126,18 @@ function promo_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
+  $translatables['news_slideshow'] = array(
+    t('Master'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('<a href="news-events">News</a>'),
+    t('Read more'),
+    t('Block'),
+  );
   $export['news_slideshow'] = $view;
 
   $view = new view();
@@ -221,7 +231,7 @@ function promo_views_default_views() {
       'fallback_style' => '',
     ),
   );
-  /* Field: Field: Promo Link */
+  /* Field: Content: Promo Link */
   $handler->display->display_options['fields']['field_promo_link']['id'] = 'field_promo_link';
   $handler->display->display_options['fields']['field_promo_link']['table'] = 'field_data_field_promo_link';
   $handler->display->display_options['fields']['field_promo_link']['field'] = 'field_promo_link';
@@ -329,7 +339,7 @@ function promo_views_default_views() {
       'fallback_style' => '',
     ),
   );
-  /* Field: Field: Promo Link */
+  /* Field: Content: Promo Link */
   $handler->display->display_options['fields']['field_promo_link']['id'] = 'field_promo_link';
   $handler->display->display_options['fields']['field_promo_link']['table'] = 'field_data_field_promo_link';
   $handler->display->display_options['fields']['field_promo_link']['field'] = 'field_promo_link';
@@ -405,7 +415,7 @@ function promo_views_default_views() {
       'fallback_style' => '',
     ),
   );
-  /* Field: Field: Promo Link */
+  /* Field: Content: Promo Link */
   $handler->display->display_options['fields']['field_promo_link']['id'] = 'field_promo_link';
   $handler->display->display_options['fields']['field_promo_link']['table'] = 'field_data_field_promo_link';
   $handler->display->display_options['fields']['field_promo_link']['field'] = 'field_promo_link';
@@ -419,6 +429,22 @@ function promo_views_default_views() {
   $handler->display->display_options['fields']['field_promo_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_promo_link']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_promo_link']['click_sort_column'] = 'url';
+  $translatables['promo_slideshow'] = array(
+    t('Master'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('<div id="slideshow-nav"></div>'),
+    t('Content referencing Content from field_promo'),
+    t('Läs mer'),
+    t('All'),
+    t('Block'),
+    t('[field_promo_link-title]'),
+    t('Inner'),
+  );
   $export['promo_slideshow'] = $view;
 
   return $export;

@@ -26,6 +26,14 @@ function solvaxis_preprocess_page(&$vars) {
   if (isset($vars['node']) && $vars['node']->type == 'page' && !empty($vars['node']->field_promo)) {
     $vars['classes_array'][] = 'with-promos';
   }
+
+  $options = array(
+    'type' => 'file',
+    'weight' => '20',
+    'scope' => 'footer',
+    'preprocess' => FALSE
+  );
+  drupal_add_js(libraries_get_path('inview') . '/jquery.inview.min.js', $options);
 }
 
 /**

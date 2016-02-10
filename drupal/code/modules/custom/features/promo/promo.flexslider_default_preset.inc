@@ -16,6 +16,8 @@ function promo_flexslider_default_presets() {
   $preset->name = 'clone_of_default';
   $preset->title = 'Default second';
   $preset->theme = 'classic';
+  $preset->imagestyle_normal = 'flexslider_full';
+  $preset->imagestyle_thumbnail = 'flexslider_thumbnail';
   $preset->options = array(
     'namespace' => 'flex-',
     'selector' => '.slides > li',
@@ -64,6 +66,8 @@ function promo_flexslider_default_presets() {
   $preset->name = 'third_of_default';
   $preset->title = 'Third default';
   $preset->theme = 'classic';
+  $preset->imagestyle_normal = 'flexslider_full';
+  $preset->imagestyle_thumbnail = 'flexslider_thumbnail';
   $preset->options = array(
     'namespace' => 'flex-',
     'selector' => '.slides > li',

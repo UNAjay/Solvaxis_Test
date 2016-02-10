@@ -560,6 +560,9 @@ function jeeveserp_layout_strongarm() {
       'section_light' => array(
         'custom_settings' => FALSE,
       ),
+      'ds_job_listing' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -625,6 +628,12 @@ function jeeveserp_layout_strongarm() {
           ),
           'ds_with_sidebar' => array(
             'weight' => '36',
+            'visible' => FALSE,
+          ),
+        ),
+        'job_postings_job_listing' => array(
+          'default' => array(
+            'weight' => '10',
             'visible' => FALSE,
           ),
         ),

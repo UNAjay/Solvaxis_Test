@@ -317,21 +317,25 @@ function industries_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'left' => array(
-        0 => 'field_image',
-        1 => 'body',
-        2 => 'field_partners',
-        3 => 'field_add_this',
-        4 => 'flippy_pager',
+        0 => 'field_success_story_title',
+        1 => 'field_image',
+        2 => 'field_success_story',
+        3 => 'body',
+        4 => 'field_partners',
+        5 => 'field_add_this',
+        6 => 'flippy_pager',
       ),
       'right' => array(
-        5 => 'field_sidebar_text',
+        7 => 'field_sidebar_text',
       ),
       'footer' => array(
-        6 => 'field_section',
+        8 => 'field_section',
       ),
     ),
     'fields' => array(
+      'field_success_story_title' => 'left',
       'field_image' => 'left',
+      'field_success_story' => 'left',
       'body' => 'left',
       'field_partners' => 'left',
       'field_add_this' => 'left',

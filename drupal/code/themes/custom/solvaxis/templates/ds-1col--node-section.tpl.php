@@ -7,6 +7,7 @@
 ?>
 <<?php print $ds_content_wrapper; print $layout_attributes; ?> class="ds-1col <?php print $classes;?> clearfix">
 
+<div class="bg-wrapper"></div>
 
 <div class="region-holder">
 

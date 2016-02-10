@@ -122,6 +122,9 @@ projects[focal_point][revision] = 0fe8db00de4c3ada962b8816cc6ac906a3f8f417
 projects[mediafront][version] = "2.2"
 projects[html5_media][version] = "1.1"
 
+projects[bg_image][version] = 1.4
+projects[bg_image_formatter][version] = 1.4
+
 projects[module_filter][version] = "2.0"
 projects[taxonomy_menu][version] = "1.5"
 projects[ckeditor_styles][version] = "1.0-alpha1"
@@ -330,5 +333,9 @@ libraries[spyc][destination] = "libraries"
 libraries[fitvids][download][type] = "file"
 libraries[fitvids][download][url] = "https://github.com/davatron5000/FitVids.js/archive/master.zip"
 libraries[fitvids][destination] = "libraries"
+
+libraries[inview][download][type] = "file"
+libraries[inview][download][url] = "https://github.com/protonet/jquery.inview/archive/master.zip"
+libraries[inview][destination] = "libraries"
 
 

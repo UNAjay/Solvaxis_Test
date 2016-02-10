@@ -34,6 +34,19 @@ function success_story_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'logo',
+          'fi-at' => '',
+          'fi-def-at' => TRUE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
     'field_success_story_title' => array(
       'formatter_settings' => array(
         'ft' => array(

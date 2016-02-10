@@ -325,8 +325,7 @@ function blogs_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_blog_post';
   $strongarm->value = array(
-    0 => 'promote',
-    1 => 'revision',
+    0 => 'revision',
   );
   $export['node_options_blog_post'] = $strongarm;
 

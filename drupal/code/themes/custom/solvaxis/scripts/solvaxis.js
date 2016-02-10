@@ -134,3 +134,20 @@ jQuery(function($){
 });
 
 
+/**
+ * InView
+ */
+jQuery(function($){
+  "use strict";
+
+  $('.bg-wrapper').on('inview', function (event, isInView) {
+    if (isInView) {
+      $(this).addClass("inview");
+    }
+  });
+
+});
+
+
+
+
