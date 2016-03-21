@@ -2,7 +2,7 @@
 # *****************************************************************************
 # build.sh by the Wunderful People at Wunderkraut
 #
-# https://github.com/tcmug/build.sh
+# https://github.com/wunderkraut/build.sh
 # *****************************************************************************
 
 import getopt
@@ -16,11 +16,16 @@ import datetime
 import shlex
 import stat
 import re
+import gzip
+import tarfile
 
 # Build scripts version string.
-build_sh_version_string = "build.sh 0.7"
+build_sh_version_string = "build.sh 1.0"
 
-# Sitt.make item (either a project/library from the site.make)
+build_sh_skip_backup = False
+build_sh_disable_cache = False
+
+# Site.make item (either a project/library from the site.make)
 class MakeItem:
 
 	def __init__(self, type, name):
@@ -31,7 +36,7 @@ class MakeItem:
 			self.project_type = 'library'
 		else:
 			self.project_type = 'module'
-		
+
 		self.download_args = {}
 
 	# Parse a line from site.make for this project/lib
@@ -70,7 +75,7 @@ class MakeItem:
 
 # BuildError exception class.
 class BuildError(Exception):
-	
+
 	def __init__(self, value):
 		self.value = value
 
@@ -82,17 +87,24 @@ class Maker:
 
 	def __init__(self, settings):
 
+		self.composer = settings.get('composer', 'composer')
 		self.drush = settings.get('drush', 'drush')
-		self.temp_build_dir = os.path.abspath(settings['temporary'])
-		self.final_build_dir = os.path.abspath(settings['final'])
+		self.type = settings.get('type', 'drush make')
+		self.temp_build_dir_name = settings['temporary']
+		self.temp_build_dir = os.path.abspath(self.temp_build_dir_name)
+		self.final_build_dir_name = settings['final']
+		self.final_build_dir = os.path.abspath(self.final_build_dir_name)
 		self.old_build_dir = os.path.abspath(settings.get('previous', 'previous'))
-		self.makefile = os.path.abspath(settings.get('makefile', 'conf/site.make'))
 		self.profile_name = settings.get('profile', 'standard')
 		self.site_name = settings.get('site', 'A drupal site')
+		self.make_cache_dir = settings.get('make_cache', '.make_cache')
 		self.settings = settings
 		self.store_old_buids = True
 		self.linked = False
-		self.makefile_hash = hashlib.md5(self.makefile).hexdigest()
+
+		if self.type == 'drush make':
+			self.makefile = os.path.abspath(settings.get('makefile', 'conf/site.make'))
+			self.makefile_hash = hashlib.md5(open(self.makefile, 'rb').read()).hexdigest()
 
 		# See if drush is installed
 		if not self._which('drush'):
@@ -101,7 +113,7 @@ class Maker:
 	def test(self):
 		self._validate_makefile()
 
-	# Check if given program exists 
+	# Check if given program exists
 	# http://stackoverflow.com/questions/377017/test-if-executable-exists-in-python
 	def _which(self, program):
 		import os
@@ -149,16 +161,51 @@ class Maker:
 
 	# Run make
 	def make(self):
+		if self.type == 'drush make':
+			self._drush_make()
+		elif self.type == 'composer':
+			self._composer_make()
+
+	def _composer_make(self):
+		self._precheck()
+		self.link()
+		self._composer([
+			'-d=' + self.temp_build_dir,
+			'install'
+		]);
+
+	def _drush_make(self):
+		global build_sh_disable_cache
 		self._precheck()
 		self.notice("Building")
-		if not self._drush(self._collect_make_args()):
-			raise BuildError("Make failed - check your makefile")
-		f = open(self.temp_build_dir + "/buildhash", "w")
-		f.write(self.makefile_hash)
-		f.close()
-		# Remove default.settings.php
-		os.remove(self.temp_build_dir + "/sites/default/default.settings.php")
 
+		packaged_build = self.make_cache_dir + '/' + self.makefile_hash + '.tgz';
+
+		if not build_sh_disable_cache and os.path.exists(packaged_build):
+			# Existing build
+			self.notice("Make file unchanged - unpacking previous make")
+			tar = tarfile.open(packaged_build)
+			tar.extractall()
+			tar.close()
+
+		else:
+
+			if not self._drush(self._collect_make_args()):
+				raise BuildError("Make failed - check your makefile")
+
+			#os.remove(self.temp_build_dir + "/sites/default/default.settings.php")
+
+			if not os.path.isdir(self.make_cache_dir):
+				os.makedirs(self.make_cache_dir)
+
+			tar = tarfile.open(packaged_build, "w:gz")
+			tar.add(self.temp_build_dir, arcname=self.temp_build_dir_name)
+			tar.close()
+
+		# f = open(self.temp_build_dir + "/buildhash", "w")
+		# f.write(self.makefile_hash)
+		# f.close()
+		# Remove default.settings.php
 
 	# Existing final build?
 	def hasExistingBuild(self):
@@ -166,6 +213,10 @@ class Maker:
 
 	# Backup current final build
 	def backup(self, params):
+		global build_sh_skip_backup
+		if build_sh_skip_backup:
+			self.notice("Skipping backup!")
+			return
 		if not params:
 			params = {}
 		self.notice("Backing up current build")
@@ -181,6 +232,9 @@ class Maker:
 				if os.path.isdir(fullpath):
 					self.notice("Removing old build " + f)
 					shutil.rmtree(fullpath)
+				elif os.path.isfile(fullpath):
+					self.notice("Removing old build archive " + f)
+					os.remove(fullpath)
 
 	# Purge current final build
 	def purge(self):
@@ -193,15 +247,15 @@ class Maker:
 		# Link and copy required files
 		self._link()
 		self._copy()
-		self.linked = True	
+		self.linked = True
 
 	# Finalize new build to be the final build
 	def finalize(self):
 		self.notice("Finalizing new build")
 		if os.path.isdir(self.final_build_dir):
+			self._unlink()
 			self._ensure_writable(self.final_build_dir)
 			shutil.rmtree(self.final_build_dir)
-
 		# Make sure linking has happened
 		if not self.linked:
 			self.link()
@@ -254,7 +308,7 @@ class Maker:
 			raise BuildError("Cancelled by user")
 
 	# Execute a shell command
-	def shell(self, command): 
+	def shell(self, command):
 		if isinstance(command, list):
 			for step in command:
 				value = os.system(command) == 0
@@ -274,11 +328,11 @@ class Maker:
 
 	# Execute given step
 	def execute(self, step):
-		
+
 		command = False
 		if isinstance(step, dict):
 			step, command = step.popitem()
-	
+
 		if step == 'make':
 			self.make()
 		elif step == 'backup':
@@ -308,7 +362,7 @@ class Maker:
 
 
 	# Collect make args
-	def _collect_make_args(self): 
+	def _collect_make_args(self):
 		return [
 			"--strict=0",
 			"--concurrency=20",
@@ -324,7 +378,7 @@ class Maker:
 		if not "link" in self.settings:
 			return
 		for tuple in self.settings['link']:
-			source, target = tuple.popitem()
+			source, target = tuple.items()[0]
 			target = self.temp_build_dir + "/" + target
 			if source.endswith('*'):
 				path = source[:-1]
@@ -334,6 +388,22 @@ class Maker:
 			else:
 				self._link_files(source, target)
 
+	# Handle unlink
+	def _unlink(self):
+		if not "link" in self.settings:
+			return
+		for tuple in self.settings['link']:
+			source, target = tuple.items()[0]
+			target = self.final_build_dir + "/" + target
+			if source.endswith('*'):
+				path = source[:-1]
+				paths = [path + name for name in os.listdir(path) if os.path.isdir(path + name)]
+				for source in paths:
+					self._unlink_files(target + "/" + os.path.basename(source))
+			else:
+				self._unlink_files(target)
+
+
 	# Handle copy
 	def _copy(self):
 		if not "copy" in self.settings:
@@ -342,6 +412,13 @@ class Maker:
 			source, target = tuple.popitem()
 			target = self.temp_build_dir + "/" + target
 			self._copy_files(source, target)
+
+	# Execute a composer command
+	def _composer(self, args, quiet = False):
+		if quiet:
+			FNULL = open(os.devnull, 'w')
+			return subprocess.call([self.composer] + args, stdout=FNULL, stderr=FNULL) == 0
+		return subprocess.call([self.composer] + args) == 0
 
 	# Execute a drush command
 	def _drush(self, args, quiet = False):
@@ -358,39 +435,48 @@ class Maker:
 		if not os.path.isdir(self.old_build_dir):
 			os.mkdir(self.old_build_dir)
 
+	# TarFile exclude callback for _backup function
+	def _backup_exlude(self, file):
+		for exclude in self._build_exclude_files:
+			if file.endswith(exclude):
+				return True
+		return False
+
 	# Backup existing final build
 	def _backup(self, params):
 
 		if 'skip-database' in params:
 			self.notice("Database dump skipped as requested")
 		else:
+
+			dump_file = self.final_build_dir + '/db.sql'
+			gzdump_file = self.final_build_dir + '/db.sql.gz'
+
 			if self._drush([
 				"--root=" + format(self.final_build_dir),
 				'sql-dump',
-				'--result-file=' + self.final_build_dir + '/db.sql'
+				'--result-file=' + dump_file
 			], True):
+
 				self.notice("Database dump taken")
+
 			else:
+
 				self.warning("No database dump taken")
 
 		name = datetime.datetime.now()
 		name = name.isoformat()
 
-		from collections import defaultdict
-
-		to_ignore = defaultdict(set)
+		backup_file = self.old_build_dir + "/" + name + ".tgz"
 
 		if 'ignore' in params:
-			for path in params['ignore']:
-				dirname, filename = os.path.split(path)
-				to_ignore[self.final_build_dir + "/" + dirname].add(filename)
+			self._build_exclude_files = params['ignore']
+		else:
+			self._build_exclude_files = {}
 
-		# Restore write rights to sites/default folder:
-		mode = os.stat(self.final_build_dir + "/sites/default").st_mode
-		os.chmod(self.final_build_dir + "/sites/default", mode|stat.S_IWRITE)
-		
-		shutil.copytree(self.final_build_dir, self.old_build_dir + "/" + name,
-			ignore=lambda path, files: to_ignore[path])
+		tar = tarfile.open(backup_file, "w:gz", dereference=True)
+		tar.add(self.final_build_dir, arcname=self.final_build_dir_name, exclude=self._backup_exlude)
+		tar.close()
 
 
 	# Wipe existing final build
@@ -407,9 +493,9 @@ class Maker:
 		shutil.rmtree(self.final_build_dir)
 
 	# Ensure we have write access to the given dir
-	def _ensure_writable(self, path): 
-		for root, dirs, files in os.walk(path):  
-			for momo in dirs:  
+	def _ensure_writable(self, path):
+		for root, dirs, files in os.walk(path):
+			for momo in dirs:
 				file = os.path.join(root, momo)
 				mode = os.stat(file).st_mode
 				os.chmod(file, mode|stat.S_IWRITE)
@@ -422,7 +508,7 @@ class Maker:
 		# Ensure target directory exists
 		target_container = os.path.dirname(filepath)
 		if not os.path.exists(target_container):
-			self.notice("Created directory " + target_container) 
+			self.notice("Created directory " + target_container)
 			os.makedirs(target_container)
 
 	# Symlink file from source to target
@@ -432,7 +518,14 @@ class Maker:
 			source = os.path.relpath(source, os.path.dirname(target))
 			os.symlink(source, target)
 		else:
-			raise BuildError("Can't link " + source + " to " + target)
+			raise BuildError("Can't link " + source + " to " + target + ". Make sure that the source exists.")
+
+	# Unlink file from target
+	def _unlink_files(self, target):
+		self._ensure_container(target)
+		if os.path.exists(target):
+			os.unlink(target)
+
 
 	# Copy file from source to target
 	def _copy_files(self, source, target):
@@ -443,7 +536,7 @@ class Maker:
 			else:
 				shutil.copyfile(source, target)
 		else:
-			raise BuildError("Can't copy " + source + " to " + target)
+			raise BuildError("Can't copy " + source + " to " + target + ". Make sure that the source exists.")
 
 
 # Print help function
@@ -456,6 +549,12 @@ def help():
 	print '			Print this help'
 	print ' -c --config'
 	print '			Configuration file to use, defaults to conf/site.yml'
+	print ' -o --commands'
+	print '			Configuration file to use, defaults to conf/commands.yml'
+	print ' -s --skip-backup'
+	print '			Do not take backups, ever'
+	print ' -d --disable-cache'
+	print '			Do not use caches'
 	print ' -v --version'
 	print '			Print version information'
 
@@ -469,11 +568,12 @@ def main(argv):
 
 	# Default configuration file to use:
 	config_file = 'conf/site.yml'
+	commands_file = 'conf/commands.yml'
 	do_build = True
 
 	# Parse options:
 	try:
-		opts, args = getopt.getopt(argv, "hc:vt", ["help", "config=", "version", "test"])
+		opts, args = getopt.getopt(argv, "hdc:o:vst", ["help", "config=", "commands=", "version", "test", "skip-backup", "disable-cache"])
 	except getopt.GetoptError:
 		help()
 		return
@@ -484,9 +584,17 @@ def main(argv):
 			return
 		elif opt in ("-c", "--config"):
 			config_file = arg
+		elif opt in ("-o", "--commands"):
+			commands_file = arg
+		elif opt in ("-s", "--skip-backup"):
+			global build_sh_skip_backup
+			build_sh_skip_backup = True
+		elif opt in ("-d", "--disable-cache"):
+			global build_sh_disable_cache
+			build_sh_disable_cache = True
 		elif opt in ("-v", "--version"):
 			version()
-			return 
+			return
 
 	try:
 
@@ -495,7 +603,7 @@ def main(argv):
 		settings = yaml.safe_load(f)
 		f.close()
 
-		try:			
+		try:
 			command = args[0]
 		except IndexError:
 			help()
@@ -510,9 +618,6 @@ def main(argv):
 				site = os.environ['WKV_SITE_ENV']
 			else:
 				site = 'default'
-
-		# ToDo: Ask for verification when running build new on prod
-		# ToDo: Ask for verification when running build without WKV_SITE_ENV or specified site
 
 		sites = []
 		sites.append(site)
@@ -543,22 +648,40 @@ def main(argv):
 
 			# Create the site maker based on the settings
 			maker = Maker(site_settings)
-			settings['commands']['test'] = {"test": "test"}
 
 			maker.notice("Using configuration " + site)
 
+			commands = {}
+
+			if 'commands' in settings:
+				commands = settings['commands']
+				maker.warning("There are commands defined in site.yml - please move them to commands.yml.")
+
+			# Read in the commands file
+			if os.path.isfile(commands_file):
+				if 'commands' in settings:
+					maker.warning("Commands defined in commands.yml override the commands defined in site.yml")
+				f = open(commands_file)
+				commands = yaml.safe_load(f)
+				f.close()
+
+			commands['test'] = {"test": "test"}
+
+			# Add and overwrite commands with local_commands
+			if 'local_commands' in settings[site]:
+				commands.update(settings[site]['local_commands'])
+
 			if do_build:
 				# Execute the command(s).
-				if command in settings['commands']:
-					command_set = settings['commands'][command]
+				if command in commands:
+					command_set = commands[command]
 					for step in command_set:
 						maker.execute(step)
 				else:
-					print "No such command defined as '" + command + "'"
+					maker.notice("No such command defined as '" + command + "'")
 
 
 	except Exception, errtxt:
-
 		print "\033[91m** BUILD ERROR: \033[0m%s" % (errtxt)
 		exit(1)
 

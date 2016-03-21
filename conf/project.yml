@@ -1,7 +1,10 @@
+project:
+  name: ansibleref
 ansible:
-  remote: git@gitlab.com:wunderkraut-finland/WunderMachina.git
-  branch: master 
-  revision: 
+  remote: git@github.com:wunderkraut/WunderMachina.git
+  branch: master
+  revision:
 buildsh:
+  enabled: true
   branch: develop
   revision:

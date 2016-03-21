@@ -13,9 +13,9 @@ databases:
 drush: {
   version: "6.*",
 }
-
+drupal_files: drupal/files
 # PHP
-php_package: php55u
+php_package: php56u
 
 # Sections APC and suhosin are only for php53u
 # OPCACHE is for php55u, PHP section is shared
@@ -24,7 +24,7 @@ php:
  - section: PHP
    options:
     - key: sendmail_path
-      val: /usr/bin/catchmail
+      val: "/usr/sbin/ssmtp -t"
     - key: memory_limit
       val: 512M
     - key: realpath_cache_size
@@ -124,9 +124,9 @@ nginx_sites:
     ssl_certificate_key: default.key
     include_drupal: true
     cdn: false
-    nocdnhostname: 'solvaxis.dev'
+    nocdnhostname: 'local.solvaxis.dev'
     redirect: false
-    redirecthost: 'https://solvaxis.dev'
+    redirecthost: 'https://local.solvaxis.dev'
   - hostname: "{{ docs.hostname }}"
     port: '8080'
     docroot: "{{ docs.dir }}"
@@ -141,6 +141,8 @@ nginx_sites:
     include_drupal: false
     include_wiki: true
     cdn: false
-    nocdnhostname: 'solvaxis.dev'
+    nocdnhostname: 'local.solvaxis.dev'
     redirect: false
-    redirecthost: 'https://solvaxis.dev'
+    redirecthost: 'https://local.solvaxis.dev'
+
+solr_collection_name: 'solvaxis'
