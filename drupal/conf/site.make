@@ -6,7 +6,7 @@ api = 2
 ; Drupal
 ; ---------
 projects[drupal][type] = core
-projects[drupal][version] = 7.41
+projects[drupal][version] = 7.43
 
 ; Contrib projects
 ; ---------
@@ -39,9 +39,8 @@ projects[link][version] = "1.2"
 projects[context][version] = "3.6"
 projects[context_condition_theme][version] = "1.0"
 
-projects[wysiwyg][version] = 2.x-dev
-projects[wysiwyg][revision] = 898d022cf7d0b6c6a6e7d813199d561b4ad39f8b
-projects[wysiwyg][patch][2243413] = https://www.drupal.org/files/issues/add_item_ajax_error-2243413-3.patch
+; projects[wysiwyg][version] = 2.x-dev
+projects[wysiwyg][revision] = 8d32d738615f5d6b85b91146cb0032085e5b1789
 
 projects[libraries][version] = "2.2"
 projects[imce][version] = "1.9"

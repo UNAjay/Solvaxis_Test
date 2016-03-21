@@ -18,6 +18,11 @@ $databases = array (
   ),
 );
 
+ini_set('memory_limit', '256M');
+
+$conf['stage_file_proxy_origin'] = 'http://prog:devels@solvaxis.wkdev.lv';
+$conf['stage_file_proxy_origin_dir'] = 'sites/default/files';
+
 // CACHING
 // $conf['cache_backends'][] = 'sites/all/modules/contrib/memcache/memcache.inc';
 // $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
