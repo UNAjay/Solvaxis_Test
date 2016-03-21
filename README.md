@@ -76,7 +76,7 @@ Docs are in
 
         #Docs
         docs:
-          hostname : 'docs.local.ansibleref.com'
+          hostname : 'docs.local.solvaxis.dev'
           dir : '/vagrant/docs'
 
 
