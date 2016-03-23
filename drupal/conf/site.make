@@ -314,7 +314,7 @@ libraries[colorbox][download][url] = "https://github.com/jackmoore/colorbox/arch
 libraries[colorbox][destination] = "libraries"
 
 libraries[ckeditor][download][type] = file
-libraries[ckeditor][download][url] = https://github.com/ckeditor/ckeditor-releases/archive/4.3.0/full.zip
+libraries[ckeditor][download][url] = https://github.com/ckeditor/ckeditor-releases/archive/full/4.5.1.zip
 libraries[ckeditor][destination] = libraries
 
 libraries[flexslider][download][type] = "get"

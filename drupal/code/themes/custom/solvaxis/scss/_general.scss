@@ -7,7 +7,7 @@ html,
 body {
   height: 100%;
   font-family: $sans-font-family;
-  
+
   margin: 0;
   padding: 0;
   height:100%;
@@ -43,7 +43,7 @@ body {
   padding-bottom: 287px;
 }
 
-.not-front #content { 
+.not-front #content {
   //padding-bottom: 320px;
   padding-bottom: 377px;
 }
@@ -104,7 +104,7 @@ body {
   padding: 0 0 20px;
   clear: both;
   @include full-width;
-  
+
   @include at-breakpoint($bp-med-2) {
     padding: 0;
   }
@@ -118,7 +118,7 @@ body {
 		max-width: 100%;
 		overflow: hidden;
 		text-overflow: ellipsis;
-    
+
     @include at-breakpoint($bp-med) {
       max-width: 85%;
     }
@@ -147,3 +147,36 @@ body {
     }
   }
 }
+
+/* =====================================
+  Table
+  ====================================== */
+
+table {
+  @include full-width;
+
+  @include at-breakpoint($bp-med) {
+    width: 468px;
+  }
+
+  td,
+  th {
+    padding: 10px;
+    //vertical-align: middle;
+
+    @include at-breakpoint($bp-small) {
+      padding: 10px 10px 10px 0;
+    }
+  }
+  p { padding: 0 !important; }
+
+  thead {
+    border-bottom: 1px solid #555;
+  }
+  tbody {
+    td {
+      border-bottom: 1px dotted #B6B6B6;
+    }
+  }
+}
+

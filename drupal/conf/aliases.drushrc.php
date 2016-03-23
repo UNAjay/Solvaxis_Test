@@ -17,7 +17,7 @@ $aliases['vagrant'] = array(
   'site' => 'ansibleref',
   'env' => 'vagrant',
   'root' => '/vagrant/drupal/current',
-  'remote-host' => 'local.ansibleref.com',
+  'remote-host' => 'local.solvaxis.dev',
   'remote-user' => 'vagrant',
   'ssh-options' => '-i ' . $key,
 );
