@@ -841,13 +841,15 @@ function jeeveserp_layout_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'group_region_holder',
-        1 => 'body',
-        2 => 'field_section',
-        3 => 'field_basic_pages',
+        1 => 'field_sidebar_text',
+        2 => 'body',
+        3 => 'field_section',
+        4 => 'field_basic_pages',
       ),
     ),
     'fields' => array(
       'group_region_holder' => 'ds_content',
+      'field_sidebar_text' => 'ds_content',
       'body' => 'ds_content',
       'field_section' => 'ds_content',
       'field_basic_pages' => 'ds_content',

@@ -549,6 +549,7 @@ function monster_page_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'diverse' => 'diverse',
+    'event' => 'event',
     'news' => 'news',
     'product_news' => 'product_news',
   );
@@ -572,6 +573,7 @@ function monster_page_views_default_views() {
   $handler->display->display_options['filters']['type_1']['field'] = 'type';
   $handler->display->display_options['filters']['type_1']['value'] = array(
     'diverse' => 'diverse',
+    'event' => 'event',
     'news' => 'news',
     'product_news' => 'product_news',
   );
@@ -606,9 +608,11 @@ function monster_page_views_default_views() {
   $handler->display->display_options['fields']['field_image']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image']['type'] = 'jail';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'hot_news_image',
-    'image_link' => 'content',
+    'jail_effect' => 'fadeIn',
+    'jail_image_style' => 'hot_news_image',
+    'jail_image_link' => 'content',
   );
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_news_image']['id'] = 'field_news_image';
@@ -620,9 +624,11 @@ function monster_page_views_default_views() {
   $handler->display->display_options['fields']['field_news_image']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_news_image']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['field_news_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_news_image']['type'] = 'jail';
   $handler->display->display_options['fields']['field_news_image']['settings'] = array(
-    'image_style' => 'hot_news_image',
-    'image_link' => 'content',
+    'jail_effect' => 'fadeIn',
+    'jail_image_style' => 'hot_news_image',
+    'jail_image_link' => 'content',
   );
   /* Field: Content: Post date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
@@ -798,9 +804,11 @@ function monster_page_views_default_views() {
   $handler->display->display_options['fields']['field_news_image']['label'] = '';
   $handler->display->display_options['fields']['field_news_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_news_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_news_image']['type'] = 'jail';
   $handler->display->display_options['fields']['field_news_image']['settings'] = array(
-    'image_style' => 'hot_news_image',
-    'image_link' => 'content',
+    'jail_effect' => 'fadeIn',
+    'jail_image_style' => 'hot_news_image',
+    'jail_image_link' => 'content',
   );
   /* Field: Content: Post date */
   $handler->display->display_options['fields']['created']['id'] = 'created';

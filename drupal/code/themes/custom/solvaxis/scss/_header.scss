@@ -1,10 +1,11 @@
 .header-secondary {
   .region-holder {
-    position: relative;  
+    position: relative;
   }
 }
 
-#block-system-main-menu {
+#block-system-main-menu,
+#block-menu-block-2 {
   @include at-breakpoint($bp-xl) {
     margin-right: 69px;
   }
@@ -29,7 +30,7 @@
     .sbOptions {
       display: block !important;
       width: 100%;
-      
+
       li {
         float: left;
       }
@@ -136,7 +137,7 @@
 
 .header-secondary {
   .navigate,
-  .search-button { 
+  .search-button {
     display: block;
     position: absolute;
     top: 25px;
@@ -147,22 +148,22 @@
     z-index:200;
     cursor: pointer;
   }
-  
+
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
     .navigate,
-    .search-button-desktop { 
+    .search-button-desktop {
       /* Reference the @2x Sprite */
 			background-image: url('../images/sprite@2x.png');
       /* Translate the @2x sprite's dimensions back to 1x */
       background-size: 120px 51px;
     }
   }
- 
+
   // Search button
   .search-button {
     display: none;
     background-position: -40px 0;
-    
+
     @include at-breakpoint($bp-med-2) {
       display: inline-block;
       background-position: -50px 0;
@@ -180,7 +181,7 @@
       border-bottom: 1px solid $black;
     }
   }
-  
+
   // Navigate
   .navigate {
     right: 25px;
@@ -193,9 +194,9 @@
       display: none;
     }
     &.close {
-      background-position: -80px 0;  
+      background-position: -80px 0;
       right: 70%;
-      
+
       @include at-breakpoint($bp-med-2) {
         right: 80%;
       }
@@ -211,7 +212,7 @@
   .not-front & {
     border-bottom: 1px solid $gray-light;
   }
-}  
+}
 
 .search-button-desktop {
 &:hover {
@@ -247,7 +248,7 @@
   width: 100%;
   border-bottom: 1px solid transparent;
   z-index: 100;
-  
+
   .region-header-secondary {
     display: block;
     position: fixed;
@@ -257,21 +258,22 @@
     height: 100%;
     background: $gray-lighter;
     border-left: 1px solid $gray-light;
-   
-    #block-system-main-menu {
+
+    #block-system-main-menu,
+    #block-menu-block-2 {
       height: 82%;
       //margin-top: 80px;
       margin-top: 60px;
       overflow-y: auto;
       z-index: 200;
-     
+
     }
     &.expanded {
       right: 0;
     	margin-right:0;
     }
   }
-  
+
   .menu {
     background: transparent;
     width: 100%;
@@ -284,15 +286,15 @@
       a {
         color: $black;
         font-weight: 300;
-        text-transform: uppercase;  
+        text-transform: uppercase;
     	  &.active,
     	  &.active-trail,
     	  &:hover {
           background: transparent;
     	  	color: $black;
-        }  
+        }
       }
-      
+
       // second level
       & > .menu {
         display: block !important;
@@ -305,7 +307,7 @@
         margin-top: 0;
         padding: 0 0 0 20px;
         li {
-          
+
         }
       }
     }
@@ -321,8 +323,9 @@
       width: auto;
       height: auto;
       background: none;
-      
-      #block-system-main-menu {
+
+      #block-system-main-menu,
+      #block-menu-block-2 {
         margin-top: 0;
         overflow-y: visible;
       }
@@ -339,9 +342,10 @@
       li {
         display: inline-block;
         float: left;
-        font-size: 14px;
-        margin: 0 20px;
+        font-size: 13px;
+        margin: 0 8px;
         padding: 0 0 6px;
+        line-height: 22px;
         a {
           background: none;
           color: $black;
@@ -357,19 +361,19 @@
               position: absolute;
               bottom: 3px;
             }
-          } 
+          }
       	  &.active,
       	  &.active-trail {
-      	    
-      	  } 
+
+      	  }
         }
         &.first {
-          margin: 0 20px 0 0;
-        } 
+          margin: 0 8px 0 0;
+        }
         &.last {
-        
-        } 
-      
+
+        }
+
         // second level
         & > .menu {
           display: none !important;
@@ -434,7 +438,7 @@
               padding-bottom: 10px;
             }
           }
-          
+
           &:before {
             display: block;
             content: "";
@@ -477,7 +481,7 @@
 
 
 #block-search-form {
-  
+
   // mobile
   &.mobile {
     display: block !important;
@@ -514,7 +518,7 @@
         line-height: 24px;
         min-height: 24px;
         text-transform: uppercase;
-      }  
+      }
       .form-actions {
         position: absolute;
         left: -8px;
@@ -530,7 +534,7 @@
       }
     }
   }
-  
+
   // desktop
   &.desktop {
     display: none;
@@ -552,7 +556,7 @@
       border-width: 0 12px 12px 12px;
       border-color: transparent transparent $white transparent;
     }
-    
+
     @include at-breakpoint($bp-xl) {
       right: -11px;
       top: 109px;
@@ -567,7 +571,7 @@
         min-height: 18px;
         float: left;
         font-size: 10px;
-      }  
+      }
       .form-actions {
         float: right;
         position: relative;
@@ -582,7 +586,7 @@
           font-weight: normal;
           color: $white;
         }
-        
+
         .form-submit {
           display: block;
           background: $crimson;

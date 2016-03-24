@@ -370,7 +370,7 @@ function jeeveserp_layout_field_default_field_instances() {
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -927,7 +927,7 @@ function jeeveserp_layout_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 40,
+        'weight' => 42,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -1204,9 +1204,10 @@ function jeeveserp_layout_field_default_field_instances() {
       ),
       'default' => array(
         'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 41,
+        'type' => 'text_default',
+        'weight' => 1,
       ),
       'ds_contact_us' => array(
         'label' => 'hidden',

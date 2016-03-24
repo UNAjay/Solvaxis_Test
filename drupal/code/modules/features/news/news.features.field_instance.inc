@@ -295,10 +295,9 @@ function news_field_default_field_instances() {
         'weight' => 0,
       ),
       'default' => array(
-        'label' => 'above',
-        'module' => 'partners',
+        'label' => 'hidden',
         'settings' => array(),
-        'type' => 'partners_badge_display_formatter',
+        'type' => 'hidden',
         'weight' => 3,
       ),
       'ds_contact_us' => array(
@@ -515,10 +514,9 @@ function news_field_default_field_instances() {
         'weight' => 0,
       ),
       'default' => array(
-        'label' => 'above',
-        'module' => 'partners',
+        'label' => 'hidden',
         'settings' => array(),
-        'type' => 'partners_badge_display_formatter',
+        'type' => 'hidden',
         'weight' => 4,
       ),
       'ds_contact_us' => array(

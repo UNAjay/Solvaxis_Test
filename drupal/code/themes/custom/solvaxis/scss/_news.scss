@@ -10,15 +10,15 @@
         margin: 0;
         padding: 5px 0 7px;
         border-bottom: 1px solid $gray-light;
-        
+
         .views-field-body {
           line-height: 1.2em;
         }
-        
+
         .views-more-link {
           display: none;
         }
-        
+
         @include at-breakpoint($bp-med-2) {
           //margin-right: 0;
           display: inline-block;
@@ -37,7 +37,7 @@
             display: inline-block;
           }
         }
-        
+
         .views-field-title-field {
           color: $black;
           font-size: 15px;
@@ -135,22 +135,22 @@
     height: 20px;
     min-width: 20px;
     padding: 0 3px;
-	
+
 		a {
 			color: $white;
 		}
-    
+
     .pager-current {
       text-decoration: underline;
     }
-    
+
     &.pager-previous,
     &.pager-next {
      background: $gray-lighter;
      width: 20px;
      position: relative;
      cursor: pointer;
-     
+
      &:before {
        content: '\e807';
        display: block;
@@ -204,7 +204,7 @@
   font-weight: 300;
   text-transform: uppercase;
   @include full-width;
-  
+
   &:before {
     content: '';
     display: block;
@@ -225,7 +225,52 @@
   text-transform: uppercase;
   @include full-width;
 }
-  
+
+
+.node-event {
+  h1 {
+    margin-bottom: 33px;
+    padding-bottom: 0;
+    position: relative;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    @include full-width;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 40px;
+      height: 1px;
+      background: $crimson;
+    }
+  }
+
+  h2 {
+    color: $black;
+    padding: 0 0 22px;
+    @include font-size(15);
+    font-weight: 300;
+    text-transform: uppercase;
+    @include full-width;
+  }
+
+  .date,
+  .type,
+  .link {
+    margin-bottom: 2px;
+
+    .field-label {
+      float: left;
+      font-weight: bold;
+      padding: 0 5px;
+    }
+  }
+}
+
 
 
 

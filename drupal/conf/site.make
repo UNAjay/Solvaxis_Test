@@ -39,8 +39,8 @@ projects[link][version] = "1.2"
 projects[context][version] = "3.6"
 projects[context_condition_theme][version] = "1.0"
 
-; projects[wysiwyg][version] = 2.x-dev
-projects[wysiwyg][revision] = 8d32d738615f5d6b85b91146cb0032085e5b1789
+projects[wysiwyg][version] = 2.x-dev
+projects[wysiwyg][revision] = 949039351d71d24d60faee4f63c6527e54761ee1
 
 projects[libraries][version] = "2.2"
 projects[imce][version] = "1.9"
