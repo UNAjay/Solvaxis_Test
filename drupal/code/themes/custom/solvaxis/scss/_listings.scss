@@ -1,7 +1,8 @@
 // hot news
 .view-ref-news.view-display-id-hot_news,
 .view-display-id-customers_page,
-.page-news-list {
+.page-news-list,
+.list-style-1 {
   .views-row {
     display: inline-block;
     float: left;
@@ -16,7 +17,7 @@
       width: 100%;
       overflow: hidden;
       background: $white;
-      
+
       img {
         display: inline-block;
         float: left;
@@ -27,7 +28,7 @@
       }
     }
     .body,
-    .title { 
+    .title {
       width: 100%;
       padding: 0;
       @include at-breakpoint($bp-med-2) {
@@ -55,7 +56,7 @@
         }
       }
     }
-  } 
+  }
 }
 
 .view-ref-customers {
@@ -64,17 +65,17 @@
      // display: table;
       //width: auto;
       height: 130px;
-      
+
       .field-content {
         display: table;
         width: 100%;
         height: 100%;
-        
+
         a {
           display: table-cell;
           text-align: center;
           vertical-align: middle;
-          
+
           img {
             width: auto;
             float: none;

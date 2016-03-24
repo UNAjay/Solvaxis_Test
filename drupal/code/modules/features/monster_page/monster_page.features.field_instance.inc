@@ -786,7 +786,7 @@ function monster_page_field_default_field_instances() {
           'view_mode' => 'view_mode_selector',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
