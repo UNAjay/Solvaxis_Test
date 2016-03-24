@@ -836,27 +836,34 @@ function jeeveserp_layout_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'page';
   $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'ds_1col';
+  $ds_layout->layout = 'ds_2col_stacked';
   $ds_layout->settings = array(
     'regions' => array(
-      'ds_content' => array(
-        0 => 'group_region_holder',
-        1 => 'field_sidebar_text',
-        2 => 'body',
+      'left' => array(
+        0 => 'body',
+        1 => 'group_region_holder',
+      ),
+      'right' => array(
+        2 => 'field_sidebar_text',
+      ),
+      'footer' => array(
         3 => 'field_section',
         4 => 'field_basic_pages',
       ),
     ),
     'fields' => array(
-      'group_region_holder' => 'ds_content',
-      'field_sidebar_text' => 'ds_content',
-      'body' => 'ds_content',
-      'field_section' => 'ds_content',
-      'field_basic_pages' => 'ds_content',
+      'body' => 'left',
+      'group_region_holder' => 'left',
+      'field_sidebar_text' => 'right',
+      'field_section' => 'footer',
+      'field_basic_pages' => 'footer',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'ds_content' => 'div',
+      'header' => 'div',
+      'left' => 'div',
+      'right' => 'div',
+      'footer' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
