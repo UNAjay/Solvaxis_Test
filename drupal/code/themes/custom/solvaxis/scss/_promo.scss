@@ -18,7 +18,7 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
-    -webkit-filter: grayscale(100%); 
+    -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     &:before {
       display: block;
@@ -39,11 +39,11 @@
     .flex-control-nav {
       display: none;
     }
-  
+
     .slides img {
       display: none;
     }
-    
+
     .slides > li {
       h2 {
         color: $black;
@@ -65,7 +65,7 @@
     }
     .flexslider {
       padding: 60px 35px 80px;
-      
+
       .slides > li {
         h2 {
           @include font-size(40,48);
@@ -80,12 +80,12 @@
 #leader {
   @include at-breakpoint($bp-xl) {
     .top-bg-image {
-      height: 490px;
+      height: 425px;
     }
-  
+
     .flexslider {
       padding: 136px 0 159px;
-    
+
       .slides > li {
         h2 {
           @include font-size(51,67);

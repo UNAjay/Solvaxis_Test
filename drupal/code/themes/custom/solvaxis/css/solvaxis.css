@@ -1595,7 +1595,7 @@ footer .region-footer-primary .social-icons {
 
 @media (min-width: 60em) {
   #leader .top-bg-image {
-    height: 490px;
+    height: 425px;
   }
   #leader .flexslider {
     padding: 136px 0 159px;
@@ -1617,21 +1617,21 @@ footer .region-footer-primary .social-icons {
   overflow: hidden;
 }
 
-.front .view-id-ref_customers {
+.view-id-ref_customers {
   margin-top: 0;
 }
-.front .view-id-ref_customers .views-row {
+.view-id-ref_customers .views-row {
   border: 1px solid transparent;
   margin-bottom: 20px;
   height: 130px;
 }
 @media (min-width: 24em) {
-  .front .view-id-ref_customers .views-row {
+  .view-id-ref_customers .views-row {
     width: 32.0%;
     float: left;
     margin-right: 2.0%;
   }
-  .front .view-id-ref_customers .views-row:nth-child(3n+3) {
+  .view-id-ref_customers .views-row:nth-child(3n+3) {
     width: 32.0%;
     float: right;
     margin-right: 0;

@@ -29,7 +29,7 @@
 }
 
 // Meet our customers
-.front .view-id-ref_customers {
+.view-id-ref_customers {
   margin-top: 0;
 	.views-row {
     border: 1px solid transparent;
@@ -44,8 +44,8 @@
       }
     }
 	}
-}    
-    
+}
+
 .view-mode-section_dark {
   .view-id-ref_customers {
     .views-row {
@@ -110,16 +110,16 @@ article {
     min-height: 80px;
     margin-bottom: 20px;
     &.media-logo img {
-      -webkit-filter: grayscale(100%); 
+      -webkit-filter: grayscale(100%);
       filter: grayscale(100%);
-      
+
   		&:hover,
       &:active {
-        -webkit-filter: grayscale(0%); 
+        -webkit-filter: grayscale(0%);
         filter: grayscale(0%);
       }
     }
-    
+
     @include at-breakpoint($bp-small) {
       display: inline-block;
       float: left;
