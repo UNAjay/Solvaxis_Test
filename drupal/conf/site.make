@@ -77,7 +77,7 @@ projects[field_tools][patch][] = https://www.drupal.org/files/issues/field_tools
 ; fix term pages, remove pager
 projects[taxonomy_display][version] = "1.1"
 
-projects[field_group][version] = "1.4"
+projects[field_group][version] = "1.5"
 projects[views_arguments_extras][version] = "1.0-beta1"
 projects[views_data_export][version] = "3.0-beta7"
 
@@ -300,6 +300,16 @@ projects[entity_view_mode][subdir] = contrib
 projects[view_mode_selector][version] = 1.x-dev
 projects[view_mode_selector][subdir] = contrib
 projects[view_mode_selector][revision] = 2e299d1be927e0181b4dfe3b330ddf1403e74efa
+
+projects[views_load_more][version] = 1.x-dev
+projects[views_load_more][revision] = 04c3555847237e2ba6409b25a7a8cbee4d59f3b5
+projects[views_load_more][patch][] = https://www.drupal.org/files/issues/views_load_more-grouping-1475642-6.patch
+
+projects[draggableviews][version] = 2.1
+
+projects[optimizely][version] = 2.18
+
+projects[advagg][version] = 2.17
 
 projects[devdocs][type] = module
 projects[devdocs][download][type] = git
