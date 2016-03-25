@@ -191,7 +191,7 @@ function industries_strongarm() {
       'display' => array(
         'language' => array(
           'teaser' => array(
-            'weight' => '4',
+            'weight' => '14',
             'visible' => FALSE,
           ),
           'default' => array(
@@ -203,6 +203,10 @@ function industries_strongarm() {
           'default' => array(
             'weight' => '6',
             'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '42',
+            'visible' => FALSE,
           ),
         ),
       ),

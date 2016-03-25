@@ -114,6 +114,22 @@
   margin: 0;
 }
 
+.node-teaser {
+  margin: 20px 0;
+  border-bottom: 1px solid $gray-light;
+  padding-bottom: 10px;
+  .node-link {
+    float: right;
+    a {
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+  }
+  .this {
+    margin-top: 0;
+  }
+}
+
 // section title, banner title
 .group-banner h2,
 .section-title {

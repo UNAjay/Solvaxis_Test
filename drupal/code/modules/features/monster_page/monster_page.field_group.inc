@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function monster_page_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -38,7 +38,7 @@ function monster_page_field_group_info() {
       ),
     ),
   );
-  $export['group_banner|node|section|form'] = $field_group;
+  $field_groups['group_banner|node|section|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -72,7 +72,7 @@ function monster_page_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_banner|node|section|section_dark'] = $field_group;
+  $field_groups['group_banner|node|section|section_dark'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -106,7 +106,7 @@ function monster_page_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_banner|node|section|section_light'] = $field_group;
+  $field_groups['group_banner|node|section|section_light'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -133,7 +133,7 @@ function monster_page_field_group_info() {
       ),
     ),
   );
-  $export['group_bg_image|node|section|form'] = $field_group;
+  $field_groups['group_bg_image|node|section|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -162,7 +162,7 @@ function monster_page_field_group_info() {
       ),
     ),
   );
-  $export['group_content|node|section|form'] = $field_group;
+  $field_groups['group_content|node|section|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -175,10 +175,8 @@ function monster_page_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Region Holder',
-    'weight' => '0',
-    'children' => array(
-      0 => 'body',
-    ),
+    'weight' => '1',
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Region Holder',
@@ -194,7 +192,7 @@ function monster_page_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_region_holder|node|page|default'] = $field_group;
+  $field_groups['group_region_holder|node|page|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -222,7 +220,7 @@ function monster_page_field_group_info() {
       ),
     ),
   );
-  $export['group_sections|node|page|form'] = $field_group;
+  $field_groups['group_sections|node|page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -250,7 +248,7 @@ function monster_page_field_group_info() {
       ),
     ),
   );
-  $export['group_sidebar|node|section|form'] = $field_group;
+  $field_groups['group_sidebar|node|section|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -282,7 +280,7 @@ function monster_page_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_sidebar|node|section|section_dark'] = $field_group;
+  $field_groups['group_sidebar|node|section|section_dark'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -314,7 +312,7 @@ function monster_page_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_sidebar|node|section|section_light'] = $field_group;
+  $field_groups['group_sidebar|node|section|section_light'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -346,7 +344,7 @@ function monster_page_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_social|node|section|section_dark'] = $field_group;
+  $field_groups['group_social|node|section|section_dark'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -378,7 +376,17 @@ function monster_page_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_social|node|section|section_light'] = $field_group;
+  $field_groups['group_social|node|section|section_light'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Background image');
+  t('Banner');
+  t('Content');
+  t('Region Holder');
+  t('Sections');
+  t('Sidebar');
+  t('Social');
+
+  return $field_groups;
 }

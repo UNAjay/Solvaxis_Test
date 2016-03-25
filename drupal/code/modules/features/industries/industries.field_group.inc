@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function industries_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -36,7 +36,7 @@ function industries_field_group_info() {
       ),
     ),
   );
-  $export['group_categories|taxonomy_term|industries|form'] = $field_group;
+  $field_groups['group_categories|taxonomy_term|industries|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -65,7 +65,7 @@ function industries_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_content|taxonomy_term|industries|form'] = $field_group;
+  $field_groups['group_content|taxonomy_term|industries|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -92,7 +92,7 @@ function industries_field_group_info() {
       ),
     ),
   );
-  $export['group_image|taxonomy_term|industries|form'] = $field_group;
+  $field_groups['group_image|taxonomy_term|industries|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -124,7 +124,7 @@ function industries_field_group_info() {
       ),
     ),
   );
-  $export['group_references|taxonomy_term|industries|form'] = $field_group;
+  $field_groups['group_references|taxonomy_term|industries|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -152,7 +152,7 @@ function industries_field_group_info() {
       ),
     ),
   );
-  $export['group_sections|node|customer|form'] = $field_group;
+  $field_groups['group_sections|node|customer|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -180,7 +180,7 @@ function industries_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_sidebar_text|node|customer|form'] = $field_group;
+  $field_groups['group_sidebar_text|node|customer|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -209,7 +209,17 @@ function industries_field_group_info() {
       ),
     ),
   );
-  $export['group_system|taxonomy_term|industries|form'] = $field_group;
+  $field_groups['group_system|taxonomy_term|industries|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Categories');
+  t('Content');
+  t('References');
+  t('Sections');
+  t('Sidebar text');
+  t('System settings');
+  t('Teaser image');
+
+  return $field_groups;
 }

@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function jeeveserp_layout_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -36,7 +36,7 @@ function jeeveserp_layout_field_group_info() {
       ),
     ),
   );
-  $export['group_categories|node|page|form'] = $field_group;
+  $field_groups['group_categories|node|page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -65,7 +65,7 @@ function jeeveserp_layout_field_group_info() {
       ),
     ),
   );
-  $export['group_content|node|page|form'] = $field_group;
+  $field_groups['group_content|node|page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -78,11 +78,8 @@ function jeeveserp_layout_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Description container',
-    'weight' => '1',
-    'children' => array(
-      0 => 'field_success_story',
-      1 => 'field_success_story_title',
-    ),
+    'weight' => '40',
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Description container',
@@ -98,7 +95,7 @@ function jeeveserp_layout_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_description_container|node|customer|teaser'] = $field_group;
+  $field_groups['group_description_container|node|customer|teaser'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -131,7 +128,7 @@ function jeeveserp_layout_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_description_container|node|page|teaser'] = $field_group;
+  $field_groups['group_description_container|node|page|teaser'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -164,7 +161,7 @@ function jeeveserp_layout_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_description_container|node|video|teaser'] = $field_group;
+  $field_groups['group_description_container|node|video|teaser'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -192,7 +189,7 @@ function jeeveserp_layout_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_image|node|page|form'] = $field_group;
+  $field_groups['group_image|node|page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -219,7 +216,15 @@ function jeeveserp_layout_field_group_info() {
       ),
     ),
   );
-  $export['group_references|node|page|form'] = $field_group;
+  $field_groups['group_references|node|page|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Categories');
+  t('Content');
+  t('Description container');
+  t('Image');
+  t('References');
+
+  return $field_groups;
 }

@@ -479,6 +479,7 @@ function jeeveserp_layout_field_default_field_instances() {
         'fields' => array(),
         'type_settings' => array(
           'allow_existing' => 1,
+          'allow_new' => 1,
           'delete_references' => 0,
           'label_plural' => 'nodes',
           'label_singular' => 'node',

@@ -56,6 +56,11 @@
        @include span-columns(4 omega,12);
        padding: 72px 0 0;
      }
+     .logo {
+        img {
+          @extend %full-width-image;
+        }
+      }
    }
 }
 

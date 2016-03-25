@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,300,700);
-.ds-2col .group-left .image img {
+.ds-2col .group-left .image img, .ds-2col .group-right .logo img {
   width: 100%;
   height: auto;
 }
@@ -1568,6 +1568,9 @@ footer .region-footer-primary .social-icons {
 #leader .flexslider .flex-control-nav {
   display: none;
 }
+#leader .flexslider .slides {
+  min-height: 170px;
+}
 #leader .flexslider .slides img {
   display: none;
 }
@@ -1598,14 +1601,14 @@ footer .region-footer-primary .social-icons {
     height: 425px;
   }
   #leader .flexslider {
-    padding: 136px 0 159px;
+    padding: 136px 0 124px;
   }
   #leader .flexslider .slides > li h2 {
-    font-size: 51px;
-    font-size: 5.1rem;
-    line-height: 1.31373;
+    font-size: 41px;
+    font-size: 4.1rem;
+    line-height: 1.39024;
     margin-bottom: 24px;
-    width: 50%;
+    width: 70%;
   }
 }
 
@@ -1867,6 +1870,22 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   float: left;
   width: 100%;
   margin: 0;
+}
+
+.node-teaser {
+  margin: 20px 0;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 10px;
+}
+.node-teaser .node-link {
+  float: right;
+}
+.node-teaser .node-link a {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.node-teaser .this {
+  margin-top: 0;
 }
 
 .group-banner h2,
@@ -2369,7 +2388,6 @@ p.italic {
 }
 
 .sbOptions li {
-  height: 20px;
   padding: 0 4px 1px;
 }
 
@@ -2377,8 +2395,9 @@ p.italic {
   padding: 0;
   border-bottom: 1px solid transparent;
 }
-.sbOptions li a:hover {
+.sbOptions li a:hover, .sbOptions li a.hover {
   border-bottom: 1px solid #3c3f42;
+  background-color: #f2f2f2;
 }
 
 .sbOptions a {

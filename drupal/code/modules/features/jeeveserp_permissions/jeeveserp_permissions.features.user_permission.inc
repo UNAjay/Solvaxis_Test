@@ -223,6 +223,13 @@ function jeeveserp_permissions_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'administer redirects'.
+  $permissions['administer redirects'] = array(
+    'name' => 'administer redirects',
+    'roles' => array(),
+    'module' => 'redirect',
+  );
+
   // Exported permission: 'administer search'.
   $permissions['administer search'] = array(
     'name' => 'administer search',
@@ -276,6 +283,13 @@ function jeeveserp_permissions_user_default_permissions() {
     'module' => 'tracking_code',
   );
 
+  // Exported permission: 'administer url aliases'.
+  $permissions['administer url aliases'] = array(
+    'name' => 'administer url aliases',
+    'roles' => array(),
+    'module' => 'path',
+  );
+
   // Exported permission: 'administer users'.
   $permissions['administer users'] = array(
     'name' => 'administer users',
@@ -311,6 +325,17 @@ function jeeveserp_permissions_user_default_permissions() {
       'Product site admin' => 'Product site admin',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'create url aliases'.
+  $permissions['create url aliases'] = array(
+    'name' => 'create url aliases',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'path',
   );
 
   // Exported permission: 'delete any page content'.
@@ -814,6 +839,13 @@ function jeeveserp_permissions_user_default_permissions() {
       'Regional editor' => 'Regional editor',
     ),
     'module' => 'entity_translation',
+  );
+
+  // Exported permission: 'translate content'.
+  $permissions['translate content'] = array(
+    'name' => 'translate content',
+    'roles' => array(),
+    'module' => 'translation',
   );
 
   // Exported permission: 'translate node entities'.

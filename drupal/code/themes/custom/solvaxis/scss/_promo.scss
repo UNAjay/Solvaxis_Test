@@ -40,6 +40,9 @@
       display: none;
     }
 
+    .slides {
+      min-height: 170px;
+    }
     .slides img {
       display: none;
     }
@@ -84,13 +87,13 @@
     }
 
     .flexslider {
-      padding: 136px 0 159px;
+      padding: 136px 0 124px;
 
       .slides > li {
         h2 {
-          @include font-size(51,67);
+          @include font-size(41,57);
           margin-bottom: 24px;
-          width: 50%;
+          width: 70%;
         }
       }
     }

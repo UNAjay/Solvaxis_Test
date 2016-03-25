@@ -479,7 +479,10 @@ function monster_page_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['css_class'] = 'list-style-1';
   $handler->display->display_options['use_ajax'] = TRUE;
+  $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'View all';
+  $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -592,16 +595,11 @@ function monster_page_views_default_views() {
 
   /* Display: Hot News */
   $handler = $view->new_display('block', 'Hot News', 'hot_news');
+  $handler->display->display_options['link_url'] = 'news-events';
   $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['pager']['options']['quantity'] = '5';
-  $handler->display->display_options['pager']['options']['tags']['first'] = '';
-  $handler->display->display_options['pager']['options']['tags']['previous'] = '';
-  $handler->display->display_options['pager']['options']['tags']['next'] = '';
-  $handler->display->display_options['pager']['options']['tags']['last'] = '';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Field: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
@@ -707,7 +705,6 @@ function monster_page_views_default_views() {
   $handler->display->display_options['filters']['type_1']['table'] = 'node';
   $handler->display->display_options['filters']['type_1']['field'] = 'type';
   $handler->display->display_options['filters']['type_1']['value'] = array(
-    'blog_post' => 'blog_post',
     'diverse' => 'diverse',
     'event' => 'event',
     'job_posting' => 'job_posting',
@@ -728,6 +725,7 @@ function monster_page_views_default_views() {
   $handler = $view->new_display('block', 'Latest News', 'latest');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'view-news';
+  $handler->display->display_options['link_url'] = 'news-events';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '3';
@@ -772,6 +770,7 @@ function monster_page_views_default_views() {
   $handler->display->display_options['filters']['type_1']['field'] = 'type';
   $handler->display->display_options['filters']['type_1']['value'] = array(
     'diverse' => 'diverse',
+    'event' => 'event',
     'news' => 'news',
     'product_news' => 'product_news',
   );
@@ -854,7 +853,7 @@ function monster_page_views_default_views() {
   $handler->display->display_options['path'] = 'news-list';
   $translatables['ref_news'] = array(
     t('Master'),
-    t('more'),
+    t('View all'),
     t('Apply'),
     t('Clear all'),
     t('Sort by'),
@@ -871,6 +870,7 @@ function monster_page_views_default_views() {
     t('[created] - [title_field]'),
     t('Filter by type'),
     t('Hot News'),
+    t('more'),
     t('[field_image]'),
     t('Latest News'),
     t('News: All'),

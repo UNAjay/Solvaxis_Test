@@ -60,9 +60,7 @@ function jeeveserp_layout_field_default_field_bases() {
         'sort' => array(
           'type' => 'none',
         ),
-        'target_bundles' => array(
-          'page' => 'page',
-        ),
+        'target_bundles' => array(),
       ),
       'target_type' => 'node',
     ),

@@ -12,6 +12,34 @@ function industries_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|customer|teaser';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'customer';
+  $ds_fieldsetting->view_mode = 'teaser';
+  $ds_fieldsetting->settings = array(
+    'node_link' => array(
+      'weight' => '2',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+    'field_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'logo',
+          'fi-at' => '',
+          'fi-def-at' => TRUE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $export['node|customer|teaser'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'taxonomy_term|industries|default';
   $ds_fieldsetting->entity_type = 'taxonomy_term';
   $ds_fieldsetting->bundle = 'industries';
@@ -317,31 +345,27 @@ function industries_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'left' => array(
-        0 => 'field_success_story_title',
-        1 => 'field_image',
-        2 => 'field_success_story',
-        3 => 'body',
-        4 => 'field_partners',
-        5 => 'field_add_this',
-        6 => 'flippy_pager',
+        0 => 'field_image',
+        1 => 'body',
+        2 => 'field_partners',
+        3 => 'field_add_this',
       ),
       'right' => array(
-        7 => 'field_sidebar_text',
+        4 => 'field_sidebar_text',
       ),
       'footer' => array(
-        8 => 'field_section',
+        5 => 'field_section',
+        6 => 'flippy_pager',
       ),
     ),
     'fields' => array(
-      'field_success_story_title' => 'left',
       'field_image' => 'left',
-      'field_success_story' => 'left',
       'body' => 'left',
       'field_partners' => 'left',
       'field_add_this' => 'left',
-      'flippy_pager' => 'left',
       'field_sidebar_text' => 'right',
       'field_section' => 'footer',
+      'flippy_pager' => 'footer',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -357,6 +381,49 @@ function industries_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['node|customer|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|customer|teaser';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'customer';
+  $ds_layout->view_mode = 'teaser';
+  $ds_layout->layout = 'ds_2col_stacked';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'left' => array(
+        0 => 'field_image',
+        1 => 'body',
+        2 => 'node_link',
+        3 => 'field_partners',
+        4 => 'field_add_this',
+      ),
+      'right' => array(
+        5 => 'field_sidebar_text',
+      ),
+    ),
+    'fields' => array(
+      'field_image' => 'left',
+      'body' => 'left',
+      'node_link' => 'left',
+      'field_partners' => 'left',
+      'field_add_this' => 'left',
+      'field_sidebar_text' => 'right',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'header' => 'div',
+      'left' => 'div',
+      'right' => 'div',
+      'footer' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|customer|teaser'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;

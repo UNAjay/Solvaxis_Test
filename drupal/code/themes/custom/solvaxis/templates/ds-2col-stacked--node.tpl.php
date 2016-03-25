@@ -15,16 +15,23 @@
     <?php print $header; ?>
   </<?php print $header_wrapper ?>>
 
-  <<?php print $left_wrapper ?> class="group-left<?php print $left_classes; ?>">
+  <?php if ($right) { ?>
+    <<?php print $left_wrapper ?> class="group-left<?php print $left_classes; ?>">
+  <?php } else { ?>
+    <<?php print $left_wrapper ?> class="<?php print $left_classes; ?>">
+  <?php } ?>
     <?php if (!empty($title)): ?>
       <h1 class="section-title"><?php print $title; ?></h1>
     <?php endif; ?>
     <?php print $left; ?>
   </<?php print $left_wrapper ?>>
 
+
+  <?php if ($right): ?>
   <<?php print $right_wrapper ?> class="group-right<?php print $right_classes; ?>">
     <?php print $right; ?>
   </<?php print $right_wrapper ?>>
+  <?php endif; ?>
 </div>
 
   <<?php print $footer_wrapper ?> class="group-footer<?php print $footer_classes; ?>">
