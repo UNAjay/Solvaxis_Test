@@ -10,6 +10,46 @@ function solvaxis_language_switch_links_alter(array &$links, $type, $path) {
   }
 }
 
+/**
+ * Return HTML for a view in a field.
+ *
+ * @see views_embed_view()
+ */
+function solvaxis_viewfield_formatter_default($variables) {
+  $element = $variables['element'];
+
+  $view_arguments = $element['#view_arguments'];
+  // Manually push arguments into Related items view.
+  // Snippet taken form views_plugin_argument_default_taxonomy_tid.inc
+  if ($element['#view_name'] == 'ref_related') {
+    // Load default argument from node.
+    foreach (range(1, 3) as $i) {
+      $node = menu_get_object('node', $i);
+      if (!empty($node)) {
+        break;
+      }
+    }
+    // Just check, if a node could be detected.
+    if ($node) {
+      $taxonomy = array();
+      $fields = field_info_instances('node', $node->type);
+      foreach ($fields as $name => $info) {
+        $field_info = field_info_field($name);
+        if ($field_info['type'] == 'taxonomy_term_reference') {
+          $items = field_get_items('node', $node, $name);
+          if (is_array($items)) {
+            foreach ($items as $item) {
+              $taxonomy[$item['tid']] = $field_info['settings']['allowed_values'][0]['vocabulary'];
+            }
+          }
+        }
+      }
+      $view_arguments[0] = implode('+', array_keys($taxonomy));
+    }
+  }
+
+  return $element['#view']->preview($element['#view_display'], $view_arguments);
+}
 
 /*
  * Implements hook_preprocess_page().
