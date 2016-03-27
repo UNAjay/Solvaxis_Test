@@ -102,6 +102,8 @@ function solvaxis_page_alter(&$page) {
 function solvaxis_css_alter(&$css) {
    // base theme styles
    unset($css[drupal_get_path('theme', 'jeeves') . '/css/jeeves.css']);
+	 // remove flexslider default style
+   unset($css[libraries_get_path('flexslider') . '/flexslider.css']);
 }
 
 /**

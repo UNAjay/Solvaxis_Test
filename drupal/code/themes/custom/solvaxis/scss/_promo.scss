@@ -35,13 +35,14 @@
     border: 0 none;
     margin-top: 0;
     padding: 68px 35px 80px;
-    .flex-direction-nav,
     .flex-control-nav {
       display: none;
     }
 
     .slides {
-      min-height: 170px;
+      min-height: 215px;
+      margin: 0;
+      padding: 0;
     }
     .slides img {
       display: none;
@@ -54,6 +55,46 @@
         font-weight: 300;
         text-transform: uppercase;
         margin-bottom: 24px;
+      }
+    }
+    
+    .flex-direction-nav {
+      li {
+        position: absolute;
+        top: 40%;
+        display: block;
+        visibility: visible;
+        a {
+          background: transparent;
+          border: 1px solid transparent;
+          display: block;
+          width: 42px;
+          height: 42px;
+          opacity: 0.4;
+          font-size: 0;
+          position: relative;
+          text-align: center;
+          text-decoration: none;
+          &:hover {
+            opacity: 1.0;
+          }
+        }
+        &.flex-nav-prev {
+          left: 0;
+          a {
+            background-image:  url('../images/flex-prev-dark@2x.png');
+            background-repeat: no-repeat;
+            background-size: 41px 41px;
+          }
+        }
+        &.flex-nav-next {
+          right: 0;
+          a {
+            background-image:  url('../images/flex-next-dark@2x.png');
+            background-repeat: no-repeat;
+            background-size: 41px 41px;
+          }
+        }
       }
     }
   }
@@ -90,17 +131,47 @@
       padding: 136px 0 124px;
 
       .slides > li {
+        min-height: 215px;
         h2 {
-          @include font-size(41,57);
+          @include font-size(36,52);
           margin-bottom: 24px;
-          width: 70%;
+          width: 90%;
+        }
+        p {
+          width: 50%;
+        }
+        .button {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+        }
+      }
+      
+      .flex-direction-nav {
+        li {
+          top: 50%;
+          margin-top: -42px;
+          a {
+            width: 85px;
+            height: 85px;
+          }
+          &.flex-nav-prev {
+            left: 0;
+            a {
+              background-size: 84px 84px;
+            }
+          }
+          &.flex-nav-next {
+            right: 0;
+            a {
+              background-size: 84px 84px;
+            }
+          }
         }
       }
     }
   }
 }
-
-
 
 
 
