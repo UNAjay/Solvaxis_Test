@@ -112,8 +112,7 @@
         width: 195px;
       }
     }
-    // desktop
-    @include at-breakpoint($bp-xl) {
+    @include at-breakpoint($bp-xl-2) {
       margin: 47px 0 18px 0;
       img {
         width: 200px;
@@ -208,11 +207,11 @@
 //-----------------------------------------
 // main menu
 //-----------------------------------------
-.header-secondary {
-  .not-front & {
-    border-bottom: 1px solid $gray-light;
-  }
-}
+//.header-secondary {
+//  .not-front & {
+//    border-bottom: 1px solid $gray-light;
+//  }
+//}
 
 .search-button-desktop {
 &:hover {

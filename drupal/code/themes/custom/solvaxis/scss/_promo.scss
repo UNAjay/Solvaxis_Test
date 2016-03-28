@@ -34,13 +34,12 @@
     background: none;
     border: 0 none;
     margin-top: 0;
-    padding: 68px 35px 80px;
+    padding: 68px 35px 30px;
     .flex-control-nav {
       display: none;
     }
 
     .slides {
-      min-height: 215px;
       margin: 0;
       padding: 0;
     }
@@ -51,24 +50,25 @@
     .slides > li {
       h2 {
         color: $black;
-        @include font-size(35,40);
+        @include font-size(21,31);
+        font-size: 20px;
         font-weight: 300;
         text-transform: uppercase;
-        margin-bottom: 24px;
+        margin-bottom: 12px;
       }
     }
     
     .flex-direction-nav {
       li {
         position: absolute;
-        top: 40%;
+        top: 50%;
         display: block;
         visibility: visible;
         a {
           background: transparent;
           border: 1px solid transparent;
           display: block;
-          width: 42px;
+          width: 35px;
           height: 42px;
           opacity: 0.4;
           font-size: 0;
@@ -83,6 +83,7 @@
           left: 0;
           a {
             background-image:  url('../images/flex-prev-dark@2x.png');
+            background-position: -7px 0;
             background-repeat: no-repeat;
             background-size: 41px 41px;
           }
@@ -109,11 +110,29 @@
     }
     .flexslider {
       padding: 60px 35px 80px;
-
+      
+      .slides {
+      }
+      
       .slides > li {
         h2 {
-          @include font-size(40,48);
-          width: 60%;
+          @include font-size(36,52);
+          margin-bottom: 24px;
+          width: 100%;
+        }
+      }
+      
+      .flex-direction-nav {
+        li {
+          a {
+            width: 42px;
+
+          }
+          &.flex-nav-prev {
+            a {
+              background-position: 0 0;
+            }
+          }
         }
       }
     }
@@ -122,20 +141,22 @@
 
 //desktop
 #leader {
-  @include at-breakpoint($bp-xl) {
+  @include at-breakpoint($bp-xl-2) {
     .top-bg-image {
       height: 425px;
     }
 
     .flexslider {
       padding: 136px 0 124px;
-
+      
+      .slides {
+        min-height: 215px;
+      }
+      
       .slides > li {
         min-height: 215px;
         h2 {
-          @include font-size(36,52);
           margin-bottom: 24px;
-          width: 90%;
         }
         p {
           width: 50%;
@@ -149,7 +170,6 @@
       
       .flex-direction-nav {
         li {
-          top: 50%;
           margin-top: -42px;
           a {
             width: 85px;
@@ -159,6 +179,7 @@
             left: 0;
             a {
               background-size: 84px 84px;
+              background-position: 0 0;
             }
           }
           &.flex-nav-next {
@@ -172,6 +193,3 @@
     }
   }
 }
-
-
-

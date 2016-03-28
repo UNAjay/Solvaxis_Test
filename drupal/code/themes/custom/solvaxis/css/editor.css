@@ -324,13 +324,13 @@ input[type="submit"],
 input[type="button"],
 .button, .region-content input[type="submit"], #colorbox input[type="submit"], .node-type-full-page .view-promo-slideshow .slides {
   background: none transparent;
-  padding: 18px 22px;
+  padding: 6px 22px;
   border: 1px solid #e30043;
   background: transparent;
   color: #e30043;
   font-size: 14px;
   font-weight: 300;
-  line-height: 0;
+  line-height: 24px;
   text-transform: uppercase;
   text-shadow: none;
 }
@@ -508,14 +508,14 @@ a.call-to-action {
   color: black;
   display: inline-block;
   font-size: 15px;
-  line-height: 48px;
+  line-height: 20px;
   font-weight: 300;
   margin-bottom: 10px;
-  height: 50px;
+  height: auto;
   width: 100%;
   max-width: 320px;
   position: relative;
-  padding: 0 10px 0 70px;
+  padding: 15px 10px 15px 70px;
   text-decoration: none;
   overflow: hidden;
 }
@@ -523,7 +523,7 @@ a.call-to-action:before {
   display: block;
   content: "";
   width: 48px;
-  height: 96px;
+  height: 48px;
   background-image: url("../images/call-to-action.png");
   background-repeat: no-repeat;
   background-size: 336px 96px;

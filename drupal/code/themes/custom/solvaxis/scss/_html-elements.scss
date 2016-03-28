@@ -30,14 +30,16 @@ input[type="submit"],
 input[type="button"],
 .button, .region-content input[type="submit"], #colorbox input[type="submit"], .node-type-full-page .view-promo-slideshow .slides {
   background: none transparent;
-  padding: 18px 22px;
+  //padding: 18px 22px;
+  padding: 6px 22px;
   border: 1px solid $crimson;
   background: transparent;
   color: $crimson;
 
   font-size: 14px;
   font-weight: 300;
-  line-height: 0;
+  //line-height: 0;
+  line-height: 24px;
   
   text-transform: uppercase;
   text-shadow: none;

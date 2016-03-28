@@ -490,7 +490,7 @@ a {
     width: 195px;
   }
 }
-@media (min-width: 60em) {
+@media (min-width: 67em) {
   .header-secondary #logo {
     margin: 47px 0 18px 0;
   }
@@ -571,10 +571,6 @@ a {
   .header-secondary .navigate.close {
     right: 80%;
   }
-}
-
-.not-front .header-secondary {
-  border-bottom: 1px solid #cccccc;
 }
 
 .search-button-desktop:hover:after {
@@ -1131,13 +1127,13 @@ input[type="submit"],
 input[type="button"],
 .button, .region-content input[type="submit"], #colorbox input[type="submit"], .node-type-full-page .view-promo-slideshow .slides {
   background: none transparent;
-  padding: 18px 22px;
+  padding: 6px 22px;
   border: 1px solid #e30043;
   background: transparent;
   color: #e30043;
   font-size: 14px;
   font-weight: 300;
-  line-height: 0;
+  line-height: 24px;
   text-transform: uppercase;
   text-shadow: none;
 }
@@ -1315,14 +1311,14 @@ a.call-to-action {
   color: black;
   display: inline-block;
   font-size: 15px;
-  line-height: 48px;
+  line-height: 20px;
   font-weight: 300;
   margin-bottom: 10px;
-  height: 50px;
+  height: auto;
   width: 100%;
   max-width: 320px;
   position: relative;
-  padding: 0 10px 0 70px;
+  padding: 15px 10px 15px 70px;
   text-decoration: none;
   overflow: hidden;
 }
@@ -1330,7 +1326,7 @@ a.call-to-action:before {
   display: block;
   content: "";
   width: 48px;
-  height: 96px;
+  height: 48px;
   background-image: url("../images/call-to-action.png");
   background-repeat: no-repeat;
   background-size: 336px 96px;
@@ -1562,13 +1558,12 @@ footer .region-footer-primary .social-icons {
   background: none;
   border: 0 none;
   margin-top: 0;
-  padding: 68px 35px 80px;
+  padding: 68px 35px 30px;
 }
 #leader .flexslider .flex-control-nav {
   display: none;
 }
 #leader .flexslider .slides {
-  min-height: 215px;
   margin: 0;
   padding: 0;
 }
@@ -1577,16 +1572,17 @@ footer .region-footer-primary .social-icons {
 }
 #leader .flexslider .slides > li h2 {
   color: black;
-  font-size: 35px;
-  font-size: 3.5rem;
-  line-height: 1.14286;
+  font-size: 21px;
+  font-size: 2.1rem;
+  line-height: 1.47619;
+  font-size: 20px;
   font-weight: 300;
   text-transform: uppercase;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 #leader .flexslider .flex-direction-nav li {
   position: absolute;
-  top: 40%;
+  top: 50%;
   display: block;
   visibility: visible;
 }
@@ -1594,7 +1590,7 @@ footer .region-footer-primary .social-icons {
   background: transparent;
   border: 1px solid transparent;
   display: block;
-  width: 42px;
+  width: 35px;
   height: 42px;
   opacity: 0.4;
   font-size: 0;
@@ -1610,6 +1606,7 @@ footer .region-footer-primary .social-icons {
 }
 #leader .flexslider .flex-direction-nav li.flex-nav-prev a {
   background-image: url("../images/flex-prev-dark@2x.png");
+  background-position: -7px 0;
   background-repeat: no-repeat;
   background-size: 41px 41px;
 }
@@ -1627,29 +1624,35 @@ footer .region-footer-primary .social-icons {
     padding: 60px 35px 80px;
   }
   #leader .flexslider .slides > li h2 {
-    font-size: 40px;
-    font-size: 4rem;
-    line-height: 1.2;
-    width: 60%;
+    font-size: 36px;
+    font-size: 3.6rem;
+    line-height: 1.44444;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+  #leader .flexslider .flex-direction-nav li a {
+    width: 42px;
+  }
+  #leader .flexslider .flex-direction-nav li.flex-nav-prev a {
+    background-position: 0 0;
   }
 }
 
-@media (min-width: 60em) {
+@media (min-width: 67em) {
   #leader .top-bg-image {
     height: 425px;
   }
   #leader .flexslider {
     padding: 136px 0 124px;
   }
+  #leader .flexslider .slides {
+    min-height: 215px;
+  }
   #leader .flexslider .slides > li {
     min-height: 215px;
   }
   #leader .flexslider .slides > li h2 {
-    font-size: 36px;
-    font-size: 3.6rem;
-    line-height: 1.44444;
     margin-bottom: 24px;
-    width: 90%;
   }
   #leader .flexslider .slides > li p {
     width: 50%;
@@ -1660,7 +1663,6 @@ footer .region-footer-primary .social-icons {
     bottom: 0;
   }
   #leader .flexslider .flex-direction-nav li {
-    top: 50%;
     margin-top: -42px;
   }
   #leader .flexslider .flex-direction-nav li a {
@@ -1672,6 +1674,7 @@ footer .region-footer-primary .social-icons {
   }
   #leader .flexslider .flex-direction-nav li.flex-nav-prev a {
     background-size: 84px 84px;
+    background-position: 0 0;
   }
   #leader .flexslider .flex-direction-nav li.flex-nav-next {
     right: 0;
