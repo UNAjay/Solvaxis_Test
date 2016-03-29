@@ -78,6 +78,14 @@
       }
     }
   }
+
+  &.node-customer {
+    .group-right {
+      @include at-breakpoint($bp-med-2) {
+        padding: 0;
+      }
+    }
+  }
 }
 
 
