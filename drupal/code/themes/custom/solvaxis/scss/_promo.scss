@@ -38,7 +38,11 @@
     .flex-control-nav {
       display: none;
     }
-
+    .not-front & {
+      .flex-direction-nav {
+        display: none;
+      }
+    }
     .slides {
       margin: 0;
       padding: 0;

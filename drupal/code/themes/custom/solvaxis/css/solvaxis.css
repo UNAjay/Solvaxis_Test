@@ -470,8 +470,13 @@ a {
   #block-lang-dropdown-language {
     position: absolute;
     right: 20px;
-    top: 69px;
+    top: 41px;
     width: auto;
+  }
+}
+@media (min-width: 67em) {
+  #block-lang-dropdown-language {
+    top: 67px;
   }
 }
 
@@ -542,6 +547,11 @@ a {
 @media (min-width: 60em) {
   .header-secondary .search-button {
     right: 0;
+    top: 30px;
+  }
+}
+@media (min-width: 67em) {
+  .header-secondary .search-button {
     top: 60px;
   }
 }
@@ -669,14 +679,15 @@ a {
     float: right;
     width: auto;
     height: auto;
-    margin-top: 69px;
+    margin-top: 41px;
     overflow: visible;
+    padding: 0;
   }
   .header-secondary .menu li {
     display: inline-block;
     float: left;
-    font-size: 13px;
-    margin: 0 8px;
+    font-size: 14px;
+    margin: 0 6px;
     padding: 0 0 6px;
     line-height: 22px;
   }
@@ -696,7 +707,7 @@ a {
     bottom: 3px;
   }
   .header-secondary .menu li.first {
-    margin: 0 8px 0 0;
+    margin: 0 6px 0 0;
   }
   .header-secondary .menu li > .menu {
     display: none !important;
@@ -705,7 +716,7 @@ a {
     top: 20px;
     border-top: 0 none;
     border-bottom: 0 none;
-    width: 160px;
+    width: auto;
     margin-top: 0;
     padding: 18px 2px 15px 0;
     background: transparent;
@@ -724,6 +735,7 @@ a {
   .header-secondary .menu li > .menu li a {
     position: relative;
     padding: 0 0 3px;
+    white-space: nowrap;
   }
   .header-secondary .menu li > .menu li a:hover:after {
     display: block;
@@ -772,6 +784,17 @@ a {
   }
   .header-secondary .menu li:hover > .menu {
     display: block !important;
+  }
+}
+@media (min-width: 67em) {
+  .header-secondary .menu {
+    margin-top: 67px;
+  }
+  .header-secondary .menu li {
+    margin: 0 8px;
+  }
+  .header-secondary .menu li.first {
+    margin: 0 8px 0 0;
   }
 }
 
@@ -1561,6 +1584,9 @@ footer .region-footer-primary .social-icons {
   padding: 68px 35px 30px;
 }
 #leader .flexslider .flex-control-nav {
+  display: none;
+}
+.not-front #leader .flexslider .flex-direction-nav {
   display: none;
 }
 #leader .flexslider .slides {
@@ -2571,7 +2597,6 @@ p.italic {
     height: auto;
     position: absolute;
     right: 20px;
-    top: 69px;
     height: auto;
   }
 

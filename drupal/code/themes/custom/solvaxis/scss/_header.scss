@@ -89,8 +89,11 @@
   @include at-breakpoint($bp-xl) {
     position: absolute;
     right: 20px;
-    top: 69px;
+    top: 41px;
     width: auto;
+  }
+  @include at-breakpoint($bp-xl-2) {
+    top: 67px;
   }
 }
 
@@ -173,6 +176,9 @@
     }
     @include at-breakpoint($bp-xl) {
       right: 0;
+      top: 30px;
+    }
+    @include at-breakpoint($bp-xl-2) {
       top: 60px;
     }
     &:hover,
@@ -336,13 +342,15 @@
       float: right;
       width: auto;
       height: auto;
-      margin-top: 69px;
+      margin-top: 41px;
       overflow: visible;
+      padding: 0;
       li {
         display: inline-block;
         float: left;
-        font-size: 13px;
-        margin: 0 8px;
+        //font-size: 13px;
+        font-size: 14px;
+        margin: 0 6px;
         padding: 0 0 6px;
         line-height: 22px;
         a {
@@ -367,7 +375,7 @@
       	  }
         }
         &.first {
-          margin: 0 8px 0 0;
+          margin: 0 6px 0 0;
         }
         &.last {
 
@@ -381,7 +389,8 @@
           top: 20px;
           border-top: 0 none;
           border-bottom: 0 none;
-          width: 160px;
+          //width: 160px;
+          width: auto;
           margin-top: 0;
           padding: 18px 2px 15px 0;
           background: transparent;
@@ -398,7 +407,9 @@
             a {
               position: relative;
               padding: 0 0 3px;
+              white-space: nowrap;
               &:hover {
+                //text-decoration: underline;
                 &:after {
                   display: block;
                   content: "";
@@ -409,7 +420,9 @@
                   left: 0;
                   bottom: 0;
                   z-index: 999;
-                }
+
+                  }
+                
               }
             }
             &.first {
@@ -453,6 +466,17 @@
         }
         &:hover > .menu {
           display: block !important;
+        }
+      }
+    }
+  }
+  @include at-breakpoint($bp-xl-2) {
+    .menu {
+      margin-top: 67px;
+      li {
+        margin: 0 8px;
+        &.first {
+          margin: 0 8px 0 0;
         }
       }
     }
