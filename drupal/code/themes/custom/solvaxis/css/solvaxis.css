@@ -1829,11 +1829,19 @@ article .media-element-container.media-logo img:hover, article .media-element-co
 }
 .tag-cloud a,
 .block-tagclouds a {
-  color: #e30043;
+  color: #3c3f42;
 }
 .tag-cloud a:hover,
 .block-tagclouds a:hover {
   text-decoration: underline;
+}
+.tag-cloud:nth-child(2n+1) a,
+.block-tagclouds:nth-child(2n+1) a {
+  color: #3c3f42;
+}
+.tag-cloud:nth-child(3n+1) a,
+.block-tagclouds:nth-child(3n+1) a {
+  color: #73797c;
 }
 .tag-cloud .tagclouds-term,
 .block-tagclouds .tagclouds-term {

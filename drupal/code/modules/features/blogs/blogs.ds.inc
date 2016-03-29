@@ -165,8 +165,8 @@ function blogs_ds_custom_fields_info() {
   );
   $ds_field->ui_limit = '';
   $ds_field->properties = array(
-    'block' => 'tagclouds|6',
-    'block_render' => '1',
+    'block' => 'views|tags_tagadelic-block',
+    'block_render' => '3',
   );
   $export['tag_cloud'] = $ds_field;
 

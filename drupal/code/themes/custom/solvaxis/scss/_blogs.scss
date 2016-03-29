@@ -4,13 +4,24 @@
 	.content {
 		padding: 0 0 15px;
 	}
-	a {
-	  color: $crimson;
+  a {
+    color: $gray-dark;
 
-	  &:hover {
-	  	text-decoration: underline;
-	  }
-	}
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &:nth-child(2n+1) {
+    a {
+      color: $gray-dark;
+    }
+  }
+  &:nth-child(3n+1) {
+    a {
+      color: $gray;
+    }
+  }
+
 	.tagclouds-term {
 		margin-right: 2px;
     &:after {
