@@ -1127,6 +1127,22 @@ footer .social-icons li a[title="Xing"] {
     padding: 72px 0 0;
   }
 }
+@media (min-width: 48em) {
+  .ds-2col.node-office .group-left {
+    width: 49%;
+    float: left;
+    margin-right: 2.0%;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 48em) {
+  .ds-2col.node-office .group-right {
+    width: 49%;
+    float: right;
+    margin-right: 0;
+    padding: 0;
+  }
+}
 
 html {
   box-sizing: border-box;
@@ -1847,11 +1863,19 @@ article .media-element-container.media-logo img:hover, article .media-element-co
 }
 .tag-cloud a,
 .block-tagclouds a {
-  color: #e30043;
+  color: #3c3f42;
 }
 .tag-cloud a:hover,
 .block-tagclouds a:hover {
   text-decoration: underline;
+}
+.tag-cloud:nth-child(2n+1) a,
+.block-tagclouds:nth-child(2n+1) a {
+  color: #3c3f42;
+}
+.tag-cloud:nth-child(3n+1) a,
+.block-tagclouds:nth-child(3n+1) a {
+  color: #73797c;
 }
 .tag-cloud .tagclouds-term,
 .block-tagclouds .tagclouds-term {

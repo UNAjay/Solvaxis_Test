@@ -154,33 +154,6 @@ function monster_page_views_default_views() {
   $handler->display->display_options['tab_options']['title'] = 'Embed blocks/forms';
   $handler->display->display_options['tab_options']['weight'] = '0';
   $handler->display->display_options['tab_options']['name'] = 'management';
-  $translatables['administration_embed'] = array(
-    t('Master'),
-    t('Embed content'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Title'),
-    t('Type'),
-    t('Embed code'),
-    t('[embed:[type]=[id]]'),
-    t('.'),
-    t(','),
-    t('Created'),
-    t('Changed'),
-    t('edit'),
-    t('Page'),
-  );
   $export['administration_embed'] = $view;
 
   $view = new view();
@@ -443,26 +416,6 @@ function monster_page_views_default_views() {
   $handler->display->display_options['filters']['tid_1']['type'] = 'select';
   $handler->display->display_options['filters']['tid_1']['vocabulary'] = 'product';
   $handler->display->display_options['path'] = 'customers-list';
-  $translatables['ref_customers'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('They Trust Us'),
-    t('Customers: Block'),
-    t('View all...'),
-    t('Industry'),
-    t('Product'),
-    t('Customers: All'),
-    t('All customers'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('[created] - [title]'),
-  );
   $export['ref_customers'] = $view;
 
   $view = new view();
@@ -851,31 +804,6 @@ function monster_page_views_default_views() {
     'trim_length' => '500',
   );
   $handler->display->display_options['path'] = 'news-list';
-  $translatables['ref_news'] = array(
-    t('Master'),
-    t('View all'),
-    t('Apply'),
-    t('Clear all'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Translations'),
-    t('[created] - [title_field]'),
-    t('Filter by type'),
-    t('Hot News'),
-    t('more'),
-    t('[field_image]'),
-    t('Latest News'),
-    t('News: All'),
-    t('All news'),
-  );
   $export['ref_news'] = $view;
 
   $view = new view();
@@ -1132,31 +1060,6 @@ function monster_page_views_default_views() {
   $handler->display->display_options['filters']['language']['value'] = array(
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
     'und' => 'und',
-  );
-  $translatables['ref_related'] = array(
-    t('Master'),
-    t('View all'),
-    t('Apply'),
-    t('Clear all'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Translations'),
-    t('term from field_product'),
-    t('[created] - [title_field]'),
-    t('All'),
-    t('Filter by type'),
-    t('Related items'),
-    t('more'),
-    t('Load more'),
-    t('[field_image]'),
   );
   $export['ref_related'] = $view;
 

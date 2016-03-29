@@ -137,6 +137,13 @@ jQuery(function($){
 jQuery(function($){
   "use strict";
 
+  var is_mobile;
+  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    is_mobile = true;
+  } else {
+    is_mobile = false;
+  }
+
   // got dpm? skip the loop
   if (!$('.krumo-root').length) {
     // mail-links
@@ -155,6 +162,14 @@ jQuery(function($){
         }
       }
     });
+    var linksToTel = $('a[href^="tel:"]');
+    $(linksToTel).each(function() {
+      if(!is_mobile) {
+        var linkText = $(this).html();
+        $(this).replaceWith(linkText);
+      }
+    });
+
   }
 });
 

@@ -305,6 +305,12 @@ projects[views_load_more][version] = 1.x-dev
 projects[views_load_more][revision] = 04c3555847237e2ba6409b25a7a8cbee4d59f3b5
 projects[views_load_more][patch][] = https://www.drupal.org/files/issues/views_load_more-grouping-1475642-6.patch
 
+projects[tagadelic][version] = "2.x-dev"
+projects[tagadelic][revision] = 26cf4681830770aa6a2700f3e1913d7c270afcab
+
+projects[tagadelic_views][version] = "2.x-dev"
+projects[tagadelic_views][revision] = 1c40767d25df956f9f6c19c926b0cd2f56725580
+
 projects[draggableviews][version] = 2.1
 
 projects[optimizely][version] = 2.18

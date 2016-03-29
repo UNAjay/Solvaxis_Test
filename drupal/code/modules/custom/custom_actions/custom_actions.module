@@ -861,11 +861,11 @@ function custom_actions_query_taxtag_alter(QueryAlterableInterface $query) {
  * @return type
  */
 function custom_actions_taxonomy_term_uri($term) {
-  if ($term->vocabulary_machine_name == 'tags') {
-    return array(
-      'path' => 'blogs/tag/' . str_replace(" ", "-", strtolower($term->name)),
-    );
-  }
+  // if ($term->vocabulary_machine_name == 'tags') {
+  //   return array(
+  //     'path' => 'blogs/tag/' . str_replace(" ", "-", strtolower($term->name)),
+  //   );
+  // }
 
   return taxonomy_term_uri($term);
 }

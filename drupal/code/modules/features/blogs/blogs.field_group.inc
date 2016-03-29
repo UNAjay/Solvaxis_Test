@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function blogs_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -38,7 +38,7 @@ function blogs_field_group_info() {
       ),
     ),
   );
-  $export['group_categories|node|blog_post|form'] = $field_group;
+  $field_groups['group_categories|node|blog_post|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -66,7 +66,7 @@ function blogs_field_group_info() {
       ),
     ),
   );
-  $export['group_content|node|blog_post|form'] = $field_group;
+  $field_groups['group_content|node|blog_post|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -93,7 +93,7 @@ function blogs_field_group_info() {
       ),
     ),
   );
-  $export['group_image|node|blog_post|form'] = $field_group;
+  $field_groups['group_image|node|blog_post|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -121,7 +121,7 @@ function blogs_field_group_info() {
       ),
     ),
   );
-  $export['group_sections|node|blog_post|form'] = $field_group;
+  $field_groups['group_sections|node|blog_post|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -148,7 +148,15 @@ function blogs_field_group_info() {
       ),
     ),
   );
-  $export['group_sidebar_text|node|blog_post|form'] = $field_group;
+  $field_groups['group_sidebar_text|node|blog_post|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Categories');
+  t('Content');
+  t('Sections');
+  t('Sidebar text');
+  t('Teaser image');
+
+  return $field_groups;
 }
