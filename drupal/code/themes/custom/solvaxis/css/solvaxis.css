@@ -928,6 +928,7 @@ a {
 }
 
 .block-site-socialicons label,
+.block-site-socialicons h2,
 .block-site-socialicons .name,
 .block-site-socialicons .title {
   display: none;

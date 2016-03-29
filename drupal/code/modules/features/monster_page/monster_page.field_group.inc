@@ -122,6 +122,7 @@ function monster_page_field_group_info() {
     'weight' => '8',
     'children' => array(
       0 => 'field_background_image',
+      1 => 'field_background_transparent',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

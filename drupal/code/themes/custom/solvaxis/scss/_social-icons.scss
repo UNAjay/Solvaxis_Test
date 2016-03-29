@@ -1,6 +1,7 @@
 // Social icons - common styles
 .block-site-socialicons {
   label,
+  h2,
   .name,
   .title {
     display: none;
@@ -17,13 +18,13 @@
     &:first-child {
       margin: 0;
     }
-    
+
     a {
       display: block;
       width: 25px;
       height: 25px;
       position: relative;
-      
+
       &:before {
         content: '';
         display: block;
@@ -36,14 +37,14 @@
         color: $white;
       }
     }
-    
+
     a[title="Twitter"] {
       background: $twitter;
       &:before {
         content: '\e800';
       }
     }
-    
+
     a[title="Facebook"] {
       background: $facebook;
       &:before {
@@ -53,7 +54,7 @@
         left: 9px;
       }
     }
-    
+
     a[title="LinkedIn"] {
       background: $linkedin;
       &:before {
@@ -61,7 +62,7 @@
         font-size: 17px;
       }
     }
-    
+
     a[title="Xing"] {
       background: $xing;
       &:before {
@@ -71,7 +72,7 @@
         left: 5px;
       }
     }
-    
+
     img {
       display: none;
     }
@@ -109,11 +110,11 @@ footer {
     > span {
       display: none;
     }
-    
+
     &:first-child {
       margin: 0;
     }
-   
+
     &:before {
       content: '';
       display: block;
@@ -132,7 +133,7 @@ footer {
       content: '\e800';
     }
   }
-  
+
   a.addthis_button_facebook {
     background: $facebook;
     &:before {
@@ -142,7 +143,7 @@ footer {
       left: 9px;
     }
   }
-  
+
   a.addthis_button_linkedin {
     background: $linkedin;
     &:before {
@@ -150,7 +151,7 @@ footer {
       font-size: 17px;
     }
   }
-  
+
   a.addthis_button_xing {
     background: $xing;
     &:before {

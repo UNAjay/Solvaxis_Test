@@ -41,6 +41,12 @@ function monster_page_preprocess_node(&$variables) {
       if ($banner_style) {
         $variables['classes_array'][] = drupal_html_class('banner-style-' . $banner_style[0]['value']);
       }
+
+      $transparent = field_get_items($entity_type, $node, 'field_background_transparent');
+      if ($transparent) {
+        $variables['classes_array'][] = drupal_html_class('transparent');
+      }
+
       $show_social = field_get_items($entity_type, $node, 'field_show_social_icons');
       if ($show_social && $show_social[0]['value'] == '1') {
         $variables['content']['field_add_this']['#access'] = TRUE;
@@ -266,7 +272,7 @@ function monster_page_form_views_exposed_form_alter(&$form, $form_state) {
  * Implementation of hook_filter_info().
  */
 function monster_page_filter_info_alter(&$info) {
-  $info['insert_block']['tips callback'] = 'monster_page_insert_block_tips';
+  // $info['insert_block']['tips callback'] = 'monster_page_insert_block_tips';
 }
 
 
