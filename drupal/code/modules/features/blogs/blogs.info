@@ -13,6 +13,7 @@ dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = field_group
 dependencies[] = i18n_taxonomy
+dependencies[] = i18nviews
 dependencies[] = image
 dependencies[] = inline_entity_form
 dependencies[] = jeeveserp_layout

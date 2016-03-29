@@ -1127,6 +1127,22 @@ footer .social-icons li a[title="Xing"] {
     padding: 72px 0 0;
   }
 }
+@media (min-width: 48em) {
+  .ds-2col.node-office .group-left {
+    width: 49%;
+    float: left;
+    margin-right: 2.0%;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 48em) {
+  .ds-2col.node-office .group-right {
+    width: 49%;
+    float: right;
+    margin-right: 0;
+    padding: 72px 0 0;
+  }
+}
 
 html {
   box-sizing: border-box;
