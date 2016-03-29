@@ -248,34 +248,6 @@ function jeeveserp_layout_views_default_views() {
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
     'en' => 'en',
   );
-  $translatables['files'] = array(
-    t('Master'),
-    t('Files'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Select any filter and click on Apply to see results'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Translations'),
-    t('Titel'),
-    t('<div class="title">[title]</div>
-<div class="desciption">[body]</div>'),
-    t('Block'),
-    t('File'),
-    t('Type'),
-    t('Document type'),
-    t('Industry'),
-    t('Region'),
-  );
   $export['files'] = $view;
 
   $view = new view();
@@ -341,24 +313,6 @@ function jeeveserp_layout_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'node_rss';
   $handler->display->display_options['path'] = 'rss.xml';
   $handler->display->display_options['sitename_title'] = 0;
-  $translatables['global_rss'] = array(
-    t('Master'),
-    t('Site RSS feed'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('RSS Feed'),
-  );
   $export['global_rss'] = $view;
 
   $view = new view();
@@ -573,32 +527,6 @@ function jeeveserp_layout_views_default_views() {
   );
   $handler->display->display_options['filters']['tid']['type'] = 'select';
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'product';
-  $translatables['videos'] = array(
-    t('Master'),
-    t('Videos'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Select any filter and click on Apply to see results'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Titel'),
-    t('<div class="title">[title]</div>
-<div class="desciption">[body]</div>'),
-    t('Block'),
-    t('Video type'),
-    t('Industry'),
-    t('Region'),
-    t('Product'),
-  );
   $export['videos'] = $view;
 
   $view = new view();
@@ -904,40 +832,6 @@ function jeeveserp_layout_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
-  $translatables['webinars'] = array(
-    t('Master'),
-    t('Webinars'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Select any filter and click on Apply to see results'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Datum'),
-    t('<div class="title">[title]</div>
-<div class="desciption">[body]</div>'),
-    t('Titel'),
-    t('Event type'),
-    t('Plats/typ'),
-    t('<div class="type">[field_event_type]</div>
-<div class="location">[field_event_location]</div>'),
-    t('<div class="type">[field_event_type]</div>
-<div class="product">[field_product]</div>'),
-    t('Typ'),
-    t('Plats'),
-    t('Bransch'),
-    t('Region'),
-    t('Produkt'),
-    t('Block'),
-  );
   $export['webinars'] = $view;
 
   return $export;

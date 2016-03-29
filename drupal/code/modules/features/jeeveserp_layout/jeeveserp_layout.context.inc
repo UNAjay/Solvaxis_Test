@@ -36,23 +36,23 @@ function jeeveserp_layout_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'system-main-menu' => array(
-          'module' => 'system',
-          'delta' => 'main-menu',
+        'menu_block-2' => array(
+          'module' => 'menu_block',
+          'delta' => '2',
           'region' => 'header_secondary',
-          'weight' => '-39',
+          'weight' => '-9',
         ),
         'search-form' => array(
           'module' => 'search',
           'delta' => 'form',
           'region' => 'header_secondary',
-          'weight' => '-38',
+          'weight' => '-8',
         ),
         'lang_dropdown-language' => array(
           'module' => 'lang_dropdown',
           'delta' => 'language',
           'region' => 'header_secondary',
-          'weight' => '-37',
+          'weight' => '-7',
         ),
         'floatbar-floatbar' => array(
           'module' => 'floatbar',
