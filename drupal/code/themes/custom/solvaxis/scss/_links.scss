@@ -36,7 +36,7 @@ a {
     width: 100%;
     max-width: 320px;
     position: relative;
-    padding: 15px 10px 15px 70px;
+    padding: 14px 10px 14px 70px;
     text-decoration: none;
     overflow: hidden;
     &:before {
@@ -44,9 +44,9 @@ a {
       content: "";
       width: 48px;
       height: 48px;
-      background-image: url('../images/call-to-action.png');
+      background-image: url('../images/call-to-action1.png');
       background-repeat: no-repeat;
-      background-size: 336px 96px;
+      background-size: 480px 96px;
       position: absolute;
       top: 0;
       left: 0;
@@ -153,6 +153,46 @@ a {
         }
       }
     }
+    
+    &.rss-feed {
+      &:before {
+        background-position: -336px 0;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        &:before {
+          background-position: -336px -48px;
+        }
+      }
+    }
+    
+    &.email {
+      &:before {
+        background-position: -384px 0;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        &:before {
+          background-position: -384px -48px;
+        }
+      }
+    }
+    
+    &.phone {
+      &:before {
+        background-position: -432px 0;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        &:before {
+          background-position: -432px -48px;
+        }
+      }
+    }
+    
   }
 }
 
@@ -161,9 +201,9 @@ a {
     &.call-to-action {
       &:before  {
         /* Reference the @2x Sprite */
-  			background-image: url('../images/call-to-action@2x.png');
+  			background-image: url('../images/call-to-action1@2x.png');
         /* Translate the @2x sprite's dimensions back to 1x */
-        background-size: 336px 96px;
+        background-size: 480px 96px;
   		}
     }
   }

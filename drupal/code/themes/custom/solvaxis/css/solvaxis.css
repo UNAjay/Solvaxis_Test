@@ -1341,7 +1341,7 @@ a.call-to-action {
   width: 100%;
   max-width: 320px;
   position: relative;
-  padding: 15px 10px 15px 70px;
+  padding: 14px 10px 14px 70px;
   text-decoration: none;
   overflow: hidden;
 }
@@ -1350,9 +1350,9 @@ a.call-to-action:before {
   content: "";
   width: 48px;
   height: 48px;
-  background-image: url("../images/call-to-action.png");
+  background-image: url("../images/call-to-action1.png");
   background-repeat: no-repeat;
-  background-size: 336px 96px;
+  background-size: 480px 96px;
   position: absolute;
   top: 0;
   left: 0;
@@ -1409,13 +1409,31 @@ a.call-to-action.attached:before {
 a.call-to-action.attached:hover:before, a.call-to-action.attached:active:before, a.call-to-action.attached:focus:before {
   background-position: -288px -48px;
 }
+a.call-to-action.rss-feed:before {
+  background-position: -336px 0;
+}
+a.call-to-action.rss-feed:hover:before, a.call-to-action.rss-feed:active:before, a.call-to-action.rss-feed:focus:before {
+  background-position: -336px -48px;
+}
+a.call-to-action.email:before {
+  background-position: -384px 0;
+}
+a.call-to-action.email:hover:before, a.call-to-action.email:active:before, a.call-to-action.email:focus:before {
+  background-position: -384px -48px;
+}
+a.call-to-action.phone:before {
+  background-position: -432px 0;
+}
+a.call-to-action.phone:hover:before, a.call-to-action.phone:active:before, a.call-to-action.phone:focus:before {
+  background-position: -432px -48px;
+}
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
   a.call-to-action:before {
     /* Reference the @2x Sprite */
-    background-image: url("../images/call-to-action@2x.png");
+    background-image: url("../images/call-to-action1@2x.png");
     /* Translate the @2x sprite's dimensions back to 1x */
-    background-size: 336px 96px;
+    background-size: 480px 96px;
   }
 }
 .more-link {

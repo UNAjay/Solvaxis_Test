@@ -633,7 +633,7 @@ function jeeveserp_layout_strongarm() {
         ),
         'job_postings_job_listing' => array(
           'default' => array(
-            'weight' => '42',
+            'weight' => '41',
             'visible' => FALSE,
           ),
         ),
@@ -680,13 +680,13 @@ function jeeveserp_layout_strongarm() {
     'language' => 'en',
     'name' => 'U.S. English',
     'native' => 'EN',
-    'direction' => '0',
+    'direction' => 0,
     'enabled' => 1,
-    'plurals' => '0',
+    'plurals' => 0,
     'formula' => '',
     'domain' => '',
     'prefix' => 'en',
-    'weight' => '-10',
+    'weight' => -10,
     'javascript' => '',
   );
   $export['language_default'] = $strongarm;
