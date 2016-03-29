@@ -164,6 +164,9 @@ jQuery(function($){
     });
     var linksToTel = $('a[href^="tel:"]');
     $(linksToTel).each(function() {
+      var telWrapper = $('<span>');
+      telWrapper.addClass('link-phone');
+      $(this).wrap(telWrapper);
       if(!is_mobile) {
         var linkText = $(this).html();
         $(this).replaceWith(linkText);

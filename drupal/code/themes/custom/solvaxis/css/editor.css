@@ -176,6 +176,11 @@ table tbody td {
   border-bottom: 1px dotted #B6B6B6;
 }
 
+.link-phone {
+  padding-left: 20px;
+  background: url(../images/icon-phone.png) no-repeat left center;
+}
+
 @font-face {
   font-family: 'solvaxis-icn';
   src: url("../fonts/solvaxis-icons/font/solvaxis-icn.eot?35242246");
