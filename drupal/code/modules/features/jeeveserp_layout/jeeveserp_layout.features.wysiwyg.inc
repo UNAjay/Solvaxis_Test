@@ -47,6 +47,9 @@ function jeeveserp_layout_wysiwyg_default_profiles() {
           'Flash' => 1,
           'Templates' => 1,
         ),
+        'icons' => array(
+          'icons' => 1,
+        ),
         'imce' => array(
           'imce' => 1,
         ),
@@ -126,6 +129,9 @@ Section title=h2.section-title',
           'Iframe' => 1,
           'Scayt' => 1,
           'Templates' => 1,
+        ),
+        'icons' => array(
+          'icons' => 1,
         ),
         'imce' => array(
           'imce' => 1,
