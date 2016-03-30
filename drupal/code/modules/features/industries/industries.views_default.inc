@@ -762,38 +762,6 @@ function industries_views_default_views() {
   $handler->display->display_options['filters']['term_node_tid_depth_1']['type'] = 'select';
   $handler->display->display_options['filters']['term_node_tid_depth_1']['vocabulary'] = 'employee_region';
   $handler->display->display_options['filters']['term_node_tid_depth_1']['depth'] = '1';
-  $translatables['Customers'] = array(
-    t('Master'),
-    t('Customers'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('[field_image]'),
-    t('Type'),
-    t('Industries'),
-    t('Country'),
-    t('Success stories'),
-    t('Customer Success Stories'),
-    t('Read more'),
-    t('<p class="title success-story-title">[field_success_story_title]</p>
-<p class="story">[field_success_story]</p>
-<p class="industry">[field_industry]</p>
-<div class="links">[view_node]</div>'),
-    t('Industry'),
-    t('Region'),
-    t('Customer list'),
-    t('<div class="wrapper">[field_image]</div>'),
-  );
   $export['Customers'] = $view;
 
   $view = new view();
@@ -942,22 +910,6 @@ function industries_views_default_views() {
   $handler->display->display_options['fields']['nothing']['element_wrapper_type'] = 'div';
   $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'description-container';
   $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
-  $translatables['industries'] = array(
-    t('Master'),
-    t('Industries'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('.'),
-    t(','),
-    t('Läs mer'),
-    t('Block'),
-    t('<span class="title">[name]</span>
-<div class="description">[description]</div>'),
-  );
   $export['industries'] = $view;
 
   $view = new view();
@@ -1080,18 +1032,6 @@ function industries_views_default_views() {
   $handler->display->display_options['filters']['field_success_story_title_value']['table'] = 'field_data_field_success_story_title';
   $handler->display->display_options['filters']['field_success_story_title_value']['field'] = 'field_success_story_title_value';
   $handler->display->display_options['filters']['field_success_story_title_value']['operator'] = 'not empty';
-  $translatables['success_stories'] = array(
-    t('Master'),
-    t('Success Stories'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Läs mer'),
-    t('Block'),
-  );
   $export['success_stories'] = $view;
 
   return $export;

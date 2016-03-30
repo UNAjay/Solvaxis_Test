@@ -28,7 +28,7 @@ function industries_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -85,7 +85,7 @@ function industries_field_default_field_instances() {
           'share_services' => 'linkedin, facebook,twitter',
         ),
         'type' => 'addthis_basic_toolbox',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -253,7 +253,7 @@ function industries_field_default_field_instances() {
           'image_style' => 'large',
         ),
         'type' => 'image',
-        'weight' => 0,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'hidden',

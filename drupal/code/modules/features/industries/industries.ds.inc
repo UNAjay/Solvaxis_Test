@@ -345,12 +345,12 @@ function industries_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'left' => array(
-        0 => 'field_image',
-        1 => 'body',
-        2 => 'field_partners',
-        3 => 'field_add_this',
+        0 => 'body',
+        1 => 'field_partners',
+        2 => 'field_add_this',
       ),
       'right' => array(
+        3 => 'field_image',
         4 => 'field_sidebar_text',
       ),
       'footer' => array(
@@ -359,10 +359,10 @@ function industries_ds_layout_settings_info() {
       ),
     ),
     'fields' => array(
-      'field_image' => 'left',
       'body' => 'left',
       'field_partners' => 'left',
       'field_add_this' => 'left',
+      'field_image' => 'right',
       'field_sidebar_text' => 'right',
       'field_section' => 'footer',
       'flippy_pager' => 'footer',
