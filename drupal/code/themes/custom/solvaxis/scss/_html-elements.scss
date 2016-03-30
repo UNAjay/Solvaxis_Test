@@ -30,17 +30,13 @@ input[type="submit"],
 input[type="button"],
 .button, .region-content input[type="submit"], #colorbox input[type="submit"], .node-type-full-page .view-promo-slideshow .slides {
   background: none transparent;
-  //padding: 18px 22px;
   padding: 6px 22px;
   border: 1px solid $crimson;
   background: transparent;
   color: $crimson;
-
   font-size: 14px;
   font-weight: 300;
-  //line-height: 0;
   line-height: 24px;
-  
   text-transform: uppercase;
   text-shadow: none;
   &:hover,
@@ -49,7 +45,6 @@ input[type="button"],
     background: $crimson;
     color: $white;
   }
-
   &:active {
     border: 1px solid #c70038;
     background: #c70038;
@@ -78,6 +73,27 @@ a.button {
   background: none;
   border: none;
   text-decoration: underline;
+}
+
+// White button - for section with background
+a.button {
+  .transparent & {
+    border: 1px solid $white;
+    background: transparent;
+    color: $white;
+    margin-top: 20px;
+    &:hover,
+    &:focus {
+      border: 1px solid $crimson;
+      background: transparent;
+      color: $crimson;
+    }
+    &:active {
+      border: 1px solid $white;
+      background: $white;
+      color: $gray-dark;
+    }
+  }
 }
 
 textarea,

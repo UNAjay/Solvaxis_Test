@@ -27,7 +27,7 @@
       height: 100%;
       position: absolute;
       background: $white;
-      opacity: 0.6;
+      @include opacity(0.6);
     }
   }
   .flexslider {
@@ -74,13 +74,13 @@
           display: block;
           width: 35px;
           height: 42px;
-          opacity: 0.4;
+          @include opacity(0.4);
           font-size: 0;
           position: relative;
           text-align: center;
           text-decoration: none;
           &:hover {
-            opacity: 1.0;
+            @include opacity(1.0);
           }
         }
         &.flex-nav-prev {

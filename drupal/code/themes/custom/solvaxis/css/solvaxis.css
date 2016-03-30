@@ -1233,6 +1233,23 @@ a.button:active {
   text-decoration: underline;
 }
 
+.transparent a.button {
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  margin-top: 20px;
+}
+.transparent a.button:hover, .transparent a.button:focus {
+  border: 1px solid #e30043;
+  background: transparent;
+  color: #e30043;
+}
+.transparent a.button:active {
+  border: 1px solid white;
+  background: white;
+  color: #3c3f42;
+}
+
 textarea,
 select,
 input[type="date"],
@@ -1620,6 +1637,7 @@ footer .region-footer-primary .social-icons {
   height: 100%;
   position: absolute;
   background: white;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
 }
 #leader .flexslider {
@@ -1663,6 +1681,7 @@ footer .region-footer-primary .social-icons {
   display: block;
   width: 35px;
   height: 42px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
   opacity: 0.4;
   font-size: 0;
   position: relative;
@@ -1670,7 +1689,8 @@ footer .region-footer-primary .social-icons {
   text-decoration: none;
 }
 #leader .flexslider .flex-direction-nav li a:hover {
-  opacity: 1.0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
 }
 #leader .flexslider .flex-direction-nav li.flex-nav-prev {
   left: 0;
@@ -1963,7 +1983,16 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   width: 100%;
   height: 100%;
   background: #4d4d4d;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7;
+}
+.node-section.transparent .region-holder {
+  padding: 28px 0;
+}
+@media (min-width: 48em) {
+  .node-section.transparent .region-holder {
+    height: 320px;
+  }
 }
 .node-section.with-sidebar .body,
 .node-section.with-sidebar .field-view {

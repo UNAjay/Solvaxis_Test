@@ -385,6 +385,23 @@ a.button:active {
   text-decoration: underline;
 }
 
+.transparent a.button {
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  margin-top: 20px;
+}
+.transparent a.button:hover, .transparent a.button:focus {
+  border: 1px solid #e30043;
+  background: transparent;
+  color: #e30043;
+}
+.transparent a.button:active {
+  border: 1px solid white;
+  background: white;
+  color: #3c3f42;
+}
+
 textarea,
 select,
 input[type="date"],
