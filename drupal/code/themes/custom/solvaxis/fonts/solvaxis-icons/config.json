@@ -59,6 +59,18 @@
       "css": "down",
       "code": 59398,
       "src": "mfglabs"
+    },
+    {
+      "uid": "72b1277834cba5b7944b0a6cac7ddb0d",
+      "css": "rss",
+      "code": 59401,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "mjbsqg8yglgu0esc6ru2vh111jmh7qng",
+      "css": "at",
+      "code": 59402,
+      "src": "modernpics"
     }
   ]
 }
