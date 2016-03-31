@@ -940,7 +940,7 @@ function monster_page_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'section_light' => array(
         'label' => 'hidden',
@@ -1250,7 +1250,7 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 31,
       ),
       'section_light' => array(
         'label' => 'above',
@@ -1442,7 +1442,7 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 44,
+        'weight' => 45,
       ),
       'section_light' => array(
         'label' => 'above',
@@ -1582,7 +1582,7 @@ function monster_page_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 43,
+        'weight' => 44,
       ),
       'section_light' => array(
         'label' => 'hidden',
@@ -1656,7 +1656,7 @@ function monster_page_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'section_light' => array(
         'label' => 'hidden',
@@ -1821,7 +1821,7 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 33,
+        'weight' => 43,
       ),
       'section_light' => array(
         'label' => 'above',
@@ -1891,7 +1891,7 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 32,
+        'weight' => 42,
       ),
       'section_light' => array(
         'label' => 'above',
@@ -2032,7 +2032,7 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 46,
+        'weight' => 47,
       ),
       'section_light' => array(
         'label' => 'above',
@@ -2204,7 +2204,7 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 45,
+        'weight' => 46,
       ),
       'section_light' => array(
         'label' => 'above',

@@ -30,11 +30,6 @@ function monster_page_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_background_image' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
   );
   $export['node|section|section_dark'] = $ds_fieldsetting;
 
@@ -145,30 +140,30 @@ function monster_page_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'group_banner',
-        1 => 'field_banner_image',
-        2 => 'field_heading',
+        0 => 'field_heading',
+        1 => 'body',
+        2 => 'field_banner_image',
         3 => 'field_banner_text',
-        4 => 'body',
-        5 => 'group_sidebar',
-        6 => 'field_promo_link',
-        7 => 'group_social',
-        8 => 'field_background_image',
-        9 => 'field_add_this',
+        4 => 'group_sidebar',
+        5 => 'field_promo_link',
+        6 => 'group_social',
+        7 => 'group_banner',
+        8 => 'field_add_this',
+        9 => 'field_background_image',
         10 => 'field_sidebar_text',
       ),
     ),
     'fields' => array(
-      'group_banner' => 'ds_content',
-      'field_banner_image' => 'ds_content',
       'field_heading' => 'ds_content',
-      'field_banner_text' => 'ds_content',
       'body' => 'ds_content',
+      'field_banner_image' => 'ds_content',
+      'field_banner_text' => 'ds_content',
       'group_sidebar' => 'ds_content',
       'field_promo_link' => 'ds_content',
       'group_social' => 'ds_content',
-      'field_background_image' => 'ds_content',
+      'group_banner' => 'ds_content',
       'field_add_this' => 'ds_content',
+      'field_background_image' => 'ds_content',
       'field_sidebar_text' => 'ds_content',
     ),
     'classes' => array(),
