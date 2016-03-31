@@ -3242,3 +3242,90 @@ p.italic {
   width: auto;
   float: none;
 }
+
+.icon-wrapper {
+  min-height: 120px;
+  position: relative;
+}
+.icon-wrapper .icon {
+  display: block;
+  margin: 0 auto;
+  background-image: url("../images/products.png");
+  background-repeat: no-repeat;
+  background-size: 320px 640px;
+}
+.icon-wrapper .icon.icon_1 {
+  background-position: 0 0;
+  width: 152px;
+  height: 152px;
+}
+.icon-wrapper .icon.icon_2 {
+  background-position: 0 -160px;
+  width: 152px;
+  height: 152px;
+}
+.icon-wrapper .icon.icon_3 {
+  background-position: 0 -320px;
+  width: 152px;
+  height: 152px;
+}
+.icon-wrapper .icon.icon_4 {
+  background-position: 0 -480px;
+  width: 152px;
+  height: 152px;
+}
+.icon-wrapper .icon-title {
+  color: white;
+  display: block;
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 1.25;
+  text-align: center;
+  margin-top: 20px;
+}
+@media (min-width: 46.8em) {
+  .icon-wrapper .icon-title {
+    position: absolute;
+    top: 170px;
+    left: 0;
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  .icon-wrapper .icon {
+    /* Reference the @2x Sprite */
+    background-image: url("../images/products@2x.png");
+    /* Translate the @2x sprite's dimensions back to 1x */
+    background-size: 320px 640px;
+  }
+}
+.icon-wrapper {
+  width: 100%;
+  margin: 0 0 140px;
+  padding: 0 10px;
+}
+@media (min-width: 46.8em) {
+  .icon-wrapper.float {
+    width: 49.25373%;
+    float: left;
+    margin-right: 1.49254%;
+    margin: 0 0 140px;
+    padding: 0 10px;
+  }
+}
+@media (min-width: 54.5em) {
+  .icon-wrapper.float {
+    width: 23.8806%;
+    float: left;
+    margin-right: 1.49254%;
+    margin: 0 0 140px;
+    padding: 0 10px;
+  }
+}
+.icon-wrapper.center {
+  display: inline-block;
+  margin: 10px 0;
+  width: 100%;
+}

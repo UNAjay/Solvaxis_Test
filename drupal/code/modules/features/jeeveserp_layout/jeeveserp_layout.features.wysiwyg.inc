@@ -107,7 +107,6 @@ Section title=h2.section-title',
       'buttons' => array(
         'default' => array(
           'Bold' => 1,
-          'Italic' => 1,
           'Underline' => 1,
           'JustifyLeft' => 1,
           'JustifyCenter' => 1,
@@ -173,7 +172,7 @@ Italic=p.italic
 Section title=h2.section-title',
       'block_formats' => 'p,address,h2,h3,div',
       'advanced__active_tab' => 'edit-basic',
-      'forcePasteAsPlainText' => 1,
+      'forcePasteAsPlainText' => 0,
     ),
   );
 

@@ -16,6 +16,7 @@ dependencies[] = field_group
 dependencies[] = filter
 dependencies[] = floatbar
 dependencies[] = i18n_taxonomy
+dependencies[] = icons_wysiwyg
 dependencies[] = image
 dependencies[] = industries
 dependencies[] = inline_entity_form

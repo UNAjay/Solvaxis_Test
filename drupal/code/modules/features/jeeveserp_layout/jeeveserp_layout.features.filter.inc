@@ -57,6 +57,18 @@ function jeeveserp_layout_filter_default_formats() {
         'status' => 1,
         'settings' => array(),
       ),
+      'icons_wysiwyg' => array(
+        'weight' => 0,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'insert_block' => array(
+        'weight' => 0,
+        'status' => 1,
+        'settings' => array(
+          'check_roles' => 0,
+        ),
+      ),
       'embed_entity' => array(
         'weight' => 0,
         'status' => 1,
