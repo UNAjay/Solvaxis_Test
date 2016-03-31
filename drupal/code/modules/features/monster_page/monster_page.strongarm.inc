@@ -170,10 +170,20 @@ function monster_page_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '2',
+          'weight' => '3',
+        ),
+        'redirect' => array(
+          'weight' => '4',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'ref_related_entity_view_1' => array(
+          'embed' => array(
+            'weight' => '2',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_ee__embed_list'] = $strongarm;

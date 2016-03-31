@@ -482,46 +482,7 @@ function monster_page_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'customer' => 'customer',
   );
-  /* Filter criterion: industry */
-  $handler->display->display_options['filters']['tid']['id'] = 'tid';
-  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['filters']['tid']['field'] = 'tid';
-  $handler->display->display_options['filters']['tid']['ui_name'] = 'industry';
-  $handler->display->display_options['filters']['tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['tid']['expose']['operator_id'] = 'tid_op';
-  $handler->display->display_options['filters']['tid']['expose']['label'] = 'Industry';
-  $handler->display->display_options['filters']['tid']['expose']['operator'] = 'tid_op';
-  $handler->display->display_options['filters']['tid']['expose']['identifier'] = 'industry';
-  $handler->display->display_options['filters']['tid']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-    5 => 0,
-    6 => 0,
-  );
-  $handler->display->display_options['filters']['tid']['type'] = 'select';
-  $handler->display->display_options['filters']['tid']['vocabulary'] = 'industries';
-  /* Filter criterion: product */
-  $handler->display->display_options['filters']['tid_1']['id'] = 'tid_1';
-  $handler->display->display_options['filters']['tid_1']['table'] = 'taxonomy_index';
-  $handler->display->display_options['filters']['tid_1']['field'] = 'tid';
-  $handler->display->display_options['filters']['tid_1']['ui_name'] = 'product';
-  $handler->display->display_options['filters']['tid_1']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['tid_1']['expose']['operator_id'] = 'tid_1_op';
-  $handler->display->display_options['filters']['tid_1']['expose']['label'] = 'Product';
-  $handler->display->display_options['filters']['tid_1']['expose']['operator'] = 'tid_1_op';
-  $handler->display->display_options['filters']['tid_1']['expose']['identifier'] = 'product';
-  $handler->display->display_options['filters']['tid_1']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-    5 => 0,
-    6 => 0,
-  );
-  $handler->display->display_options['filters']['tid_1']['type'] = 'select';
-  $handler->display->display_options['filters']['tid_1']['vocabulary'] = 'product';
+  $handler->display->display_options['filters']['type']['group'] = 1;
   $export['ref_customers'] = $view;
 
   $view = new view();
@@ -847,16 +808,23 @@ function monster_page_views_default_views() {
   $handler = $view->new_display('page', 'News: All', 'page_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'All news';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'View all';
   $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['type'] = 'load_more';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '2';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['pager']['options']['tags']['first'] = '';
   $handler->display->display_options['pager']['options']['tags']['previous'] = '';
   $handler->display->display_options['pager']['options']['tags']['next'] = '';
   $handler->display->display_options['pager']['options']['tags']['last'] = '';
+  $handler->display->display_options['pager']['options']['effects']['speed'] = 'slow';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Image */
   $handler->display->display_options['fields']['field_news_image']['id'] = 'field_news_image';

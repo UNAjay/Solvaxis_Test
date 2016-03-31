@@ -350,10 +350,9 @@ function monster_page_field_default_field_instances() {
       ),
       'embed' => array(
         'label' => 'hidden',
-        'module' => 'viewfield',
         'settings' => array(),
-        'type' => 'viewfield_default',
-        'weight' => 0,
+        'type' => 'hidden',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -415,6 +414,59 @@ function monster_page_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'ee-embed_list-field_view_ref'
+  $field_instances['ee-embed_list-field_view_ref'] = array(
+    'bundle' => 'embed_list',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'viewreference',
+        'settings' => array(),
+        'type' => 'viewreference_default',
+        'weight' => 2,
+      ),
+      'embed' => array(
+        'label' => 'hidden',
+        'module' => 'viewreference',
+        'settings' => array(),
+        'type' => 'viewreference_default',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'ee',
+    'field_name' => 'field_view_ref',
+    'label' => 'View',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'mediafront' => array(
+        'custom' => '',
+        'field_type' => 0,
+        'media_type' => 'media',
+        'preview' => 0,
+        'thumbnail' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'viewreference',
+      'settings' => array(),
+      'type' => 'viewreference_select',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'ee-embed_list-title_field'
   $field_instances['ee-embed_list-title_field'] = array(
     'bundle' => 'embed_list',
@@ -433,7 +485,7 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -787,7 +839,7 @@ function monster_page_field_default_field_instances() {
           'view_mode' => 'view_mode_selector',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'ds_contact_us' => array(
         'label' => 'above',

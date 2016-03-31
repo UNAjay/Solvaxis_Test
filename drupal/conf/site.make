@@ -290,6 +290,7 @@ projects[shs][download][type] = git
 projects[shs][download][revision] = ee6f612914764a4e6f48494d44c2c8325b896ca5
 
 projects[viewfield][version] = 2.0
+projects[viewreference][version] = 3.5
 projects[insert_block][version] = 1.x-dev
 projects[insert_block][subdir] = contrib
 projects[insert_block][revision] = be4314aef56af4b6bdf78d2f18e005c959d8cdd9
