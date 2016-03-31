@@ -841,30 +841,32 @@ function jeeveserp_layout_ds_layout_settings_info() {
     'regions' => array(
       'left' => array(
         0 => 'body',
-        1 => 'group_banner',
-        2 => 'group_region_holder',
-        6 => 'field_banner_image',
-        7 => 'field_banner_text',
-        8 => 'field_promo_link',
+        1 => 'group_region_holder',
       ),
       'right' => array(
-        3 => 'field_sidebar_text',
+        2 => 'field_sidebar_text',
       ),
       'footer' => array(
-        4 => 'field_section',
-        5 => 'field_basic_pages',
+        3 => 'field_section',
+        4 => 'field_basic_pages',
+      ),
+      'banner' => array(
+        5 => 'field_banner_image',
+        6 => 'field_banner_text',
+        7 => 'field_promo_link',
+        8 => 'group_banner',
       ),
     ),
     'fields' => array(
       'body' => 'left',
-      'group_banner' => 'left',
       'group_region_holder' => 'left',
       'field_sidebar_text' => 'right',
       'field_section' => 'footer',
       'field_basic_pages' => 'footer',
-      'field_banner_image' => 'left',
-      'field_banner_text' => 'left',
-      'field_promo_link' => 'left',
+      'field_banner_image' => 'banner',
+      'field_banner_text' => 'banner',
+      'field_promo_link' => 'banner',
+      'group_banner' => 'banner',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -872,6 +874,7 @@ function jeeveserp_layout_ds_layout_settings_info() {
       'left' => 'div',
       'right' => 'div',
       'footer' => 'div',
+      'banner' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
@@ -998,6 +1001,57 @@ function jeeveserp_layout_ds_layout_settings_info() {
     ),
   );
   $export['node|page|frontpage'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|page|full';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'page';
+  $ds_layout->view_mode = 'full';
+  $ds_layout->layout = 'ds_2col_stacked';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'left' => array(
+        0 => 'body',
+        1 => 'group_region_holder',
+      ),
+      'right' => array(
+        2 => 'field_sidebar_text',
+      ),
+      'footer' => array(
+        3 => 'group_banner',
+        4 => 'field_section',
+        5 => 'field_basic_pages',
+        6 => 'field_banner_image',
+        7 => 'field_banner_text',
+        8 => 'field_promo_link',
+      ),
+    ),
+    'fields' => array(
+      'body' => 'left',
+      'group_region_holder' => 'left',
+      'field_sidebar_text' => 'right',
+      'group_banner' => 'footer',
+      'field_section' => 'footer',
+      'field_basic_pages' => 'footer',
+      'field_banner_image' => 'footer',
+      'field_banner_text' => 'footer',
+      'field_promo_link' => 'footer',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'header' => 'div',
+      'left' => 'div',
+      'right' => 'div',
+      'footer' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|page|full'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;

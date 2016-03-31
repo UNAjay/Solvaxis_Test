@@ -66,6 +66,17 @@ function monster_page_preprocess_node(&$variables) {
 
 }
 
+/**
+ * Alter layouts found by Display Suite.
+ *
+ * @param $layouts
+ *   A array of layouts which keys are the layout and which values are
+ *   properties of that layout (label, path, regions and css).
+ */
+function monster_page_ds_layout_info_alter(&$layouts) {
+  $layouts['ds_2col_stacked']['regions']['banner'] = 'Banner';
+}
+
 
 function monster_page_entity_view($entity, $type, $view_mode, $langcode) {
   if ($type == 'node' && $entity->type == 'section' && ($view_mode == 'full' || $view_mode == 'teaser')) {
