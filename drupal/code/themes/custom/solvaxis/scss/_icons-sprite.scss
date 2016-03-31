@@ -1,13 +1,17 @@
 // Icons sprite
 .icon-wrapper {
-  min-height: 120px;
+  display: block;
+  min-height: 250px;
   position: relative;
   .icon {
     display: block;
     margin: 0 auto;
-    background-image: url('../images/products.png');
+    background-image: url('../images/product-line.png');
     background-repeat: no-repeat;
-    background-size: 320px 640px;
+    background-size: 160px 640px;
+    border: 3px solid transparent;
+    @include border-radius(100%, 100%);
+    @include box-sizing(content-box);
     
     &.icon_1 {
       background-position: 0 0;
@@ -33,12 +37,14 @@
   .icon-title {
     color: $white;
     display: block;
-    @include font-size(20,25);
+    @include font-size(16);
+    font-weight: 300;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
+    padding: 0 20px;
     @include at-breakpoint($bp-med) {
       position: absolute;
-      top: 170px;
+      top: 180px;
       left: 0;
       width: 100%;
       margin-top: 0;
@@ -46,52 +52,33 @@
   }
 }
 
-//a {
-//  .icon-wrapper {
-//    &:hover,
-//    &:active,
-//    &:focus {
-//      .icon-title {
-//        color: $white;
-//        text-decoration: none;
-//      }
-//      .icon {
-//        &.icon_1 {
-//          background-position: -150px 0;
-//        }
-//        &.icon_2 {
-//          background-position: -150px -100px;
-//        }
-//        &.icon_3 {
-//          background-position: -150px -200px;
-//        }
-//        &.icon_4 {
-//          background-position: -150px -310px;
-//        }
-//        &.icon_5 {
-//          background-position: -150px -410px;
-//        }
-//        &.icon_6 {
-//          background-position: -150px -510px;
-//        }
-//        &.icon_7 {
-//          background-position: -150px -610px;
-//        }
-//        &.icon_8 {
-//          background-position: -150px -710px;
-//        }
-//      }
-//    }
-//  }
-//}
+a {
+  .icon-wrapper {
+    &:hover,
+    &:active,
+    &:focus {
+      .icon-title {
+        color: $white;
+        text-decoration: none;
+      }
+      .icon {
+        background-color: $crimson;
+        border: 3px solid $crimson;
+      }
+    }
+  }
+  &.external-link {
+    text-decoration: none;
+  }
+}
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
   .icon-wrapper {
     .icon {
         /* Reference the @2x Sprite */
-				background-image: url('../images/products@2x.png');
+				background-image: url('../images/product-line@2x.png');
         /* Translate the @2x sprite's dimensions back to 1x */
-        background-size: 320px 640px;
+        background-size: 160px 640px;
 			}
     }
 	}
@@ -99,18 +86,18 @@
 // icons layout
 .icon-wrapper {
   width: 100%;
-  margin: 0 0 140px;
-  padding: 0 10px;
+  margin: 0;
+  padding: 10px 10px 0;
   &.float {
     @include at-breakpoint($bp-med) {
       @include span-columns(8,16);
-      margin: 0 0 140px;
-      padding: 0 10px;
+      margin: 0;
+      padding: 10px 10px 0;
     }
     @include at-breakpoint($bp-large-2) {
       @include span-columns(4,16);
-      margin: 0 0 140px;
-      padding: 0 10px;
+      margin: 0;
+      padding: 10px 10px 0;
     }
   }
   &.center {
