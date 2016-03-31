@@ -52,6 +52,17 @@ function jeeveserp_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'access contextual links'.
+  $permissions['access contextual links'] = array(
+    'name' => 'access contextual links',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'contextual',
+  );
+
   // Exported permission: 'access direct download file'.
   $permissions['access direct download file'] = array(
     'name' => 'access direct download file',
@@ -180,6 +191,15 @@ function jeeveserp_permissions_user_default_permissions() {
     'module' => 'system',
   );
 
+  // Exported permission: 'administer blocks'.
+  $permissions['administer blocks'] = array(
+    'name' => 'administer blocks',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+    ),
+    'module' => 'block',
+  );
+
   // Exported permission: 'administer google analytics'.
   $permissions['administer google analytics'] = array(
     'name' => 'administer google analytics',
@@ -194,6 +214,13 @@ function jeeveserp_permissions_user_default_permissions() {
       'Product site admin' => 'Product site admin',
     ),
     'module' => 'locale',
+  );
+
+  // Exported permission: 'administer menu block'.
+  $permissions['administer menu block'] = array(
+    'name' => 'administer menu block',
+    'roles' => array(),
+    'module' => 'config_perms',
   );
 
   // Exported permission: 'administer meta tags'.
@@ -244,6 +271,22 @@ function jeeveserp_permissions_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'system',
+  );
+
+  // Exported permission: 'administer site information'.
+  $permissions['administer site information'] = array(
+    'name' => 'administer site information',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+    ),
+    'module' => 'config_perms',
+  );
+
+  // Exported permission: 'administer site maintenance'.
+  $permissions['administer site maintenance'] = array(
+    'name' => 'administer site maintenance',
+    'roles' => array(),
+    'module' => 'config_perms',
   );
 
   // Exported permission: 'administer software updates'.
@@ -420,6 +463,31 @@ function jeeveserp_permissions_user_default_permissions() {
     'name' => 'delete terms in tags',
     'roles' => array(),
     'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'display block admin page'.
+  $permissions['display block admin page'] = array(
+    'name' => 'display block admin page',
+    'roles' => array(),
+    'module' => 'config_perms',
+  );
+
+  // Exported permission: 'display site configuration menu'.
+  $permissions['display site configuration menu'] = array(
+    'name' => 'display site configuration menu',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+    ),
+    'module' => 'config_perms',
+  );
+
+  // Exported permission: 'display site structure menu'.
+  $permissions['display site structure menu'] = array(
+    'name' => 'display site structure menu',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+    ),
+    'module' => 'config_perms',
   );
 
   // Exported permission: 'edit any page content'.

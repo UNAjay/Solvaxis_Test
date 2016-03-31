@@ -14,10 +14,17 @@ function jeeveserp_layout_filter_default_formats() {
   $formats['basic_html'] = array(
     'format' => 'basic_html',
     'name' => 'Basic HTML',
-    'cache' => 1,
+    'cache' => 0,
     'status' => 1,
     'weight' => 0,
     'filters' => array(
+      'insert_block' => array(
+        'weight' => 0,
+        'status' => 1,
+        'settings' => array(
+          'check_roles' => 0,
+        ),
+      ),
       'media_filter' => array(
         'weight' => 2,
         'status' => 1,

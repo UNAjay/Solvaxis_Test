@@ -94,6 +94,13 @@ function jeeveserp_layout_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 21,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
       'industries' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -202,7 +209,7 @@ function jeeveserp_layout_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 45,
+        'weight' => 46,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -239,6 +246,12 @@ function jeeveserp_layout_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 46,
       ),
       'industries' => array(
         'label' => 'above',
@@ -337,6 +350,534 @@ function jeeveserp_layout_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-page-field_banner_image'
+  $field_instances['node-page-field_banner_image'] = array(
+    'bundle' => 'page',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'blogs' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'company' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'customers' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'cs_adaptive_image',
+        'settings' => array(
+          'image_link' => '',
+          'styles' => array(
+            'breakpoint_1' => 480,
+            'breakpoint_2' => '',
+            'breakpoint_3' => '',
+            'breakpoint_4' => '',
+            'breakpoint_5' => '',
+            'fallback_style' => 'banner_image',
+            'max_style' => 'banner_image',
+            'style_1' => 'banner_image',
+            'style_2' => '',
+            'style_3' => '',
+            'style_4' => '',
+            'style_5' => '',
+          ),
+        ),
+        'type' => 'cs_adaptive_image',
+        'weight' => 53,
+      ),
+      'ds_contact_us' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ds_press_releases' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'events' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'frontpage' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'cs_adaptive_image',
+        'settings' => array(
+          'image_link' => '',
+          'styles' => array(
+            'breakpoint_1' => 480,
+            'breakpoint_2' => '',
+            'breakpoint_3' => '',
+            'breakpoint_4' => '',
+            'breakpoint_5' => '',
+            'fallback_style' => 'banner_image',
+            'max_style' => 'banner_image',
+            'style_1' => 'banner_image',
+            'style_2' => '',
+            'style_3' => '',
+            'style_4' => '',
+            'style_5' => '',
+          ),
+        ),
+        'type' => 'cs_adaptive_image',
+        'weight' => 53,
+      ),
+      'industries' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'news' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'partners' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resources_events' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resources_files' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resources_video' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'section_dark' => array(
+        'label' => 'hidden',
+        'module' => 'cs_adaptive_image',
+        'settings' => array(
+          'image_link' => '',
+          'styles' => array(
+            'breakpoint_1' => 480,
+            'breakpoint_2' => 768,
+            'breakpoint_3' => 980,
+            'breakpoint_4' => '',
+            'breakpoint_5' => '',
+            'fallback_style' => 'banner_image',
+            'max_style' => 'banner_image',
+            'style_1' => 'banner_image',
+            'style_2' => 'banner_image',
+            'style_3' => 'banner_image',
+            'style_4' => '',
+            'style_5' => '',
+          ),
+        ),
+        'type' => 'cs_adaptive_image',
+        'weight' => 1,
+      ),
+      'section_light' => array(
+        'label' => 'hidden',
+        'module' => 'cs_adaptive_image',
+        'settings' => array(
+          'image_link' => '',
+          'styles' => array(
+            'breakpoint_1' => 480,
+            'breakpoint_2' => 768,
+            'breakpoint_3' => 980,
+            'breakpoint_4' => '',
+            'breakpoint_5' => '',
+            'fallback_style' => 'banner_image',
+            'max_style' => 'banner_image',
+            'style_1' => 'banner_image',
+            'style_2' => 'banner_image',
+            'style_3' => 'banner_image',
+            'style_4' => '',
+            'style_5' => '',
+          ),
+        ),
+        'type' => 'cs_adaptive_image',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_banner_image',
+    'label' => 'Banner Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'entity_translation_sync' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'focus' => 0,
+      'focus_lock_ratio' => 0,
+      'focus_min_size' => '',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'mediafront' => array(
+        'custom' => '',
+        'field_type' => 0,
+        'media_type' => 'media',
+        'preview' => 0,
+        'thumbnail' => 0,
+      ),
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 'upload',
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 16,
+    ),
+  );
+
+  // Exported field_instance: 'node-page-field_banner_style'
+  $field_instances['node-page-field_banner_style'] = array(
+    'bundle' => 'page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'blogs' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'company' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'customers' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 52,
+      ),
+      'ds_contact_us' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ds_press_releases' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'events' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'frontpage' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 52,
+      ),
+      'industries' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'news' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'partners' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resources_events' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resources_files' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resources_video' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'section_dark' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 44,
+      ),
+      'section_light' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 44,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_banner_style',
+    'label' => 'Banner style',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'mediafront' => array(
+        'custom' => '',
+        'field_type' => 0,
+        'media_type' => 'media',
+        'preview' => 0,
+        'thumbnail' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 14,
+    ),
+  );
+
+  // Exported field_instance: 'node-page-field_banner_text'
+  $field_instances['node-page-field_banner_text'] = array(
+    'bundle' => 'page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'blogs' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'company' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'customers' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 54,
+      ),
+      'ds_contact_us' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ds_press_releases' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'events' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'frontpage' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 54,
+      ),
+      'industries' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'news' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'partners' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resources_events' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resources_files' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resources_video' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'section_dark' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'section_light' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_banner_text',
+    'label' => 'Banner text',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'mediafront' => array(
+        'custom' => '',
+        'field_type' => 0,
+        'media_type' => 'media',
+        'preview' => 0,
+        'thumbnail' => 0,
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 17,
+    ),
+  );
+
   // Exported field_instance: 'node-page-field_basic_pages'
   $field_instances['node-page-field_basic_pages'] = array(
     'bundle' => 'page',
@@ -370,7 +911,7 @@ function jeeveserp_layout_field_default_field_instances() {
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -412,6 +953,17 @@ function jeeveserp_layout_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 1,
+          'use_content_language' => 1,
+          'view_mode' => 'teaser',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 5,
       ),
       'industries' => array(
         'label' => 'above',
@@ -549,7 +1101,7 @@ function jeeveserp_layout_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 48,
+        'weight' => 49,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -574,6 +1126,12 @@ function jeeveserp_layout_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 49,
       ),
       'industries' => array(
         'label' => 'above',
@@ -677,7 +1235,7 @@ function jeeveserp_layout_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 47,
+        'weight' => 48,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -708,6 +1266,12 @@ function jeeveserp_layout_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 48,
       ),
       'industries' => array(
         'label' => 'above',
@@ -806,7 +1370,7 @@ function jeeveserp_layout_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 49,
+        'weight' => 50,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -831,6 +1395,12 @@ function jeeveserp_layout_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 50,
       ),
       'industries' => array(
         'label' => 'above',
@@ -928,7 +1498,7 @@ function jeeveserp_layout_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 43,
+        'weight' => 44,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -959,6 +1529,12 @@ function jeeveserp_layout_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 44,
       ),
       'industries' => array(
         'label' => 'above',
@@ -1040,6 +1616,173 @@ function jeeveserp_layout_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-page-field_promo_link'
+  $field_instances['node-page-field_promo_link'] = array(
+    'bundle' => 'page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'blogs' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'company' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'customers' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 55,
+      ),
+      'ds_contact_us' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ds_press_releases' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'events' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'frontpage' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 55,
+      ),
+      'industries' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'news' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'partners' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resources_events' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resources_files' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'resources_video' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'section_dark' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 3,
+      ),
+      'section_light' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_promo_link',
+    'label' => 'Promo Link',
+    'required' => 0,
+    'settings' => array(
+      'attributes' => array(
+        'class' => '',
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'user',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 0,
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 1,
+        'profile' => 'field',
+      ),
+      'mediafront' => array(
+        'custom' => '',
+        'field_type' => 0,
+        'media_type' => 'media',
+        'preview' => 0,
+        'thumbnail' => 0,
+      ),
+      'rel_remove' => 'default',
+      'title' => 'none',
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 15,
+    ),
+  );
+
   // Exported field_instance: 'node-page-field_region'
   $field_instances['node-page-field_region'] = array(
     'bundle' => 'page',
@@ -1069,7 +1812,7 @@ function jeeveserp_layout_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 44,
+        'weight' => 45,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -1106,6 +1849,12 @@ function jeeveserp_layout_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 45,
       ),
       'industries' => array(
         'label' => 'above',
@@ -1208,7 +1957,7 @@ function jeeveserp_layout_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'ds_contact_us' => array(
         'label' => 'hidden',
@@ -1249,6 +1998,13 @@ function jeeveserp_layout_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
       ),
       'industries' => array(
         'label' => 'hidden',
@@ -1356,7 +2112,7 @@ function jeeveserp_layout_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 50,
+        'weight' => 51,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -1381,6 +2137,12 @@ function jeeveserp_layout_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 51,
       ),
       'industries' => array(
         'label' => 'above',
@@ -1481,7 +2243,7 @@ function jeeveserp_layout_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 46,
+        'weight' => 47,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -1512,6 +2274,12 @@ function jeeveserp_layout_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 47,
       ),
       'industries' => array(
         'label' => 'above',
@@ -1582,12 +2350,16 @@ function jeeveserp_layout_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Background image');
+  t('Banner Image');
+  t('Banner style');
+  t('Banner text');
   t('Basic pages');
   t('Body');
   t('Industry');
   t('Market');
   t('Product');
   t('Promo');
+  t('Promo Link');
   t('Region');
   t('Sidebar text');
   t('Tags');
