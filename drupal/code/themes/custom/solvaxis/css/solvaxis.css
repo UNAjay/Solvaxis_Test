@@ -1006,10 +1006,10 @@ a {
   top: 1px;
   left: 6px;
 }
-.social-icons li a[title="Email"] {
+.social-icons li a[title="Mail"] {
   background: #e30043;
 }
-.social-icons li a[title="Email"]:before {
+.social-icons li a[title="Mail"]:before {
   content: '\e80a';
   font-size: 19px;
   top: -1px;
@@ -1030,7 +1030,7 @@ footer .social-icons li a[title="Facebook"],
 footer .social-icons li a[title="LinkedIn"],
 footer .social-icons li a[title="Xing"],
 footer .social-icons li a[title="Site RSS"],
-footer .social-icons li a[title="Email"] {
+footer .social-icons li a[title="Mail"] {
   background: #3c3f42;
 }
 
@@ -1102,10 +1102,10 @@ footer .social-icons li a[title="Email"] {
   top: 4px;
   left: 6px;
 }
-.addthis_toolbox.addthis_default_style a.addthis_button_email {
+.addthis_toolbox.addthis_default_style a.addthis_button_mail {
   background: #e30043;
 }
-.addthis_toolbox.addthis_default_style a.addthis_button_email:before {
+.addthis_toolbox.addthis_default_style a.addthis_button_mail:before {
   content: '\e80a';
   font-size: 19px;
   top: 3px;

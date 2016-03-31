@@ -86,7 +86,7 @@
       }
     }
     
-    a[title="Email"] {
+    a[title="Mail"] {
       background: $crimson;
       &:before {
         content: '\e80a';
@@ -117,7 +117,7 @@ footer {
        a[title="LinkedIn"],
        a[title="Xing"],
        a[title="Site RSS"],
-       a[title="Email"] {
+       a[title="Mail"] {
          background: $gray-dark;
       }
     }
@@ -200,7 +200,7 @@ footer {
     }
   }
   
-  a.addthis_button_email {
+  a.addthis_button_mail {
     background: $crimson;
     &:before {
       content: '\e80a';
