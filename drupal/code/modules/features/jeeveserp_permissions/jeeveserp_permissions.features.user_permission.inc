@@ -52,6 +52,17 @@ function jeeveserp_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'access contextual links'.
+  $permissions['access contextual links'] = array(
+    'name' => 'access contextual links',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'contextual',
+  );
+
   // Exported permission: 'access direct download file'.
   $permissions['access direct download file'] = array(
     'name' => 'access direct download file',
