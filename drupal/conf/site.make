@@ -39,6 +39,8 @@ projects[link][version] = "1.2"
 projects[context][version] = "3.6"
 projects[context_condition_theme][version] = "1.0"
 
+projects[config_perms][version] = "2.1"
+
 projects[wysiwyg][version] = 2.x-dev
 projects[wysiwyg][revision] = 949039351d71d24d60faee4f63c6527e54761ee1
 
