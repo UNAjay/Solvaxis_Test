@@ -1947,7 +1947,7 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   margin-right: auto;
   margin: 0 auto;
   max-width: 1000px;
-  padding: 28px 0 130px;
+  padding: 28px 0;
   position: relative;
 }
 .node-section .region-holder:after {
@@ -2028,6 +2028,9 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   padding-top: 20px;
 }
 
+.node-page .region-holder {
+  padding-bottom: 28px;
+}
 .node-page .field-items .field-item:last-child .node-section.section_light {
   border-bottom: 0 none;
 }
@@ -2185,7 +2188,7 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   width: 100%;
   min-height: 170px;
   z-index: 2;
-  margin: -80px 0 12px;
+  margin: 0 0 -45px;
   padding: 5px 10px;
   overflow: hidden;
 }
@@ -2227,7 +2230,7 @@ article .media-element-container.media-logo img:hover, article .media-element-co
     min-height: 196px;
     height: auto;
     padding: 10px 15px;
-    margin: -144px 0 12px;
+    margin: 0 0 -45px;
   }
 }
 
@@ -2235,7 +2238,7 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   .group-banner {
     width: 690px;
     min-height: 175px;
-    margin: -188px -30px 12px 0;
+    margin: 0 -30px -45px 0;
     padding: 27px 30px 24px;
   }
 }

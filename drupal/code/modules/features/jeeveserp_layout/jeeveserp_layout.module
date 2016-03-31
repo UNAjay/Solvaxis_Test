@@ -47,7 +47,9 @@ function jeeveserp_layout_wysiwyg_editor_settings_alter(&$settings, $context) {
         '-',
         'Styles',
         '-',
-        'custom_link'),
+        'custom_link',
+        '-',
+        'icons'),
     );
   }
 }

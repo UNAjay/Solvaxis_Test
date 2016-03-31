@@ -13,6 +13,70 @@ function jeeveserp_layout_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_banner|node|page|default';
+  $field_group->group_name = 'group_banner';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'page';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Banner',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_banner_text',
+      1 => 'field_banner_image',
+      2 => 'field_promo_link',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Banner',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-banner field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_banner|node|page|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_banner|node|page|form';
+  $field_group->group_name = 'group_banner';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'page';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Banner',
+    'weight' => '7',
+    'children' => array(
+      0 => 'field_banner_text',
+      1 => 'field_banner_image',
+      2 => 'field_banner_style',
+      3 => 'field_promo_link',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-banner field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_banner|node|page|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_categories|node|page|form';
   $field_group->group_name = 'group_categories';
   $field_group->entity_type = 'node';
@@ -220,6 +284,7 @@ function jeeveserp_layout_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Banner');
   t('Categories');
   t('Content');
   t('Description container');

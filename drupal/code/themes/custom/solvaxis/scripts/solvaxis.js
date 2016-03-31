@@ -27,11 +27,11 @@
         $(this).toggleClass( "collapsed" );
       });
 
-      $(window, context).on('load', function(e){
-        $('html,body').animate({
-          scrollTop: $('html,body').offset().top
-        });
-      });
+      // $(window, context).on('load', function(e){
+      //   $('html,body').animate({
+      //     scrollTop: $('html,body').offset().top
+      //   });
+      // });
 
       // Scroll to hash.
       // ------------------------------------------------------------------------------------------------

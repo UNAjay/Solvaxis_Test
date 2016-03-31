@@ -43,7 +43,7 @@ function monster_page_preprocess_node(&$variables) {
       }
 
       $transparent = field_get_items($entity_type, $node, 'field_background_transparent');
-      if ($transparent) {
+      if ($transparent && $transparent[0]['value'] == '1') {
         $variables['classes_array'][] = drupal_html_class('transparent');
       }
 
@@ -53,6 +53,13 @@ function monster_page_preprocess_node(&$variables) {
       }
       else {
         $variables['content']['field_add_this']['#access'] = FALSE;
+      }
+    }
+
+    if ($node->type == 'page') {
+      $banner_style = field_get_items($entity_type, $node, 'field_banner_style');
+      if ($banner_style) {
+        $variables['classes_array'][] = drupal_html_class('banner-style-' . $banner_style[0]['value']);
       }
     }
   }

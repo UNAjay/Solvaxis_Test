@@ -841,22 +841,30 @@ function jeeveserp_layout_ds_layout_settings_info() {
     'regions' => array(
       'left' => array(
         0 => 'body',
-        1 => 'group_region_holder',
+        1 => 'group_banner',
+        2 => 'group_region_holder',
+        6 => 'field_banner_image',
+        7 => 'field_banner_text',
+        8 => 'field_promo_link',
       ),
       'right' => array(
-        2 => 'field_sidebar_text',
+        3 => 'field_sidebar_text',
       ),
       'footer' => array(
-        3 => 'field_section',
-        4 => 'field_basic_pages',
+        4 => 'field_section',
+        5 => 'field_basic_pages',
       ),
     ),
     'fields' => array(
       'body' => 'left',
+      'group_banner' => 'left',
       'group_region_holder' => 'left',
       'field_sidebar_text' => 'right',
       'field_section' => 'footer',
       'field_basic_pages' => 'footer',
+      'field_banner_image' => 'left',
+      'field_banner_text' => 'left',
+      'field_promo_link' => 'left',
     ),
     'classes' => array(),
     'wrappers' => array(

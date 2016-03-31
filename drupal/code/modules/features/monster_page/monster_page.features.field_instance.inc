@@ -787,7 +787,7 @@ function monster_page_field_default_field_instances() {
           'view_mode' => 'view_mode_selector',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -823,6 +823,17 @@ function monster_page_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'use_content_language' => 1,
+          'view_mode' => 'view_mode_selector',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 4,
       ),
       'industries' => array(
         'label' => 'above',
@@ -936,7 +947,7 @@ function monster_page_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'section_text' => array(
         'label' => 'hidden',
@@ -1245,7 +1256,7 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 32,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1437,7 +1448,7 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 44,
+        'weight' => 45,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1582,7 +1593,7 @@ function monster_page_field_default_field_instances() {
           'view_mode' => 'default',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1652,7 +1663,7 @@ function monster_page_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1816,7 +1827,7 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 42,
+        'weight' => 43,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1886,7 +1897,7 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 43,
+        'weight' => 44,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2027,7 +2038,7 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 46,
+        'weight' => 47,
       ),
       'section_text' => array(
         'label' => 'above',
@@ -2199,7 +2210,7 @@ function monster_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 45,
+        'weight' => 46,
       ),
       'section_text' => array(
         'label' => 'above',
