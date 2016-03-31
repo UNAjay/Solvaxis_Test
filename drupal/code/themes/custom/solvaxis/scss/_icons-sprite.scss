@@ -1,0 +1,121 @@
+// Icons sprite
+.icon-wrapper {
+  min-height: 120px;
+  position: relative;
+  .icon {
+    display: block;
+    margin: 0 auto;
+    background-image: url('../images/products.png');
+    background-repeat: no-repeat;
+    background-size: 320px 640px;
+    
+    &.icon_1 {
+      background-position: 0 0;
+      width: 152px;
+      height: 152px;
+    }
+    &.icon_2 {
+      background-position: 0 -160px;
+      width: 152px;
+      height: 152px;
+    }
+    &.icon_3 {
+      background-position: 0 -320px;
+      width: 152px;
+      height: 152px;
+    }
+    &.icon_4 {
+      background-position: 0 -480px;
+      width: 152px;
+      height: 152px;
+    }
+  }
+  .icon-title {
+    color: $white;
+    display: block;
+    @include font-size(20,25);
+    text-align: center;
+    margin-top: 20px;
+    @include at-breakpoint($bp-med) {
+      position: absolute;
+      top: 170px;
+      left: 0;
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+}
+
+//a {
+//  .icon-wrapper {
+//    &:hover,
+//    &:active,
+//    &:focus {
+//      .icon-title {
+//        color: $white;
+//        text-decoration: none;
+//      }
+//      .icon {
+//        &.icon_1 {
+//          background-position: -150px 0;
+//        }
+//        &.icon_2 {
+//          background-position: -150px -100px;
+//        }
+//        &.icon_3 {
+//          background-position: -150px -200px;
+//        }
+//        &.icon_4 {
+//          background-position: -150px -310px;
+//        }
+//        &.icon_5 {
+//          background-position: -150px -410px;
+//        }
+//        &.icon_6 {
+//          background-position: -150px -510px;
+//        }
+//        &.icon_7 {
+//          background-position: -150px -610px;
+//        }
+//        &.icon_8 {
+//          background-position: -150px -710px;
+//        }
+//      }
+//    }
+//  }
+//}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  .icon-wrapper {
+    .icon {
+        /* Reference the @2x Sprite */
+				background-image: url('../images/products@2x.png');
+        /* Translate the @2x sprite's dimensions back to 1x */
+        background-size: 320px 640px;
+			}
+    }
+	}
+
+// icons layout
+.icon-wrapper {
+  width: 100%;
+  margin: 0 0 140px;
+  padding: 0 10px;
+  &.float {
+    @include at-breakpoint($bp-med) {
+      @include span-columns(8,16);
+      margin: 0 0 140px;
+      padding: 0 10px;
+    }
+    @include at-breakpoint($bp-large-2) {
+      @include span-columns(4,16);
+      margin: 0 0 140px;
+      padding: 0 10px;
+    }
+  }
+  &.center {
+    display: inline-block;
+    margin: 10px 0;
+    width: 100%;
+  }
+}

@@ -121,7 +121,29 @@ function site_iframe_formatter_field_formatter_view($entity_type, $entity, $fiel
         $raw_url = $item['url'];
 
         if (isset($raw_url)) {
-          $element[$delta]['#markup'] = '<iframe class="external-iframe-display" frameborder="0" src="'.$raw_url.'" ></iframe>';
+          // $element[$delta]['#markup'] = '<iframe class="external-iframe-display" frameborder="0" src="'.$raw_url.'" ></iframe>';
+          $element[$delta]['#markup'] = '<div id="iframe" class="external-iframe-display"></div>';
+          $element[$delta]['#markup'] .= "
+
+<script>
+
+var linker;
+
+function addiFrame(divId, url, opt_hash) {
+
+  return function(tracker) {
+    window.linker = window.linker || new window.gaplugins.Linker(tracker);
+    var iFrame = document.createElement('iFrame');
+    iFrame.src = window.linker.decorate(url, opt_hash);
+    document.getElementById(divId).appendChild(iFrame);
+  };
+
+}
+
+// Dynamically add the iFrame to the page with proper linker parameters.
+ga(addiFrame('iframe', '".$raw_url."'));
+
+</script>";
 
           drupal_add_js(drupal_get_path('module', 'site_iframe_formatter').'/iframe_parent.js');
           drupal_add_css(drupal_get_path('module', 'site_iframe_formatter').'/iframe_parent.css');

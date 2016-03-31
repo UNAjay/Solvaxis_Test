@@ -29,14 +29,15 @@
             // If we get an integer, that is a request to resize the window
             var intRegex = /^\d+$/;
             if (intRegex.test(data.height)) {
-              $('iframe[src=' + data.url + ']').height(Math.round(data.height));
+              // $('iframe[src=' + data.url + ']').height(Math.round(data.height));
+              $('#iframe iframe').height(Math.round(data.height));
             }
 
           }
 
         } // try
         catch(err) {
-          console.log('Wrong event');
+          console.log(err);
         } // catch
 
       }
