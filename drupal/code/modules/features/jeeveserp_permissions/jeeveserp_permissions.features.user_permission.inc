@@ -191,6 +191,15 @@ function jeeveserp_permissions_user_default_permissions() {
     'module' => 'system',
   );
 
+  // Exported permission: 'administer blocks'.
+  $permissions['administer blocks'] = array(
+    'name' => 'administer blocks',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+    ),
+    'module' => 'block',
+  );
+
   // Exported permission: 'administer google analytics'.
   $permissions['administer google analytics'] = array(
     'name' => 'administer google analytics',
