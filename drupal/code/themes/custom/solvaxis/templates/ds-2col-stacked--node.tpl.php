@@ -32,6 +32,14 @@
     <?php print $right; ?>
   </<?php print $right_wrapper ?>>
   <?php endif; ?>
+
+  <?php if ($banner): ?>
+    <span class="clearfix"></span>
+  <<?php print $banner_wrapper ?> class="group-banner<?php print $banner_classes; ?>">
+    <?php print $banner; ?>
+  </<?php print $banner_wrapper ?>>
+  <?php endif; ?>
+
 </div>
 
   <<?php print $footer_wrapper ?> class="group-footer<?php print $footer_classes; ?>">
