@@ -3247,15 +3247,23 @@ p.italic {
 }
 
 .icon-wrapper {
-  min-height: 120px;
+  display: block;
+  min-height: 250px;
   position: relative;
 }
 .icon-wrapper .icon {
   display: block;
   margin: 0 auto;
-  background-image: url("../images/products.png");
+  background-image: url("../images/product-line.png");
   background-repeat: no-repeat;
-  background-size: 320px 640px;
+  background-size: 160px 640px;
+  border: 3px solid transparent;
+  -webkit-border-radius: 100% 100%;
+  -moz-border-radius: 100% / 100%;
+  border-radius: 100% / 100%;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
 }
 .icon-wrapper .icon.icon_1 {
   background-position: 0 0;
@@ -3280,42 +3288,55 @@ p.italic {
 .icon-wrapper .icon-title {
   color: white;
   display: block;
-  font-size: 20px;
-  font-size: 2rem;
-  line-height: 1.25;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: 300;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
+  padding: 0 20px;
 }
 @media (min-width: 46.8em) {
   .icon-wrapper .icon-title {
     position: absolute;
-    top: 170px;
+    top: 180px;
     left: 0;
     width: 100%;
     margin-top: 0;
   }
 }
 
+a .icon-wrapper:hover .icon-title, a .icon-wrapper:active .icon-title, a .icon-wrapper:focus .icon-title {
+  color: white;
+  text-decoration: none;
+}
+a .icon-wrapper:hover .icon, a .icon-wrapper:active .icon, a .icon-wrapper:focus .icon {
+  background-color: #e30043;
+  border: 3px solid #e30043;
+}
+a.external-link {
+  text-decoration: none;
+}
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
   .icon-wrapper .icon {
     /* Reference the @2x Sprite */
-    background-image: url("../images/products@2x.png");
+    background-image: url("../images/product-line@2x.png");
     /* Translate the @2x sprite's dimensions back to 1x */
-    background-size: 320px 640px;
+    background-size: 160px 640px;
   }
 }
 .icon-wrapper {
   width: 100%;
-  margin: 0 0 140px;
-  padding: 0 10px;
+  margin: 0;
+  padding: 10px 10px 0;
 }
 @media (min-width: 46.8em) {
   .icon-wrapper.float {
     width: 49.25373%;
     float: left;
     margin-right: 1.49254%;
-    margin: 0 0 140px;
-    padding: 0 10px;
+    margin: 0;
+    padding: 10px 10px 0;
   }
 }
 @media (min-width: 54.5em) {
@@ -3323,8 +3344,8 @@ p.italic {
     width: 23.8806%;
     float: left;
     margin-right: 1.49254%;
-    margin: 0 0 140px;
-    padding: 0 10px;
+    margin: 0;
+    padding: 10px 10px 0;
   }
 }
 .icon-wrapper.center {
