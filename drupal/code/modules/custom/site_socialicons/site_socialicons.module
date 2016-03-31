@@ -106,12 +106,12 @@ function site_socialicons_field_formatter_view($entity_type, $entity, $field, $i
       case 'facebook.com':
           $socialmedia = 'facebook';
         break;
-      
+
       case 'www.xing.com':
       case 'xing.com':
         $socialmedia = 'Xing';
       break;
-      
+
       case 'www.twitter.com':
       case 'twitter.com':
           $socialmedia = 'twitter';
@@ -463,7 +463,13 @@ function _site_socialicons_parse_text($text, $context = FALSE) {
 
       if (!empty($url['host'])) {
         $host = check_plain($url['host']);
-      } else $host = '';
+      }
+      elseif (!empty($url['scheme']) && $url['scheme'] == 'mailto') {
+        $host = 'mailto';
+      }
+      else {
+        $host = '';
+      }
 
       switch ($host) {
         case 'www.linkedin.com':
@@ -477,7 +483,7 @@ function _site_socialicons_parse_text($text, $context = FALSE) {
             $socialmedia = 'facebook';
             $socialmedianame = 'Facebook';
           break;
-          
+
         case 'www.xing.com':
         case 'xing.com':
             $socialmedia = 'xing';
@@ -493,9 +499,13 @@ function _site_socialicons_parse_text($text, $context = FALSE) {
             $socialmedia = 'google';
             $socialmedianame = 'Google+';
             break;
-         case 'drupal.org':
+        case 'drupal.org':
             $socialmedia = 'drupal';
             $socialmedianame = 'Drupal';
+            break;
+        case 'mailto':
+            $socialmedia = 'mail';
+            $socialmedianame = 'Mail';
             break;
         default: // host
           if (isset($url['path'])) {
