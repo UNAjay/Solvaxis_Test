@@ -1153,6 +1153,7 @@ footer .social-icons li a[title="Mail"] {
 .ds-2col .group-left {
   float: left;
   width: 100%;
+  padding: 0 35px;
   margin-bottom: 40px;
 }
 @media (min-width: 48em) {
@@ -1160,7 +1161,13 @@ footer .social-icons li a[title="Mail"] {
     width: 66.0%;
     float: left;
     margin-right: 2.0%;
+    padding: 0 0 0 35px;
     margin-bottom: 0;
+  }
+}
+@media (min-width: 67em) {
+  .ds-2col .group-left {
+    padding: 0;
   }
 }
 .ds-2col .group-left .section-title {
@@ -1169,13 +1176,31 @@ footer .social-icons li a[title="Mail"] {
 .ds-2col .group-right {
   float: left;
   width: 100%;
+  padding: 0 35px;
 }
 @media (min-width: 48em) {
   .ds-2col .group-right {
     width: 32.0%;
     float: right;
     margin-right: 0;
+    padding: 72px 35px 0 0;
+  }
+}
+@media (min-width: 67em) {
+  .ds-2col .group-right {
     padding: 72px 0 0;
+  }
+}
+.node-section .ds-2col .group-left,
+.node-section .ds-2col .group-right {
+  padding: 0;
+}
+.ds-2col.node-page.full .region-holder > div {
+  padding: 0 35px;
+}
+@media (min-width: 67em) {
+  .ds-2col.node-page.full .region-holder > div {
+    padding: 0;
   }
 }
 @media (min-width: 48em) {
@@ -1977,7 +2002,7 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   padding: 0 35px;
   width: 100%;
 }
-@media (min-width: 60em) {
+@media (min-width: 67em) {
   .node-section {
     padding: 0;
   }
@@ -2283,8 +2308,12 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   .group-banner {
     width: 690px;
     min-height: 175px;
-    margin: 0 -30px -45px 0;
     padding: 27px 30px 24px;
+  }
+}
+@media (min-width: 67em) {
+  .group-banner {
+    margin: 0 -30px -45px 0;
   }
 }
 

@@ -8,11 +8,7 @@
   padding: 0 35px;
   width: 100%;
 
-  @include at-breakpoint($bp-med-2) {
-    //padding: 0;
-  }
-
-  @include at-breakpoint($bp-xl) {
+  @include at-breakpoint($bp-xl-2) {
     padding: 0;
   }
 
@@ -331,8 +327,11 @@
     width: 690px;
     //height: 190px;
     min-height: 175px;
-    margin: 0 -30px -45px 0;
+    //margin: 0 -30px -45px 0;
     padding: 27px 30px 24px;
+  }
+  @include at-breakpoint($bp-xl-2) {
+    margin: 0 -30px -45px 0;
   }
 }
 

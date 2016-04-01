@@ -31,13 +31,15 @@
 .ds-2col {
   .group-left {
     @include full-width;
-    //background: green;
-    //padding: 0 35px;
+    padding: 0 35px;
     margin-bottom: 40px;
     @include at-breakpoint($bp-med-2) {
       @include span-columns(8,12);
-      //padding: 0;
+      padding: 0 0 0 35px;
       margin-bottom: 0;
+    }
+    @include at-breakpoint($bp-xl-2) {
+      padding: 0;
     }
     .section-title {
       margin: 0 0 42px;
@@ -50,19 +52,41 @@
   }
   .group-right {
      @include full-width;
-     //background: pink;
-     //padding: 0 35px;
+     padding: 0 35px;
      @include at-breakpoint($bp-med-2) {
        @include span-columns(4 omega,12);
+       padding: 72px 35px 0 0;
+     }
+     @include at-breakpoint($bp-xl-2) {
        padding: 72px 0 0;
      }
      .logo {
-        img {
-          @extend %full-width-image;
-        }
+       img {
+         @extend %full-width-image;
+       }
      }
+   }
+  .node-section & {
+    .group-left,
+    .group-right {
+      padding: 0;
+    }
   }
-
+  
+  // 1 column
+  &.node-page {
+    &.full {
+      .region-holder {
+        & > div {
+          padding: 0 35px;
+          @include at-breakpoint($bp-xl-2) {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+  
   &.node-office {
     .group-left {
       @include at-breakpoint($bp-med-2) {
