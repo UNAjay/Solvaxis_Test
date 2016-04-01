@@ -170,7 +170,7 @@
     &.prev {
       float: left;
       .button {
-        padding: 18px 0;
+        padding: 6px 0;
         &:before {
           float: left;
           margin: 0 0 0 12px;
@@ -181,7 +181,7 @@
     &.next {
       float: right;
       .button {
-        padding: 18px 0;
+        padding: 6px 0;
         &:before {
           content: '\e808';
           float: right;
@@ -201,7 +201,7 @@
       // previous
       &.prev {
         .button {
-          padding: 18px 22px 14px 35px;
+          padding: 6px 22px 6px 35px;
           &:before {
             margin: 0 20px 0 -20px;
           }
@@ -210,12 +210,20 @@
       // next
       &.next {
         .button {
-          padding: 18px 35px 14px 22px;
+          padding: 6px 35px 6px 22px;
           &:before {
             margin: 0 -20px 0 20px;
           }
         }
       }
     }
+  }
+}
+.region-content .group-footer ul.flippy {
+  @include container;
+	margin: 20px auto 80px;
+	max-width: 1000px;
+  li {
+    list-style-type: none;
   }
 }
