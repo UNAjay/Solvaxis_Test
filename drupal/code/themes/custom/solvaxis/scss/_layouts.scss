@@ -31,11 +31,11 @@
 .ds-2col {
   .group-left {
     @include full-width;
-    padding: 0 35px;
+    //padding: 0 35px;
     margin-bottom: 40px;
     @include at-breakpoint($bp-med-2) {
       @include span-columns(8,12);
-      padding: 0 0 0 35px;
+     // padding: 0 0 0 35px;
       margin-bottom: 0;
     }
     @include at-breakpoint($bp-xl-2) {
@@ -52,10 +52,10 @@
   }
   .group-right {
      @include full-width;
-     padding: 0 35px;
+    // padding: 0 35px;
      @include at-breakpoint($bp-med-2) {
        @include span-columns(4 omega,12);
-       padding: 72px 35px 0 0;
+       padding: 72px 0 0 0;
      }
      @include at-breakpoint($bp-xl-2) {
        padding: 72px 0 0;
@@ -73,16 +73,11 @@
     }
   }
   
-  // 1 column
   &.node-page {
-    &.full {
-      .region-holder {
-        & > div {
-          padding: 0 35px;
-          @include at-breakpoint($bp-xl-2) {
-            padding: 0;
-          }
-        }
+    & > .region-holder {
+      padding: 0 35px;
+      @include at-breakpoint($bp-xl-2) {
+        padding: 0;
       }
     }
   }

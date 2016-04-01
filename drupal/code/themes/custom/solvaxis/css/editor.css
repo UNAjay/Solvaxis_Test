@@ -644,6 +644,9 @@ a.call-to-action.phone:hover:before, a.call-to-action.phone:active:before, a.cal
   color: #73797c;
   text-decoration: none;
 }
+.view-mode-section_light .more-link a {
+  color: #73797c;
+}
 
 p a {
   color: #e30043;
