@@ -61,13 +61,16 @@ Drupal.behaviors.jeeves_images = function (context) {
   Drupal.behaviors.action_colorbox = {
     attach: function (context, settings) {
 
-        $('a.call-to-action.fill-form').each(function() {
+      $(document).ready(function() {
+        $('a.call-to-action.fill-form.external-link, a.call-to-action.download-pdf.external-link').each(function() {
           var href = $(this).attr('href');
+          var title = $(this).text();
           var urlVars = getUrlVars(href)['width'];
           if (urlVars == null) {
-            $(this).colorbox({iframe:true, innerWidth:455, innerHeight:450});
+            $(this).colorbox({title:title, iframe:true, innerWidth:455, innerHeight:450});
           }
         });
+      });
 
     },
   }

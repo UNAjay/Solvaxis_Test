@@ -89,6 +89,9 @@ function jeeveserp_layout_field_group_info() {
     'children' => array(
       0 => 'field_region',
       1 => 'field_market',
+      2 => 'field_industry',
+      3 => 'field_product',
+      4 => 'field_tags',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -116,8 +119,7 @@ function jeeveserp_layout_field_group_info() {
     'weight' => '3',
     'children' => array(
       0 => 'body',
-      1 => 'field_acton_newsletter_url',
-      2 => 'field_sidebar_text',
+      1 => 'field_sidebar_text',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

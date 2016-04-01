@@ -2,7 +2,7 @@
 .view-news,
 .list-style-1 {
   .item-list {
-    ul {
+    ul:not(.pager) {
       margin: 0;
       padding: 0;
       li {
@@ -139,6 +139,7 @@
 
 		a {
 			color: $white;
+      cursor: pointer;
 		}
 
     .pager-current {
@@ -150,7 +151,6 @@
      background: $gray-lighter;
      width: 20px;
      position: relative;
-     cursor: pointer;
 
      &:before {
        content: '\e807';
@@ -178,6 +178,37 @@
          color: $white;
        }
      }
+    }
+  }
+
+  &.pager-load-more {
+    li {
+      width: auto;
+      padding: 0;
+      background: none !important;
+      &:before {
+        display: none;
+      }
+      &.pager-next {
+       &:before {
+         display: none;
+       }
+      }
+      &:hover {
+        background: none;
+      }
+      &:focus,
+      &:active {
+        background: none;
+        &:before {
+          display: none;
+        }
+      }
+
+      a {
+        background: $gray-light;
+        padding: 0 5px;
+      }
     }
   }
 }

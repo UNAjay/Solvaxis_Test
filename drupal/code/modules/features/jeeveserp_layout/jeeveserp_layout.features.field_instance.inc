@@ -1202,7 +1202,7 @@ function jeeveserp_layout_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 13,
+      'weight' => 7,
     ),
   );
 
@@ -1337,7 +1337,7 @@ function jeeveserp_layout_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 8,
+      'weight' => 6,
     ),
   );
 
@@ -1466,7 +1466,7 @@ function jeeveserp_layout_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 10,
+      'weight' => 4,
     ),
   );
 
@@ -1920,7 +1920,7 @@ function jeeveserp_layout_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 7,
+      'weight' => 5,
     ),
   );
 
