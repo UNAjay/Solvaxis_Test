@@ -176,7 +176,7 @@ function monster_page_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Region Holder',
-    'weight' => '2',
+    'weight' => '1',
     'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
