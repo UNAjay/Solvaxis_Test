@@ -145,6 +145,7 @@ features[views_view][] = administration_embed
 features[views_view][] = ref_customers
 features[views_view][] = ref_news
 features[views_view][] = ref_related
+features[views_view][] = research_erp
 features_exclude[dependencies][contact_us] = contact_us
 features_exclude[dependencies][geocoder] = geocoder
 features_exclude[dependencies][geofield_map] = geofield_map

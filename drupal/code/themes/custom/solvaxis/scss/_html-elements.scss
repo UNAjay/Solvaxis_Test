@@ -118,11 +118,11 @@ input[type="week"] {
   border: 1px solid transparent;
   background: $white;
 
-  font-size: 14px;  
+  font-size: 14px;
   color: $gray-dark;
   font-family: inherit;
   line-height: 28px;
-  
+
   &:focus {
     border: 1px solid $gray-light;
     outline: none;
@@ -146,7 +146,8 @@ input {
     background: url('../images/clear.png') 0 4px no-repeat;
     height: auto;
     min-height: 20px;
-    padding: 9px 0 9px 15px;
+    padding: 0 0 0 15px;
+    line-height: 20px;
     border: 0 none;
     color: $white;
     font-size: 12px;
