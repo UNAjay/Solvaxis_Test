@@ -314,23 +314,6 @@ function monster_page_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_view'
-  $field_bases['field_view'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_view',
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'viewfield',
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'viewfield',
-  );
-
   // Exported field_base: 'field_view_mode'
   $field_bases['field_view_mode'] = array(
     'active' => 1,

@@ -334,86 +334,6 @@ function monster_page_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'ee-embed_list-field_view'
-  $field_instances['ee-embed_list-field_view'] = array(
-    'bundle' => 'embed_list',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'viewfield',
-        'settings' => array(),
-        'type' => 'viewfield_default',
-        'weight' => 1,
-      ),
-      'embed' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'ee',
-    'field_name' => 'field_view',
-    'label' => 'View',
-    'required' => 0,
-    'settings' => array(
-      'allowed_views' => array(
-        'Customers' => 0,
-        'administration_embed' => 0,
-        'authors' => 0,
-        'blogs' => 0,
-        'employees' => 0,
-        'events' => 0,
-        'files' => 0,
-        'global_rss' => 0,
-        'industries' => 0,
-        'job_postings' => 0,
-        'media_default' => 0,
-        'message' => 0,
-        'micro_verticals' => 0,
-        'news' => 0,
-        'news_slideshow' => 0,
-        'offices' => 'offices',
-        'partner' => 0,
-        'promo_slideshow' => 0,
-        'ref_customers' => 'ref_customers',
-        'ref_news' => 'ref_news',
-        'ref_related' => 'ref_related',
-        'success_stories' => 0,
-        'tags_tagadelic' => 0,
-        'videos' => 0,
-        'webinars' => 0,
-      ),
-      'entity_translation_sync' => FALSE,
-      'force_default' => 0,
-      'mediafront' => array(
-        'custom' => '',
-        'field_type' => 0,
-        'media_type' => 'media',
-        'preview' => 0,
-        'thumbnail' => 0,
-      ),
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'viewfield',
-      'settings' => array(),
-      'type' => 'viewfield_select',
-      'weight' => 1,
-    ),
-  );
-
   // Exported field_instance: 'ee-embed_list-field_view_ref'
   $field_instances['ee-embed_list-field_view_ref'] = array(
     'bundle' => 'embed_list',
@@ -422,7 +342,7 @@ function monster_page_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'viewreference',
         'settings' => array(),
         'type' => 'viewreference_default',
@@ -1181,7 +1101,7 @@ function monster_page_field_default_field_instances() {
             'bg_image_important' => 0,
             'bg_image_media_query' => 'all',
             'bg_image_repeat' => 'no-repeat',
-            'bg_image_selector' => '.node-page .node-[node:nid] .bg-wrapper.inview',
+            'bg_image_selector' => '.node .node-[node:nid] .bg-wrapper.inview',
             'bg_image_x' => 'left',
             'bg_image_y' => 'center',
           ),
@@ -1203,7 +1123,7 @@ function monster_page_field_default_field_instances() {
             'bg_image_important' => 0,
             'bg_image_media_query' => 'all',
             'bg_image_repeat' => 'no-repeat',
-            'bg_image_selector' => '.node-page .node-[node:nid] .bg-wrapper.inview',
+            'bg_image_selector' => '.node .node-[node:nid] .bg-wrapper.inview',
             'bg_image_x' => 'left',
             'bg_image_y' => 'center',
           ),
