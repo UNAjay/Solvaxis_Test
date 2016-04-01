@@ -3234,6 +3234,7 @@ p.italic {
   margin-bottom: 40px;
   clear: both;
   width: 100%;
+  position: relative;
 }
 @media (min-width: 48em) {
   .view-ref-news.view-display-id-hot_news .views-row,
@@ -3345,6 +3346,28 @@ p.italic {
 .list-style-1 .views-row .title a:active {
   color: black;
   text-decoration: none;
+}
+.view-ref-news.view-display-id-hot_news .views-row .views-field-view-node a,
+.view-display-id-customers_page .views-row .views-field-view-node a,
+.page-news-list .views-row .views-field-view-node a,
+.list-style-1 .views-row .views-field-view-node a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  text-indent: -10000px;
+}
+.view-ref-news.view-display-id-hot_news .views-row .views-field-field-acton-url a,
+.view-display-id-customers_page .views-row .views-field-field-acton-url a,
+.page-news-list .views-row .views-field-field-acton-url a,
+.list-style-1 .views-row .views-field-field-acton-url a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  text-indent: -10000px;
 }
 
 .view-ref-customers .views-row .views-field-field-image {
