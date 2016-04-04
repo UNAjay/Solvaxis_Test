@@ -35,12 +35,26 @@
 
   &.section_light {
     background: transparent;
-    border-bottom: 1px solid $gray-light;
+    //border-bottom: 1px solid $gray-light;
+    .bg-wrapper {
+      background: $gray-lighter;
+     // border-bottom: 1px solid $gray-light;
+      border-top: 1px solid $gray-light;
+      .transparent & {
+        background: transparent;
+      }
+    }
   }
   &.section_dark {
      background: $gray-dark;
      color: $white;
-  }
+     .bg-wrapper {
+       background: $gray-dark;
+       .transparent & {
+         background: transparent;
+       }
+     }
+   }
 
   // Call to action section - with transparent overlay
   &.transparent {
@@ -102,9 +116,19 @@
   }
   .field-items {
     .field-item {
-      &:last-child {
+      //&:last-child {
+//        .node-section.section_light {
+//          //border-bottom: 0 none;
+//          .bg-wrapper {
+//            border-bottom: 0 none;
+//          }
+//        }
+//      }
+      &:first-child {
         .node-section.section_light {
-          border-bottom: 0 none;
+          .bg-wrapper {
+            border-top: 0 none;
+          }
         }
       }
     }
@@ -331,7 +355,16 @@
     padding: 27px 30px 24px;
   }
   @include at-breakpoint($bp-xl-2) {
-    margin: 0 -30px -45px 0;
+    //margin: 0 -30px -45px 0;
+    margin: 90px -30px -45px 0;
+  }
+}
+
+.not-front {
+  .group-banner {
+    @include at-breakpoint($bp-xl-2) {
+      margin: 45px -30px -45px 0;
+    }
   }
 }
 
@@ -349,6 +382,16 @@ p {
     }
     @include at-breakpoint($bp-xl) {
       margin-bottom: -3px;
+    }
+  }
+}
+
+.not-front {
+  .field-item {
+    &.with-banner + .field-item {
+      .region-holder {
+        padding-top: 90px;
+      }
     }
   }
 }
