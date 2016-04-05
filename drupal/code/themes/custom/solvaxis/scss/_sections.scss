@@ -286,6 +286,13 @@
 // Banners
 //-----------------------------------------
 
+.group-banner {
+  & > .group-banner {
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+}
 // mobile
 .group-banner {
   position: relative;
@@ -308,7 +315,11 @@
     background-color: $gray-lighter;
     color: $gray;
   }
-
+  
+  a {
+    color: $white;
+  }
+  
   .image {
     position: absolute;
     top: 0;
@@ -337,11 +348,12 @@
 .group-banner {
   @include at-breakpoint($bp-med-2) {
     float: right;
+    clear: right;
     width: 461px;
     min-height: 196px;
     height: auto;
     padding: 10px 15px;
-    margin: 0 0 -45px;
+    margin: 20px 0 -45px;
   }
 }
 
@@ -349,13 +361,10 @@
 .group-banner {
   @include at-breakpoint($bp-xl) {
     width: 690px;
-    //height: 190px;
     min-height: 175px;
-    //margin: 0 -30px -45px 0;
     padding: 27px 30px 24px;
   }
   @include at-breakpoint($bp-xl-2) {
-    //margin: 0 -30px -45px 0;
     margin: 90px -30px -45px 0;
   }
 }
@@ -391,6 +400,16 @@ p {
     &.with-banner + .field-item {
       .region-holder {
         padding-top: 90px;
+      }
+    }
+  }
+  .node-page > .region-holder {
+    &.with-banner + .group-footer {
+      .field-item:first-child {
+        .region-holder {
+          padding-top: 120px;
+    
+        }
       }
     }
   }

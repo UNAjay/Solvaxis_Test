@@ -2295,6 +2295,12 @@ article .media-element-container.media-logo img:hover, article .media-element-co
   color: white;
 }
 
+.group-banner > .group-banner {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
 .group-banner {
   position: relative;
   width: 100%;
@@ -2315,6 +2321,9 @@ article .media-element-container.media-logo img:hover, article .media-element-co
 .banner-style-light .group-banner {
   background-color: #f2f2f2;
   color: #73797c;
+}
+.group-banner a {
+  color: white;
 }
 .group-banner .image {
   position: absolute;
@@ -2338,11 +2347,12 @@ article .media-element-container.media-logo img:hover, article .media-element-co
 @media (min-width: 48em) {
   .group-banner {
     float: right;
+    clear: right;
     width: 461px;
     min-height: 196px;
     height: auto;
     padding: 10px 15px;
-    margin: 0 0 -45px;
+    margin: 20px 0 -45px;
   }
 }
 
@@ -2389,6 +2399,9 @@ p.italic {
 
 .not-front .field-item.with-banner + .field-item .region-holder {
   padding-top: 90px;
+}
+.not-front .node-page > .region-holder.with-banner + .group-footer .field-item:first-child .region-holder {
+  padding-top: 120px;
 }
 
 .view-news .item-list ul:not(.pager),

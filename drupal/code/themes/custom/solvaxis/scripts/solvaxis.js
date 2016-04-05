@@ -27,8 +27,10 @@
         $(this).toggleClass( "collapsed" );
       });
       
+      // Section banners
       $( ".front .field-item" ).has( ".group-banner" ).css( {marginBottom: "-49px" } );
       $( ".not-front .field-item" ).has( ".group-banner" ).css( {marginBottom: "-49px" } ).addClass( "with-banner" );
+      $( ".not-front .node-page > .region-holder" ).has( ".group-banner" ).css( {marginBottom: "-49px" } ).addClass( "with-banner" );
 
       // $(window, context).on('load', function(e){
       //   $('html,body').animate({
