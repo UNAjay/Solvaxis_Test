@@ -14,6 +14,7 @@ function news_user_default_permissions() {
   $permissions['create news content'] = array(
     'name' => 'create news content',
     'roles' => array(
+      'Product site admin' => 'Product site admin',
       'Regional editor' => 'Regional editor',
     ),
     'module' => 'node',
@@ -22,7 +23,9 @@ function news_user_default_permissions() {
   // Exported permission: 'delete any news content'.
   $permissions['delete any news content'] = array(
     'name' => 'delete any news content',
-    'roles' => array(),
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+    ),
     'module' => 'node',
   );
 
@@ -38,7 +41,9 @@ function news_user_default_permissions() {
   // Exported permission: 'edit any news content'.
   $permissions['edit any news content'] = array(
     'name' => 'edit any news content',
-    'roles' => array(),
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+    ),
     'module' => 'node',
   );
 

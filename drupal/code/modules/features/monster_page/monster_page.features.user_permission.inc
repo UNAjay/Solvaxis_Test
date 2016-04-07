@@ -14,6 +14,7 @@ function monster_page_user_default_permissions() {
   $permissions['create section content'] = array(
     'name' => 'create section content',
     'roles' => array(
+      'Product site admin' => 'Product site admin',
       'Regional editor' => 'Regional editor',
     ),
     'module' => 'node',
@@ -22,7 +23,9 @@ function monster_page_user_default_permissions() {
   // Exported permission: 'delete any section content'.
   $permissions['delete any section content'] = array(
     'name' => 'delete any section content',
-    'roles' => array(),
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+    ),
     'module' => 'node',
   );
 
@@ -206,7 +209,9 @@ function monster_page_user_default_permissions() {
   // Exported permission: 'edit any section content'.
   $permissions['edit any section content'] = array(
     'name' => 'edit any section content',
-    'roles' => array(),
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+    ),
     'module' => 'node',
   );
 
@@ -229,14 +234,20 @@ function monster_page_user_default_permissions() {
   // Exported permission: 'override section authored by option'.
   $permissions['override section authored by option'] = array(
     'name' => 'override section authored by option',
-    'roles' => array(),
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
+    ),
     'module' => 'override_node_options',
   );
 
   // Exported permission: 'override section authored on option'.
   $permissions['override section authored on option'] = array(
     'name' => 'override section authored on option',
-    'roles' => array(),
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
+    ),
     'module' => 'override_node_options',
   );
 
@@ -250,7 +261,10 @@ function monster_page_user_default_permissions() {
   // Exported permission: 'override section published option'.
   $permissions['override section published option'] = array(
     'name' => 'override section published option',
-    'roles' => array(),
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
+    ),
     'module' => 'override_node_options',
   );
 

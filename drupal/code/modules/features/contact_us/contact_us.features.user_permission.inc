@@ -15,6 +15,7 @@ function contact_us_user_default_permissions() {
     'name' => 'create office content',
     'roles' => array(
       'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
     ),
     'module' => 'node',
   );
@@ -31,7 +32,9 @@ function contact_us_user_default_permissions() {
   // Exported permission: 'delete own office content'.
   $permissions['delete own office content'] = array(
     'name' => 'delete own office content',
-    'roles' => array(),
+    'roles' => array(
+      'Regional editor' => 'Regional editor',
+    ),
     'module' => 'node',
   );
 
@@ -47,7 +50,9 @@ function contact_us_user_default_permissions() {
   // Exported permission: 'edit own office content'.
   $permissions['edit own office content'] = array(
     'name' => 'edit own office content',
-    'roles' => array(),
+    'roles' => array(
+      'Regional editor' => 'Regional editor',
+    ),
     'module' => 'node',
   );
 

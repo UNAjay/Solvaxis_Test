@@ -325,5 +325,33 @@ function products_strongarm() {
   $strongarm->value = 0;
   $export['node_submitted_step'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_product_pattern';
+  $strongarm->value = 'products/[node:title]';
+  $export['pathauto_node_product_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_product_und_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_product_und_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_step_pattern';
+  $strongarm->value = 'tour/[node:title]';
+  $export['pathauto_node_step_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_step_und_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_step_und_pattern'] = $strongarm;
+
   return $export;
 }

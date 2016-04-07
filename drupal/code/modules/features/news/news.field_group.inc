@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function news_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -38,7 +38,7 @@ function news_field_group_info() {
       ),
     ),
   );
-  $export['group_categories|node|diverse|form'] = $field_group;
+  $field_groups['group_categories|node|diverse|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -68,7 +68,7 @@ function news_field_group_info() {
       ),
     ),
   );
-  $export['group_categories|node|news|form'] = $field_group;
+  $field_groups['group_categories|node|news|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -98,7 +98,7 @@ function news_field_group_info() {
       ),
     ),
   );
-  $export['group_categories|node|product_news|form'] = $field_group;
+  $field_groups['group_categories|node|product_news|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -126,7 +126,7 @@ function news_field_group_info() {
       ),
     ),
   );
-  $export['group_content|node|diverse|form'] = $field_group;
+  $field_groups['group_content|node|diverse|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -154,7 +154,7 @@ function news_field_group_info() {
       ),
     ),
   );
-  $export['group_content|node|news|form'] = $field_group;
+  $field_groups['group_content|node|news|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -182,7 +182,7 @@ function news_field_group_info() {
       ),
     ),
   );
-  $export['group_content|node|product_news|form'] = $field_group;
+  $field_groups['group_content|node|product_news|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -209,7 +209,7 @@ function news_field_group_info() {
       ),
     ),
   );
-  $export['group_image|node|diverse|form'] = $field_group;
+  $field_groups['group_image|node|diverse|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -236,7 +236,7 @@ function news_field_group_info() {
       ),
     ),
   );
-  $export['group_image|node|news|form'] = $field_group;
+  $field_groups['group_image|node|news|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -263,7 +263,7 @@ function news_field_group_info() {
       ),
     ),
   );
-  $export['group_image|node|product_news|form'] = $field_group;
+  $field_groups['group_image|node|product_news|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -291,7 +291,7 @@ function news_field_group_info() {
       ),
     ),
   );
-  $export['group_sections|node|diverse|form'] = $field_group;
+  $field_groups['group_sections|node|diverse|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -319,7 +319,7 @@ function news_field_group_info() {
       ),
     ),
   );
-  $export['group_sections|node|news|form'] = $field_group;
+  $field_groups['group_sections|node|news|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -347,7 +347,7 @@ function news_field_group_info() {
       ),
     ),
   );
-  $export['group_sections|node|product_news|form'] = $field_group;
+  $field_groups['group_sections|node|product_news|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -375,7 +375,7 @@ function news_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_sidebar_text|node|diverse|form'] = $field_group;
+  $field_groups['group_sidebar_text|node|diverse|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -402,7 +402,7 @@ function news_field_group_info() {
       ),
     ),
   );
-  $export['group_sidebar_text|node|news|form'] = $field_group;
+  $field_groups['group_sidebar_text|node|news|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -430,7 +430,15 @@ function news_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_sidebar_text|node|product_news|form'] = $field_group;
+  $field_groups['group_sidebar_text|node|product_news|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Categories');
+  t('Content');
+  t('Sections');
+  t('Sidebar text');
+  t('Teaser image');
+
+  return $field_groups;
 }
