@@ -115,4 +115,11 @@ function jeeveserp_layout_update_7009() {
     ->execute();
 }
 
+/**
+ * Enable Products feature and View Reference and Custom Permissions modules.
+ */
+function jeeveserp_layout_update_7010() {
+  module_enable(array('products', 'viewreference', 'config_perms'));
+}
+
 
