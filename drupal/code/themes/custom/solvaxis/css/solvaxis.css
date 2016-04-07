@@ -1221,6 +1221,22 @@ footer .social-icons li a[title="Mail"] {
     padding: 0;
   }
 }
+@media (min-width: 48em) {
+  .ds-2col.node-step .group-left {
+    width: 40.5%;
+    float: left;
+    margin-right: 2.0%;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 48em) {
+  .ds-2col.node-step .group-right {
+    width: 57.5%;
+    float: right;
+    margin-right: 0;
+    padding: 0;
+  }
+}
 
 html {
   box-sizing: border-box;
@@ -2630,6 +2646,48 @@ p.italic {
   float: left;
   font-weight: bold;
   padding: 0 5px;
+}
+
+/* =====================================
+	Products
+	====================================== */
+.node-product .group-header {
+  border-bottom: 1px solid #cccccc;
+}
+.node-product .group-header .group-navigation .view-product-tour .views-row {
+  position: relative;
+}
+.node-product .group-header .group-navigation .view-product-tour .views-row .views-field-field-product-logo {
+  float: left;
+  margin-right: 5px;
+}
+.node-product .group-header .group-navigation .view-product-tour .views-row .views-field-field-product-logo img {
+  width: 50px;
+  height: auto;
+}
+.node-product .group-header .group-navigation .view-product-tour .views-row .views-field-title {
+  margin: 5px 0;
+  display: inline-block;
+  width: 50%;
+}
+.node-product .group-header .group-navigation .view-product-tour .views-row .views-field-view-node a {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-indent: -10000px;
+  top: 0;
+}
+.node-product .group-header .group-navigation .view-product-tour .attachment {
+  float: left;
+}
+.node-product .group-header .group-navigation .view-product-tour .view-content {
+  float: right;
+}
+
+.node-step .field-image img {
+  width: 100%;
+  height: auto;
 }
 
 @CHARSET "UTF-8";

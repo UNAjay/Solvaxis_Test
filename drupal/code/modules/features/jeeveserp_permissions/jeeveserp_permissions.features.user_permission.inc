@@ -361,11 +361,60 @@ function jeeveserp_permissions_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'create attachments content'.
+  $permissions['create attachments content'] = array(
+    'name' => 'create attachments content',
+    'roles' => array(
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'create diverse content'.
+  $permissions['create diverse content'] = array(
+    'name' => 'create diverse content',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'create page content'.
   $permissions['create page content'] = array(
     'name' => 'create page content',
     'roles' => array(
       'Product site admin' => 'Product site admin',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'create product content'.
+  $permissions['create product content'] = array(
+    'name' => 'create product content',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'create product_news content'.
+  $permissions['create product_news content'] = array(
+    'name' => 'create product_news content',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'create step content'.
+  $permissions['create step content'] = array(
+    'name' => 'create step content',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
     ),
     'module' => 'node',
   );
@@ -381,6 +430,31 @@ function jeeveserp_permissions_user_default_permissions() {
     'module' => 'path',
   );
 
+  // Exported permission: 'create video content'.
+  $permissions['create video content'] = array(
+    'name' => 'create video content',
+    'roles' => array(
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete any attachments content'.
+  $permissions['delete any attachments content'] = array(
+    'name' => 'delete any attachments content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete any diverse content'.
+  $permissions['delete any diverse content'] = array(
+    'name' => 'delete any diverse content',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete any page content'.
   $permissions['delete any page content'] = array(
     'name' => 'delete any page content',
@@ -388,10 +462,95 @@ function jeeveserp_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete any product content'.
+  $permissions['delete any product content'] = array(
+    'name' => 'delete any product content',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete any product_news content'.
+  $permissions['delete any product_news content'] = array(
+    'name' => 'delete any product_news content',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete any step content'.
+  $permissions['delete any step content'] = array(
+    'name' => 'delete any step content',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete any video content'.
+  $permissions['delete any video content'] = array(
+    'name' => 'delete any video content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own attachments content'.
+  $permissions['delete own attachments content'] = array(
+    'name' => 'delete own attachments content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own diverse content'.
+  $permissions['delete own diverse content'] = array(
+    'name' => 'delete own diverse content',
+    'roles' => array(
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete own page content'.
   $permissions['delete own page content'] = array(
     'name' => 'delete own page content',
     'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own product content'.
+  $permissions['delete own product content'] = array(
+    'name' => 'delete own product content',
+    'roles' => array(
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own product_news content'.
+  $permissions['delete own product_news content'] = array(
+    'name' => 'delete own product_news content',
+    'roles' => array(
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own step content'.
+  $permissions['delete own step content'] = array(
+    'name' => 'delete own step content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own video content'.
+  $permissions['delete own video content'] = array(
+    'name' => 'delete own video content',
+    'roles' => array(
+      'Regional editor' => 'Regional editor',
+    ),
     'module' => 'node',
   );
 
@@ -490,12 +649,65 @@ function jeeveserp_permissions_user_default_permissions() {
     'module' => 'config_perms',
   );
 
+  // Exported permission: 'edit any attachments content'.
+  $permissions['edit any attachments content'] = array(
+    'name' => 'edit any attachments content',
+    'roles' => array(
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit any diverse content'.
+  $permissions['edit any diverse content'] = array(
+    'name' => 'edit any diverse content',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit any page content'.
   $permissions['edit any page content'] = array(
     'name' => 'edit any page content',
     'roles' => array(
       'Product site admin' => 'Product site admin',
     ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit any product content'.
+  $permissions['edit any product content'] = array(
+    'name' => 'edit any product content',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit any product_news content'.
+  $permissions['edit any product_news content'] = array(
+    'name' => 'edit any product_news content',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit any step content'.
+  $permissions['edit any step content'] = array(
+    'name' => 'edit any step content',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit any video content'.
+  $permissions['edit any video content'] = array(
+    'name' => 'edit any video content',
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -506,6 +718,77 @@ function jeeveserp_permissions_user_default_permissions() {
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'metatag',
+  );
+
+  // Exported permission: 'edit own attachments content'.
+  $permissions['edit own attachments content'] = array(
+    'name' => 'edit own attachments content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own customer content'.
+  $permissions['edit own customer content'] = array(
+    'name' => 'edit own customer content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own diverse content'.
+  $permissions['edit own diverse content'] = array(
+    'name' => 'edit own diverse content',
+    'roles' => array(
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own page content'.
+  $permissions['edit own page content'] = array(
+    'name' => 'edit own page content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own partner content'.
+  $permissions['edit own partner content'] = array(
+    'name' => 'edit own partner content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own product content'.
+  $permissions['edit own product content'] = array(
+    'name' => 'edit own product content',
+    'roles' => array(
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own product_news content'.
+  $permissions['edit own product_news content'] = array(
+    'name' => 'edit own product_news content',
+    'roles' => array(
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own step content'.
+  $permissions['edit own step content'] = array(
+    'name' => 'edit own step content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own video content'.
+  $permissions['edit own video content'] = array(
+    'name' => 'edit own video content',
+    'roles' => array(
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: 'edit terms in attachment_type'.
@@ -596,6 +879,111 @@ function jeeveserp_permissions_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'enter attachments revision log entry'.
+  $permissions['enter attachments revision log entry'] = array(
+    'name' => 'enter attachments revision log entry',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'enter blog_post revision log entry'.
+  $permissions['enter blog_post revision log entry'] = array(
+    'name' => 'enter blog_post revision log entry',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'enter customer revision log entry'.
+  $permissions['enter customer revision log entry'] = array(
+    'name' => 'enter customer revision log entry',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'enter diverse revision log entry'.
+  $permissions['enter diverse revision log entry'] = array(
+    'name' => 'enter diverse revision log entry',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'enter event revision log entry'.
+  $permissions['enter event revision log entry'] = array(
+    'name' => 'enter event revision log entry',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'enter job_posting revision log entry'.
+  $permissions['enter job_posting revision log entry'] = array(
+    'name' => 'enter job_posting revision log entry',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'enter news revision log entry'.
+  $permissions['enter news revision log entry'] = array(
+    'name' => 'enter news revision log entry',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'enter office revision log entry'.
+  $permissions['enter office revision log entry'] = array(
+    'name' => 'enter office revision log entry',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'enter page revision log entry'.
+  $permissions['enter page revision log entry'] = array(
+    'name' => 'enter page revision log entry',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'enter partner revision log entry'.
+  $permissions['enter partner revision log entry'] = array(
+    'name' => 'enter partner revision log entry',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'enter product revision log entry'.
+  $permissions['enter product revision log entry'] = array(
+    'name' => 'enter product revision log entry',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'enter product_news revision log entry'.
+  $permissions['enter product_news revision log entry'] = array(
+    'name' => 'enter product_news revision log entry',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'enter promo revision log entry'.
+  $permissions['enter promo revision log entry'] = array(
+    'name' => 'enter promo revision log entry',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'enter step revision log entry'.
+  $permissions['enter step revision log entry'] = array(
+    'name' => 'enter step revision log entry',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'enter video revision log entry'.
+  $permissions['enter video revision log entry'] = array(
+    'name' => 'enter video revision log entry',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
   // Exported permission: 'override attachments authored by option'.
   $permissions['override attachments authored by option'] = array(
     'name' => 'override attachments authored by option',
@@ -616,6 +1004,13 @@ function jeeveserp_permissions_user_default_permissions() {
     'module' => 'override_node_options',
   );
 
+  // Exported permission: 'override attachments promote to front page option'.
+  $permissions['override attachments promote to front page option'] = array(
+    'name' => 'override attachments promote to front page option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
   // Exported permission: 'override attachments published option'.
   $permissions['override attachments published option'] = array(
     'name' => 'override attachments published option',
@@ -623,6 +1018,20 @@ function jeeveserp_permissions_user_default_permissions() {
       'Product site admin' => 'Product site admin',
       'Regional editor' => 'Regional editor',
     ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override attachments revision option'.
+  $permissions['override attachments revision option'] = array(
+    'name' => 'override attachments revision option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override attachments sticky option'.
+  $permissions['override attachments sticky option'] = array(
+    'name' => 'override attachments sticky option',
+    'roles' => array(),
     'module' => 'override_node_options',
   );
 
@@ -646,6 +1055,13 @@ function jeeveserp_permissions_user_default_permissions() {
     'module' => 'override_node_options',
   );
 
+  // Exported permission: 'override blog_post promote to front page option'.
+  $permissions['override blog_post promote to front page option'] = array(
+    'name' => 'override blog_post promote to front page option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
   // Exported permission: 'override blog_post published option'.
   $permissions['override blog_post published option'] = array(
     'name' => 'override blog_post published option',
@@ -653,6 +1069,20 @@ function jeeveserp_permissions_user_default_permissions() {
       'Product site admin' => 'Product site admin',
       'Regional editor' => 'Regional editor',
     ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override blog_post revision option'.
+  $permissions['override blog_post revision option'] = array(
+    'name' => 'override blog_post revision option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override blog_post sticky option'.
+  $permissions['override blog_post sticky option'] = array(
+    'name' => 'override blog_post sticky option',
+    'roles' => array(),
     'module' => 'override_node_options',
   );
 
@@ -676,6 +1106,13 @@ function jeeveserp_permissions_user_default_permissions() {
     'module' => 'override_node_options',
   );
 
+  // Exported permission: 'override customer promote to front page option'.
+  $permissions['override customer promote to front page option'] = array(
+    'name' => 'override customer promote to front page option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
   // Exported permission: 'override customer published option'.
   $permissions['override customer published option'] = array(
     'name' => 'override customer published option',
@@ -683,6 +1120,71 @@ function jeeveserp_permissions_user_default_permissions() {
       'Product site admin' => 'Product site admin',
       'Regional editor' => 'Regional editor',
     ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override customer revision option'.
+  $permissions['override customer revision option'] = array(
+    'name' => 'override customer revision option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override customer sticky option'.
+  $permissions['override customer sticky option'] = array(
+    'name' => 'override customer sticky option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override diverse authored by option'.
+  $permissions['override diverse authored by option'] = array(
+    'name' => 'override diverse authored by option',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override diverse authored on option'.
+  $permissions['override diverse authored on option'] = array(
+    'name' => 'override diverse authored on option',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override diverse promote to front page option'.
+  $permissions['override diverse promote to front page option'] = array(
+    'name' => 'override diverse promote to front page option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override diverse published option'.
+  $permissions['override diverse published option'] = array(
+    'name' => 'override diverse published option',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override diverse revision option'.
+  $permissions['override diverse revision option'] = array(
+    'name' => 'override diverse revision option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override diverse sticky option'.
+  $permissions['override diverse sticky option'] = array(
+    'name' => 'override diverse sticky option',
+    'roles' => array(),
     'module' => 'override_node_options',
   );
 
@@ -706,6 +1208,13 @@ function jeeveserp_permissions_user_default_permissions() {
     'module' => 'override_node_options',
   );
 
+  // Exported permission: 'override event promote to front page option'.
+  $permissions['override event promote to front page option'] = array(
+    'name' => 'override event promote to front page option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
   // Exported permission: 'override event published option'.
   $permissions['override event published option'] = array(
     'name' => 'override event published option',
@@ -713,6 +1222,62 @@ function jeeveserp_permissions_user_default_permissions() {
       'Product site admin' => 'Product site admin',
       'Regional editor' => 'Regional editor',
     ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override event revision option'.
+  $permissions['override event revision option'] = array(
+    'name' => 'override event revision option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override event sticky option'.
+  $permissions['override event sticky option'] = array(
+    'name' => 'override event sticky option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override job_posting authored by option'.
+  $permissions['override job_posting authored by option'] = array(
+    'name' => 'override job_posting authored by option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override job_posting authored on option'.
+  $permissions['override job_posting authored on option'] = array(
+    'name' => 'override job_posting authored on option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override job_posting promote to front page option'.
+  $permissions['override job_posting promote to front page option'] = array(
+    'name' => 'override job_posting promote to front page option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override job_posting published option'.
+  $permissions['override job_posting published option'] = array(
+    'name' => 'override job_posting published option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override job_posting revision option'.
+  $permissions['override job_posting revision option'] = array(
+    'name' => 'override job_posting revision option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override job_posting sticky option'.
+  $permissions['override job_posting sticky option'] = array(
+    'name' => 'override job_posting sticky option',
+    'roles' => array(),
     'module' => 'override_node_options',
   );
 
@@ -753,6 +1318,13 @@ function jeeveserp_permissions_user_default_permissions() {
     'module' => 'override_node_options',
   );
 
+  // Exported permission: 'override news revision option'.
+  $permissions['override news revision option'] = array(
+    'name' => 'override news revision option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
   // Exported permission: 'override news sticky option'.
   $permissions['override news sticky option'] = array(
     'name' => 'override news sticky option',
@@ -780,6 +1352,13 @@ function jeeveserp_permissions_user_default_permissions() {
     'module' => 'override_node_options',
   );
 
+  // Exported permission: 'override office promote to front page option'.
+  $permissions['override office promote to front page option'] = array(
+    'name' => 'override office promote to front page option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
   // Exported permission: 'override office published option'.
   $permissions['override office published option'] = array(
     'name' => 'override office published option',
@@ -787,6 +1366,20 @@ function jeeveserp_permissions_user_default_permissions() {
       'Product site admin' => 'Product site admin',
       'Regional editor' => 'Regional editor',
     ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override office revision option'.
+  $permissions['override office revision option'] = array(
+    'name' => 'override office revision option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override office sticky option'.
+  $permissions['override office sticky option'] = array(
+    'name' => 'override office sticky option',
+    'roles' => array(),
     'module' => 'override_node_options',
   );
 
@@ -810,6 +1403,13 @@ function jeeveserp_permissions_user_default_permissions() {
     'module' => 'override_node_options',
   );
 
+  // Exported permission: 'override page promote to front page option'.
+  $permissions['override page promote to front page option'] = array(
+    'name' => 'override page promote to front page option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
   // Exported permission: 'override page published option'.
   $permissions['override page published option'] = array(
     'name' => 'override page published option',
@@ -817,6 +1417,20 @@ function jeeveserp_permissions_user_default_permissions() {
       'Product site admin' => 'Product site admin',
       'Regional editor' => 'Regional editor',
     ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override page revision option'.
+  $permissions['override page revision option'] = array(
+    'name' => 'override page revision option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override page sticky option'.
+  $permissions['override page sticky option'] = array(
+    'name' => 'override page sticky option',
+    'roles' => array(),
     'module' => 'override_node_options',
   );
 
@@ -840,6 +1454,13 @@ function jeeveserp_permissions_user_default_permissions() {
     'module' => 'override_node_options',
   );
 
+  // Exported permission: 'override partner promote to front page option'.
+  $permissions['override partner promote to front page option'] = array(
+    'name' => 'override partner promote to front page option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
   // Exported permission: 'override partner published option'.
   $permissions['override partner published option'] = array(
     'name' => 'override partner published option',
@@ -847,6 +1468,122 @@ function jeeveserp_permissions_user_default_permissions() {
       'Product site admin' => 'Product site admin',
       'Regional editor' => 'Regional editor',
     ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override partner revision option'.
+  $permissions['override partner revision option'] = array(
+    'name' => 'override partner revision option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override partner sticky option'.
+  $permissions['override partner sticky option'] = array(
+    'name' => 'override partner sticky option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override product authored by option'.
+  $permissions['override product authored by option'] = array(
+    'name' => 'override product authored by option',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override product authored on option'.
+  $permissions['override product authored on option'] = array(
+    'name' => 'override product authored on option',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override product promote to front page option'.
+  $permissions['override product promote to front page option'] = array(
+    'name' => 'override product promote to front page option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override product published option'.
+  $permissions['override product published option'] = array(
+    'name' => 'override product published option',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override product revision option'.
+  $permissions['override product revision option'] = array(
+    'name' => 'override product revision option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override product sticky option'.
+  $permissions['override product sticky option'] = array(
+    'name' => 'override product sticky option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override product_news authored by option'.
+  $permissions['override product_news authored by option'] = array(
+    'name' => 'override product_news authored by option',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override product_news authored on option'.
+  $permissions['override product_news authored on option'] = array(
+    'name' => 'override product_news authored on option',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override product_news promote to front page option'.
+  $permissions['override product_news promote to front page option'] = array(
+    'name' => 'override product_news promote to front page option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override product_news published option'.
+  $permissions['override product_news published option'] = array(
+    'name' => 'override product_news published option',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override product_news revision option'.
+  $permissions['override product_news revision option'] = array(
+    'name' => 'override product_news revision option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override product_news sticky option'.
+  $permissions['override product_news sticky option'] = array(
+    'name' => 'override product_news sticky option',
+    'roles' => array(),
     'module' => 'override_node_options',
   );
 
@@ -870,6 +1607,13 @@ function jeeveserp_permissions_user_default_permissions() {
     'module' => 'override_node_options',
   );
 
+  // Exported permission: 'override promo promote to front page option'.
+  $permissions['override promo promote to front page option'] = array(
+    'name' => 'override promo promote to front page option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
   // Exported permission: 'override promo published option'.
   $permissions['override promo published option'] = array(
     'name' => 'override promo published option',
@@ -877,6 +1621,113 @@ function jeeveserp_permissions_user_default_permissions() {
       'Product site admin' => 'Product site admin',
       'Regional editor' => 'Regional editor',
     ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override promo revision option'.
+  $permissions['override promo revision option'] = array(
+    'name' => 'override promo revision option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override promo sticky option'.
+  $permissions['override promo sticky option'] = array(
+    'name' => 'override promo sticky option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override step authored by option'.
+  $permissions['override step authored by option'] = array(
+    'name' => 'override step authored by option',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override step authored on option'.
+  $permissions['override step authored on option'] = array(
+    'name' => 'override step authored on option',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override step promote to front page option'.
+  $permissions['override step promote to front page option'] = array(
+    'name' => 'override step promote to front page option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override step published option'.
+  $permissions['override step published option'] = array(
+    'name' => 'override step published option',
+    'roles' => array(
+      'Product site admin' => 'Product site admin',
+      'Regional editor' => 'Regional editor',
+    ),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override step revision option'.
+  $permissions['override step revision option'] = array(
+    'name' => 'override step revision option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override step sticky option'.
+  $permissions['override step sticky option'] = array(
+    'name' => 'override step sticky option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override video authored by option'.
+  $permissions['override video authored by option'] = array(
+    'name' => 'override video authored by option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override video authored on option'.
+  $permissions['override video authored on option'] = array(
+    'name' => 'override video authored on option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override video promote to front page option'.
+  $permissions['override video promote to front page option'] = array(
+    'name' => 'override video promote to front page option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override video published option'.
+  $permissions['override video published option'] = array(
+    'name' => 'override video published option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override video revision option'.
+  $permissions['override video revision option'] = array(
+    'name' => 'override video revision option',
+    'roles' => array(),
+    'module' => 'override_node_options',
+  );
+
+  // Exported permission: 'override video sticky option'.
+  $permissions['override video sticky option'] = array(
+    'name' => 'override video sticky option',
+    'roles' => array(),
     'module' => 'override_node_options',
   );
 

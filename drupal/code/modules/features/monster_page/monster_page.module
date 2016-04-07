@@ -74,6 +74,7 @@ function monster_page_preprocess_node(&$variables) {
  *   properties of that layout (label, path, regions and css).
  */
 function monster_page_ds_layout_info_alter(&$layouts) {
+  $layouts['ds_2col_stacked']['regions']['preface'] = 'Preface';
   $layouts['ds_2col_stacked']['regions']['banner'] = 'Banner';
 }
 
