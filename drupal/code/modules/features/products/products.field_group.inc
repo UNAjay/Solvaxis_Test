@@ -197,6 +197,39 @@ function products_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_navigation|node|product|default';
+  $field_group->group_name = 'group_navigation';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'product';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Navigation',
+    'weight' => '0',
+    'children' => array(
+      0 => 'product_tour_list',
+      1 => 'product_tour_tour_steps',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Navigation',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-navigation field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_navigation|node|product|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_references|node|product|form';
   $field_group->group_name = 'group_references';
   $field_group->entity_type = 'node';
@@ -220,6 +253,36 @@ function products_field_group_info() {
     ),
   );
   $field_groups['group_references|node|product|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_region_holder|node|product|default';
+  $field_group->group_name = 'group_region_holder';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'product';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Region Holder',
+    'weight' => '2',
+    'children' => array(),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Region Holder',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-region-holder field-group-div region-holder',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_region_holder|node|product|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -283,7 +346,9 @@ function products_field_group_info() {
   t('Content');
   t('Description container');
   t('Image');
+  t('Navigation');
   t('References');
+  t('Region Holder');
   t('Sections');
   t('Tour');
 
