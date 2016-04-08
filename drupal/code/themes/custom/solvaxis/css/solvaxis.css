@@ -403,7 +403,8 @@ a {
 
 @media (min-width: 60em) {
   #block-system-main-menu,
-  #block-menu-block-2 {
+  #block-menu-block-2,
+  #block-menu-block-3 {
     margin-right: 69px;
   }
 }
@@ -622,7 +623,8 @@ a {
   border-left: 1px solid #cccccc;
 }
 .header-secondary .region-header-secondary #block-system-main-menu,
-.header-secondary .region-header-secondary #block-menu-block-2 {
+.header-secondary .region-header-secondary #block-menu-block-2,
+.header-secondary .region-header-secondary #block-menu-block-3 {
   height: 82%;
   margin-top: 60px;
   overflow-y: auto;
@@ -671,9 +673,11 @@ a {
     width: auto;
     height: auto;
     background: none;
+    border: none;
   }
   .header-secondary .region-header-secondary #block-system-main-menu,
-  .header-secondary .region-header-secondary #block-menu-block-2 {
+  .header-secondary .region-header-secondary #block-menu-block-2,
+  .header-secondary .region-header-secondary #block-menu-block-3 {
     margin-top: 0;
     overflow-y: visible;
   }
@@ -800,6 +804,9 @@ a {
   }
   .header-secondary .menu li.first {
     margin: 0 8px 0 0;
+  }
+  .header-secondary .menu.title li {
+    margin: 0 16px 0 0;
   }
 }
 
@@ -1594,9 +1601,14 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 287px;
+  height: auto;
   background: transparent;
   overflow: hidden;
+}
+@media (min-width: 46.8em) {
+  footer {
+    height: 287px;
+  }
 }
 footer .region-holder {
   height: 100%;
@@ -1699,6 +1711,32 @@ footer .region-footer-primary {
 }
 footer .region-footer-primary .social-icons {
   padding: 0;
+}
+footer .menu {
+  display: inline-block;
+  position: relative;
+  top: 0;
+  width: auto;
+  height: auto;
+  margin-left: -15px;
+  overflow: visible;
+  padding: 0;
+}
+footer .menu li {
+  font-size: 14px;
+  margin: 0 6px;
+  padding: 0;
+  line-height: 22px;
+  display: block;
+}
+footer .menu li a {
+  background: none;
+  color: black;
+  text-decoration: none;
+  padding: 0;
+}
+footer .menu li a:hover {
+  text-decoration: underline;
 }
 
 #leader {
@@ -2040,6 +2078,35 @@ article .media-element-container.media-logo img:hover, article .media-element-co
 .tag-cloud .tagclouds-term a,
 .block-tagclouds .tagclouds-term a {
   color: #73797c;
+}
+
+/* =====================================
+  Landing page
+  ====================================== */
+.node-type-landing-page #block-menu-block-3:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.node-type-landing-page #block-menu-block-3 h2 {
+  float: left;
+  width: 100%;
+}
+@media (min-width: 24em) {
+  .node-type-landing-page #block-menu-block-3 h2 {
+    width: auto;
+  }
+}
+.node-type-landing-page #block-menu-block-3 h2 a {
+  color: black;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.node-type-landing-page #block-menu-block-3 h2 a.active, .node-type-landing-page #block-menu-block-3 h2 a.active-trail, .node-type-landing-page #block-menu-block-3 h2 a:hover {
+  background: transparent;
+  color: black;
 }
 
 .node-section {

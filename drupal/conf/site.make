@@ -83,7 +83,7 @@ projects[field_group][version] = "1.5"
 projects[views_arguments_extras][version] = "1.0-beta1"
 projects[views_data_export][version] = "3.0-beta7"
 
-projects[menu_block][version] = "2.5"
+projects[menu_block][version] = "2.7"
 
 projects[entityreference][version] = "1.1"
 ; issue where entity is displayed in english instead of referenced language. https://drupal.org/node/1674792 comment 30

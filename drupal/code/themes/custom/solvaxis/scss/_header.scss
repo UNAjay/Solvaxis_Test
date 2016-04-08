@@ -5,7 +5,8 @@
 }
 
 #block-system-main-menu,
-#block-menu-block-2 {
+#block-menu-block-2,
+#block-menu-block-3 {
   @include at-breakpoint($bp-xl) {
     margin-right: 69px;
   }
@@ -265,7 +266,8 @@
     border-left: 1px solid $gray-light;
 
     #block-system-main-menu,
-    #block-menu-block-2 {
+    #block-menu-block-2,
+    #block-menu-block-3 {
       height: 82%;
       //margin-top: 80px;
       margin-top: 60px;
@@ -328,9 +330,11 @@
       width: auto;
       height: auto;
       background: none;
+      border:none;
 
       #block-system-main-menu,
-      #block-menu-block-2 {
+      #block-menu-block-2,
+      #block-menu-block-3 {
         margin-top: 0;
         overflow-y: visible;
       }
@@ -422,7 +426,7 @@
                   z-index: 999;
 
                   }
-                
+
               }
             }
             &.first {
@@ -477,6 +481,11 @@
         margin: 0 8px;
         &.first {
           margin: 0 8px 0 0;
+        }
+      }
+      &.title {
+        li {
+          margin: 0 16px 0 0;
         }
       }
     }

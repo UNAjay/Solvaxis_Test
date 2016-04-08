@@ -57,8 +57,8 @@ function solvaxis_viewfield_formatter_default($variables) {
 function solvaxis_preprocess_page(&$vars) {
   $active_contexts = array_keys(context_active_contexts());
   if (in_array('landing_page', $active_contexts)) {
-    $vars['logo'] = base_path() . drupal_get_path('theme', 'solvaxis') . '/images/logo_white.png';
-    $vars['logo_footer'] = base_path() . drupal_get_path('theme', 'solvaxis') . '/images/logo_white.png';
+    $vars['logo'] = base_path() . drupal_get_path('theme', 'solvaxis') . '/logo.png';
+    $vars['logo_footer'] = '';
   }
   $view = views_embed_view('promo_slideshow', 'block');
   $vars['slideshow'] = $view;
