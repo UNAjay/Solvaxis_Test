@@ -122,4 +122,11 @@ function jeeveserp_layout_update_7010() {
   module_enable(array('products', 'viewreference', 'config_perms'));
 }
 
+/**
+ * Enable Landing Pages feature.
+ */
+function jeeveserp_layout_update_7011() {
+  module_enable(array('landing_pages'));
+}
+
 
