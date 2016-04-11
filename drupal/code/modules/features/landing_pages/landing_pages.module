@@ -14,7 +14,7 @@ function landing_pages_menu_block_blocks() {
   // The array key is the block delta used by menu block.
   return array(
     '3' => array(
-      'parent'      => menu-landing-pages:0,
+      'parent'      => 'menu-landing-pages:0',
       'title_link'  => 1,
       'admin_title' => 'Landing pages (level 2+)',
       'level'       => 2,
