@@ -53,7 +53,9 @@ function blogs_block_view($delta='') {
       $results = $result->execute()->fetchAll();
 
       foreach ($results as $object) {
-        $cloud_tags[] = new TagadelicTag($object->tid, $object->name, $object->term_count);
+        $tag = new TagadelicTag($object->tid, $object->name, $object->term_count);
+        $tag->set_link("taxonomy/term/{$object->tid}");
+        $cloud_tags[] = $tag;
       }
 
       drupal_add_css(drupal_get_path('module', 'tagadelic') . '/tagadelic.css');
