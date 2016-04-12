@@ -2758,7 +2758,11 @@ p.italic {
   height: 95px;
   padding: 26px 0;
   border-bottom: 1px solid #cccccc;
-  z-index: 100;
+  z-index: 1;
+}
+.node-product .group-header .view-display-id-tour_steps {
+  display: inline-block;
+  margin-top: 13px;
 }
 .node-product .group-header .group-navigation .view-product-tour ul {
   margin: 0;
@@ -2768,6 +2772,7 @@ p.italic {
   list-style-type: none;
   margin-right: 20px;
   min-width: 96px;
+  max-width: 96px;
   position: relative;
 }
 .node-product .group-header .group-navigation .view-product-tour ul li a {
@@ -2775,30 +2780,42 @@ p.italic {
   color: #3c3f42;
   white-space: nowrap;
 }
-.active .node-product .group-header .group-navigation .view-product-tour ul li a {
-  display: block;
-}
-.node-product .group-header .group-navigation .view-product-tour ul li a:hover {
+.node-product .group-header .group-navigation .view-product-tour ul li:hover a, .node-product .group-header .group-navigation .view-product-tour ul li.active a {
   text-decoration: none;
-}
-.node-product .group-header .group-navigation .view-product-tour ul li.active a, .node-product .group-header .group-navigation .view-product-tour ul li:hover a {
   font-size: 1.4rem;
+}
+.node-product .group-header .group-navigation .view-product-tour ul li:hover a:before, .node-product .group-header .group-navigation .view-product-tour ul li.active a:before {
+  background: #e30043;
 }
 .node-product .group-header .group-navigation .view-product-tour ul li a:before {
   counter-increment: section;
   content: counter(section) "";
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 100% 100%;
+  -moz-border-radius: 100% / 100%;
+  border-radius: 100% / 100%;
+  border: 1px solid #e30043;
+  background: transparent;
+  display: block;
+  color: white;
+  line-height: 13px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0;
+  margin-top: 3px;
+}
+.node-product .group-header .group-navigation .view-product-tour ul li.active a:before, .node-product .group-header .group-navigation .view-product-tour ul li.done a:before, .node-product .group-header .group-navigation .view-product-tour ul li.views-row-first a:before, .node-product .group-header .group-navigation .view-product-tour ul li.views-row-last a:before {
+  border: 0 none;
   width: 16px;
   height: 16px;
   -webkit-border-radius: 100% 100%;
   -moz-border-radius: 100% / 100%;
   border-radius: 100% / 100%;
   background: #e30043;
-  display: block;
-  color: white;
-  line-height: 13px;
-  text-align: center;
-  cursor: pointer;
   font-size: 1.4rem;
+  color: white;
+  margin-top: 0;
 }
 .node-product .group-header .group-navigation .view-product-tour ul li:after {
   display: block;
@@ -2809,6 +2826,9 @@ p.italic {
   position: absolute;
   right: 0;
   top: 8px;
+}
+.node-product .group-header .group-navigation .view-product-tour ul li.views-row-last:after {
+  display: none;
 }
 .node-product .group-header .group-navigation .view-product-tour .views-row {
   position: relative;
