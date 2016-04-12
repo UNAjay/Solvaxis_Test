@@ -2766,14 +2766,13 @@ p.italic {
 .node-product .group-header .group-navigation .view-product-tour ul li {
   float: left;
   list-style-type: none;
-  margin-right: 10px;
+  margin-right: 20px;
   min-width: 96px;
   position: relative;
 }
 .node-product .group-header .group-navigation .view-product-tour ul li a {
-  display: none;
+  font-size: 0;
   color: #3c3f42;
-  position: absolute;
   white-space: nowrap;
 }
 .active .node-product .group-header .group-navigation .view-product-tour ul li a {
@@ -2783,9 +2782,9 @@ p.italic {
   text-decoration: none;
 }
 .node-product .group-header .group-navigation .view-product-tour ul li.active a, .node-product .group-header .group-navigation .view-product-tour ul li:hover a {
-  display: block;
+  font-size: 1.4rem;
 }
-.node-product .group-header .group-navigation .view-product-tour ul li:before {
+.node-product .group-header .group-navigation .view-product-tour ul li a:before {
   counter-increment: section;
   content: counter(section) "";
   width: 16px;
@@ -2799,6 +2798,7 @@ p.italic {
   line-height: 13px;
   text-align: center;
   cursor: pointer;
+  font-size: 1.4rem;
 }
 .node-product .group-header .group-navigation .view-product-tour ul li:after {
   display: block;
@@ -2808,7 +2808,7 @@ p.italic {
   background: #73797c;
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 8px;
 }
 .node-product .group-header .group-navigation .view-product-tour .views-row {
   position: relative;

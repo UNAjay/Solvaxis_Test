@@ -164,10 +164,12 @@ jQuery(function($){
   "use strict";
   
   $(".node-product .group-navigation li").click(function(){
-    $(this).toggleClass( "active" );
+    $('.active').removeClass('active');
+    $(this).addClass('active');    
   });
  
 });
+
 
 
 
