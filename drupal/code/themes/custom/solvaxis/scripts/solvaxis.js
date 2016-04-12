@@ -166,7 +166,9 @@ jQuery(function($){
   $(".node-product .group-navigation li").click(function(){
     $('.active').removeClass('active');
     $(this).addClass('active');
-    $(this).addClass('done');       
+    $(this).addClass('done');  
+    $(this).nextAll().removeClass('active done'); 
+    $(this).prevtAll().removeClass('active done');  
   });
  
 });
