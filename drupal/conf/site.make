@@ -201,7 +201,7 @@ projects[geophp][version] = "1.7"
 projects[geocoder][version] = "1.2"
 
 
-projects[title][version] = "1.0-alpha7"
+projects[title][version] = "1.0-alpha8"
 projects[page_title][version] = "2.7"
 
 ; projects[webform][version] = "3.19"
