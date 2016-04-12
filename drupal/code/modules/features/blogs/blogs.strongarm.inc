@@ -155,6 +155,10 @@ function blogs_strongarm() {
             'weight' => '5',
             'visible' => TRUE,
           ),
+          'teaser' => array(
+            'weight' => '44',
+            'visible' => FALSE,
+          ),
         ),
       ),
     ),
