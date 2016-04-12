@@ -157,5 +157,19 @@ jQuery(function($){
 });
 
 
+/**
+ * Product navigation
+ */
+jQuery(function($){
+  "use strict";
+  
+  $(".node-product .group-navigation li").click(function(){
+    $(this).toggleClass( "active" );
+  });
+ 
+});
+
+
+
 
 

@@ -7,10 +7,10 @@ html,
 body {
   height: 100%;
   font-family: $sans-font-family;
-
   margin: 0;
   padding: 0;
   height:100%;
+  counter-reset: section;
 }
 
 html {

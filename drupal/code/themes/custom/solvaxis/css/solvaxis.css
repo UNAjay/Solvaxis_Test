@@ -78,6 +78,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  counter-reset: section;
 }
 
 html {
@@ -587,6 +588,13 @@ a {
   .header-secondary .navigate.close {
     right: 80%;
   }
+}
+
+.not-front .header-secondary {
+  border-bottom: 1px solid #cccccc;
+}
+.with-promos .header-secondary {
+  border-bottom: 1px solid transparent;
 }
 
 .search-button-desktop:hover:after {
@@ -1149,11 +1157,31 @@ footer .social-icons li a[title="Mail"] {
 }
 
 #page:not(.with-promos) #content {
-  margin-top: 100px;
+  margin-top: 81px;
 }
-@media (min-width: 48em) {
+@media (min-width: 50em) {
   #page:not(.with-promos) #content {
-    margin-top: 195px;
+    margin-top: 84px;
+  }
+}
+@media (min-width: 67em) {
+  #page:not(.with-promos) #content {
+    margin-top: 110px;
+  }
+}
+
+#page:not(.with-promos).not-front #content {
+  margin-top: 110px;
+}
+
+@media (min-width: 50em) {
+  .node-type-product #page:not(.with-promos) #content {
+    margin-top: 84px;
+  }
+}
+@media (min-width: 67em) {
+  .node-type-product #page:not(.with-promos) #content {
+    margin-top: 230px;
   }
 }
 
@@ -2718,8 +2746,69 @@ p.italic {
 /* =====================================
 	Products
 	====================================== */
+.node-type-product #content {
+  margin-top: 230px;
+}
+
 .node-product .group-header {
+  background: #f2f2f2;
+  position: fixed;
+  top: 110px;
+  width: 100%;
+  height: 95px;
+  padding: 26px 0;
   border-bottom: 1px solid #cccccc;
+  z-index: 100;
+}
+.node-product .group-header .group-navigation .view-product-tour ul {
+  margin: 0;
+}
+.node-product .group-header .group-navigation .view-product-tour ul li {
+  float: left;
+  list-style-type: none;
+  margin-right: 10px;
+  min-width: 96px;
+  position: relative;
+}
+.node-product .group-header .group-navigation .view-product-tour ul li a {
+  display: none;
+  color: #3c3f42;
+  position: absolute;
+  white-space: nowrap;
+}
+.active .node-product .group-header .group-navigation .view-product-tour ul li a {
+  display: block;
+}
+.node-product .group-header .group-navigation .view-product-tour ul li a:hover {
+  text-decoration: none;
+}
+.node-product .group-header .group-navigation .view-product-tour ul li.active a, .node-product .group-header .group-navigation .view-product-tour ul li:hover a {
+  display: block;
+}
+.node-product .group-header .group-navigation .view-product-tour ul li:before {
+  counter-increment: section;
+  content: counter(section) "";
+  width: 16px;
+  height: 16px;
+  -webkit-border-radius: 100% 100%;
+  -moz-border-radius: 100% / 100%;
+  border-radius: 100% / 100%;
+  background: #e30043;
+  display: block;
+  color: white;
+  line-height: 13px;
+  text-align: center;
+  cursor: pointer;
+}
+.node-product .group-header .group-navigation .view-product-tour ul li:after {
+  display: block;
+  content: "";
+  width: 60px;
+  height: 1px;
+  background: #73797c;
+  position: absolute;
+  right: 0;
+  top: 50%;
 }
 .node-product .group-header .group-navigation .view-product-tour .views-row {
   position: relative;
@@ -2729,7 +2818,8 @@ p.italic {
   margin-right: 5px;
 }
 .node-product .group-header .group-navigation .view-product-tour .views-row .views-field-field-product-logo img {
-  width: 50px;
+  float: left;
+  width: 42px;
   height: auto;
 }
 .node-product .group-header .group-navigation .view-product-tour .views-row .views-field-title {
@@ -2750,6 +2840,32 @@ p.italic {
 }
 .node-product .group-header .group-navigation .view-product-tour .view-content {
   float: right;
+}
+.node-product .group-preface {
+  position: relative;
+}
+.node-product .group-preface #step-0.hidden,
+.node-product .group-preface #step-1.hidden,
+.node-product .group-preface #step-2.hidden {
+  display: none;
+}
+.node-product .tour-navigation .prev,
+.node-product .tour-navigation .next {
+  display: block;
+  background: #e30043;
+  width: 90px;
+  height: 90px;
+  -webkit-border-radius: 100% 100%;
+  -moz-border-radius: 100% / 100%;
+  border-radius: 100% / 100%;
+  position: absolute;
+  top: 50%;
+}
+.node-product .tour-navigation .prev {
+  left: 0;
+}
+.node-product .tour-navigation .next {
+  right: 0;
 }
 
 .node-step .field-image img {

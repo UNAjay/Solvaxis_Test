@@ -214,11 +214,14 @@
 //-----------------------------------------
 // main menu
 //-----------------------------------------
-//.header-secondary {
-//  .not-front & {
-//    border-bottom: 1px solid $gray-light;
-//  }
-//}
+.header-secondary {
+  .not-front & {
+    border-bottom: 1px solid $gray-light;
+  }
+  .with-promos & { 
+    border-bottom: 1px solid transparent;
+  }
+}
 
 .search-button-desktop {
 &:hover {

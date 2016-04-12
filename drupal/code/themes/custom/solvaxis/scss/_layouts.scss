@@ -21,11 +21,41 @@
 }
 
 #page:not(.with-promos) #content {
-   margin-top: 100px;
-   @include at-breakpoint($bp-med-2) {
-     margin-top: 195px;
-   }
+  //margin-top: 100px;
+  margin-top: 81px;
+  //@include at-breakpoint($bp-med-2) {
+//    margin-top: 195px;
+//  }
+@include at-breakpoint($bp-large) {
+  margin-top: 84px;
 }
+  @include at-breakpoint($bp-xl-2) {
+    margin-top: 110px;
+  }
+}
+
+#page:not(.with-promos) {
+  &.not-front {
+    #content {
+      margin-top: 110px;
+    }
+  }
+ }
+ 
+.node-type-product {
+  #page:not(.with-promos) {
+     #content {
+       //margin-top: 81px;
+       @include at-breakpoint($bp-large) {
+         margin-top: 84px;
+       }
+       @include at-breakpoint($bp-xl-2) {
+         margin-top: 230px;
+       }
+     }
+  }
+}
+
 
 // internal page 2 column layout
 .ds-2col {
