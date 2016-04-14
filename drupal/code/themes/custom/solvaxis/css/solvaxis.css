@@ -2864,10 +2864,12 @@ p.italic {
 .node-product .group-preface {
   position: relative;
 }
-.node-product .group-preface #step-0.hidden,
-.node-product .group-preface #step-1.hidden,
-.node-product .group-preface #step-2.hidden {
+.node-product .group-preface .views-row {
   display: none;
+  min-height: 600px;
+}
+.node-product .group-preface .views-row.visible {
+  display: block;
 }
 .node-product .tour-navigation .prev,
 .node-product .tour-navigation .next {

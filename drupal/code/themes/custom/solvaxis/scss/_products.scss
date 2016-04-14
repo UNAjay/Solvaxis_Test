@@ -109,7 +109,6 @@
         }
         .views-row {
           position: relative;
-
           .views-field-field-product-logo {
             float: left;
             margin-right: 5px;
@@ -148,12 +147,13 @@
   
   .group-preface {
     position: relative;
-    #step-0,
-    #step-1,
-    #step-2 {
-      &.hidden {
-        display: none;
-      }
+    //height: 600px;
+    .views-row {
+      display: none;
+      min-height: 600px;
+      &.visible {
+       display: block;
+     }
     }
   }
   

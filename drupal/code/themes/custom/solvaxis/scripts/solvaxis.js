@@ -163,6 +163,16 @@ jQuery(function($){
 jQuery(function($){
   "use strict";
   
+  var $anchors = $('.node-product .group-navigation li a'),
+  $items = $('.group-preface .views-row');
+
+  $anchors.on('click', function() {
+    var selectedIndex = $anchors.index(this);
+
+    $anchors.removeClass('visible').eq(selectedIndex).addClass('visible');
+    $items.removeClass('visible').eq(selectedIndex).addClass('visible');
+  });
+  
   $(".node-product .group-navigation li").click(function(){
     $('.active').removeClass('active');
     $(this).addClass('active');
@@ -170,7 +180,13 @@ jQuery(function($){
     $(this).nextAll().removeClass('active done'); 
     $(this).prevtAll().removeClass('active done');  
   });
- 
+  
+  $(".node-product .group-preface .views-row.views-row-first").addClass('visible');
+  
+  $(".node-product .group-navigation li:not(.views-row-1)").click(function(){
+    $(".node-product .group-preface .views-row.views-row-first").removeClass('visible');
+  });
+  
 });
 
 
