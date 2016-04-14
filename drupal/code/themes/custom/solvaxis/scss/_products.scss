@@ -5,6 +5,9 @@
   #content {
     margin-top: 230px;
   }
+  .block-floatbar {
+    top: 400px!important;
+  }
 }
 .node-product {
   .group-header {
@@ -161,15 +164,28 @@
     .prev,
     .next {
       display: block;
-      background: $crimson;
-      width: 90px;
-      height: 90px;
-      @include border-radius(100%, 100%);
+      width: 34px;
+      height: 68px;
+      top: 25px;
+      margin-top: -34px;
+      font-size: 0;
+      overflow: hidden;
       position: absolute;
-      top: 50%;
+      &:before {
+        display: block;
+        content: "";
+        background: $crimson;
+        width: 68px;
+        height: 68px;
+        @include border-radius(100%, 100%);
+        position: absolute;
+      }
     }
     .prev {
       left: 0;
+      &:before {
+        right: 0;
+      }
     }
     .next { 
       right: 0;

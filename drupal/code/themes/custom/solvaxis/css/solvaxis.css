@@ -1181,7 +1181,7 @@ footer .social-icons li a[title="Mail"] {
 }
 @media (min-width: 67em) {
   .node-type-product #page:not(.with-promos) #content {
-    margin-top: 230px;
+    margin-top: 265px;
   }
 }
 
@@ -2749,6 +2749,9 @@ p.italic {
 .node-type-product #content {
   margin-top: 230px;
 }
+.node-type-product .block-floatbar {
+  top: 400px !important;
+}
 
 .node-product .group-header {
   background: #f2f2f2;
@@ -2874,17 +2877,31 @@ p.italic {
 .node-product .tour-navigation .prev,
 .node-product .tour-navigation .next {
   display: block;
+  width: 34px;
+  height: 68px;
+  top: 25px;
+  margin-top: -34px;
+  font-size: 0;
+  overflow: hidden;
+  position: absolute;
+}
+.node-product .tour-navigation .prev:before,
+.node-product .tour-navigation .next:before {
+  display: block;
+  content: "";
   background: #e30043;
-  width: 90px;
-  height: 90px;
+  width: 68px;
+  height: 68px;
   -webkit-border-radius: 100% 100%;
   -moz-border-radius: 100% / 100%;
   border-radius: 100% / 100%;
   position: absolute;
-  top: 50%;
 }
 .node-product .tour-navigation .prev {
   left: 0;
+}
+.node-product .tour-navigation .prev:before {
+  right: 0;
 }
 .node-product .tour-navigation .next {
   right: 0;

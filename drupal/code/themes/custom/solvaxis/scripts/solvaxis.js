@@ -158,7 +158,7 @@ jQuery(function($){
 
 
 /**
- * Product navigation
+ * Product tour - navigation
  */
 jQuery(function($){
   "use strict";
@@ -190,6 +190,36 @@ jQuery(function($){
 });
 
 
+
+/**
+ * Product tour - prev/next arrows
+ */
+jQuery(function($){
+    $(".node-product .group-preface .views-row.views-row").each(function(e) {
+        if (e != 0)
+            $(this).hide();
+    });
+
+    $(".next").click(function(){
+        if ($(".node-product .group-preface .views-row.views-row:visible").next().length != 0)
+            $(".node-product .group-preface .views-row.views-row:visible").next().show().prev().hide();
+        else {
+            $(".node-product .group-preface .views-row.views-row:visible").hide();
+            $(".node-product .group-preface .views-row.views-row:first").show();
+        }
+        return false;
+    });
+
+    $(".prev").click(function(){
+        if ($(".node-product .group-preface .views-row.views-row:visible").prev().length != 0)
+            $(".node-product .group-preface .views-row.views-row:visible").prev().show().next().hide();
+        else {
+            $(".node-product .group-preface .views-row.views-row:visible").hide();
+            $(".node-product .group-preface .views-row.views-row:last").show();
+        }
+        return false;
+    });
+});
 
 
 
