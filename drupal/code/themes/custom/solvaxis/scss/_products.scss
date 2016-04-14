@@ -150,7 +150,6 @@
   
   .group-preface {
     position: relative;
-    //height: 600px;
     .views-row {
       display: none;
       min-height: 600px;
@@ -174,21 +173,50 @@
       &:before {
         display: block;
         content: "";
-        background: $crimson;
+        background-color: $crimson;
         width: 68px;
         height: 68px;
         @include border-radius(100%, 100%);
         position: absolute;
+        font-family: 'solvaxis-icn';
+        line-height: 68px;
+        font-size: 18px;
+        color: $white;
+      }
+      &:hover {
+        width: 55px;
       }
     }
     .prev {
       left: 0;
       &:before {
         right: 0;
+        content: '\e80c';
+        text-align: right;
+        padding: 0 17px 0 0;
+      }
+      &:hover {
+        &:before {
+          @include border-top-left-radius(0);
+          @include border-bottom-left-radius(0);
+          padding: 0 38px 0 0;
+        }
       }
     }
     .next { 
       right: 0;
+      &:before {
+        text-align: left;
+        content: '\e80b';
+        padding: 0 0 0 17px;
+      }
+      &:hover {
+        &:before {
+          @include border-top-right-radius(0);
+          @include border-bottom-right-radius(0);
+          padding: 0 0 0 38px;
+        }
+      }
     }
   }
 }
