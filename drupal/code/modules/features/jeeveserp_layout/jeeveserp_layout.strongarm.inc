@@ -637,12 +637,18 @@ function jeeveserp_layout_strongarm() {
         ),
         'job_postings_job_listing' => array(
           'default' => array(
-            'weight' => '46',
+            'weight' => '44',
             'visible' => FALSE,
           ),
           'full' => array(
             'weight' => '43',
             'visible' => FALSE,
+          ),
+        ),
+        'footer_sections' => array(
+          'default' => array(
+            'weight' => '5',
+            'visible' => TRUE,
           ),
         ),
       ),

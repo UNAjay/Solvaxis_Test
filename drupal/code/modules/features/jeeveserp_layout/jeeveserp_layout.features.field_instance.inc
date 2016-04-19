@@ -209,7 +209,7 @@ function jeeveserp_layout_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 49,
+        'weight' => 47,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -613,7 +613,7 @@ function jeeveserp_layout_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 55,
+        'weight' => 53,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -1101,7 +1101,7 @@ function jeeveserp_layout_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 52,
+        'weight' => 50,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -1235,7 +1235,7 @@ function jeeveserp_layout_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 51,
+        'weight' => 49,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -1370,7 +1370,7 @@ function jeeveserp_layout_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 53,
+        'weight' => 51,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -1498,7 +1498,7 @@ function jeeveserp_layout_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 47,
+        'weight' => 45,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -1812,7 +1812,7 @@ function jeeveserp_layout_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 48,
+        'weight' => 46,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -2112,7 +2112,7 @@ function jeeveserp_layout_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 54,
+        'weight' => 52,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
@@ -2243,7 +2243,7 @@ function jeeveserp_layout_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 50,
+        'weight' => 48,
       ),
       'ds_contact_us' => array(
         'label' => 'above',
