@@ -152,6 +152,7 @@ function monster_page_field_group_info() {
       0 => 'body',
       1 => 'field_add_this',
       2 => 'field_heading',
+      3 => 'field_full_width',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

@@ -969,7 +969,7 @@ function monster_page_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 18,
+      'weight' => 19,
     ),
   );
 
@@ -1600,6 +1600,76 @@ function monster_page_field_default_field_instances() {
       ),
       'type' => 'entityreference_autocomplete',
       'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-section-field_full_width'
+  $field_instances['node-section-field_full_width'] = array(
+    'bundle' => 'section',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 17,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'section_dark' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'section_light' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_full_width',
+    'label' => 'Full width',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'mediafront' => array(
+        'custom' => '',
+        'field_type' => 0,
+        'media_type' => 'media',
+        'preview' => 0,
+        'thumbnail' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 0,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 18,
     ),
   );
 
@@ -2248,6 +2318,7 @@ function monster_page_field_default_field_instances() {
   t('Content');
   t('Content entity');
   t('External form');
+  t('Full width');
   t('Heading');
   t('Location');
   t('Promo Link');

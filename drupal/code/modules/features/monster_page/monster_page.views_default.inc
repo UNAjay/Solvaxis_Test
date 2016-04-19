@@ -816,7 +816,6 @@ function monster_page_views_default_views() {
   /* Display: News: All */
   $handler = $view->new_display('page', 'News: All', 'page_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'All news';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;

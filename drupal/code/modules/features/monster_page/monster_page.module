@@ -79,6 +79,11 @@ function monster_page_preprocess_node(&$variables) {
         $variables['classes_array'][] = drupal_html_class('transparent');
       }
 
+      $full_width = field_get_items($entity_type, $node, 'field_full_width');
+      if (!$full_width || empty($full_width) || $full_width[0]['value'] == '0') {
+        $variables['classes_array'][] = drupal_html_class('with-sidebar');
+      }
+
       $show_social = field_get_items($entity_type, $node, 'field_show_social_icons');
       if ($show_social && $show_social[0]['value'] == '1') {
         $variables['content']['field_add_this']['#access'] = TRUE;
