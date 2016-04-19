@@ -1715,6 +1715,10 @@ footer .footer-info h3:before {
 footer .footer-info .content p {
   margin: 0;
 }
+footer .footer-info .content a {
+  color: white;
+  text-decoration: underline;
+}
 footer .region-footer-primary {
   width: 100%;
   padding: 10px 10px 20px;
