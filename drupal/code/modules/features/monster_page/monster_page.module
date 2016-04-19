@@ -8,6 +8,38 @@ include_once 'monster_page.features.inc';
 include_once 'monster_page.embed.inc';
 
 
+function monster_page_menu(){
+  $items = array();
+
+  $items['admin/config/monster_page'] = array(
+    'title' => 'Monster page settings',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('monster_page_admin'),
+    'access arguments' => array('administer site configuration'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+
+/**
+ * Function to create settings form for each menu item
+ * @return type
+ */
+function monster_page_admin() {
+  $form = array();
+
+  $form['monster_page_footer_sections'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Footer sections'),
+    '#default_value' => variable_get('monster_page_footer_sections', '')
+  );
+
+  return system_settings_form($form);
+}
+
+
 /**
  * Process variables for node.tpl.php.
  */
@@ -106,6 +138,25 @@ function monster_page_entity_view($entity, $type, $view_mode, $langcode) {
       drupal_add_css(' #map-canvas {width: 100%;height: 300px;}', 'inline');
     }
   }
+
+  if ($type == 'node' && $entity->type == 'page' && $view_mode == 'full') {
+    if (!drupal_is_front_page()) {
+      $entity_ids = explode(',', variable_get('monster_page_footer_sections', ''));
+      if (is_array($entity_ids)) {
+        $entity_ids = array_map('trim', $entity_ids);
+        $nodes = node_load_multiple($entity_ids);
+        $sections = '';
+        foreach ($nodes as $node) {
+          $mode = field_get_items($type, $node, 'field_view_mode');
+          $mode = $mode[0]['value'];
+          $sections .= drupal_render(node_view($node, $mode));
+        }
+        $entity->content['footer_sections'] = array(
+          '#markup' => $sections,
+        );
+      }
+    }
+  }
 }
 
 
@@ -117,6 +168,10 @@ function monster_page_field_extra_fields() {
 
   $return['ee']['embed_map']['display']['embed'] = array(
     'label' => 'Google JS Map',
+    'weight' =>'0',
+  );
+  $return['node']['page']['display']['footer_sections'] = array(
+    'label' => 'Default footer sections',
     'weight' =>'0',
   );
 
