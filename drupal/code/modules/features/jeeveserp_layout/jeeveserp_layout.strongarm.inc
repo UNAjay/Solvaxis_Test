@@ -847,6 +847,122 @@ function jeeveserp_layout_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'site_map_categories_depth';
+  $strongarm->value = 'all';
+  $export['site_map_categories_depth'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'site_map_css';
+  $strongarm->value = 0;
+  $export['site_map_css'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'site_map_forum_threshold';
+  $strongarm->value = '-1';
+  $export['site_map_forum_threshold'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'site_map_message';
+  $strongarm->value = array(
+    'value' => '',
+    'format' => 'full_html',
+  );
+  $export['site_map_message'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'site_map_page_title';
+  $strongarm->value = 'Site map';
+  $export['site_map_page_title'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'site_map_rss_depth';
+  $strongarm->value = 'all';
+  $export['site_map_rss_depth'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'site_map_rss_front';
+  $strongarm->value = 'rss.xml';
+  $export['site_map_rss_front'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'site_map_show_count';
+  $strongarm->value = 0;
+  $export['site_map_show_count'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'site_map_show_front';
+  $strongarm->value = 0;
+  $export['site_map_show_front'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'site_map_show_menus';
+  $strongarm->value = array(
+    'main-menu' => 'main-menu',
+    'devel' => 0,
+    'menu-footer-menu' => 0,
+    'menu-landing-pages' => 0,
+    'management' => 0,
+    'navigation' => 0,
+    'user-menu' => 0,
+  );
+  $export['site_map_show_menus'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'site_map_show_rss_links';
+  $strongarm->value = '1';
+  $export['site_map_show_rss_links'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'site_map_show_vocabularies';
+  $strongarm->value = array(
+    9 => 0,
+    11 => 0,
+    6 => 0,
+    7 => 0,
+    2 => 0,
+    13 => 0,
+    10 => 0,
+    4 => 0,
+    3 => 0,
+    1 => 0,
+    5 => 0,
+    8 => 0,
+    12 => 0,
+  );
+  $export['site_map_show_vocabularies'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'site_map_term_threshold';
+  $strongarm->value = '0';
+  $export['site_map_term_threshold'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'theme_jeeves_settings';
   $strongarm->value = array(
     'toggle_logo' => 1,
@@ -863,6 +979,30 @@ function jeeveserp_layout_strongarm() {
     'favicon_upload' => '',
   );
   $export['theme_jeeves_settings'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_generated_last';
+  $strongarm->value = 1461055015;
+  $export['xmlsitemap_generated_last'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_regenerate_needed';
+  $strongarm->value = FALSE;
+  $export['xmlsitemap_regenerate_needed'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_menu_link_main-menu';
+  $strongarm->value = array(
+    'status' => '1',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_menu_link_main-menu'] = $strongarm;
 
   return $export;
 }
