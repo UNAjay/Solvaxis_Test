@@ -109,7 +109,7 @@ function attachments_field_default_field_bases() {
     'locked' => 0,
     'module' => 'image',
     'settings' => array(
-      'default_image' => 430,
+      'default_image' => 0,
       'entity_translation_sync' => array(
         0 => 'fid',
       ),
