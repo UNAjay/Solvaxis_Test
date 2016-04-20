@@ -153,6 +153,10 @@ body {
   }
 }
 
+.front .node-page h1.section-title {
+  display: none;
+}
+
 .breadcrumb {
   display: none;
 }
