@@ -35,10 +35,8 @@
 
   &.section_light {
     background: transparent;
-    //border-bottom: 1px solid $gray-light;
     .bg-wrapper {
       background: $gray-lighter;
-     // border-bottom: 1px solid $gray-light;
       border-top: 1px solid $gray-light;
       .transparent & {
         background: transparent;
@@ -49,16 +47,18 @@
      background: $gray-dark;
      color: $white;
      .bg-wrapper {
+       border-top: 1px solid $gray;
        background: $gray-dark;
        .transparent & {
          background: transparent;
        }
      }
    }
-
+   
   // Call to action section - with transparent overlay
   &.transparent {
     .bg-wrapper {
+      border-top: 0 none;
       &:before {
         content: '';
         display: block;
@@ -106,26 +106,24 @@
     @include span-columns(12);
     padding-top: 20px;
   }
-
 }
 
-// Remove border bottom from last section
-.node-page {
-  .region-holder {
-    padding-bottom: 28px;
+// If light section below dark section or dark below light we don't need border-top
+.light + .dark,
+.dark + .light,
+.transparent_wrapper + .dark,
+.transparent_wrapper + .light {
+  .bg-wrapper {
+    border-top: 0 none;
   }
+}
+
+// Remove border top from first section
+.not-front {
   .field-items {
-    .field-item {
-      //&:last-child {
-//        .node-section.section_light {
-//          //border-bottom: 0 none;
-//          .bg-wrapper {
-//            border-bottom: 0 none;
-//          }
-//        }
-//      }
+    .field-item.dark {
       &:first-child {
-        .node-section.section_light {
+        .node-section {
           .bg-wrapper {
             border-top: 0 none;
           }
@@ -135,6 +133,25 @@
   }
 }
 
+.front {
+  .field-items {
+    .field-item {
+      &:first-child {
+        .node-section {
+          .bg-wrapper {
+            border-top: 0 none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.node-page {
+  .region-holder {
+    padding-bottom: 28px;
+  }
+}
 
 .with-sidebar.sidebar-position-right {
   .body,

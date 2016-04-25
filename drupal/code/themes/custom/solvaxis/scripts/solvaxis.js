@@ -27,6 +27,11 @@
         $(this).toggleClass( "collapsed" );
       });
       
+      // Add class to section outer element
+      $( ".section_dark" ).parent().addClass( "dark" );
+      $( ".section_light" ).parent().addClass( "light" );
+      $( ".node-section.transparent" ).parent().addClass( "transparent_wrapper" );
+      
       // Section banners
       $( ".front .field-item" ).has( ".group-banner" ).css( {marginBottom: "-49px" } );
       $( ".not-front .field-item" ).has( ".group-banner" ).css( {marginBottom: "-49px" } ).addClass( "with-banner" );
