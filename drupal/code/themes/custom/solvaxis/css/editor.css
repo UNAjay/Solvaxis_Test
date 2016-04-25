@@ -515,6 +515,33 @@ input {
   background: url("../images/clear-hover.png") 0 4px no-repeat;
 }
 
+.pager {
+  float: none;
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 15px 0 0;
+  width: 100%;
+}
+.pager li {
+  display: inline-block;
+  margin: 0;
+  color: #73797c;
+  font-weight: 300;
+}
+.pager li a {
+  color: #73797c;
+  cursor: pointer;
+  padding: 0 5px;
+  text-decoration: none;
+}
+.pager li a:after {
+  content: "...";
+}
+.section_dark .pager li a {
+  color: white;
+}
+
 a {
   color: #e30043;
 }

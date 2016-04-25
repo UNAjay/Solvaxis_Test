@@ -185,6 +185,35 @@ input[type="button"],
 .button, .region-content input[type="submit"], #colorbox input[type="submit"], .node-type-full-page .view-promo-slideshow .slides {
 }
 
-
+//-----------------------------------------
+// pager
+//-----------------------------------------
+.pager {
+  float: none;
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 15px 0 0;
+  width: 100%;
+  
+  li {
+    display: inline-block;
+    margin: 0;
+    color: $gray;
+    font-weight: 300;
+    a {
+      color: $gray;
+      cursor: pointer;
+      padding: 0 5px;
+      text-decoration: none;
+      &:after {
+        content: "...";
+      }
+      .section_dark & {
+        color: $white;
+      }
+    }
+  }
+}
 
 

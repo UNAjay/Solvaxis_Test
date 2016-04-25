@@ -13,7 +13,7 @@
       });
 
       // Add 100% width to pager outer element.
-      $( "ul.pager" ).parent().css( "width", "100%" );
+      // $( "ul.pager" ).parent().css( "width", "100%" );
 
       // Collapse/expand text
       // ------------------------------------------------------------------------------------------------
@@ -185,7 +185,7 @@ jQuery(function($){
         }
         return false;
     });
-    
+
 });
 
 
@@ -194,7 +194,7 @@ jQuery(function($){
  */
 jQuery(function($){
   "use strict";
-  
+
   var $anchors = $('.node-product .group-navigation li a'),
   $items = $('.group-preface .views-row');
 
@@ -204,22 +204,25 @@ jQuery(function($){
     $anchors.removeClass('visible').eq(selectedIndex).addClass('visible');
     $items.removeClass('visible').eq(selectedIndex).addClass('visible');
   });
-  
+
   $(".node-product .group-navigation li").click(function(){
     $('.active').removeClass('active');
     $(this).addClass('active');
-    $(this).addClass('done');  
-    $(this).nextAll().removeClass('active done'); 
-    $(this).prevtAll().removeClass('active done');  
+    $(this).addClass('done');
+    $(this).nextAll().removeClass('active done');
+    $(this).prevAll().removeClass('active done');
   });
-  
+
   $(".node-product .group-preface .views-row.views-row-first").addClass('visible');
-  
+
   $(".node-product .group-navigation li:not(.views-row-1)").click(function(){
     $(".node-product .group-preface .views-row.views-row-first").removeClass('visible');
   });
-  
+
+
 });
+
+
 
 
 

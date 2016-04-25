@@ -237,6 +237,7 @@ function monster_page_views_default_views() {
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['label'] = '';
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
     'image_style' => 'partner_logo',
@@ -258,11 +259,13 @@ function monster_page_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'customer' => 'customer',
   );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: industry */
   $handler->display->display_options['filters']['tid']['id'] = 'tid';
   $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid']['field'] = 'tid';
   $handler->display->display_options['filters']['tid']['ui_name'] = 'industry';
+  $handler->display->display_options['filters']['tid']['group'] = 1;
   $handler->display->display_options['filters']['tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['tid']['expose']['operator_id'] = 'tid_op';
   $handler->display->display_options['filters']['tid']['expose']['label'] = 'Industry';
@@ -283,6 +286,7 @@ function monster_page_views_default_views() {
   $handler->display->display_options['filters']['tid_1']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid_1']['field'] = 'tid';
   $handler->display->display_options['filters']['tid_1']['ui_name'] = 'product';
+  $handler->display->display_options['filters']['tid_1']['group'] = 1;
   $handler->display->display_options['filters']['tid_1']['exposed'] = TRUE;
   $handler->display->display_options['filters']['tid_1']['expose']['operator_id'] = 'tid_1_op';
   $handler->display->display_options['filters']['tid_1']['expose']['label'] = 'Product';
@@ -298,6 +302,12 @@ function monster_page_views_default_views() {
   );
   $handler->display->display_options['filters']['tid_1']['type'] = 'select';
   $handler->display->display_options['filters']['tid_1']['vocabulary'] = 'product';
+  /* Filter criterion: Field: Image (field_image:fid) */
+  $handler->display->display_options['filters']['field_image_fid']['id'] = 'field_image_fid';
+  $handler->display->display_options['filters']['field_image_fid']['table'] = 'field_data_field_image';
+  $handler->display->display_options['filters']['field_image_fid']['field'] = 'field_image_fid';
+  $handler->display->display_options['filters']['field_image_fid']['operator'] = '>';
+  $handler->display->display_options['filters']['field_image_fid']['value']['value'] = '0';
 
   /* Display: Customers: All */
   $handler = $view->new_display('page', 'Customers: All', 'customers_page');
