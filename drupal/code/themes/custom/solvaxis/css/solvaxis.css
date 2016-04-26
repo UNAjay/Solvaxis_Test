@@ -1219,23 +1219,23 @@ footer .social-icons li a[title="Mail"] {
     width: 32.0%;
     float: right;
     margin-right: 0;
-    padding: 72px 0 0 0;
+    padding: 72px 0 0 10px;
   }
 }
 @media (min-width: 67em) {
   .ds-2col .group-right {
-    padding: 72px 0 0;
+    padding: 72px 0 0 20px;
   }
 }
 .node-section .ds-2col .group-left,
 .node-section .ds-2col .group-right {
   padding: 0;
 }
-.ds-2col.node-page > .region-holder {
+.ds-2col.full > .region-holder {
   padding: 0 35px;
 }
 @media (min-width: 67em) {
-  .ds-2col.node-page > .region-holder {
+  .ds-2col.full > .region-holder {
     padding: 0;
   }
 }
@@ -1252,11 +1252,6 @@ footer .social-icons li a[title="Mail"] {
     width: 49%;
     float: right;
     margin-right: 0;
-    padding: 0;
-  }
-}
-@media (min-width: 48em) {
-  .ds-2col.node-customer .group-right {
     padding: 0;
   }
 }
@@ -1527,6 +1522,7 @@ a.call-to-action {
   border: 1px solid black;
   color: black;
   display: inline-block;
+  float: left;
   font-size: 15px;
   line-height: 20px;
   font-weight: 300;
@@ -2280,7 +2276,16 @@ article .media-element-container.media-logo img:hover, article .media-element-co
     width: 32.0%;
     float: right;
     margin-right: 0;
+    padding: 0 0 0 10px;
   }
+}
+@media (min-width: 67em) {
+  .node-section.with-sidebar .group-sidebar {
+    padding: 0 0 0 20px;
+  }
+}
+.node-section.with-sidebar .group-sidebar .field-sidebar-text p {
+  margin-top: 0;
 }
 .node-section .group-social {
   width: 100%;
@@ -2324,6 +2329,7 @@ article .media-element-container.media-logo img:hover, article .media-element-co
 }
 .with-sidebar.sidebar-position-right .group-sidebar {
   width: 100%;
+  padding: 0;
 }
 @media (min-width: 48em) {
   .with-sidebar.sidebar-position-right .group-sidebar {
@@ -2331,6 +2337,12 @@ article .media-element-container.media-logo img:hover, article .media-element-co
     float: left;
     margin-right: 2.0%;
     float: left;
+    padding: 0 10px 0 0;
+  }
+}
+@media (min-width: 67em) {
+  .with-sidebar.sidebar-position-right .group-sidebar {
+    padding: 0 20px 0 0;
   }
 }
 
@@ -3397,6 +3409,10 @@ p.italic {
 
 .group-right .field-sidebar-text p:first-child {
   margin-top: 0;
+}
+.group-right .field-sidebar-text .field-item {
+  float: left;
+  width: 100%;
 }
 
 .not-front .node h2, .not-front .node h3, .not-front .node h5 {

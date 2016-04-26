@@ -562,6 +562,7 @@ a.call-to-action {
   border: 1px solid black;
   color: black;
   display: inline-block;
+  float: left;
   font-size: 15px;
   line-height: 20px;
   font-weight: 300;

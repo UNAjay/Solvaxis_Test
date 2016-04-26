@@ -18,9 +18,13 @@
         margin-top: 0;
       }
     }
+    .field-item {
+     // background: pink;
+      float: left;
+      width: 100%;
+    }
   }
 }
-
 
 .not-front {
   .node {
