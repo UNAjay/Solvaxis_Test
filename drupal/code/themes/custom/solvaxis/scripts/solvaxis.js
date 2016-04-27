@@ -14,7 +14,7 @@
 
       // Add 100% width to pager outer element.
       // $( "ul.pager" ).parent().css( "width", "100%" );
-
+      
       // Collapse/expand text
       // ------------------------------------------------------------------------------------------------
       $('.not-front .group-left .field-items h5').each(function(index) {

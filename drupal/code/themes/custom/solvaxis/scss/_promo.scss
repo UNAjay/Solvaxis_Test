@@ -122,10 +122,9 @@
 // tablet
 #leader {
   @include at-breakpoint($bp-med-2) {
+    height: 425px;
     .top-bg-image {
-      height: 425px;
-      &:before {
-      }
+      //height: 425px;
     }
     .flexslider {
       padding: 136px 35px 124px;

@@ -72,9 +72,11 @@
       padding: 0;
     }
     .section-title {
-      margin: 0 0 42px;
+      //margin: 0 0 42px;
+      margin: 0 0 47px;
     }
     .image {
+      padding-top: 4px;
       img {
         @extend %full-width-image;
       }
@@ -85,10 +87,10 @@
     // padding: 0 35px;
      @include at-breakpoint($bp-med-2) {
        @include span-columns(4 omega,12);
-       padding: 72px 0 0 10px;
+       padding: 81px 0 0 10px;
      }
      @include at-breakpoint($bp-xl-2) {
-       padding: 72px 0 0 20px;
+       padding: 81px 0 0 20px;
      }
      .logo {
        img {
@@ -105,9 +107,17 @@
 
   &.full {
     & > .region-holder {
-      padding: 0 35px;
+      padding: 28px 35px;
       @include at-breakpoint($bp-xl-2) {
-        padding: 0;
+        padding: 28px 0;
+      }
+    }
+    .front & {
+      & > .region-holder {
+        padding: 0 35px;
+        @include at-breakpoint($bp-xl-2) {
+          padding: 0;
+        }
       }
     }
     //.group-right {

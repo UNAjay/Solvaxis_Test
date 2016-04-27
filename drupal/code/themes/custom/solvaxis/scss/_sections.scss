@@ -98,14 +98,20 @@
       padding: 0;
       @include at-breakpoint($bp-med-2) {
         @include span-columns(4 omega,12);
-        padding: 0 0 0 10px;
+        padding: 16px 0 0 10px;
       }
       @include at-breakpoint($bp-xl-2) {
-        padding: 0 0 0 20px;
+        padding: 16px 0 0 20px;
       }
       .field-sidebar-text {
         p {
           margin-top: 0;
+        }
+        h2 {
+          margin-top: -4px;
+        }
+        p + h2 {
+          margin-top: 12px;
         }
       }
     }
@@ -163,6 +169,12 @@
 }
 
 .with-sidebar.sidebar-position-right {
+  .body {
+    clear: both;
+    @include at-breakpoint($bp-med-2) {
+      clear: none;
+    }
+  }
   .body,
   .field-view {
     width: 100%;
@@ -177,10 +189,10 @@
     @include at-breakpoint($bp-med-2) {
       @include span-columns(4,12);
       float: left;
-      padding: 0 10px 0 0;
+      padding: 16px 10px 0 0;
     }
     @include at-breakpoint($bp-xl-2) {
-      padding: 0 20px 0 0;
+      padding: 16px 20px 0 0;
     }
   }
 }
@@ -239,7 +251,6 @@
     }
   }
 }
-
 
 .group-banner h2 {
   @include at-breakpoint($bp-med-2) {
