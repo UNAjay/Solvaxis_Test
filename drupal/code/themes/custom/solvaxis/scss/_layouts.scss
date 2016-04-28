@@ -109,7 +109,15 @@
     & > .region-holder {
       padding: 28px 35px;
       @include at-breakpoint($bp-xl-2) {
-        padding: 28px 0;
+        padding: 83px 0 28px;
+      }
+    }
+    .with-promos & {
+      & > .region-holder {
+        padding: 28px 35px;
+        @include at-breakpoint($bp-xl-2) {
+          padding: 28px 0;
+        }
       }
     }
     .front & {

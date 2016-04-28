@@ -587,6 +587,10 @@ a.call-to-action:before {
   top: 0;
   left: 0;
 }
+.section_dark a.call-to-action {
+  border: 1px solid white;
+  color: white;
+}
 a.call-to-action:hover {
   background-color: #e30043;
   border: 1px solid #e30043;

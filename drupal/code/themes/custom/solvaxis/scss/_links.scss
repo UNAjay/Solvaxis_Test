@@ -52,6 +52,11 @@ a {
       top: 0;
       left: 0;
     }
+    // Call to action buttons on dark background
+    .section_dark & {
+      border: 1px solid $white;
+      color: $white;
+    }
     &:hover {
       background-color: $crimson;
       border: 1px solid $crimson;
@@ -193,7 +198,6 @@ a {
         }
       }
     }
-    
   }
 }
 

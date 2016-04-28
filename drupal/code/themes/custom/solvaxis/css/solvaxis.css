@@ -1239,6 +1239,14 @@ footer .social-icons li a[title="Mail"] {
 }
 @media (min-width: 67em) {
   .ds-2col.full > .region-holder {
+    padding: 83px 0 28px;
+  }
+}
+.with-promos .ds-2col.full > .region-holder {
+  padding: 28px 35px;
+}
+@media (min-width: 67em) {
+  .with-promos .ds-2col.full > .region-holder {
     padding: 28px 0;
   }
 }
@@ -1557,6 +1565,10 @@ a.call-to-action:before {
   position: absolute;
   top: 0;
   left: 0;
+}
+.section_dark a.call-to-action {
+  border: 1px solid white;
+  color: white;
 }
 a.call-to-action:hover {
   background-color: #e30043;
