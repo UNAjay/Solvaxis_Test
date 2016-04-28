@@ -402,7 +402,8 @@
     min-height: 196px;
     height: auto;
     padding: 10px 15px;
-    margin: 20px 0 -45px;
+    //margin: 20px 0 -45px;
+    margin: 20px 0 0;
   }
 }
 
@@ -414,14 +415,16 @@
     padding: 27px 30px 24px;
   }
   @include at-breakpoint($bp-xl-2) {
-    margin: 90px -30px -45px 0;
+    //margin: 90px -30px -45px 0;
+    margin: 90px -30px 0 0;
   }
 }
 
 .not-front {
   .group-banner {
     @include at-breakpoint($bp-xl-2) {
-      margin: 45px -30px -45px 0;
+      //margin: 45px -30px -45px 0;
+      margin: 45px -30px 0 0;
     }
   }
 }

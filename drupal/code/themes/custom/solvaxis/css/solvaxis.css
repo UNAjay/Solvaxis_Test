@@ -2560,7 +2560,7 @@ article .media-element-container.media-logo img:hover, article .media-element-co
     min-height: 196px;
     height: auto;
     padding: 10px 15px;
-    margin: 20px 0 -45px;
+    margin: 20px 0 0;
   }
 }
 
@@ -2573,13 +2573,13 @@ article .media-element-container.media-logo img:hover, article .media-element-co
 }
 @media (min-width: 67em) {
   .group-banner {
-    margin: 90px -30px -45px 0;
+    margin: 90px -30px 0 0;
   }
 }
 
 @media (min-width: 67em) {
   .not-front .group-banner {
-    margin: 45px -30px -45px 0;
+    margin: 45px -30px 0 0;
   }
 }
 
