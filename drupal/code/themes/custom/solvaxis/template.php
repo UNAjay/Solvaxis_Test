@@ -74,6 +74,7 @@ function solvaxis_preprocess_page(&$vars) {
     'preprocess' => FALSE
   );
   drupal_add_js(libraries_get_path('inview') . '/jquery.inview.min.js', $options);
+  drupal_add_js(drupal_get_path('theme', 'solvaxis') . '/scripts/libraries/jquery.parallax-scroll.js', $options);
 }
 
 /**
