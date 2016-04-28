@@ -36,9 +36,10 @@
 
   &.section_light {
     background: transparent;
+    border-top: 1px solid $gray-light;
     .bg-wrapper {
       background: $gray-lighter;
-      border-top: 1px solid $gray-light;
+      //border-top: 1px solid $gray-light;
       .transparent & {
         background: transparent;
       }
@@ -46,9 +47,10 @@
   }
   &.section_dark {
      background: $gray-dark;
+     border-top: 1px solid $gray;
      color: $white;
      .bg-wrapper {
-       border-top: 1px solid $gray;
+       //border-top: 1px solid $gray;
        background: $gray-dark;
        .transparent & {
          background: transparent;
@@ -58,8 +60,9 @@
 
   // Call to action section - with transparent overlay
   &.transparent {
+    border-top: 0 none;
     .bg-wrapper {
-      border-top: 0 none;
+      //border-top: 0 none;
       &:before {
         content: '';
         display: block;
@@ -129,9 +132,10 @@
 .dark + .light,
 .transparent_wrapper + .dark,
 .transparent_wrapper + .light {
-  .bg-wrapper {
-    border-top: 0 none;
-  }
+  //.bg-wrapper {
+//    border-top: 0 none;
+//  }
+  border-top: 0 none;
 }
 
 // Remove border top from first section
@@ -140,9 +144,10 @@
     .field-item.dark {
       &:first-child {
         .node-section {
-          .bg-wrapper {
-            border-top: 0 none;
-          }
+          border-top: 0 none;
+          //.bg-wrapper {
+//            border-top: 0 none;
+//          }
         }
       }
     }
@@ -154,9 +159,10 @@
     .field-item {
       &:first-child {
         .node-section {
-          .bg-wrapper {
-            border-top: 0 none;
-          }
+          border-top: 0 none;
+          //.bg-wrapper {
+//            border-top: 0 none;
+//          }
         }
       }
     }
