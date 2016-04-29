@@ -11,9 +11,6 @@
           $('.header-secondary').removeClass( "sticky" );
         }
       });
-
-      // Add 100% width to pager outer element.
-      // $( "ul.pager" ).parent().css( "width", "100%" );
       
       // Collapse/expand text
       // ------------------------------------------------------------------------------------------------
@@ -166,7 +163,8 @@ jQuery(function($){
  * Product tour prev/next arrows
  */
 jQuery(function($){
-    $(".node-product .group-preface .views-row.views-row").each(function(e) {
+  var $anchors = $('.node-product .group-navigation li a');
+  $(".node-product .group-preface .views-row.views-row").each(function(e) {
         if (e != 0)
             $(this).removeClass('visible');
     });
@@ -190,7 +188,6 @@ jQuery(function($){
         }
         return false;
     });
-
 });
 
 
@@ -209,13 +206,13 @@ jQuery(function($){
     $anchors.removeClass('visible').eq(selectedIndex).addClass('visible');
     $items.removeClass('visible').eq(selectedIndex).addClass('visible');
   });
-
+  
   $(".node-product .group-navigation li").click(function(){
     $('.active').removeClass('active');
     $(this).addClass('active');
     $(this).addClass('done');
     $(this).nextAll().removeClass('active done');
-    $(this).prevAll().removeClass('active done');
+    $(this).prevAll().removeClass('active');
   });
 
   $(".node-product .group-preface .views-row.views-row-first").addClass('visible');
@@ -223,12 +220,34 @@ jQuery(function($){
   $(".node-product .group-navigation li:not(.views-row-1)").click(function(){
     $(".node-product .group-preface .views-row.views-row-first").removeClass('visible');
   });
-
-
+  
+  // Count items in navigation and add class
+  $('.node-product .group-navigation ul li').each(function (e) {
+      $('.node-product .group-navigation ul').addClass('count_' + e);
+  });
+  
+  $(".node-product .group-navigation .count_8").each(function(index) {
+    $(".node-product .group-navigation li.views-row-7, .node-product .group-navigation li.views-row-8").wrapAll('<span class="ellipsis"></span>');
+    $(".node-product .group-navigation li.views-row-2, .node-product .group-navigation li.views-row-3").wrapAll('<span class="ellipsis"></span>');
+  });
+  
+  // $(".node-product .group-navigation .count_7").each(function(index) {
+ //    $(".node-product .group-navigation li.views-row-6, .node-product .group-navigation li.views-row-7").wrapAll('<span class="ellipsis"></span>');
+ //    $(".node-product .group-navigation li.views-row-2, .node-product .group-navigation li.views-row-3").wrapAll('<span class="ellipsis"></span>');
+ //  });
+ //
+ //  $(".node-product .group-navigation .count_6").each(function(index) {
+ //    $(".node-product .group-navigation li.views-row-5, .node-product .group-navigation li.views-row-6").wrapAll('<span class="ellipsis"></span>');
+ //    $(".node-product .group-navigation li.views-row-2, .node-product .group-navigation li.views-row-3").wrapAll('<span class="ellipsis"></span>');
+ //  });
+ //
+ //  $(".node-product .group-navigation .count_5").each(function(index) {
+ //    $(".node-product .group-navigation li.views-row-3, .node-product .group-navigation li.views-row-4").wrapAll('<span class="ellipsis"></span>');
+ //  });
+ $(".node-product .group-navigation .ellipsis").each(function(index) {
+   $(this).prev().addClass('no-line');
+ });
+ 
 });
-
-
-
-
 
 

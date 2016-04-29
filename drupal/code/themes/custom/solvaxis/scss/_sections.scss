@@ -50,7 +50,6 @@
      border-top: 1px solid $gray;
      color: $white;
      .bg-wrapper {
-       //border-top: 1px solid $gray;
        background: $gray-dark;
        .transparent & {
          background: transparent;
@@ -62,7 +61,6 @@
   &.transparent {
     border-top: 0 none;
     .bg-wrapper {
-      //border-top: 0 none;
       &:before {
         content: '';
         display: block;
@@ -132,10 +130,9 @@
 .dark + .light,
 .transparent_wrapper + .dark,
 .transparent_wrapper + .light {
-  //.bg-wrapper {
-//    border-top: 0 none;
-//  }
-  border-top: 0 none;
+  .node-section {
+    border-top: 0 none;
+  }
 }
 
 // Remove border top from first section
@@ -145,9 +142,6 @@
       &:first-child {
         .node-section {
           border-top: 0 none;
-          //.bg-wrapper {
-//            border-top: 0 none;
-//          }
         }
       }
     }
@@ -160,9 +154,6 @@
       &:first-child {
         .node-section {
           border-top: 0 none;
-          //.bg-wrapper {
-//            border-top: 0 none;
-//          }
         }
       }
     }
@@ -403,7 +394,6 @@
     min-height: 196px;
     height: auto;
     padding: 10px 15px;
-    //margin: 20px 0 -45px;
     margin: 20px 0 0;
   }
 }
@@ -416,7 +406,6 @@
     padding: 27px 30px 24px;
   }
   @include at-breakpoint($bp-xl-2) {
-    //margin: 90px -30px -45px 0;
     margin: 90px -30px 0 0;
   }
 }
@@ -424,12 +413,10 @@
 .not-front {
   .group-banner {
     @include at-breakpoint($bp-xl-2) {
-      //margin: 45px -30px -45px 0;
       margin: 45px -30px 0 0;
     }
   }
 }
-
 
 // Styles in banners
 p {
@@ -461,7 +448,6 @@ p {
       .field-item:first-child {
         .region-holder {
           padding-top: 120px;
-
         }
       }
     }
