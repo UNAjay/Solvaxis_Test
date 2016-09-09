@@ -153,7 +153,7 @@ function floatbar_floatbar_items($items) {
 
   $items[] = array(
     'text' => 'Facebook',
-    'path' =>  'http://www.facebook.com/sharer.php?u='.urlencode($url).'&t='.$title,
+    'path' =>  'http://www.faceblook.com/sharer.php?u='.urlencode($url).'&t='.$title,
     'options' => array(
       'html' => TRUE,
       'attributes' => array(

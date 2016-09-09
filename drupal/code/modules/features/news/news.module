@@ -170,10 +170,11 @@ function news_block_configure($delta='') {
 
 function _news_topitem_autocomplete($string) {
   $matches = array();
+  $types = array('news', 'product-news', 'diverse', 'event');
   if ($string) {
     $result = db_select('node')
       ->fields('node', array('title', 'nid'))
-      ->condition('type', 'news', '=')
+      ->condition('type', $types, 'IN')
       ->condition('title', '%' . db_like($string) . '%', 'LIKE')
       ->range(0, 10)
       ->execute();

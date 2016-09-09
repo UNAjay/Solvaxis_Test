@@ -73,6 +73,14 @@ function monster_page_preprocess_node(&$variables) {
       if ($banner_style) {
         $variables['classes_array'][] = drupal_html_class('banner-style-' . $banner_style[0]['value']);
       }
+      $banner_position = field_get_items($entity_type, $node, 'field_banner_position');
+      if ($banner_position && isset($banner_position[0]['value'])) {
+        $variables['classes_array'][] = drupal_html_class('banner-position-' . $banner_position[0]['value']);
+        if ($banner_position[0]['value'] == 'top') {
+          $variables['content']['group_banner']['#weight'] = -20;
+
+        }
+      }
 
       $transparent = field_get_items($entity_type, $node, 'field_background_transparent');
       if ($transparent && $transparent[0]['value'] == '1') {
@@ -93,12 +101,16 @@ function monster_page_preprocess_node(&$variables) {
       }
     }
 
-    if ($node->type == 'page') {
-      $banner_style = field_get_items($entity_type, $node, 'field_banner_style');
-      if ($banner_style) {
-        $variables['classes_array'][] = drupal_html_class('banner-style-' . $banner_style[0]['value']);
-      }
+    // All nodes
+    $banner_style = field_get_items($entity_type, $node, 'field_banner_style');
+    if ($banner_style && isset($banner_style[0]['value'])) {
+      $variables['classes_array'][] = drupal_html_class('banner-style-' . $banner_style[0]['value']);
     }
+    $banner_position = field_get_items($entity_type, $node, 'field_banner_position');
+    if ($banner_position && isset($banner_position[0]['value'])) {
+      $variables['classes_array'][] = drupal_html_class('banner-position-' . $banner_position[0]['value']);
+    }
+
   }
 
 }
@@ -343,6 +355,33 @@ function monster_page_form_views_exposed_form_alter(&$form, $form_state) {
         if (isset($form[$field_id])) $form[$field_id]['#options']['All'] = t($form['#info']['filter-'.$field]['label']);
       }
     }
+  }
+
+  if ($form['#id'] == 'views-exposed-form-research-erp-research-erp-block') {
+
+    $default_options = array('' => 'All');
+    foreach ($form_state['view']->filter as $field => $filter) {
+      if ($filter->options['exposed']) {
+        $field_id = $form['#info']["filter-$field"]['value'];
+        if ($field_id == 'tid') {
+          $additional_options = $form[$field_id]['#options'];
+        }
+        if ($field_id == 'type_1') {
+          $default_options = array_merge($default_options, $form[$field_id]['#options']);
+        }
+      }
+    }
+    if (!empty($default_options)) {
+      unset($default_options['attachments']);
+      foreach ($additional_options as $key => $value) {
+        $default_options[$key] = $value;
+      }
+    }
+
+    $form['combine']['#type'] = 'select';
+    $form['combine']['#options'] = $default_options;
+    $form['combine']['#default_value'] = '';
+
   }
 }
 

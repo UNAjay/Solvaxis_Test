@@ -849,13 +849,13 @@ function jeeveserp_layout_ds_layout_settings_info() {
       'footer' => array(
         3 => 'field_section',
         4 => 'field_basic_pages',
-        6 => 'footer_sections',
+        5 => 'footer_sections',
       ),
       'banner' => array(
-        5 => 'field_banner_image',
+        6 => 'field_banner_image',
         7 => 'field_banner_text',
-        8 => 'group_banner',
-        9 => 'field_promo_link',
+        8 => 'field_promo_link',
+        9 => 'group_banner',
       ),
     ),
     'fields' => array(
@@ -864,11 +864,11 @@ function jeeveserp_layout_ds_layout_settings_info() {
       'field_sidebar_text' => 'right',
       'field_section' => 'footer',
       'field_basic_pages' => 'footer',
-      'field_banner_image' => 'banner',
       'footer_sections' => 'footer',
+      'field_banner_image' => 'banner',
       'field_banner_text' => 'banner',
-      'group_banner' => 'banner',
       'field_promo_link' => 'banner',
+      'group_banner' => 'banner',
     ),
     'classes' => array(),
     'wrappers' => array(

@@ -57,10 +57,11 @@ function jeeveserp_layout_field_group_info() {
     'label' => 'Banner',
     'weight' => '7',
     'children' => array(
-      0 => 'field_banner_text',
-      1 => 'field_banner_image',
-      2 => 'field_banner_style',
+      0 => 'field_banner_image',
+      1 => 'field_banner_style',
+      2 => 'field_banner_text',
       3 => 'field_promo_link',
+      4 => 'field_banner_position',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

@@ -664,7 +664,7 @@ a {
 }
 .header-secondary .menu li a.active, .header-secondary .menu li a.active-trail, .header-secondary .menu li a:hover {
   background: transparent;
-  color: black;
+  color: red;
 }
 .header-secondary .menu li > .menu {
   display: block !important;
@@ -1940,7 +1940,7 @@ footer .menu li a:hover {
     height: 425px;
   }
   #leader .flexslider {
-    padding: 136px 35px 124px;
+    padding: 136px 35px 0;
   }
   #leader .flexslider .slides {
     min-height: 215px;
@@ -1976,7 +1976,7 @@ footer .menu li a:hover {
 
 @media (min-width: 67em) {
   #leader .flexslider {
-    padding: 136px 0 124px;
+    padding: 136px 0 0;
   }
   #leader .flexslider .slides > li h2 {
     margin-bottom: 24px;
@@ -2122,6 +2122,10 @@ article .media-element-container.media-logo img:hover, article .media-element-co
     margin: 0 1%;
     margin-bottom: 20px;
   }
+}
+
+.node-customer .group-right .logo {
+  margin-bottom: 40px;
 }
 
 .tag-cloud .content,
@@ -2338,6 +2342,29 @@ article .media-element-container.media-logo img:hover, article .media-element-co
 
 .node-page .region-holder {
   padding-bottom: 28px;
+  position: relative;
+}
+.node-page.banner-position-top > .region-holder > .group-banner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: -115px;
+  max-height: 170px;
+}
+.node-page.banner-position-top > .region-holder > .group-banner h3 {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+.node-page.banner-position-top > .region-holder > .group-banner h3:before {
+  display: none;
+}
+.node-page.banner-position-top > .region-holder > .group-banner h2 {
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+.node-page.banner-position-top > .region-holder > .group-banner .view-news .views-field-body {
+  font-size: 14px;
 }
 
 .with-sidebar.sidebar-position-right .body {

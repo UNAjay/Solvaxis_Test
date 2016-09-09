@@ -3,6 +3,7 @@ core = 7.x
 package = Features
 dependencies[] = addthis_displays
 dependencies[] = attachments
+dependencies[] = better_exposed_filters
 dependencies[] = bg_image_formatter
 dependencies[] = cs_adaptive_image
 dependencies[] = eck

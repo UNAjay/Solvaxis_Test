@@ -330,7 +330,7 @@ function _site_socialicons_global_view() {
   $text = variable_get('site_socialicons_global_'.$language->language, variable_get('site_socialicons_global_en', ''));
 
   // Add RSS links
-  $text .= "\n".'rss.xml';
+  // $text .= "\n".'rss.xml';
 
   $markup = '<label>'.t('Follow us:').'</label>';
   $markup .= _site_socialicons_parse_text($text, 'global');
